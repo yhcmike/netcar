@@ -1,5 +1,7 @@
 /netcar__harbor/target/
 /netcar_logic/target/
+/netcar__harbor/netcar_harbor.iml
+/netcar_logic/netcar_logic.iml
 .project
 .classpath
 .settings/

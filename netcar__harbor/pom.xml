@@ -223,7 +223,7 @@
 
 	</dependencies>
 	<build>
-		<finalName>mot_harbor</finalName>
+		<finalName>harbor</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>

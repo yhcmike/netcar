@@ -224,7 +224,7 @@
 	
   </dependencies>
   <build>
-	<finalName>mot_logic</finalName>
+	<finalName>netcar_logic</finalName>
 	<plugins>
 		<plugin>
 			<groupId>org.apache.maven.plugins</groupId>
