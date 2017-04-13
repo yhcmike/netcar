@@ -9,10 +9,6 @@ import org.springframework.kafka.listener.MessageListener;
 public class KafkaConsumer implements MessageListener<String, String> {
     protected final Logger log = LoggerFactory.getLogger(KafkaConsumer.class);
     
-    public KafkaConsumer(){
-    	System.out.println("miks sb");
-    }
-
     /**
      * 监听器自动执行该方法
      *     消费消息
