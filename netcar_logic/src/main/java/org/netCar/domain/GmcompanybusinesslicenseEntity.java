@@ -1,20 +1,19 @@
 package org.netCar.domain;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
 import java.util.Arrays;
 
 /**
- * Created by ffd on 2017/4/17.
+ * Created by ffd on 2017/4/19.
  */
 @Entity
-@Table(name = "gmcompanybusinesslicense")
-public class GmcompanybusinesslicenseEntity  extends  IdEntity{
-
+@javax.persistence.Table(name = "gm_company_business_license")
+public class GmCompanyBusinessLicenseEntity  extends IdEntity{
 
     private String companyName;
 
 
-    @Column(name = "companyName", length = 32)
+    @javax.persistence.Column(name = "company_name", length = 32)
     public String getCompanyName() {
         return companyName;
     }
@@ -26,7 +25,7 @@ public class GmcompanybusinesslicenseEntity  extends  IdEntity{
     private Integer addressCode;
 
 
-    @Column(name = "addressCode")
+    @javax.persistence.Column(name = "address_code")
     public Integer getAddressCode() {
         return addressCode;
     }
@@ -38,7 +37,7 @@ public class GmcompanybusinesslicenseEntity  extends  IdEntity{
     private String addressName;
 
 
-    @Column(name = "addressName", length = 64)
+    @javax.persistence.Column(name = "address_name", length = 64)
     public String getAddressName() {
         return addressName;
     }
@@ -50,7 +49,7 @@ public class GmcompanybusinesslicenseEntity  extends  IdEntity{
     private String address;
 
 
-    @Column(name = "address", length = 128)
+    @javax.persistence.Column(name = "address", length = 128)
     public String getAddress() {
         return address;
     }
@@ -62,7 +61,7 @@ public class GmcompanybusinesslicenseEntity  extends  IdEntity{
     private String operatingState;
 
 
-    @Column(name = "operatingState", length = 8)
+    @javax.persistence.Column(name = "operating_state", length = 8)
     public String getOperatingState() {
         return operatingState;
     }
@@ -74,7 +73,7 @@ public class GmcompanybusinesslicenseEntity  extends  IdEntity{
     private String economicNature;
 
 
-    @Column(name = "economicNature", length = 8)
+    @javax.persistence.Column(name = "economic_nature", length = 8)
     public String getEconomicNature() {
         return economicNature;
     }
@@ -86,7 +85,7 @@ public class GmcompanybusinesslicenseEntity  extends  IdEntity{
     private Double latitude;
 
 
-    @Column(name = "latitude", precision = 0)
+    @javax.persistence.Column(name = "latitude", precision = 0)
     public Double getLatitude() {
         return latitude;
     }
@@ -98,7 +97,7 @@ public class GmcompanybusinesslicenseEntity  extends  IdEntity{
     private Double longitude;
 
 
-    @Column(name = "longitude", precision = 0)
+    @javax.persistence.Column(name = "longitude", precision = 0)
     public Double getLongitude() {
         return longitude;
     }
@@ -110,7 +109,7 @@ public class GmcompanybusinesslicenseEntity  extends  IdEntity{
     private String operationArea;
 
 
-    @Column(name = "operationArea", length = 128)
+    @javax.persistence.Column(name = "operation_area", length = 128)
     public String getOperationArea() {
         return operationArea;
     }
@@ -122,7 +121,7 @@ public class GmcompanybusinesslicenseEntity  extends  IdEntity{
     private String operationArea2;
 
 
-    @Column(name = "operationArea2", length = 128)
+    @javax.persistence.Column(name = "operation_area2", length = 128)
     public String getOperationArea2() {
         return operationArea2;
     }
@@ -134,7 +133,7 @@ public class GmcompanybusinesslicenseEntity  extends  IdEntity{
     private String certificate;
 
 
-    @Column(name = "certificate", length = 64)
+    @javax.persistence.Column(name = "certificate", length = 64)
     public String getCertificate() {
         return certificate;
     }
@@ -146,7 +145,7 @@ public class GmcompanybusinesslicenseEntity  extends  IdEntity{
     private Integer startDate;
 
 
-    @Column(name = "startDate")
+    @javax.persistence.Column(name = "start_date")
     public Integer getStartDate() {
         return startDate;
     }
@@ -158,7 +157,7 @@ public class GmcompanybusinesslicenseEntity  extends  IdEntity{
     private Integer stopDate;
 
 
-    @Column(name = "stopDate")
+    @javax.persistence.Column(name = "stop_date")
     public Integer getStopDate() {
         return stopDate;
     }
@@ -170,7 +169,7 @@ public class GmcompanybusinesslicenseEntity  extends  IdEntity{
     private String organization;
 
 
-    @Column(name = "organization", length = 256)
+    @javax.persistence.Column(name = "organization", length = 256)
     public String getOrganization() {
         return organization;
     }
@@ -182,7 +181,7 @@ public class GmcompanybusinesslicenseEntity  extends  IdEntity{
     private Integer certifyDate;
 
 
-    @Column(name = "certifyDate")
+    @javax.persistence.Column(name = "certify_date")
     public Integer getCertifyDate() {
         return certifyDate;
     }
@@ -194,7 +193,7 @@ public class GmcompanybusinesslicenseEntity  extends  IdEntity{
     private byte[] type;
 
 
-    @Column(name = "type")
+    @javax.persistence.Column(name = "type")
     public byte[] getType() {
         return type;
     }
@@ -206,7 +205,7 @@ public class GmcompanybusinesslicenseEntity  extends  IdEntity{
     private Integer flag;
 
 
-    @Column(name = "flag")
+    @javax.persistence.Column(name = "flag")
     public Integer getFlag() {
         return flag;
     }
@@ -218,7 +217,7 @@ public class GmcompanybusinesslicenseEntity  extends  IdEntity{
     private Long updateTime;
 
 
-    @Column(name = "updateTime")
+    @javax.persistence.Column(name = "update_time")
     public Long getUpdateTime() {
         return updateTime;
     }
@@ -232,9 +231,9 @@ public class GmcompanybusinesslicenseEntity  extends  IdEntity{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        GmcompanybusinesslicenseEntity that = (GmcompanybusinesslicenseEntity) o;
+        GmCompanyBusinessLicenseEntity that = (GmCompanyBusinessLicenseEntity) o;
 
-        if (id != that.id) return false;
+        if (id != null ? !id.equals(that.id) : that.id != null) return false;
         if (companyName != null ? !companyName.equals(that.companyName) : that.companyName != null) return false;
         if (addressCode != null ? !addressCode.equals(that.addressCode) : that.addressCode != null) return false;
         if (addressName != null ? !addressName.equals(that.addressName) : that.addressName != null) return false;
@@ -263,7 +262,7 @@ public class GmcompanybusinesslicenseEntity  extends  IdEntity{
 
     @Override
     public int hashCode() {
-        int result = id;
+        int result = id != null ? id.hashCode() : 0;
         result = 31 * result + (companyName != null ? companyName.hashCode() : 0);
         result = 31 * result + (addressCode != null ? addressCode.hashCode() : 0);
         result = 31 * result + (addressName != null ? addressName.hashCode() : 0);

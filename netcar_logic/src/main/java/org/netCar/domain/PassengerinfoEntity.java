@@ -1,14 +1,16 @@
 package org.netCar.domain;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 /**
- * Created by ffd on 2017/4/17.
+ * Created by ffd on 2017/4/19.
  */
 @Entity
-@Table(name = "passengerinfo")
-public class PassengerinfoEntity extends  IdEntity {
-
+@Table(name = "passenger_info")
+public class PassengerInfoEntity  extends IdEntity{
+    private Integer id;
     private String companyId;
     private Integer registerDate;
     private String passengerPhone;
@@ -19,7 +21,9 @@ public class PassengerinfoEntity extends  IdEntity {
     private Long updateTime;
 
 
-    @Column(name = "companyId", length = 32)
+
+
+    @Column(name = "company_id", length = 32)
     public String getCompanyId() {
         return companyId;
     }
@@ -29,7 +33,7 @@ public class PassengerinfoEntity extends  IdEntity {
     }
 
 
-    @Column(name = "registerDate")
+    @Column(name = "register_date")
     public Integer getRegisterDate() {
         return registerDate;
     }
@@ -39,7 +43,7 @@ public class PassengerinfoEntity extends  IdEntity {
     }
 
 
-    @Column(name = "passengerPhone", length = 32)
+    @Column(name = "passenger_phone", length = 32)
     public String getPassengerPhone() {
         return passengerPhone;
     }
@@ -49,7 +53,7 @@ public class PassengerinfoEntity extends  IdEntity {
     }
 
 
-    @Column(name = "passengerName", length = 64)
+    @Column(name = "passenger_name", length = 64)
     public String getPassengerName() {
         return passengerName;
     }
@@ -59,7 +63,7 @@ public class PassengerinfoEntity extends  IdEntity {
     }
 
 
-    @Column(name = "passengerGender", length = 2)
+    @Column(name = "passenger_gender", length = 2)
     public String getPassengerGender() {
         return passengerGender;
     }
@@ -89,7 +93,7 @@ public class PassengerinfoEntity extends  IdEntity {
     }
 
 
-    @Column(name = "updateTime")
+    @Column(name = "update_time")
     public Long getUpdateTime() {
         return updateTime;
     }
@@ -103,9 +107,9 @@ public class PassengerinfoEntity extends  IdEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        PassengerinfoEntity that = (PassengerinfoEntity) o;
+        PassengerInfoEntity that = (PassengerInfoEntity) o;
 
-        if (id != that.id) return false;
+        if (id != null ? !id.equals(that.id) : that.id != null) return false;
         if (companyId != null ? !companyId.equals(that.companyId) : that.companyId != null) return false;
         if (registerDate != null ? !registerDate.equals(that.registerDate) : that.registerDate != null) return false;
         if (passengerPhone != null ? !passengerPhone.equals(that.passengerPhone) : that.passengerPhone != null)
@@ -123,7 +127,7 @@ public class PassengerinfoEntity extends  IdEntity {
 
     @Override
     public int hashCode() {
-        int result = id;
+        int result = id != null ? id.hashCode() : 0;
         result = 31 * result + (companyId != null ? companyId.hashCode() : 0);
         result = 31 * result + (registerDate != null ? registerDate.hashCode() : 0);
         result = 31 * result + (passengerPhone != null ? passengerPhone.hashCode() : 0);

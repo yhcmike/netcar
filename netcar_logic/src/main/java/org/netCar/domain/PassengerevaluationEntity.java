@@ -1,14 +1,16 @@
 package org.netCar.domain;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 /**
- * Created by ffd on 2017/4/17.
+ * Created by ffd on 2017/4/19.
  */
 @Entity
-@Table(name = "passengerevaluation")
-public class PassengerevaluationEntity  extends  IdEntity{
-
+@Table(name = "passenger_evaluation")
+public class PassengerEvaluationEntity  extends IdEntity{
+    private Integer id;
     private String companyId;
     private String orderId;
     private Long evaluateTime;
@@ -18,7 +20,9 @@ public class PassengerevaluationEntity  extends  IdEntity{
     private String detail;
 
 
-    @Column(name = "companyId", length = 32)
+
+
+    @Column(name = "company_id", length = 32)
     public String getCompanyId() {
         return companyId;
     }
@@ -28,7 +32,7 @@ public class PassengerevaluationEntity  extends  IdEntity{
     }
 
 
-    @Column(name = "orderId", length = 64)
+    @Column(name = "order_id", length = 64)
     public String getOrderId() {
         return orderId;
     }
@@ -38,7 +42,7 @@ public class PassengerevaluationEntity  extends  IdEntity{
     }
 
 
-    @Column(name = "evaluateTime")
+    @Column(name = "evaluate_time")
     public Long getEvaluateTime() {
         return evaluateTime;
     }
@@ -48,7 +52,7 @@ public class PassengerevaluationEntity  extends  IdEntity{
     }
 
 
-    @Column(name = "serviceScore")
+    @Column(name = "service_score")
     public Integer getServiceScore() {
         return serviceScore;
     }
@@ -58,7 +62,7 @@ public class PassengerevaluationEntity  extends  IdEntity{
     }
 
 
-    @Column(name = "driverScore")
+    @Column(name = "driver_score")
     public Integer getDriverScore() {
         return driverScore;
     }
@@ -68,7 +72,7 @@ public class PassengerevaluationEntity  extends  IdEntity{
     }
 
 
-    @Column(name = "vehicleScore")
+    @Column(name = "vehicle_score")
     public Integer getVehicleScore() {
         return vehicleScore;
     }
@@ -92,9 +96,9 @@ public class PassengerevaluationEntity  extends  IdEntity{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        PassengerevaluationEntity that = (PassengerevaluationEntity) o;
+        PassengerEvaluationEntity that = (PassengerEvaluationEntity) o;
 
-        if (id != that.id) return false;
+        if (id != null ? !id.equals(that.id) : that.id != null) return false;
         if (companyId != null ? !companyId.equals(that.companyId) : that.companyId != null) return false;
         if (orderId != null ? !orderId.equals(that.orderId) : that.orderId != null) return false;
         if (evaluateTime != null ? !evaluateTime.equals(that.evaluateTime) : that.evaluateTime != null) return false;
@@ -108,7 +112,7 @@ public class PassengerevaluationEntity  extends  IdEntity{
 
     @Override
     public int hashCode() {
-        int result = id;
+        int result = id != null ? id.hashCode() : 0;
         result = 31 * result + (companyId != null ? companyId.hashCode() : 0);
         result = 31 * result + (orderId != null ? orderId.hashCode() : 0);
         result = 31 * result + (evaluateTime != null ? evaluateTime.hashCode() : 0);

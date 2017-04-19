@@ -1,18 +1,16 @@
 package org.netCar.domain;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 /**
- * Created by ffd on 2017/4/17.
+ * Created by ffd on 2017/4/19.
  */
 @Entity
-@Table(name = "companyserver")
-public class CompanyServerEntity extends  IdEntity{
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
+@Table(name = "company_service")
+public class CompanyServiceEntity extends IdEntity{
+    private Integer id;
     private String companyId;
     private Integer address;
     private String serviceName;
@@ -30,7 +28,9 @@ public class CompanyServerEntity extends  IdEntity{
     private Long updateTime;
 
 
-    @Column(name = "companyId", length = 32)
+
+
+    @Column(name = "company_id", length = 32)
     public String getCompanyId() {
         return companyId;
     }
@@ -50,7 +50,7 @@ public class CompanyServerEntity extends  IdEntity{
     }
 
 
-    @Column(name = "serviceName", length = 128)
+    @Column(name = "service_name", length = 128)
     public String getServiceName() {
         return serviceName;
     }
@@ -60,7 +60,7 @@ public class CompanyServerEntity extends  IdEntity{
     }
 
 
-    @Column(name = "serviceNo", length = 64)
+    @Column(name = "service_no", length = 64)
     public String getServiceNo() {
         return serviceNo;
     }
@@ -70,7 +70,7 @@ public class CompanyServerEntity extends  IdEntity{
     }
 
 
-    @Column(name = "detailAddress", length = 128)
+    @Column(name = "detail_address", length = 128)
     public String getDetailAddress() {
         return detailAddress;
     }
@@ -80,7 +80,7 @@ public class CompanyServerEntity extends  IdEntity{
     }
 
 
-    @Column(name = "responsibleName", length = 128)
+    @Column(name = "responsible_name", length = 128)
     public String getResponsibleName() {
         return responsibleName;
     }
@@ -90,7 +90,7 @@ public class CompanyServerEntity extends  IdEntity{
     }
 
 
-    @Column(name = "responsiblePhone", length = 32)
+    @Column(name = "responsible_phone", length = 32)
     public String getResponsiblePhone() {
         return responsiblePhone;
     }
@@ -100,7 +100,7 @@ public class CompanyServerEntity extends  IdEntity{
     }
 
 
-    @Column(name = "managerName", length = 64)
+    @Column(name = "manager_name", length = 64)
     public String getManagerName() {
         return managerName;
     }
@@ -110,7 +110,7 @@ public class CompanyServerEntity extends  IdEntity{
     }
 
 
-    @Column(name = "managerPhone", length = 32)
+    @Column(name = "manager_phone", length = 32)
     public String getManagerPhone() {
         return managerPhone;
     }
@@ -120,7 +120,7 @@ public class CompanyServerEntity extends  IdEntity{
     }
 
 
-    @Column(name = "contactPhone", length = 32)
+    @Column(name = "contact_phone", length = 32)
     public String getContactPhone() {
         return contactPhone;
     }
@@ -130,7 +130,7 @@ public class CompanyServerEntity extends  IdEntity{
     }
 
 
-    @Column(name = "mailAddress", length = 128)
+    @Column(name = "mail_address", length = 128)
     public String getMailAddress() {
         return mailAddress;
     }
@@ -140,7 +140,7 @@ public class CompanyServerEntity extends  IdEntity{
     }
 
 
-    @Column(name = "createDate")
+    @Column(name = "create_date")
     public Integer getCreateDate() {
         return createDate;
     }
@@ -170,7 +170,7 @@ public class CompanyServerEntity extends  IdEntity{
     }
 
 
-    @Column(name = "updateTime")
+    @Column(name = "update_time")
     public Long getUpdateTime() {
         return updateTime;
     }
@@ -184,9 +184,9 @@ public class CompanyServerEntity extends  IdEntity{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        CompanyServerEntity that = (CompanyServerEntity) o;
+        CompanyServiceEntity that = (CompanyServiceEntity) o;
 
-        if (id != that.id) return false;
+        if (id != null ? !id.equals(that.id) : that.id != null) return false;
         if (companyId != null ? !companyId.equals(that.companyId) : that.companyId != null) return false;
         if (address != null ? !address.equals(that.address) : that.address != null) return false;
         if (serviceName != null ? !serviceName.equals(that.serviceName) : that.serviceName != null) return false;
@@ -211,7 +211,7 @@ public class CompanyServerEntity extends  IdEntity{
 
     @Override
     public int hashCode() {
-        int result = id;
+        int result = id != null ? id.hashCode() : 0;
         result = 31 * result + (companyId != null ? companyId.hashCode() : 0);
         result = 31 * result + (address != null ? address.hashCode() : 0);
         result = 31 * result + (serviceName != null ? serviceName.hashCode() : 0);

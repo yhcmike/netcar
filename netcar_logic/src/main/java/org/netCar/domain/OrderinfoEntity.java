@@ -1,18 +1,18 @@
 package org.netCar.domain;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
 
 /**
- * Created by ffd on 2017/4/17.
+ * Created by ffd on 2017/4/19.
  */
 @Entity
-@Table(name = "orderinfo")
-public class OrderinfoEntity  extends  IdEntity{
+@javax.persistence.Table(name = "order_info")
+public class OrderInfoEntity  extends IdEntity{
 
     private String companyId;
 
 
-    @Column(name = "companyId", length = 32)
+    @javax.persistence.Column(name = "company_id", length = 32)
     public String getCompanyId() {
         return companyId;
     }
@@ -24,7 +24,7 @@ public class OrderinfoEntity  extends  IdEntity{
     private Integer address;
 
 
-    @Column(name = "address")
+    @javax.persistence.Column(name = "address")
     public Integer getAddress() {
         return address;
     }
@@ -36,7 +36,7 @@ public class OrderinfoEntity  extends  IdEntity{
     private String orderId;
 
 
-    @Column(name = "orderId", length = 64)
+    @javax.persistence.Column(name = "order_id", length = 64)
     public String getOrderId() {
         return orderId;
     }
@@ -48,7 +48,7 @@ public class OrderinfoEntity  extends  IdEntity{
     private Long departTime;
 
 
-    @Column(name = "departTime")
+    @javax.persistence.Column(name = "depart_time")
     public Long getDepartTime() {
         return departTime;
     }
@@ -60,7 +60,7 @@ public class OrderinfoEntity  extends  IdEntity{
     private Long orderTime;
 
 
-    @Column(name = "orderTime")
+    @javax.persistence.Column(name = "order_time")
     public Long getOrderTime() {
         return orderTime;
     }
@@ -72,7 +72,7 @@ public class OrderinfoEntity  extends  IdEntity{
     private String passengerNote;
 
 
-    @Column(name = "passengerNote", length = 128)
+    @javax.persistence.Column(name = "passenger_note", length = 128)
     public String getPassengerNote() {
         return passengerNote;
     }
@@ -84,7 +84,7 @@ public class OrderinfoEntity  extends  IdEntity{
     private String departure;
 
 
-    @Column(name = "departure", length = 128)
+    @javax.persistence.Column(name = "departure", length = 128)
     public String getDeparture() {
         return departure;
     }
@@ -96,7 +96,7 @@ public class OrderinfoEntity  extends  IdEntity{
     private Integer depLongitude;
 
 
-    @Column(name = "depLongitude")
+    @javax.persistence.Column(name = "dep_longitude")
     public Integer getDepLongitude() {
         return depLongitude;
     }
@@ -105,10 +105,46 @@ public class OrderinfoEntity  extends  IdEntity{
         this.depLongitude = depLongitude;
     }
 
+    private Integer depLatitude;
+
+
+    @javax.persistence.Column(name = "dep_latitude")
+    public Integer getDepLatitude() {
+        return depLatitude;
+    }
+
+    public void setDepLatitude(Integer depLatitude) {
+        this.depLatitude = depLatitude;
+    }
+
+    private String destination;
+
+
+    @javax.persistence.Column(name = "destination", length = 128)
+    public String getDestination() {
+        return destination;
+    }
+
+    public void setDestination(String destination) {
+        this.destination = destination;
+    }
+
+    private Integer destLongitude;
+
+
+    @javax.persistence.Column(name = "dest_longitude")
+    public Integer getDestLongitude() {
+        return destLongitude;
+    }
+
+    public void setDestLongitude(Integer destLongitude) {
+        this.destLongitude = destLongitude;
+    }
+
     private Integer destLatitude;
 
 
-    @Column(name = "destLatitude")
+    @javax.persistence.Column(name = "dest_latitude")
     public Integer getDestLatitude() {
         return destLatitude;
     }
@@ -120,7 +156,7 @@ public class OrderinfoEntity  extends  IdEntity{
     private Integer encrypt;
 
 
-    @Column(name = "encrypt")
+    @javax.persistence.Column(name = "encrypt")
     public Integer getEncrypt() {
         return encrypt;
     }
@@ -132,7 +168,7 @@ public class OrderinfoEntity  extends  IdEntity{
     private String fareType;
 
 
-    @Column(name = "fareType", length = 16)
+    @javax.persistence.Column(name = "fare_type", length = 16)
     public String getFareType() {
         return fareType;
     }
@@ -144,7 +180,7 @@ public class OrderinfoEntity  extends  IdEntity{
     private Integer longitude;
 
 
-    @Column(name = "longitude")
+    @javax.persistence.Column(name = "longitude")
     public Integer getLongitude() {
         return longitude;
     }
@@ -156,7 +192,7 @@ public class OrderinfoEntity  extends  IdEntity{
     private Integer latitude;
 
 
-    @Column(name = "latitude")
+    @javax.persistence.Column(name = "latitude")
     public Integer getLatitude() {
         return latitude;
     }
@@ -168,7 +204,7 @@ public class OrderinfoEntity  extends  IdEntity{
     private String licenseId;
 
 
-    @Column(name = "licenseId", length = 32)
+    @javax.persistence.Column(name = "license_id", length = 32)
     public String getLicenseId() {
         return licenseId;
     }
@@ -180,7 +216,7 @@ public class OrderinfoEntity  extends  IdEntity{
     private String driverPhone;
 
 
-    @Column(name = "driverPhone", length = 32)
+    @javax.persistence.Column(name = "driver_phone", length = 32)
     public String getDriverPhone() {
         return driverPhone;
     }
@@ -192,7 +228,7 @@ public class OrderinfoEntity  extends  IdEntity{
     private String vehicleNo;
 
 
-    @Column(name = "vehicleNo", length = 32)
+    @javax.persistence.Column(name = "vehicle_no", length = 32)
     public String getVehicleNo() {
         return vehicleNo;
     }
@@ -204,7 +240,7 @@ public class OrderinfoEntity  extends  IdEntity{
     private Long distributeTime;
 
 
-    @Column(name = "distributeTime")
+    @javax.persistence.Column(name = "distribute_time")
     public Long getDistributeTime() {
         return distributeTime;
     }
@@ -216,7 +252,7 @@ public class OrderinfoEntity  extends  IdEntity{
     private Long cancelTime;
 
 
-    @Column(name = "cancelTime")
+    @javax.persistence.Column(name = "cancel_time")
     public Long getCancelTime() {
         return cancelTime;
     }
@@ -228,7 +264,7 @@ public class OrderinfoEntity  extends  IdEntity{
     private String operator;
 
 
-    @Column(name = "operator", length = 64)
+    @javax.persistence.Column(name = "operator", length = 64)
     public String getOperator() {
         return operator;
     }
@@ -240,7 +276,7 @@ public class OrderinfoEntity  extends  IdEntity{
     private String cancelTypeCode;
 
 
-    @Column(name = "cancelTypeCode", length = 32)
+    @javax.persistence.Column(name = "cancel_type_code", length = 32)
     public String getCancelTypeCode() {
         return cancelTypeCode;
     }
@@ -252,7 +288,7 @@ public class OrderinfoEntity  extends  IdEntity{
     private String cancelReason;
 
 
-    @Column(name = "cancelReason", length = 128)
+    @javax.persistence.Column(name = "cancel_reason", length = 128)
     public String getCancelReason() {
         return cancelReason;
     }
@@ -266,9 +302,9 @@ public class OrderinfoEntity  extends  IdEntity{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        OrderinfoEntity that = (OrderinfoEntity) o;
+        OrderInfoEntity that = (OrderInfoEntity) o;
 
-        if (id != that.id) return false;
+        if (id != null ? !id.equals(that.id) : that.id != null) return false;
         if (companyId != null ? !companyId.equals(that.companyId) : that.companyId != null) return false;
         if (address != null ? !address.equals(that.address) : that.address != null) return false;
         if (orderId != null ? !orderId.equals(that.orderId) : that.orderId != null) return false;
@@ -278,6 +314,10 @@ public class OrderinfoEntity  extends  IdEntity{
             return false;
         if (departure != null ? !departure.equals(that.departure) : that.departure != null) return false;
         if (depLongitude != null ? !depLongitude.equals(that.depLongitude) : that.depLongitude != null) return false;
+        if (depLatitude != null ? !depLatitude.equals(that.depLatitude) : that.depLatitude != null) return false;
+        if (destination != null ? !destination.equals(that.destination) : that.destination != null) return false;
+        if (destLongitude != null ? !destLongitude.equals(that.destLongitude) : that.destLongitude != null)
+            return false;
         if (destLatitude != null ? !destLatitude.equals(that.destLatitude) : that.destLatitude != null) return false;
         if (encrypt != null ? !encrypt.equals(that.encrypt) : that.encrypt != null) return false;
         if (fareType != null ? !fareType.equals(that.fareType) : that.fareType != null) return false;
@@ -299,7 +339,7 @@ public class OrderinfoEntity  extends  IdEntity{
 
     @Override
     public int hashCode() {
-        int result = id;
+        int result = id != null ? id.hashCode() : 0;
         result = 31 * result + (companyId != null ? companyId.hashCode() : 0);
         result = 31 * result + (address != null ? address.hashCode() : 0);
         result = 31 * result + (orderId != null ? orderId.hashCode() : 0);
@@ -308,6 +348,9 @@ public class OrderinfoEntity  extends  IdEntity{
         result = 31 * result + (passengerNote != null ? passengerNote.hashCode() : 0);
         result = 31 * result + (departure != null ? departure.hashCode() : 0);
         result = 31 * result + (depLongitude != null ? depLongitude.hashCode() : 0);
+        result = 31 * result + (depLatitude != null ? depLatitude.hashCode() : 0);
+        result = 31 * result + (destination != null ? destination.hashCode() : 0);
+        result = 31 * result + (destLongitude != null ? destLongitude.hashCode() : 0);
         result = 31 * result + (destLatitude != null ? destLatitude.hashCode() : 0);
         result = 31 * result + (encrypt != null ? encrypt.hashCode() : 0);
         result = 31 * result + (fareType != null ? fareType.hashCode() : 0);

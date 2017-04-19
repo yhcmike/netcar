@@ -1,15 +1,16 @@
 package org.netCar.domain;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 /**
- * Created by ffd on 2017/4/17.
- * desc:公司基本信息
- *
+ * Created by ffd on 2017/4/19.
  */
 @Entity
-@Table(name = "companyinfo")
-public class CompanyInfoEntity extends IdEntity {
+@Table(name = "company_info")
+public class CompanyInfoEntity extends IdEntity{
+    private Integer id;
     private String companyId;
     private String companyName;
     private String identifier;
@@ -28,7 +29,8 @@ public class CompanyInfoEntity extends IdEntity {
 
 
 
-    @Column(name = "companyId", length = 32)
+
+    @Column(name = "company_id", length = 32)
     public String getCompanyId() {
         return companyId;
     }
@@ -38,7 +40,7 @@ public class CompanyInfoEntity extends IdEntity {
     }
 
 
-    @Column(name = "companyName", length = 256)
+    @Column(name = "company_name", length = 256)
     public String getCompanyName() {
         return companyName;
     }
@@ -68,7 +70,7 @@ public class CompanyInfoEntity extends IdEntity {
     }
 
 
-    @Column(name = "businessScope", length = 256)
+    @Column(name = "business_scope", length = 256)
     public String getBusinessScope() {
         return businessScope;
     }
@@ -78,7 +80,7 @@ public class CompanyInfoEntity extends IdEntity {
     }
 
 
-    @Column(name = "contactAddress", length = 256)
+    @Column(name = "contact_address", length = 256)
     public String getContactAddress() {
         return contactAddress;
     }
@@ -88,7 +90,7 @@ public class CompanyInfoEntity extends IdEntity {
     }
 
 
-    @Column(name = "economicType", length = 128)
+    @Column(name = "economic_type", length = 128)
     public String getEconomicType() {
         return economicType;
     }
@@ -98,7 +100,7 @@ public class CompanyInfoEntity extends IdEntity {
     }
 
 
-    @Column(name = "regCapital", length = 128)
+    @Column(name = "reg_capital", length = 128)
     public String getRegCapital() {
         return regCapital;
     }
@@ -108,7 +110,7 @@ public class CompanyInfoEntity extends IdEntity {
     }
 
 
-    @Column(name = "legalName", length = 256)
+    @Column(name = "legal_name", length = 256)
     public String getLegalName() {
         return legalName;
     }
@@ -118,7 +120,7 @@ public class CompanyInfoEntity extends IdEntity {
     }
 
 
-    @Column(name = "legalID", length = 32)
+    @Column(name = "legal_ID", length = 32)
     public String getLegalId() {
         return legalId;
     }
@@ -128,7 +130,7 @@ public class CompanyInfoEntity extends IdEntity {
     }
 
 
-    @Column(name = "legalPhone", length = 32)
+    @Column(name = "legal_phone", length = 32)
     public String getLegalPhone() {
         return legalPhone;
     }
@@ -138,7 +140,7 @@ public class CompanyInfoEntity extends IdEntity {
     }
 
 
-    @Column(name = "legalPhoto", length = 128)
+    @Column(name = "legal_photo", length = 128)
     public String getLegalPhoto() {
         return legalPhoto;
     }
@@ -168,7 +170,7 @@ public class CompanyInfoEntity extends IdEntity {
     }
 
 
-    @Column(name = "updateTime")
+    @Column(name = "update_time")
     public Long getUpdateTime() {
         return updateTime;
     }
@@ -184,7 +186,7 @@ public class CompanyInfoEntity extends IdEntity {
 
         CompanyInfoEntity that = (CompanyInfoEntity) o;
 
-        if (id != that.id) return false;
+        if (id != null ? !id.equals(that.id) : that.id != null) return false;
         if (companyId != null ? !companyId.equals(that.companyId) : that.companyId != null) return false;
         if (companyName != null ? !companyName.equals(that.companyName) : that.companyName != null) return false;
         if (identifier != null ? !identifier.equals(that.identifier) : that.identifier != null) return false;
@@ -208,7 +210,7 @@ public class CompanyInfoEntity extends IdEntity {
 
     @Override
     public int hashCode() {
-        int result = id;
+        int result = id != null ? id.hashCode() : 0;
         result = 31 * result + (companyId != null ? companyId.hashCode() : 0);
         result = 31 * result + (companyName != null ? companyName.hashCode() : 0);
         result = 31 * result + (identifier != null ? identifier.hashCode() : 0);

@@ -1,19 +1,24 @@
 package org.netCar.domain;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import java.sql.Date;
 
 /**
- * Created by ffd on 2017/4/17.
+ * Created by ffd on 2017/4/19.
  */
 @Entity
-@Table(name = "alarminformations")
+@Table(name = "alarm_informations")
 public class AlarmInformationsEntity extends IdEntity{
+    private Integer id;
     private String content;
     private String type;
     private Integer num;
     private Date date;
     private String remark;
+
+
 
 
     @Column(name = "content", length = 256)
@@ -72,7 +77,7 @@ public class AlarmInformationsEntity extends IdEntity{
 
         AlarmInformationsEntity that = (AlarmInformationsEntity) o;
 
-        if (id != that.id) return false;
+        if (id != null ? !id.equals(that.id) : that.id != null) return false;
         if (content != null ? !content.equals(that.content) : that.content != null) return false;
         if (type != null ? !type.equals(that.type) : that.type != null) return false;
         if (num != null ? !num.equals(that.num) : that.num != null) return false;
@@ -84,7 +89,7 @@ public class AlarmInformationsEntity extends IdEntity{
 
     @Override
     public int hashCode() {
-        int result = id;
+        int result = id != null ? id.hashCode() : 0;
         result = 31 * result + (content != null ? content.hashCode() : 0);
         result = 31 * result + (type != null ? type.hashCode() : 0);
         result = 31 * result + (num != null ? num.hashCode() : 0);

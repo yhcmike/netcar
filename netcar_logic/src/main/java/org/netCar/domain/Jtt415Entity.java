@@ -1,24 +1,23 @@
 package org.netCar.domain;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 /**
- * Created by ffd on 2017/4/17.
+ * Created by ffd on 2017/4/19.
  */
 @Entity
 @Table(name = "jtt415")
-public class Jtt415Entity  extends  IdEntity{
-
+public class Jtt415Entity  extends IdEntity{
+    private Integer id;
     private String code;
     private String name;
-    private int year;
-
-    public void setYear(Integer year) {
-        this.year = year;
-    }
-
+    private Integer year;
     private String remark;
     private Integer status;
+
+
 
 
     @Column(name = "code", length = 32)
@@ -42,11 +41,11 @@ public class Jtt415Entity  extends  IdEntity{
 
 
     @Column(name = "year")
-    public int getYear() {
+    public Integer getYear() {
         return year;
     }
 
-    public void setYear(int year) {
+    public void setYear(Integer year) {
         this.year = year;
     }
 
@@ -77,10 +76,10 @@ public class Jtt415Entity  extends  IdEntity{
 
         Jtt415Entity that = (Jtt415Entity) o;
 
-        if (id != that.id) return false;
-        if (year != that.year) return false;
+        if (id != null ? !id.equals(that.id) : that.id != null) return false;
         if (code != null ? !code.equals(that.code) : that.code != null) return false;
         if (name != null ? !name.equals(that.name) : that.name != null) return false;
+        if (year != null ? !year.equals(that.year) : that.year != null) return false;
         if (remark != null ? !remark.equals(that.remark) : that.remark != null) return false;
         if (status != null ? !status.equals(that.status) : that.status != null) return false;
 
@@ -89,10 +88,10 @@ public class Jtt415Entity  extends  IdEntity{
 
     @Override
     public int hashCode() {
-        int result = id;
+        int result = id != null ? id.hashCode() : 0;
         result = 31 * result + (code != null ? code.hashCode() : 0);
         result = 31 * result + (name != null ? name.hashCode() : 0);
-        result = 31 * result + year;
+        result = 31 * result + (year != null ? year.hashCode() : 0);
         result = 31 * result + (remark != null ? remark.hashCode() : 0);
         result = 31 * result + (status != null ? status.hashCode() : 0);
         return result;

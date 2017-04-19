@@ -1,18 +1,16 @@
 package org.netCar.domain;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 /**
- * Created by ffd on 2017/4/17.
+ * Created by ffd on 2017/4/19.
  */
 @Entity
-@Table(name = "driverappinfo")
-public class DriverAppInfoEntity extends  IdEntity{
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
+@Table(name = "driver_app")
+public class DriverAppEntity extends IdEntity{
+    private Integer id;
     private String companyId;
     private Integer address;
     private String licenseId;
@@ -25,7 +23,9 @@ public class DriverAppInfoEntity extends  IdEntity{
     private Long updateTime;
 
 
-    @Column(name = "companyId", length = 32)
+
+
+    @Column(name = "company_id", length = 32)
     public String getCompanyId() {
         return companyId;
     }
@@ -45,7 +45,7 @@ public class DriverAppInfoEntity extends  IdEntity{
     }
 
 
-    @Column(name = "licenseId", length = 32)
+    @Column(name = "license_id", length = 32)
     public String getLicenseId() {
         return licenseId;
     }
@@ -55,7 +55,7 @@ public class DriverAppInfoEntity extends  IdEntity{
     }
 
 
-    @Column(name = "driverPhone", length = 32)
+    @Column(name = "driver_phone", length = 32)
     public String getDriverPhone() {
         return driverPhone;
     }
@@ -65,7 +65,7 @@ public class DriverAppInfoEntity extends  IdEntity{
     }
 
 
-    @Column(name = "netType")
+    @Column(name = "net_type")
     public Integer getNetType() {
         return netType;
     }
@@ -75,7 +75,7 @@ public class DriverAppInfoEntity extends  IdEntity{
     }
 
 
-    @Column(name = "appVersion", length = 32)
+    @Column(name = "app_version", length = 32)
     public String getAppVersion() {
         return appVersion;
     }
@@ -85,7 +85,7 @@ public class DriverAppInfoEntity extends  IdEntity{
     }
 
 
-    @Column(name = "mapType")
+    @Column(name = "map_type")
     public Integer getMapType() {
         return mapType;
     }
@@ -115,7 +115,7 @@ public class DriverAppInfoEntity extends  IdEntity{
     }
 
 
-    @Column(name = "updateTime")
+    @Column(name = "update_time")
     public Long getUpdateTime() {
         return updateTime;
     }
@@ -129,9 +129,9 @@ public class DriverAppInfoEntity extends  IdEntity{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        DriverAppInfoEntity that = (DriverAppInfoEntity) o;
+        DriverAppEntity that = (DriverAppEntity) o;
 
-        if (id != that.id) return false;
+        if (id != null ? !id.equals(that.id) : that.id != null) return false;
         if (companyId != null ? !companyId.equals(that.companyId) : that.companyId != null) return false;
         if (address != null ? !address.equals(that.address) : that.address != null) return false;
         if (licenseId != null ? !licenseId.equals(that.licenseId) : that.licenseId != null) return false;
@@ -148,7 +148,7 @@ public class DriverAppInfoEntity extends  IdEntity{
 
     @Override
     public int hashCode() {
-        int result = id;
+        int result = id != null ? id.hashCode() : 0;
         result = 31 * result + (companyId != null ? companyId.hashCode() : 0);
         result = 31 * result + (address != null ? address.hashCode() : 0);
         result = 31 * result + (licenseId != null ? licenseId.hashCode() : 0);

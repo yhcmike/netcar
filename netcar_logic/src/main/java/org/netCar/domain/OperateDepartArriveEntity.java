@@ -1,18 +1,18 @@
 package org.netCar.domain;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
 
 /**
- * Created by ffd on 2017/4/17.
+ * Created by ffd on 2017/4/19.
  */
 @Entity
-@Table(name = "operatedepart")
-public class OperateDepartEntity extends  IdEntity{
+@javax.persistence.Table(name = "operate_depart_arrive")
+public class OperateDepartArriveEntity  extends IdEntity{
 
     private String companyId;
 
 
-    @Column(name = "companyId", length = 32)
+    @javax.persistence.Column(name = "company_id", length = 32)
     public String getCompanyId() {
         return companyId;
     }
@@ -24,7 +24,7 @@ public class OperateDepartEntity extends  IdEntity{
     private String orderId;
 
 
-    @Column(name = "orderId", length = 64)
+    @javax.persistence.Column(name = "order_id", length = 64)
     public String getOrderId() {
         return orderId;
     }
@@ -36,7 +36,7 @@ public class OperateDepartEntity extends  IdEntity{
     private Integer onArea;
 
 
-    @Column(name = "onArea")
+    @javax.persistence.Column(name = "on_area")
     public Integer getOnArea() {
         return onArea;
     }
@@ -48,7 +48,7 @@ public class OperateDepartEntity extends  IdEntity{
     private String driverName;
 
 
-    @Column(name = "driverName", length = 64)
+    @javax.persistence.Column(name = "driver_name", length = 64)
     public String getDriverName() {
         return driverName;
     }
@@ -60,7 +60,7 @@ public class OperateDepartEntity extends  IdEntity{
     private String licenseId;
 
 
-    @Column(name = "licenseId", length = 32)
+    @javax.persistence.Column(name = "license_id", length = 32)
     public String getLicenseId() {
         return licenseId;
     }
@@ -72,7 +72,7 @@ public class OperateDepartEntity extends  IdEntity{
     private String fareType;
 
 
-    @Column(name = "fareType", length = 16)
+    @javax.persistence.Column(name = "fare_type", length = 16)
     public String getFareType() {
         return fareType;
     }
@@ -84,7 +84,7 @@ public class OperateDepartEntity extends  IdEntity{
     private String vehicleNo;
 
 
-    @Column(name = "vehicleNo", length = 32)
+    @javax.persistence.Column(name = "vehicle_no", length = 32)
     public String getVehicleNo() {
         return vehicleNo;
     }
@@ -96,7 +96,7 @@ public class OperateDepartEntity extends  IdEntity{
     private Long bookDepTime;
 
 
-    @Column(name = "bookDepTime")
+    @javax.persistence.Column(name = "book_dep_time")
     public Long getBookDepTime() {
         return bookDepTime;
     }
@@ -108,7 +108,7 @@ public class OperateDepartEntity extends  IdEntity{
     private Long waitTime;
 
 
-    @Column(name = "waitTime")
+    @javax.persistence.Column(name = "wait_time")
     public Long getWaitTime() {
         return waitTime;
     }
@@ -120,7 +120,7 @@ public class OperateDepartEntity extends  IdEntity{
     private String depLongitude;
 
 
-    @Column(name = "depLongitude", length = 10)
+    @javax.persistence.Column(name = "dep_longitude", length = 10)
     public String getDepLongitude() {
         return depLongitude;
     }
@@ -132,7 +132,7 @@ public class OperateDepartEntity extends  IdEntity{
     private String depLatitude;
 
 
-    @Column(name = "depLatitude", length = 10)
+    @javax.persistence.Column(name = "dep_latitude", length = 10)
     public String getDepLatitude() {
         return depLatitude;
     }
@@ -144,7 +144,7 @@ public class OperateDepartEntity extends  IdEntity{
     private String depArea;
 
 
-    @Column(name = "depArea", length = 128)
+    @javax.persistence.Column(name = "dep_area", length = 128)
     public String getDepArea() {
         return depArea;
     }
@@ -156,7 +156,7 @@ public class OperateDepartEntity extends  IdEntity{
     private Long depTime;
 
 
-    @Column(name = "depTime")
+    @javax.persistence.Column(name = "dep_time")
     public Long getDepTime() {
         return depTime;
     }
@@ -168,7 +168,7 @@ public class OperateDepartEntity extends  IdEntity{
     private Integer encrypt;
 
 
-    @Column(name = "encrypt")
+    @javax.persistence.Column(name = "encrypt")
     public Integer getEncrypt() {
         return encrypt;
     }
@@ -180,7 +180,7 @@ public class OperateDepartEntity extends  IdEntity{
     private Integer destLongitude;
 
 
-    @Column(name = "destLongitude")
+    @javax.persistence.Column(name = "dest_longitude")
     public Integer getDestLongitude() {
         return destLongitude;
     }
@@ -192,7 +192,7 @@ public class OperateDepartEntity extends  IdEntity{
     private Integer destLatitude;
 
 
-    @Column(name = "destLatitude")
+    @javax.persistence.Column(name = "dest_latitude")
     public Integer getDestLatitude() {
         return destLatitude;
     }
@@ -204,7 +204,7 @@ public class OperateDepartEntity extends  IdEntity{
     private String destArea;
 
 
-    @Column(name = "destArea", length = 128)
+    @javax.persistence.Column(name = "dest_area", length = 128)
     public String getDestArea() {
         return destArea;
     }
@@ -216,7 +216,7 @@ public class OperateDepartEntity extends  IdEntity{
     private Long destTime;
 
 
-    @Column(name = "destTime")
+    @javax.persistence.Column(name = "dest_time")
     public Long getDestTime() {
         return destTime;
     }
@@ -228,7 +228,7 @@ public class OperateDepartEntity extends  IdEntity{
     private String bookModel;
 
 
-    @Column(name = "bookModel", length = 64)
+    @javax.persistence.Column(name = "book_model", length = 64)
     public String getBookModel() {
         return bookModel;
     }
@@ -240,7 +240,7 @@ public class OperateDepartEntity extends  IdEntity{
     private String model;
 
 
-    @Column(name = "model", length = 64)
+    @javax.persistence.Column(name = "model", length = 64)
     public String getModel() {
         return model;
     }
@@ -252,7 +252,7 @@ public class OperateDepartEntity extends  IdEntity{
     private Integer driveMile;
 
 
-    @Column(name = "driveMile")
+    @javax.persistence.Column(name = "drive_mile")
     public Integer getDriveMile() {
         return driveMile;
     }
@@ -264,7 +264,7 @@ public class OperateDepartEntity extends  IdEntity{
     private Integer driveTime;
 
 
-    @Column(name = "driveTime")
+    @javax.persistence.Column(name = "drive_time")
     public Integer getDriveTime() {
         return driveTime;
     }
@@ -276,7 +276,7 @@ public class OperateDepartEntity extends  IdEntity{
     private Integer waitMile;
 
 
-    @Column(name = "waitMile")
+    @javax.persistence.Column(name = "wait_mile")
     public Integer getWaitMile() {
         return waitMile;
     }
@@ -288,7 +288,7 @@ public class OperateDepartEntity extends  IdEntity{
     private Integer factPrice;
 
 
-    @Column(name = "factPrice")
+    @javax.persistence.Column(name = "fact_price")
     public Integer getFactPrice() {
         return factPrice;
     }
@@ -300,7 +300,7 @@ public class OperateDepartEntity extends  IdEntity{
     private Integer price;
 
 
-    @Column(name = "price")
+    @javax.persistence.Column(name = "price")
     public Integer getPrice() {
         return price;
     }
@@ -312,7 +312,7 @@ public class OperateDepartEntity extends  IdEntity{
     private Integer cashPrice;
 
 
-    @Column(name = "cashPrice")
+    @javax.persistence.Column(name = "cash_price")
     public Integer getCashPrice() {
         return cashPrice;
     }
@@ -324,7 +324,7 @@ public class OperateDepartEntity extends  IdEntity{
     private String lineName;
 
 
-    @Column(name = "lineName", length = 64)
+    @javax.persistence.Column(name = "line_name", length = 64)
     public String getLineName() {
         return lineName;
     }
@@ -336,7 +336,7 @@ public class OperateDepartEntity extends  IdEntity{
     private Integer linePrice;
 
 
-    @Column(name = "linePrice")
+    @javax.persistence.Column(name = "line_price")
     public Integer getLinePrice() {
         return linePrice;
     }
@@ -348,7 +348,7 @@ public class OperateDepartEntity extends  IdEntity{
     private String posName;
 
 
-    @Column(name = "posName", length = 64)
+    @javax.persistence.Column(name = "pos_name", length = 64)
     public String getPosName() {
         return posName;
     }
@@ -360,7 +360,7 @@ public class OperateDepartEntity extends  IdEntity{
     private Integer posPrice;
 
 
-    @Column(name = "posPrice")
+    @javax.persistence.Column(name = "pos_price")
     public Integer getPosPrice() {
         return posPrice;
     }
@@ -372,7 +372,7 @@ public class OperateDepartEntity extends  IdEntity{
     private Integer benfitPrice;
 
 
-    @Column(name = "benfitPrice")
+    @javax.persistence.Column(name = "benfit_price")
     public Integer getBenfitPrice() {
         return benfitPrice;
     }
@@ -384,7 +384,7 @@ public class OperateDepartEntity extends  IdEntity{
     private Integer bookTip;
 
 
-    @Column(name = "bookTip")
+    @javax.persistence.Column(name = "book_tip")
     public Integer getBookTip() {
         return bookTip;
     }
@@ -396,7 +396,7 @@ public class OperateDepartEntity extends  IdEntity{
     private Integer passengerTip;
 
 
-    @Column(name = "passengerTip")
+    @javax.persistence.Column(name = "passenger_tip")
     public Integer getPassengerTip() {
         return passengerTip;
     }
@@ -408,7 +408,7 @@ public class OperateDepartEntity extends  IdEntity{
     private Integer peakUpPrice;
 
 
-    @Column(name = "peakUpPrice")
+    @javax.persistence.Column(name = "peak_up_price")
     public Integer getPeakUpPrice() {
         return peakUpPrice;
     }
@@ -420,7 +420,7 @@ public class OperateDepartEntity extends  IdEntity{
     private Integer nightUpPrice;
 
 
-    @Column(name = "nightUpPrice")
+    @javax.persistence.Column(name = "night_up_price")
     public Integer getNightUpPrice() {
         return nightUpPrice;
     }
@@ -432,7 +432,7 @@ public class OperateDepartEntity extends  IdEntity{
     private Integer farUpPrice;
 
 
-    @Column(name = "farUpPrice")
+    @javax.persistence.Column(name = "far_up_price")
     public Integer getFarUpPrice() {
         return farUpPrice;
     }
@@ -444,7 +444,7 @@ public class OperateDepartEntity extends  IdEntity{
     private Integer otherUpPrice;
 
 
-    @Column(name = "otherUpPrice")
+    @javax.persistence.Column(name = "other_up_price")
     public Integer getOtherUpPrice() {
         return otherUpPrice;
     }
@@ -456,7 +456,7 @@ public class OperateDepartEntity extends  IdEntity{
     private String payState;
 
 
-    @Column(name = "payState", length = 32)
+    @javax.persistence.Column(name = "pay_state", length = 32)
     public String getPayState() {
         return payState;
     }
@@ -468,7 +468,7 @@ public class OperateDepartEntity extends  IdEntity{
     private Long payTime;
 
 
-    @Column(name = "payTime")
+    @javax.persistence.Column(name = "pay_time")
     public Long getPayTime() {
         return payTime;
     }
@@ -480,7 +480,7 @@ public class OperateDepartEntity extends  IdEntity{
     private Long orderMatchTime;
 
 
-    @Column(name = "orderMatchTime")
+    @javax.persistence.Column(name = "order_match_time")
     public Long getOrderMatchTime() {
         return orderMatchTime;
     }
@@ -492,7 +492,7 @@ public class OperateDepartEntity extends  IdEntity{
     private String invoiceStatus;
 
 
-    @Column(name = "invoiceStatus", length = 32)
+    @javax.persistence.Column(name = "invoice_status", length = 32)
     public String getInvoiceStatus() {
         return invoiceStatus;
     }
@@ -504,7 +504,7 @@ public class OperateDepartEntity extends  IdEntity{
     private Integer isBeyondOperate;
 
 
-    @Column(name = "isBeyondOperate")
+    @javax.persistence.Column(name = "is_beyond_operate")
     public Integer getIsBeyondOperate() {
         return isBeyondOperate;
     }
@@ -518,9 +518,9 @@ public class OperateDepartEntity extends  IdEntity{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        OperateDepartEntity that = (OperateDepartEntity) o;
+        OperateDepartArriveEntity that = (OperateDepartArriveEntity) o;
 
-        if (id != that.id) return false;
+        if (id != null ? !id.equals(that.id) : that.id != null) return false;
         if (companyId != null ? !companyId.equals(that.companyId) : that.companyId != null) return false;
         if (orderId != null ? !orderId.equals(that.orderId) : that.orderId != null) return false;
         if (onArea != null ? !onArea.equals(that.onArea) : that.onArea != null) return false;
@@ -573,7 +573,7 @@ public class OperateDepartEntity extends  IdEntity{
 
     @Override
     public int hashCode() {
-        int result = id;
+        int result = id != null ? id.hashCode() : 0;
         result = 31 * result + (companyId != null ? companyId.hashCode() : 0);
         result = 31 * result + (orderId != null ? orderId.hashCode() : 0);
         result = 31 * result + (onArea != null ? onArea.hashCode() : 0);

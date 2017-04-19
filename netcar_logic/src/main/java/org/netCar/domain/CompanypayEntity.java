@@ -1,18 +1,21 @@
 package org.netCar.domain;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 /**
- * Created by ffd on 2017/4/17.
+ * Created by ffd on 2017/4/19.
  */
 @Entity
-@Table(name = "companypay")
-public class CompanyPayEntity extends  IdEntity {
+@Table(name = "company_pay")
+public class CompanyPayEntity extends IdEntity{
+    private Integer id;
     private String companyId;
     private String payName;
     private String payId;
     private String payType;
-    private String payScop;
+    private String payScope;
     private String prepareBank;
     private String countDate;
     private Integer state;
@@ -20,7 +23,9 @@ public class CompanyPayEntity extends  IdEntity {
     private Long updateTime;
 
 
-    @Column(name = "companyId", length = 32)
+
+
+    @Column(name = "company_id", length = 32)
     public String getCompanyId() {
         return companyId;
     }
@@ -30,7 +35,7 @@ public class CompanyPayEntity extends  IdEntity {
     }
 
 
-    @Column(name = "payName", length = 256)
+    @Column(name = "pay_name", length = 256)
     public String getPayName() {
         return payName;
     }
@@ -40,7 +45,7 @@ public class CompanyPayEntity extends  IdEntity {
     }
 
 
-    @Column(name = "payId", length = 32)
+    @Column(name = "pay_id", length = 32)
     public String getPayId() {
         return payId;
     }
@@ -50,7 +55,7 @@ public class CompanyPayEntity extends  IdEntity {
     }
 
 
-    @Column(name = "payType", length = 64)
+    @Column(name = "pay_type", length = 64)
     public String getPayType() {
         return payType;
     }
@@ -60,17 +65,17 @@ public class CompanyPayEntity extends  IdEntity {
     }
 
 
-    @Column(name = "payScop", length = 64)
-    public String getPayScop() {
-        return payScop;
+    @Column(name = "pay_scope", length = 64)
+    public String getPayScope() {
+        return payScope;
     }
 
-    public void setPayScop(String payScop) {
-        this.payScop = payScop;
+    public void setPayScope(String payScope) {
+        this.payScope = payScope;
     }
 
 
-    @Column(name = "prepareBank", length = 256)
+    @Column(name = "prepare_bank", length = 256)
     public String getPrepareBank() {
         return prepareBank;
     }
@@ -80,7 +85,7 @@ public class CompanyPayEntity extends  IdEntity {
     }
 
 
-    @Column(name = "countDate", length = 10)
+    @Column(name = "count_date", length = 10)
     public String getCountDate() {
         return countDate;
     }
@@ -110,7 +115,7 @@ public class CompanyPayEntity extends  IdEntity {
     }
 
 
-    @Column(name = "updateTime")
+    @Column(name = "update_time")
     public Long getUpdateTime() {
         return updateTime;
     }
@@ -126,12 +131,12 @@ public class CompanyPayEntity extends  IdEntity {
 
         CompanyPayEntity that = (CompanyPayEntity) o;
 
-        if (id != that.id) return false;
+        if (id != null ? !id.equals(that.id) : that.id != null) return false;
         if (companyId != null ? !companyId.equals(that.companyId) : that.companyId != null) return false;
         if (payName != null ? !payName.equals(that.payName) : that.payName != null) return false;
         if (payId != null ? !payId.equals(that.payId) : that.payId != null) return false;
         if (payType != null ? !payType.equals(that.payType) : that.payType != null) return false;
-        if (payScop != null ? !payScop.equals(that.payScop) : that.payScop != null) return false;
+        if (payScope != null ? !payScope.equals(that.payScope) : that.payScope != null) return false;
         if (prepareBank != null ? !prepareBank.equals(that.prepareBank) : that.prepareBank != null) return false;
         if (countDate != null ? !countDate.equals(that.countDate) : that.countDate != null) return false;
         if (state != null ? !state.equals(that.state) : that.state != null) return false;
@@ -143,12 +148,12 @@ public class CompanyPayEntity extends  IdEntity {
 
     @Override
     public int hashCode() {
-        int result = id;
+        int result = id != null ? id.hashCode() : 0;
         result = 31 * result + (companyId != null ? companyId.hashCode() : 0);
         result = 31 * result + (payName != null ? payName.hashCode() : 0);
         result = 31 * result + (payId != null ? payId.hashCode() : 0);
         result = 31 * result + (payType != null ? payType.hashCode() : 0);
-        result = 31 * result + (payScop != null ? payScop.hashCode() : 0);
+        result = 31 * result + (payScope != null ? payScope.hashCode() : 0);
         result = 31 * result + (prepareBank != null ? prepareBank.hashCode() : 0);
         result = 31 * result + (countDate != null ? countDate.hashCode() : 0);
         result = 31 * result + (state != null ? state.hashCode() : 0);

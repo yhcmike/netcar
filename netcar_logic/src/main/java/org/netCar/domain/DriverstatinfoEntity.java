@@ -1,14 +1,16 @@
 package org.netCar.domain;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 /**
- * Created by ffd on 2017/4/17.
+ * Created by ffd on 2017/4/19.
  */
 @Entity
-@Table(name = "driverstatinfo")
-public class DriverstatinfoEntity  extends  IdEntity{
-
+@Table(name = "driver_stat_info")
+public class DriverStatInfoEntity  extends IdEntity{
+    private Integer id;
     private String companyId;
     private Integer address;
     private String licenseId;
@@ -20,7 +22,9 @@ public class DriverstatinfoEntity  extends  IdEntity{
     private Long updateTime;
 
 
-    @Column(name = "companyId", length = 32)
+
+
+    @Column(name = "company_id", length = 32)
     public String getCompanyId() {
         return companyId;
     }
@@ -40,7 +44,7 @@ public class DriverstatinfoEntity  extends  IdEntity{
     }
 
 
-    @Column(name = "licenseId", length = 32)
+    @Column(name = "license_id", length = 32)
     public String getLicenseId() {
         return licenseId;
     }
@@ -60,7 +64,7 @@ public class DriverstatinfoEntity  extends  IdEntity{
     }
 
 
-    @Column(name = "orderCount", length = 10)
+    @Column(name = "order_count", length = 10)
     public String getOrderCount() {
         return orderCount;
     }
@@ -70,7 +74,7 @@ public class DriverstatinfoEntity  extends  IdEntity{
     }
 
 
-    @Column(name = "trafficViolationCount", length = 32)
+    @Column(name = "traffic_violation_count", length = 32)
     public String getTrafficViolationCount() {
         return trafficViolationCount;
     }
@@ -80,7 +84,7 @@ public class DriverstatinfoEntity  extends  IdEntity{
     }
 
 
-    @Column(name = "complainedCount", length = 32)
+    @Column(name = "complained_count", length = 32)
     public String getComplainedCount() {
         return complainedCount;
     }
@@ -100,7 +104,7 @@ public class DriverstatinfoEntity  extends  IdEntity{
     }
 
 
-    @Column(name = "updateTime")
+    @Column(name = "update_time")
     public Long getUpdateTime() {
         return updateTime;
     }
@@ -114,9 +118,9 @@ public class DriverstatinfoEntity  extends  IdEntity{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        DriverstatinfoEntity that = (DriverstatinfoEntity) o;
+        DriverStatInfoEntity that = (DriverStatInfoEntity) o;
 
-        if (id != that.id) return false;
+        if (id != null ? !id.equals(that.id) : that.id != null) return false;
         if (companyId != null ? !companyId.equals(that.companyId) : that.companyId != null) return false;
         if (address != null ? !address.equals(that.address) : that.address != null) return false;
         if (licenseId != null ? !licenseId.equals(that.licenseId) : that.licenseId != null) return false;
@@ -134,7 +138,7 @@ public class DriverstatinfoEntity  extends  IdEntity{
 
     @Override
     public int hashCode() {
-        int result = id;
+        int result = id != null ? id.hashCode() : 0;
         result = 31 * result + (companyId != null ? companyId.hashCode() : 0);
         result = 31 * result + (address != null ? address.hashCode() : 0);
         result = 31 * result + (licenseId != null ? licenseId.hashCode() : 0);

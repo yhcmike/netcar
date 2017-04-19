@@ -1,14 +1,16 @@
 package org.netCar.domain;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 /**
- * Created by ffd on 2017/4/17.
+ * Created by ffd on 2017/4/19.
  */
 @Entity
-@Table(name = "driverpunish")
-public class DriverpunishEntity  extends  IdEntity{
-
+@Table(name = "driver_punish")
+public class DriverPunishEntity extends IdEntity{
+    private Integer id;
     private String companyId;
     private String licenseId;
     private Long punishTime;
@@ -16,7 +18,9 @@ public class DriverpunishEntity  extends  IdEntity{
     private String punishResult;
 
 
-    @Column(name = "companyId", length = 32)
+
+
+    @Column(name = "company_id", length = 32)
     public String getCompanyId() {
         return companyId;
     }
@@ -26,7 +30,7 @@ public class DriverpunishEntity  extends  IdEntity{
     }
 
 
-    @Column(name = "licenseId", length = 32)
+    @Column(name = "license_id", length = 32)
     public String getLicenseId() {
         return licenseId;
     }
@@ -36,7 +40,7 @@ public class DriverpunishEntity  extends  IdEntity{
     }
 
 
-    @Column(name = "punishTime")
+    @Column(name = "punish_time")
     public Long getPunishTime() {
         return punishTime;
     }
@@ -46,7 +50,7 @@ public class DriverpunishEntity  extends  IdEntity{
     }
 
 
-    @Column(name = "punishReason", length = 128)
+    @Column(name = "punish_reason", length = 128)
     public String getPunishReason() {
         return punishReason;
     }
@@ -56,7 +60,7 @@ public class DriverpunishEntity  extends  IdEntity{
     }
 
 
-    @Column(name = "punishResult", length = 128)
+    @Column(name = "punish_result", length = 128)
     public String getPunishResult() {
         return punishResult;
     }
@@ -70,9 +74,9 @@ public class DriverpunishEntity  extends  IdEntity{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        DriverpunishEntity that = (DriverpunishEntity) o;
+        DriverPunishEntity that = (DriverPunishEntity) o;
 
-        if (id != that.id) return false;
+        if (id != null ? !id.equals(that.id) : that.id != null) return false;
         if (companyId != null ? !companyId.equals(that.companyId) : that.companyId != null) return false;
         if (licenseId != null ? !licenseId.equals(that.licenseId) : that.licenseId != null) return false;
         if (punishTime != null ? !punishTime.equals(that.punishTime) : that.punishTime != null) return false;
@@ -84,7 +88,7 @@ public class DriverpunishEntity  extends  IdEntity{
 
     @Override
     public int hashCode() {
-        int result = id;
+        int result = id != null ? id.hashCode() : 0;
         result = 31 * result + (companyId != null ? companyId.hashCode() : 0);
         result = 31 * result + (licenseId != null ? licenseId.hashCode() : 0);
         result = 31 * result + (punishTime != null ? punishTime.hashCode() : 0);

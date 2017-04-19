@@ -1,14 +1,16 @@
 package org.netCar.domain;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 /**
- * Created by ffd on 2017/4/17.
+ * Created by ffd on 2017/4/19.
  */
 @Entity
-@Table(name = "driverreputation")
-public class DriverreputationEntity  extends  IdEntity{
-
+@Table(name = "driver_reputation")
+public class DriverReputationEntity  extends IdEntity{
+    private Integer id;
     private String companyId;
     private String licenseId;
     private Integer level;
@@ -16,7 +18,9 @@ public class DriverreputationEntity  extends  IdEntity{
     private String testDepartment;
 
 
-    @Column(name = "companyId", length = 32)
+
+
+    @Column(name = "company_id", length = 32)
     public String getCompanyId() {
         return companyId;
     }
@@ -26,7 +30,7 @@ public class DriverreputationEntity  extends  IdEntity{
     }
 
 
-    @Column(name = "licenseId", length = 32)
+    @Column(name = "license_id", length = 32)
     public String getLicenseId() {
         return licenseId;
     }
@@ -46,7 +50,7 @@ public class DriverreputationEntity  extends  IdEntity{
     }
 
 
-    @Column(name = "testDate")
+    @Column(name = "test_date")
     public Integer getTestDate() {
         return testDate;
     }
@@ -56,7 +60,7 @@ public class DriverreputationEntity  extends  IdEntity{
     }
 
 
-    @Column(name = "testDepartment", length = 128)
+    @Column(name = "test_department", length = 128)
     public String getTestDepartment() {
         return testDepartment;
     }
@@ -70,9 +74,9 @@ public class DriverreputationEntity  extends  IdEntity{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        DriverreputationEntity that = (DriverreputationEntity) o;
+        DriverReputationEntity that = (DriverReputationEntity) o;
 
-        if (id != that.id) return false;
+        if (id != null ? !id.equals(that.id) : that.id != null) return false;
         if (companyId != null ? !companyId.equals(that.companyId) : that.companyId != null) return false;
         if (licenseId != null ? !licenseId.equals(that.licenseId) : that.licenseId != null) return false;
         if (level != null ? !level.equals(that.level) : that.level != null) return false;
@@ -85,7 +89,7 @@ public class DriverreputationEntity  extends  IdEntity{
 
     @Override
     public int hashCode() {
-        int result = id;
+        int result = id != null ? id.hashCode() : 0;
         result = 31 * result + (companyId != null ? companyId.hashCode() : 0);
         result = 31 * result + (licenseId != null ? licenseId.hashCode() : 0);
         result = 31 * result + (level != null ? level.hashCode() : 0);

@@ -1,15 +1,16 @@
 package org.netCar.domain;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 /**
- * Created by lyq on 2017/4/17.
- * 车辆保险信息
+ * Created by ffd on 2017/4/19.
  */
 @Entity
-@Table(name = "vehicleinsurance")
-public class VehicleInsuranceEntity extends  IdEntity{
-
+@Table(name = "vehicle_insurance")
+public class VehicleInsuranceEntity  extends IdEntity{
+    private Integer id;
     private String companyId;
     private String vehicleNo;
     private String insurCom;
@@ -21,7 +22,10 @@ public class VehicleInsuranceEntity extends  IdEntity{
     private Integer flag;
     private Long updateTime;
 
-    @Column(name = "companyId", length = 32)
+
+
+
+    @Column(name = "company_id", length = 32)
     public String getCompanyId() {
         return companyId;
     }
@@ -31,7 +35,7 @@ public class VehicleInsuranceEntity extends  IdEntity{
     }
 
 
-    @Column(name = "vehicleNo", length = 32)
+    @Column(name = "vehicle_no", length = 32)
     public String getVehicleNo() {
         return vehicleNo;
     }
@@ -41,7 +45,7 @@ public class VehicleInsuranceEntity extends  IdEntity{
     }
 
 
-    @Column(name = "insurCom", length = 64)
+    @Column(name = "insur_com", length = 64)
     public String getInsurCom() {
         return insurCom;
     }
@@ -51,7 +55,7 @@ public class VehicleInsuranceEntity extends  IdEntity{
     }
 
 
-    @Column(name = "insurNum", length = 64)
+    @Column(name = "insur_num", length = 64)
     public String getInsurNum() {
         return insurNum;
     }
@@ -61,7 +65,7 @@ public class VehicleInsuranceEntity extends  IdEntity{
     }
 
 
-    @Column(name = "insurType", length = 32)
+    @Column(name = "insur_type", length = 32)
     public String getInsurType() {
         return insurType;
     }
@@ -71,7 +75,7 @@ public class VehicleInsuranceEntity extends  IdEntity{
     }
 
 
-    @Column(name = "insurCount")
+    @Column(name = "insur_count")
     public Integer getInsurCount() {
         return insurCount;
     }
@@ -81,7 +85,7 @@ public class VehicleInsuranceEntity extends  IdEntity{
     }
 
 
-    @Column(name = "insurEff")
+    @Column(name = "insur_eff")
     public Integer getInsurEff() {
         return insurEff;
     }
@@ -91,7 +95,7 @@ public class VehicleInsuranceEntity extends  IdEntity{
     }
 
 
-    @Column(name = "insurExp")
+    @Column(name = "insur_exp")
     public Integer getInsurExp() {
         return insurExp;
     }
@@ -111,7 +115,7 @@ public class VehicleInsuranceEntity extends  IdEntity{
     }
 
 
-    @Column(name = "updateTime")
+    @Column(name = "update_time")
     public Long getUpdateTime() {
         return updateTime;
     }
@@ -127,7 +131,7 @@ public class VehicleInsuranceEntity extends  IdEntity{
 
         VehicleInsuranceEntity that = (VehicleInsuranceEntity) o;
 
-        if (id != that.id) return false;
+        if (id != null ? !id.equals(that.id) : that.id != null) return false;
         if (companyId != null ? !companyId.equals(that.companyId) : that.companyId != null) return false;
         if (vehicleNo != null ? !vehicleNo.equals(that.vehicleNo) : that.vehicleNo != null) return false;
         if (insurCom != null ? !insurCom.equals(that.insurCom) : that.insurCom != null) return false;
@@ -144,7 +148,7 @@ public class VehicleInsuranceEntity extends  IdEntity{
 
     @Override
     public int hashCode() {
-        int result = id;
+        int result = id != null ? id.hashCode() : 0;
         result = 31 * result + (companyId != null ? companyId.hashCode() : 0);
         result = 31 * result + (vehicleNo != null ? vehicleNo.hashCode() : 0);
         result = 31 * result + (insurCom != null ? insurCom.hashCode() : 0);

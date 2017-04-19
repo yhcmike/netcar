@@ -1,18 +1,16 @@
 package org.netCar.domain;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 /**
- * Created by ffd on 2017/4/17.
+ * Created by ffd on 2017/4/19.
  */
 @Entity
-@Table(name = "dirvermileage")
-public class DirverMileageEntity extends  IdEntity{
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
+@Table(name = "vehicle_total_mile")
+public class VehicleTotalMileEntity  extends IdEntity{
+    private Integer id;
     private String companyId;
     private Integer address;
     private String vehicleNo;
@@ -22,7 +20,8 @@ public class DirverMileageEntity extends  IdEntity{
 
 
 
-    @Column(name = "companyId", length = 32)
+
+    @Column(name = "company_id", length = 32)
     public String getCompanyId() {
         return companyId;
     }
@@ -42,7 +41,7 @@ public class DirverMileageEntity extends  IdEntity{
     }
 
 
-    @Column(name = "vehicleNo", length = 32)
+    @Column(name = "vehicle_no", length = 32)
     public String getVehicleNo() {
         return vehicleNo;
     }
@@ -52,7 +51,7 @@ public class DirverMileageEntity extends  IdEntity{
     }
 
 
-    @Column(name = "totalMile", length = 64)
+    @Column(name = "total_mile", length = 64)
     public String getTotalMile() {
         return totalMile;
     }
@@ -72,7 +71,7 @@ public class DirverMileageEntity extends  IdEntity{
     }
 
 
-    @Column(name = "updateTime")
+    @Column(name = "update_time")
     public Long getUpdateTime() {
         return updateTime;
     }
@@ -86,9 +85,9 @@ public class DirverMileageEntity extends  IdEntity{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        DirverMileageEntity that = (DirverMileageEntity) o;
+        VehicleTotalMileEntity that = (VehicleTotalMileEntity) o;
 
-        if (id != that.id) return false;
+        if (id != null ? !id.equals(that.id) : that.id != null) return false;
         if (companyId != null ? !companyId.equals(that.companyId) : that.companyId != null) return false;
         if (address != null ? !address.equals(that.address) : that.address != null) return false;
         if (vehicleNo != null ? !vehicleNo.equals(that.vehicleNo) : that.vehicleNo != null) return false;
@@ -101,7 +100,7 @@ public class DirverMileageEntity extends  IdEntity{
 
     @Override
     public int hashCode() {
-        int result = id;
+        int result = id != null ? id.hashCode() : 0;
         result = 31 * result + (companyId != null ? companyId.hashCode() : 0);
         result = 31 * result + (address != null ? address.hashCode() : 0);
         result = 31 * result + (vehicleNo != null ? vehicleNo.hashCode() : 0);

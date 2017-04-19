@@ -1,18 +1,18 @@
 package org.netCar.domain;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
 
 /**
- * Created by ffd on 2017/4/17.
+ * Created by ffd on 2017/4/19.
  */
 @Entity
-@Table(name = "companyprice")
-public class CompanyPriceEntity extends  IdEntity{
+@javax.persistence.Table(name = "company_fare")
+public class CompanyFareEntity extends IdEntity{
 
     private String companyId;
 
 
-    @Column(name = "companyId", length = 32)
+    @javax.persistence.Column(name = "company_id", length = 32)
     public String getCompanyId() {
         return companyId;
     }
@@ -24,7 +24,7 @@ public class CompanyPriceEntity extends  IdEntity{
     private Integer address;
 
 
-    @Column(name = "address")
+    @javax.persistence.Column(name = "address")
     public Integer getAddress() {
         return address;
     }
@@ -36,7 +36,7 @@ public class CompanyPriceEntity extends  IdEntity{
     private String fareType;
 
 
-    @Column(name = "fareType", length = 16)
+    @javax.persistence.Column(name = "fare_type", length = 16)
     public String getFareType() {
         return fareType;
     }
@@ -48,7 +48,7 @@ public class CompanyPriceEntity extends  IdEntity{
     private String fareTypeNote;
 
 
-    @Column(name = "fareTypeNote", length = 128)
+    @javax.persistence.Column(name = "fare_type_note", length = 128)
     public String getFareTypeNote() {
         return fareTypeNote;
     }
@@ -60,7 +60,7 @@ public class CompanyPriceEntity extends  IdEntity{
     private Long fareValidOn;
 
 
-    @Column(name = "fareValidOn")
+    @javax.persistence.Column(name = "fare_valid_on")
     public Long getFareValidOn() {
         return fareValidOn;
     }
@@ -72,7 +72,7 @@ public class CompanyPriceEntity extends  IdEntity{
     private Long fareValidOff;
 
 
-    @Column(name = "fareValidOff")
+    @javax.persistence.Column(name = "fare_valid_off")
     public Long getFareValidOff() {
         return fareValidOff;
     }
@@ -84,7 +84,7 @@ public class CompanyPriceEntity extends  IdEntity{
     private Integer startFare;
 
 
-    @Column(name = "startFare")
+    @javax.persistence.Column(name = "start_fare")
     public Integer getStartFare() {
         return startFare;
     }
@@ -96,7 +96,7 @@ public class CompanyPriceEntity extends  IdEntity{
     private Integer startMile;
 
 
-    @Column(name = "startMile")
+    @javax.persistence.Column(name = "start_mile")
     public Integer getStartMile() {
         return startMile;
     }
@@ -108,7 +108,7 @@ public class CompanyPriceEntity extends  IdEntity{
     private Integer unitPricePerMile;
 
 
-    @Column(name = "unitPricePerMile")
+    @javax.persistence.Column(name = "unit_price_per_mile")
     public Integer getUnitPricePerMile() {
         return unitPricePerMile;
     }
@@ -120,7 +120,7 @@ public class CompanyPriceEntity extends  IdEntity{
     private Integer unitPricePerMinute;
 
 
-    @Column(name = "unitPricePerMinute")
+    @javax.persistence.Column(name = "unit_price_per_minute")
     public Integer getUnitPricePerMinute() {
         return unitPricePerMinute;
     }
@@ -132,7 +132,7 @@ public class CompanyPriceEntity extends  IdEntity{
     private Integer upPrice;
 
 
-    @Column(name = "upPrice")
+    @javax.persistence.Column(name = "up_price")
     public Integer getUpPrice() {
         return upPrice;
     }
@@ -144,7 +144,7 @@ public class CompanyPriceEntity extends  IdEntity{
     private Integer upPriceStartMile;
 
 
-    @Column(name = "upPriceStartMile")
+    @javax.persistence.Column(name = "up_price_start_mile")
     public Integer getUpPriceStartMile() {
         return upPriceStartMile;
     }
@@ -156,7 +156,7 @@ public class CompanyPriceEntity extends  IdEntity{
     private String morningPeakTimeOn;
 
 
-    @Column(name = "morningPeakTimeOn", length = 8)
+    @javax.persistence.Column(name = "morning_peak_time_on", length = 8)
     public String getMorningPeakTimeOn() {
         return morningPeakTimeOn;
     }
@@ -168,7 +168,7 @@ public class CompanyPriceEntity extends  IdEntity{
     private String morningPeakTimeOff;
 
 
-    @Column(name = "morningPeakTimeOff", length = 8)
+    @javax.persistence.Column(name = "morning_peak_time_off", length = 8)
     public String getMorningPeakTimeOff() {
         return morningPeakTimeOff;
     }
@@ -180,7 +180,7 @@ public class CompanyPriceEntity extends  IdEntity{
     private String eveningPeakTimeOn;
 
 
-    @Column(name = "eveningPeakTimeOn", length = 8)
+    @javax.persistence.Column(name = "evening_peak_time_on", length = 8)
     public String getEveningPeakTimeOn() {
         return eveningPeakTimeOn;
     }
@@ -192,7 +192,7 @@ public class CompanyPriceEntity extends  IdEntity{
     private String eveningPeakTimeOff;
 
 
-    @Column(name = "eveningPeakTimeOff", length = 8)
+    @javax.persistence.Column(name = "evening_peak_time_off", length = 8)
     public String getEveningPeakTimeOff() {
         return eveningPeakTimeOff;
     }
@@ -204,7 +204,7 @@ public class CompanyPriceEntity extends  IdEntity{
     private String otherPeakTimeOn;
 
 
-    @Column(name = "otherPeakTimeOn", length = 8)
+    @javax.persistence.Column(name = "other_peak_time_on", length = 8)
     public String getOtherPeakTimeOn() {
         return otherPeakTimeOn;
     }
@@ -216,7 +216,7 @@ public class CompanyPriceEntity extends  IdEntity{
     private String otherPeakTimeOff;
 
 
-    @Column(name = "otherPeakTimeOff", length = 8)
+    @javax.persistence.Column(name = "other_peak_time_off", length = 8)
     public String getOtherPeakTimeOff() {
         return otherPeakTimeOff;
     }
@@ -228,7 +228,7 @@ public class CompanyPriceEntity extends  IdEntity{
     private Integer peakUnitPrice;
 
 
-    @Column(name = "peakUnitPrice")
+    @javax.persistence.Column(name = "peak_unit_price")
     public Integer getPeakUnitPrice() {
         return peakUnitPrice;
     }
@@ -240,7 +240,7 @@ public class CompanyPriceEntity extends  IdEntity{
     private Integer peakPriceStartMile;
 
 
-    @Column(name = "peakPriceStartMile")
+    @javax.persistence.Column(name = "peak_price_start_mile")
     public Integer getPeakPriceStartMile() {
         return peakPriceStartMile;
     }
@@ -252,7 +252,7 @@ public class CompanyPriceEntity extends  IdEntity{
     private Integer lowSpeedPricePerMinute;
 
 
-    @Column(name = "lowSpeedPricePerMinute")
+    @javax.persistence.Column(name = "low_speed_price_per_minute")
     public Integer getLowSpeedPricePerMinute() {
         return lowSpeedPricePerMinute;
     }
@@ -264,7 +264,7 @@ public class CompanyPriceEntity extends  IdEntity{
     private Integer nightPricePerMile;
 
 
-    @Column(name = "nightPricePerMile")
+    @javax.persistence.Column(name = "night_price_per_mile")
     public Integer getNightPricePerMile() {
         return nightPricePerMile;
     }
@@ -276,7 +276,7 @@ public class CompanyPriceEntity extends  IdEntity{
     private Integer nightPricePerMinute;
 
 
-    @Column(name = "nightPricePerMinute")
+    @javax.persistence.Column(name = "night_price_per_minute")
     public Integer getNightPricePerMinute() {
         return nightPricePerMinute;
     }
@@ -288,7 +288,7 @@ public class CompanyPriceEntity extends  IdEntity{
     private String otherPrice;
 
 
-    @Column(name = "otherPrice", length = 10)
+    @javax.persistence.Column(name = "other_price", length = 10)
     public String getOtherPrice() {
         return otherPrice;
     }
@@ -300,7 +300,7 @@ public class CompanyPriceEntity extends  IdEntity{
     private Integer state;
 
 
-    @Column(name = "state")
+    @javax.persistence.Column(name = "state")
     public Integer getState() {
         return state;
     }
@@ -312,18 +312,19 @@ public class CompanyPriceEntity extends  IdEntity{
     private Long updateTime;
 
 
-    @Column(name = "updateTime")
+    @javax.persistence.Column(name = "update_time")
     public Long getUpdateTime() {
         return updateTime;
     }
 
-
     public void setUpdateTime(Long updateTime) {
         this.updateTime = updateTime;
-    }    private Integer flag;
+    }
+
+    private Integer flag;
 
 
-    @Column(name = "flag")
+    @javax.persistence.Column(name = "flag")
     public Integer getFlag() {
         return flag;
     }
@@ -337,9 +338,9 @@ public class CompanyPriceEntity extends  IdEntity{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        CompanyPriceEntity that = (CompanyPriceEntity) o;
+        CompanyFareEntity that = (CompanyFareEntity) o;
 
-        if (id != that.id) return false;
+        if (id != null ? !id.equals(that.id) : that.id != null) return false;
         if (companyId != null ? !companyId.equals(that.companyId) : that.companyId != null) return false;
         if (address != null ? !address.equals(that.address) : that.address != null) return false;
         if (fareType != null ? !fareType.equals(that.fareType) : that.fareType != null) return false;
@@ -387,7 +388,7 @@ public class CompanyPriceEntity extends  IdEntity{
 
     @Override
     public int hashCode() {
-        int result = id;
+        int result = id != null ? id.hashCode() : 0;
         result = 31 * result + (companyId != null ? companyId.hashCode() : 0);
         result = 31 * result + (address != null ? address.hashCode() : 0);
         result = 31 * result + (fareType != null ? fareType.hashCode() : 0);

@@ -1,14 +1,16 @@
 package org.netCar.domain;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 /**
- * Created by ffd on 2017/4/17.
+ * Created by ffd on 2017/4/19.
  */
 @Entity
-@Table(name = "drivertraininfo")
-public class DrivertraininfoEntity  extends  IdEntity{
-
+@Table(name = "driver_educate")
+public class DriverEducateEntity extends IdEntity{
+    private Integer id;
     private String companyId;
     private Integer address;
     private String licenseId;
@@ -21,7 +23,9 @@ public class DrivertraininfoEntity  extends  IdEntity{
     private Long updateTime;
 
 
-    @Column(name = "companyId", length = 32)
+
+
+    @Column(name = "company_id", length = 32)
     public String getCompanyId() {
         return companyId;
     }
@@ -41,7 +45,7 @@ public class DrivertraininfoEntity  extends  IdEntity{
     }
 
 
-    @Column(name = "licenseId", length = 32)
+    @Column(name = "license_id", length = 32)
     public String getLicenseId() {
         return licenseId;
     }
@@ -51,7 +55,7 @@ public class DrivertraininfoEntity  extends  IdEntity{
     }
 
 
-    @Column(name = "courseName", length = 64)
+    @Column(name = "course_name", length = 64)
     public String getCourseName() {
         return courseName;
     }
@@ -61,7 +65,7 @@ public class DrivertraininfoEntity  extends  IdEntity{
     }
 
 
-    @Column(name = "courseDate")
+    @Column(name = "course_date")
     public Integer getCourseDate() {
         return courseDate;
     }
@@ -71,7 +75,7 @@ public class DrivertraininfoEntity  extends  IdEntity{
     }
 
 
-    @Column(name = "startTime", length = 8)
+    @Column(name = "start_time", length = 8)
     public String getStartTime() {
         return startTime;
     }
@@ -81,7 +85,7 @@ public class DrivertraininfoEntity  extends  IdEntity{
     }
 
 
-    @Column(name = "stopTime", length = 8)
+    @Column(name = "stop_time", length = 8)
     public String getStopTime() {
         return stopTime;
     }
@@ -125,9 +129,9 @@ public class DrivertraininfoEntity  extends  IdEntity{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        DrivertraininfoEntity that = (DrivertraininfoEntity) o;
+        DriverEducateEntity that = (DriverEducateEntity) o;
 
-        if (id != that.id) return false;
+        if (id != null ? !id.equals(that.id) : that.id != null) return false;
         if (companyId != null ? !companyId.equals(that.companyId) : that.companyId != null) return false;
         if (address != null ? !address.equals(that.address) : that.address != null) return false;
         if (licenseId != null ? !licenseId.equals(that.licenseId) : that.licenseId != null) return false;
@@ -144,7 +148,7 @@ public class DrivertraininfoEntity  extends  IdEntity{
 
     @Override
     public int hashCode() {
-        int result = id;
+        int result = id != null ? id.hashCode() : 0;
         result = 31 * result + (companyId != null ? companyId.hashCode() : 0);
         result = 31 * result + (address != null ? address.hashCode() : 0);
         result = 31 * result + (licenseId != null ? licenseId.hashCode() : 0);

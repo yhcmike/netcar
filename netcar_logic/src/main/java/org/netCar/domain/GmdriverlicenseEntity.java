@@ -1,20 +1,19 @@
 package org.netCar.domain;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
 import java.sql.Date;
 
 /**
- * Created by ffd on 2017/4/17.
+ * Created by ffd on 2017/4/19.
  */
 @Entity
-@Table(name = "gmdriverlicense")
-public class GmdriverlicenseEntity  extends  IdEntity{
-
+@javax.persistence.Table(name = "gm_driver_license")
+public class GmDriverLicenseEntity  extends IdEntity{
 
     private Integer address;
 
 
-    @Column(name = "address")
+    @javax.persistence.Column(name = "address")
     public Integer getAddress() {
         return address;
     }
@@ -26,7 +25,7 @@ public class GmdriverlicenseEntity  extends  IdEntity{
     private String driverName;
 
 
-    @Column(name = "driverName", length = 64)
+    @javax.persistence.Column(name = "driver_name", length = 64)
     public String getDriverName() {
         return driverName;
     }
@@ -38,7 +37,7 @@ public class GmdriverlicenseEntity  extends  IdEntity{
     private Integer driverGender;
 
 
-    @Column(name = "driverGender")
+    @javax.persistence.Column(name = "driver_gender")
     public Integer getDriverGender() {
         return driverGender;
     }
@@ -50,7 +49,7 @@ public class GmdriverlicenseEntity  extends  IdEntity{
     private Integer documentType;
 
 
-    @Column(name = "documentType")
+    @javax.persistence.Column(name = "document_type")
     public Integer getDocumentType() {
         return documentType;
     }
@@ -62,7 +61,7 @@ public class GmdriverlicenseEntity  extends  IdEntity{
     private String idNumber;
 
 
-    @Column(name = "idNumber", length = 32)
+    @javax.persistence.Column(name = "id_number", length = 32)
     public String getIdNumber() {
         return idNumber;
     }
@@ -74,7 +73,7 @@ public class GmdriverlicenseEntity  extends  IdEntity{
     private String nation;
 
 
-    @Column(name = "nation", length = 32)
+    @javax.persistence.Column(name = "nation", length = 32)
     public String getNation() {
         return nation;
     }
@@ -86,7 +85,7 @@ public class GmdriverlicenseEntity  extends  IdEntity{
     private String driverPhone;
 
 
-    @Column(name = "driverPhone", length = 32)
+    @javax.persistence.Column(name = "driver_phone", length = 32)
     public String getDriverPhone() {
         return driverPhone;
     }
@@ -98,7 +97,7 @@ public class GmdriverlicenseEntity  extends  IdEntity{
     private String driverAddress;
 
 
-    @Column(name = "driverAddress", length = 256)
+    @javax.persistence.Column(name = "driver_address", length = 256)
     public String getDriverAddress() {
         return driverAddress;
     }
@@ -110,7 +109,7 @@ public class GmdriverlicenseEntity  extends  IdEntity{
     private String driverEducation;
 
 
-    @Column(name = "driverEducation", length = 64)
+    @javax.persistence.Column(name = "driver_education", length = 64)
     public String getDriverEducation() {
         return driverEducation;
     }
@@ -122,7 +121,7 @@ public class GmdriverlicenseEntity  extends  IdEntity{
     private String technicalTitle;
 
 
-    @Column(name = "technicalTitle", length = 32)
+    @javax.persistence.Column(name = "technical_title", length = 32)
     public String getTechnicalTitle() {
         return technicalTitle;
     }
@@ -134,7 +133,7 @@ public class GmdriverlicenseEntity  extends  IdEntity{
     private String employeeStatus;
 
 
-    @Column(name = "employeeStatus", length = 32)
+    @javax.persistence.Column(name = "employee_status", length = 32)
     public String getEmployeeStatus() {
         return employeeStatus;
     }
@@ -146,7 +145,7 @@ public class GmdriverlicenseEntity  extends  IdEntity{
     private String householdRegistration;
 
 
-    @Column(name = "householdRegistration", length = 32)
+    @javax.persistence.Column(name = "household_registration", length = 32)
     public String getHouseholdRegistration() {
         return householdRegistration;
     }
@@ -158,7 +157,7 @@ public class GmdriverlicenseEntity  extends  IdEntity{
     private String certificateNo;
 
 
-    @Column(name = "certificateNo", length = 128)
+    @javax.persistence.Column(name = "certificate_no", length = 128)
     public String getCertificateNo() {
         return certificateNo;
     }
@@ -170,7 +169,7 @@ public class GmdriverlicenseEntity  extends  IdEntity{
     private Integer driverBirthday;
 
 
-    @Column(name = "driverBirthday")
+    @javax.persistence.Column(name = "driver_birthday")
     public Integer getDriverBirthday() {
         return driverBirthday;
     }
@@ -182,7 +181,7 @@ public class GmdriverlicenseEntity  extends  IdEntity{
     private Date getDriverLicenseDate;
 
 
-    @Column(name = "getDriverLicenseDate")
+    @javax.persistence.Column(name = "get_driver_license_date")
     public Date getGetDriverLicenseDate() {
         return getDriverLicenseDate;
     }
@@ -194,7 +193,7 @@ public class GmdriverlicenseEntity  extends  IdEntity{
     private Integer networkCarIssueDate;
 
 
-    @Column(name = "networkCarIssueDate")
+    @javax.persistence.Column(name = "network_car_issue_date")
     public Integer getNetworkCarIssueDate() {
         return networkCarIssueDate;
     }
@@ -206,7 +205,7 @@ public class GmdriverlicenseEntity  extends  IdEntity{
     private Integer networkCarProofOn;
 
 
-    @Column(name = "networkCarProofOn")
+    @javax.persistence.Column(name = "network_car_proof_on")
     public Integer getNetworkCarProofOn() {
         return networkCarProofOn;
     }
@@ -218,7 +217,7 @@ public class GmdriverlicenseEntity  extends  IdEntity{
     private Integer networkCarProofOff;
 
 
-    @Column(name = "networkCarProofOff")
+    @javax.persistence.Column(name = "network_car_proof_off")
     public Integer getNetworkCarProofOff() {
         return networkCarProofOff;
     }
@@ -230,7 +229,7 @@ public class GmdriverlicenseEntity  extends  IdEntity{
     private String networkCarIssueOrganization;
 
 
-    @Column(name = "networkCarIssueOrganization", length = 256)
+    @javax.persistence.Column(name = "network_car_issue_organization", length = 256)
     public String getNetworkCarIssueOrganization() {
         return networkCarIssueOrganization;
     }
@@ -242,7 +241,7 @@ public class GmdriverlicenseEntity  extends  IdEntity{
     private String networkCarIssueOrganizationCode;
 
 
-    @Column(name = "networkCarIssueOrganizationCode", length = 32)
+    @javax.persistence.Column(name = "network_car_issue_organization_code", length = 32)
     public String getNetworkCarIssueOrganizationCode() {
         return networkCarIssueOrganizationCode;
     }
@@ -254,7 +253,7 @@ public class GmdriverlicenseEntity  extends  IdEntity{
     private String adhereAddress;
 
 
-    @Column(name = "adhereAddress", length = 32)
+    @javax.persistence.Column(name = "adhere_address", length = 32)
     public String getAdhereAddress() {
         return adhereAddress;
     }
@@ -266,7 +265,7 @@ public class GmdriverlicenseEntity  extends  IdEntity{
     private String cardType;
 
 
-    @Column(name = "cardType", length = 32)
+    @javax.persistence.Column(name = "card_type", length = 32)
     public String getCardType() {
         return cardType;
     }
@@ -278,7 +277,7 @@ public class GmdriverlicenseEntity  extends  IdEntity{
     private String icCard;
 
 
-    @Column(name = "icCard", length = 32)
+    @javax.persistence.Column(name = "ic_card", length = 32)
     public String getIcCard() {
         return icCard;
     }
@@ -290,7 +289,7 @@ public class GmdriverlicenseEntity  extends  IdEntity{
     private String licenseId;
 
 
-    @Column(name = "licenseId", length = 32)
+    @javax.persistence.Column(name = "license_id", length = 32)
     public String getLicenseId() {
         return licenseId;
     }
@@ -302,7 +301,7 @@ public class GmdriverlicenseEntity  extends  IdEntity{
     private String emergencyContact;
 
 
-    @Column(name = "emergencyContact", length = 64)
+    @javax.persistence.Column(name = "emergency_contact", length = 64)
     public String getEmergencyContact() {
         return emergencyContact;
     }
@@ -314,7 +313,7 @@ public class GmdriverlicenseEntity  extends  IdEntity{
     private String emergencyContactPhone;
 
 
-    @Column(name = "emergencyContactPhone", length = 32)
+    @javax.persistence.Column(name = "emergency_contact_phone", length = 32)
     public String getEmergencyContactPhone() {
         return emergencyContactPhone;
     }
@@ -326,7 +325,7 @@ public class GmdriverlicenseEntity  extends  IdEntity{
     private String emergencyContactAddress;
 
 
-    @Column(name = "emergencyContactAddress", length = 256)
+    @javax.persistence.Column(name = "emergency_contact_address", length = 256)
     public String getEmergencyContactAddress() {
         return emergencyContactAddress;
     }
@@ -338,7 +337,7 @@ public class GmdriverlicenseEntity  extends  IdEntity{
     private Integer state;
 
 
-    @Column(name = "state")
+    @javax.persistence.Column(name = "state")
     public Integer getState() {
         return state;
     }
@@ -350,7 +349,7 @@ public class GmdriverlicenseEntity  extends  IdEntity{
     private Integer flag;
 
 
-    @Column(name = "flag")
+    @javax.persistence.Column(name = "flag")
     public Integer getFlag() {
         return flag;
     }
@@ -362,7 +361,7 @@ public class GmdriverlicenseEntity  extends  IdEntity{
     private Long updateTime;
 
 
-    @Column(name = "updateTime")
+    @javax.persistence.Column(name = "update_time")
     public Long getUpdateTime() {
         return updateTime;
     }
@@ -376,9 +375,9 @@ public class GmdriverlicenseEntity  extends  IdEntity{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        GmdriverlicenseEntity that = (GmdriverlicenseEntity) o;
+        GmDriverLicenseEntity that = (GmDriverLicenseEntity) o;
 
-        if (id != that.id) return false;
+        if (id != null ? !id.equals(that.id) : that.id != null) return false;
         if (address != null ? !address.equals(that.address) : that.address != null) return false;
         if (driverName != null ? !driverName.equals(that.driverName) : that.driverName != null) return false;
         if (driverGender != null ? !driverGender.equals(that.driverGender) : that.driverGender != null) return false;
@@ -432,7 +431,7 @@ public class GmdriverlicenseEntity  extends  IdEntity{
 
     @Override
     public int hashCode() {
-        int result = id;
+        int result = id != null ? id.hashCode() : 0;
         result = 31 * result + (address != null ? address.hashCode() : 0);
         result = 31 * result + (driverName != null ? driverName.hashCode() : 0);
         result = 31 * result + (driverGender != null ? driverGender.hashCode() : 0);

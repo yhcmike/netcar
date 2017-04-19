@@ -1,14 +1,16 @@
 package org.netCar.domain;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 /**
- * Created by ffd on 2017/4/17.
+ * Created by ffd on 2017/4/19.
  */
 @Entity
 @Table(name = "fence")
-public class FenceEntity  extends  IdEntity{
-
+public class FenceEntity  extends IdEntity{
+    private Integer id;
     private String name;
     private Integer shape;
     private Double radius;
@@ -16,6 +18,8 @@ public class FenceEntity  extends  IdEntity{
     private String spots;
     private String remark;
     private Integer status;
+
+
 
 
     @Column(name = "name", length = 64)
@@ -94,7 +98,7 @@ public class FenceEntity  extends  IdEntity{
 
         FenceEntity that = (FenceEntity) o;
 
-        if (id != that.id) return false;
+        if (id != null ? !id.equals(that.id) : that.id != null) return false;
         if (name != null ? !name.equals(that.name) : that.name != null) return false;
         if (shape != null ? !shape.equals(that.shape) : that.shape != null) return false;
         if (radius != null ? !radius.equals(that.radius) : that.radius != null) return false;
@@ -108,7 +112,7 @@ public class FenceEntity  extends  IdEntity{
 
     @Override
     public int hashCode() {
-        int result = id;
+        int result = id != null ? id.hashCode() : 0;
         result = 31 * result + (name != null ? name.hashCode() : 0);
         result = 31 * result + (shape != null ? shape.hashCode() : 0);
         result = 31 * result + (radius != null ? radius.hashCode() : 0);

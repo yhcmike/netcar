@@ -1,14 +1,16 @@
 package org.netCar.domain;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 /**
- * Created by ffd on 2017/4/17.
+ * Created by ffd on 2017/4/19.
  */
 @Entity
-@Table(name = "passengercomplaint")
-public class PassengercomplaintEntity  extends  IdEntity{
-
+@Table(name = "passenger_complaint")
+public class PassengerComplaintEntity  extends IdEntity{
+    private Integer id;
     private String companyId;
     private String orderId;
     private Long complaintTime;
@@ -16,7 +18,9 @@ public class PassengercomplaintEntity  extends  IdEntity{
     private String result;
 
 
-    @Column(name = "companyId", length = 32)
+
+
+    @Column(name = "company_id", length = 32)
     public String getCompanyId() {
         return companyId;
     }
@@ -26,7 +30,7 @@ public class PassengercomplaintEntity  extends  IdEntity{
     }
 
 
-    @Column(name = "orderId", length = 64)
+    @Column(name = "order_id", length = 64)
     public String getOrderId() {
         return orderId;
     }
@@ -36,7 +40,7 @@ public class PassengercomplaintEntity  extends  IdEntity{
     }
 
 
-    @Column(name = "complaintTime")
+    @Column(name = "complaint_time")
     public Long getComplaintTime() {
         return complaintTime;
     }
@@ -70,9 +74,9 @@ public class PassengercomplaintEntity  extends  IdEntity{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        PassengercomplaintEntity that = (PassengercomplaintEntity) o;
+        PassengerComplaintEntity that = (PassengerComplaintEntity) o;
 
-        if (id != that.id) return false;
+        if (id != null ? !id.equals(that.id) : that.id != null) return false;
         if (companyId != null ? !companyId.equals(that.companyId) : that.companyId != null) return false;
         if (orderId != null ? !orderId.equals(that.orderId) : that.orderId != null) return false;
         if (complaintTime != null ? !complaintTime.equals(that.complaintTime) : that.complaintTime != null)
@@ -85,7 +89,7 @@ public class PassengercomplaintEntity  extends  IdEntity{
 
     @Override
     public int hashCode() {
-        int result1 = id;
+        int result1 = id != null ? id.hashCode() : 0;
         result1 = 31 * result1 + (companyId != null ? companyId.hashCode() : 0);
         result1 = 31 * result1 + (orderId != null ? orderId.hashCode() : 0);
         result1 = 31 * result1 + (complaintTime != null ? complaintTime.hashCode() : 0);

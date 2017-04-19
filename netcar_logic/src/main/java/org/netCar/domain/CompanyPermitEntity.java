@@ -1,13 +1,16 @@
 package org.netCar.domain;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 /**
- * Created by ffd on 2017/4/17.
+ * Created by ffd on 2017/4/19.
  */
 @Entity
-@Table(name = "companybusinesslicense")
-public class CompanyBusinessLicenseEntity extends  IdEntity {
+@Table(name = "company_permit")
+public class CompanyPermitEntity extends IdEntity{
+    private Integer id;
     private String companyId;
     private Integer address;
     private String certificate;
@@ -23,7 +26,8 @@ public class CompanyBusinessLicenseEntity extends  IdEntity {
 
 
 
-    @Column(name = "companyId", length = 32)
+
+    @Column(name = "company_id", length = 32)
     public String getCompanyId() {
         return companyId;
     }
@@ -53,7 +57,7 @@ public class CompanyBusinessLicenseEntity extends  IdEntity {
     }
 
 
-    @Column(name = "operationArea", length = 128)
+    @Column(name = "operation_area", length = 128)
     public String getOperationArea() {
         return operationArea;
     }
@@ -63,7 +67,7 @@ public class CompanyBusinessLicenseEntity extends  IdEntity {
     }
 
 
-    @Column(name = "ownerName", length = 256)
+    @Column(name = "owner_name", length = 256)
     public String getOwnerName() {
         return ownerName;
     }
@@ -83,7 +87,7 @@ public class CompanyBusinessLicenseEntity extends  IdEntity {
     }
 
 
-    @Column(name = "startDate")
+    @Column(name = "start_date")
     public Integer getStartDate() {
         return startDate;
     }
@@ -93,7 +97,7 @@ public class CompanyBusinessLicenseEntity extends  IdEntity {
     }
 
 
-    @Column(name = "stopDate")
+    @Column(name = "stop_date")
     public Integer getStopDate() {
         return stopDate;
     }
@@ -103,7 +107,7 @@ public class CompanyBusinessLicenseEntity extends  IdEntity {
     }
 
 
-    @Column(name = "certifyDate")
+    @Column(name = "certify_date")
     public Integer getCertifyDate() {
         return certifyDate;
     }
@@ -133,7 +137,7 @@ public class CompanyBusinessLicenseEntity extends  IdEntity {
     }
 
 
-    @Column(name = "updateTime")
+    @Column(name = "update_time")
     public Long getUpdateTime() {
         return updateTime;
     }
@@ -147,9 +151,9 @@ public class CompanyBusinessLicenseEntity extends  IdEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        CompanyBusinessLicenseEntity that = (CompanyBusinessLicenseEntity) o;
+        CompanyPermitEntity that = (CompanyPermitEntity) o;
 
-        if (id != that.id) return false;
+        if (id != null ? !id.equals(that.id) : that.id != null) return false;
         if (companyId != null ? !companyId.equals(that.companyId) : that.companyId != null) return false;
         if (address != null ? !address.equals(that.address) : that.address != null) return false;
         if (certificate != null ? !certificate.equals(that.certificate) : that.certificate != null) return false;
@@ -169,7 +173,7 @@ public class CompanyBusinessLicenseEntity extends  IdEntity {
 
     @Override
     public int hashCode() {
-        int result = id;
+        int result = id != null ? id.hashCode() : 0;
         result = 31 * result + (companyId != null ? companyId.hashCode() : 0);
         result = 31 * result + (address != null ? address.hashCode() : 0);
         result = 31 * result + (certificate != null ? certificate.hashCode() : 0);

@@ -1,18 +1,16 @@
 package org.netCar.domain;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 /**
- * Created by ffd on 2017/4/17.
+ * Created by ffd on 2017/4/19.
  */
 @Entity
-@Table(name = "driverposition")
-public class DriverpositionEntity  extends  IdEntity{
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
+@Table(name = "driver_position")
+public class DriverPositionEntity extends IdEntity{
+    private Integer id;
     private String companyId;
     private String licenseId;
     private Integer driverRegionCode;
@@ -28,7 +26,9 @@ public class DriverpositionEntity  extends  IdEntity{
     private String orderId;
 
 
-    @Column(name = "companyId", length = 32)
+
+
+    @Column(name = "company_id", length = 32)
     public String getCompanyId() {
         return companyId;
     }
@@ -38,7 +38,7 @@ public class DriverpositionEntity  extends  IdEntity{
     }
 
 
-    @Column(name = "licenseId", length = 32)
+    @Column(name = "license_id", length = 32)
     public String getLicenseId() {
         return licenseId;
     }
@@ -48,7 +48,7 @@ public class DriverpositionEntity  extends  IdEntity{
     }
 
 
-    @Column(name = "driverRegionCode")
+    @Column(name = "driver_region_code")
     public Integer getDriverRegionCode() {
         return driverRegionCode;
     }
@@ -58,7 +58,7 @@ public class DriverpositionEntity  extends  IdEntity{
     }
 
 
-    @Column(name = "vehicleNo", length = 32)
+    @Column(name = "vehicle_no", length = 32)
     public String getVehicleNo() {
         return vehicleNo;
     }
@@ -68,7 +68,7 @@ public class DriverpositionEntity  extends  IdEntity{
     }
 
 
-    @Column(name = "positionTime")
+    @Column(name = "position_time")
     public Long getPositionTime() {
         return positionTime;
     }
@@ -138,7 +138,7 @@ public class DriverpositionEntity  extends  IdEntity{
     }
 
 
-    @Column(name = "bizStatus")
+    @Column(name = "biz_status")
     public Integer getBizStatus() {
         return bizStatus;
     }
@@ -148,7 +148,7 @@ public class DriverpositionEntity  extends  IdEntity{
     }
 
 
-    @Column(name = "orderId", length = 64)
+    @Column(name = "order_id", length = 64)
     public String getOrderId() {
         return orderId;
     }
@@ -162,9 +162,9 @@ public class DriverpositionEntity  extends  IdEntity{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        DriverpositionEntity that = (DriverpositionEntity) o;
+        DriverPositionEntity that = (DriverPositionEntity) o;
 
-        if (id != that.id) return false;
+        if (id != null ? !id.equals(that.id) : that.id != null) return false;
         if (companyId != null ? !companyId.equals(that.companyId) : that.companyId != null) return false;
         if (licenseId != null ? !licenseId.equals(that.licenseId) : that.licenseId != null) return false;
         if (driverRegionCode != null ? !driverRegionCode.equals(that.driverRegionCode) : that.driverRegionCode != null)
@@ -185,7 +185,7 @@ public class DriverpositionEntity  extends  IdEntity{
 
     @Override
     public int hashCode() {
-        int result = id;
+        int result = id != null ? id.hashCode() : 0;
         result = 31 * result + (companyId != null ? companyId.hashCode() : 0);
         result = 31 * result + (licenseId != null ? licenseId.hashCode() : 0);
         result = 31 * result + (driverRegionCode != null ? driverRegionCode.hashCode() : 0);

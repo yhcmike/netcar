@@ -1,15 +1,16 @@
 package org.netCar.domain;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 /**
- * Created by ffd on 2017/4/17.
- * 车辆定位信息
+ * Created by ffd on 2017/4/19.
  */
 @Entity
-@Table(name = "vehicleposition")
-public class VehiclePositionEntity extends  IdEntity{
-
+@Table(name = "vehicle_position")
+public class VehiclePositionEntity  extends IdEntity{
+    private Integer id;
     private String companyId;
     private String vehicleNo;
     private Integer vehicleRegionCode;
@@ -27,7 +28,9 @@ public class VehiclePositionEntity extends  IdEntity{
     private String orderId;
 
 
-    @Column(name = "companyId", length = 32)
+
+
+    @Column(name = "company_id", length = 32)
     public String getCompanyId() {
         return companyId;
     }
@@ -37,7 +40,7 @@ public class VehiclePositionEntity extends  IdEntity{
     }
 
 
-    @Column(name = "vehicleNo", length = 32)
+    @Column(name = "vehicle_no", length = 32)
     public String getVehicleNo() {
         return vehicleNo;
     }
@@ -47,7 +50,7 @@ public class VehiclePositionEntity extends  IdEntity{
     }
 
 
-    @Column(name = "vehicleRegionCode")
+    @Column(name = "vehicle_region_code")
     public Integer getVehicleRegionCode() {
         return vehicleRegionCode;
     }
@@ -57,7 +60,7 @@ public class VehiclePositionEntity extends  IdEntity{
     }
 
 
-    @Column(name = "positionTime")
+    @Column(name = "position_time")
     public Long getPositionTime() {
         return positionTime;
     }
@@ -137,7 +140,7 @@ public class VehiclePositionEntity extends  IdEntity{
     }
 
 
-    @Column(name = "warnStatus")
+    @Column(name = "warn_status")
     public Integer getWarnStatus() {
         return warnStatus;
     }
@@ -147,7 +150,7 @@ public class VehiclePositionEntity extends  IdEntity{
     }
 
 
-    @Column(name = "vehStatus")
+    @Column(name = "veh_status")
     public Integer getVehStatus() {
         return vehStatus;
     }
@@ -157,7 +160,7 @@ public class VehiclePositionEntity extends  IdEntity{
     }
 
 
-    @Column(name = "bizStatus")
+    @Column(name = "biz_status")
     public Integer getBizStatus() {
         return bizStatus;
     }
@@ -167,7 +170,7 @@ public class VehiclePositionEntity extends  IdEntity{
     }
 
 
-    @Column(name = "orderId", length = 64)
+    @Column(name = "order_id", length = 64)
     public String getOrderId() {
         return orderId;
     }
@@ -176,4 +179,52 @@ public class VehiclePositionEntity extends  IdEntity{
         this.orderId = orderId;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        VehiclePositionEntity that = (VehiclePositionEntity) o;
+
+        if (id != null ? !id.equals(that.id) : that.id != null) return false;
+        if (companyId != null ? !companyId.equals(that.companyId) : that.companyId != null) return false;
+        if (vehicleNo != null ? !vehicleNo.equals(that.vehicleNo) : that.vehicleNo != null) return false;
+        if (vehicleRegionCode != null ? !vehicleRegionCode.equals(that.vehicleRegionCode) : that.vehicleRegionCode != null)
+            return false;
+        if (positionTime != null ? !positionTime.equals(that.positionTime) : that.positionTime != null) return false;
+        if (longitude != null ? !longitude.equals(that.longitude) : that.longitude != null) return false;
+        if (latitude != null ? !latitude.equals(that.latitude) : that.latitude != null) return false;
+        if (speed != null ? !speed.equals(that.speed) : that.speed != null) return false;
+        if (direction != null ? !direction.equals(that.direction) : that.direction != null) return false;
+        if (elevation != null ? !elevation.equals(that.elevation) : that.elevation != null) return false;
+        if (mileage != null ? !mileage.equals(that.mileage) : that.mileage != null) return false;
+        if (encrypt != null ? !encrypt.equals(that.encrypt) : that.encrypt != null) return false;
+        if (warnStatus != null ? !warnStatus.equals(that.warnStatus) : that.warnStatus != null) return false;
+        if (vehStatus != null ? !vehStatus.equals(that.vehStatus) : that.vehStatus != null) return false;
+        if (bizStatus != null ? !bizStatus.equals(that.bizStatus) : that.bizStatus != null) return false;
+        if (orderId != null ? !orderId.equals(that.orderId) : that.orderId != null) return false;
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = id != null ? id.hashCode() : 0;
+        result = 31 * result + (companyId != null ? companyId.hashCode() : 0);
+        result = 31 * result + (vehicleNo != null ? vehicleNo.hashCode() : 0);
+        result = 31 * result + (vehicleRegionCode != null ? vehicleRegionCode.hashCode() : 0);
+        result = 31 * result + (positionTime != null ? positionTime.hashCode() : 0);
+        result = 31 * result + (longitude != null ? longitude.hashCode() : 0);
+        result = 31 * result + (latitude != null ? latitude.hashCode() : 0);
+        result = 31 * result + (speed != null ? speed.hashCode() : 0);
+        result = 31 * result + (direction != null ? direction.hashCode() : 0);
+        result = 31 * result + (elevation != null ? elevation.hashCode() : 0);
+        result = 31 * result + (mileage != null ? mileage.hashCode() : 0);
+        result = 31 * result + (encrypt != null ? encrypt.hashCode() : 0);
+        result = 31 * result + (warnStatus != null ? warnStatus.hashCode() : 0);
+        result = 31 * result + (vehStatus != null ? vehStatus.hashCode() : 0);
+        result = 31 * result + (bizStatus != null ? bizStatus.hashCode() : 0);
+        result = 31 * result + (orderId != null ? orderId.hashCode() : 0);
+        return result;
+    }
 }

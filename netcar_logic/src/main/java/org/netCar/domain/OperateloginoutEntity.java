@@ -1,14 +1,16 @@
 package org.netCar.domain;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 /**
- * Created by ffd on 2017/4/17.
+ * Created by ffd on 2017/4/19.
  */
 @Entity
-@Table(name = "operateloginout")
-public class OperateloginoutEntity  extends  IdEntity{
-
+@Table(name = "operate_log_in_out")
+public class OperateLogInOutEntity  extends IdEntity{
+    private Integer id;
     private String companyId;
     private String licenseId;
     private String vehicleNo;
@@ -22,7 +24,9 @@ public class OperateloginoutEntity  extends  IdEntity{
     private Integer outEncrypt;
 
 
-    @Column(name = "companyId", length = 32)
+
+
+    @Column(name = "company_id", length = 32)
     public String getCompanyId() {
         return companyId;
     }
@@ -32,7 +36,7 @@ public class OperateloginoutEntity  extends  IdEntity{
     }
 
 
-    @Column(name = "licenseId", length = 32)
+    @Column(name = "license_id", length = 32)
     public String getLicenseId() {
         return licenseId;
     }
@@ -42,7 +46,7 @@ public class OperateloginoutEntity  extends  IdEntity{
     }
 
 
-    @Column(name = "vehicleNo", length = 32)
+    @Column(name = "vehicle_no", length = 32)
     public String getVehicleNo() {
         return vehicleNo;
     }
@@ -52,7 +56,7 @@ public class OperateloginoutEntity  extends  IdEntity{
     }
 
 
-    @Column(name = "loginTime")
+    @Column(name = "login_time")
     public Long getLoginTime() {
         return loginTime;
     }
@@ -62,7 +66,7 @@ public class OperateloginoutEntity  extends  IdEntity{
     }
 
 
-    @Column(name = "inLongitude")
+    @Column(name = "in_longitude")
     public Integer getInLongitude() {
         return inLongitude;
     }
@@ -72,7 +76,7 @@ public class OperateloginoutEntity  extends  IdEntity{
     }
 
 
-    @Column(name = "inLatitude")
+    @Column(name = "in_latitude")
     public Integer getInLatitude() {
         return inLatitude;
     }
@@ -82,7 +86,7 @@ public class OperateloginoutEntity  extends  IdEntity{
     }
 
 
-    @Column(name = "inEncrypt")
+    @Column(name = "in_encrypt")
     public Integer getInEncrypt() {
         return inEncrypt;
     }
@@ -92,7 +96,7 @@ public class OperateloginoutEntity  extends  IdEntity{
     }
 
 
-    @Column(name = "logoutTime")
+    @Column(name = "logout_time")
     public Long getLogoutTime() {
         return logoutTime;
     }
@@ -102,7 +106,7 @@ public class OperateloginoutEntity  extends  IdEntity{
     }
 
 
-    @Column(name = "outLongitude")
+    @Column(name = "out_longitude")
     public Integer getOutLongitude() {
         return outLongitude;
     }
@@ -112,7 +116,7 @@ public class OperateloginoutEntity  extends  IdEntity{
     }
 
 
-    @Column(name = "outLatitude")
+    @Column(name = "out_latitude")
     public Integer getOutLatitude() {
         return outLatitude;
     }
@@ -122,7 +126,7 @@ public class OperateloginoutEntity  extends  IdEntity{
     }
 
 
-    @Column(name = "outEncrypt")
+    @Column(name = "out_encrypt")
     public Integer getOutEncrypt() {
         return outEncrypt;
     }
@@ -136,9 +140,9 @@ public class OperateloginoutEntity  extends  IdEntity{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        OperateloginoutEntity that = (OperateloginoutEntity) o;
+        OperateLogInOutEntity that = (OperateLogInOutEntity) o;
 
-        if (id != that.id) return false;
+        if (id != null ? !id.equals(that.id) : that.id != null) return false;
         if (companyId != null ? !companyId.equals(that.companyId) : that.companyId != null) return false;
         if (licenseId != null ? !licenseId.equals(that.licenseId) : that.licenseId != null) return false;
         if (vehicleNo != null ? !vehicleNo.equals(that.vehicleNo) : that.vehicleNo != null) return false;
@@ -156,7 +160,7 @@ public class OperateloginoutEntity  extends  IdEntity{
 
     @Override
     public int hashCode() {
-        int result = id;
+        int result = id != null ? id.hashCode() : 0;
         result = 31 * result + (companyId != null ? companyId.hashCode() : 0);
         result = 31 * result + (licenseId != null ? licenseId.hashCode() : 0);
         result = 31 * result + (vehicleNo != null ? vehicleNo.hashCode() : 0);
