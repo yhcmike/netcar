@@ -5,7 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 /**
- * Created by ffd on 2017/4/19.
+ * Created by lyq on 2017/4/19.
+ * 车辆定位信息
  */
 @Entity
 @Table(name = "vehicle_position")

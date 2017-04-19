@@ -6,11 +6,13 @@ import javax.persistence.Table;
 
 /**
  * Created by ffd on 2017/4/19.
+ * 乘客基本信息
  */
 @Entity
 @Table(name = "passenger_info")
 public class PassengerInfoEntity  extends IdEntity{
-    private Integer id;
+
+
     private String companyId;
     private Integer registerDate;
     private String passengerPhone;
@@ -19,9 +21,6 @@ public class PassengerInfoEntity  extends IdEntity{
     private Integer state;
     private Integer flag;
     private Long updateTime;
-
-
-
 
     @Column(name = "company_id", length = 32)
     public String getCompanyId() {

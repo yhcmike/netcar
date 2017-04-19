@@ -6,21 +6,19 @@ import javax.persistence.Table;
 
 /**
  * Created by lyq on 2017/4/19.
+ * 网约车车辆里程信息
  */
 @Entity
 @Table(name = "vehicle_total_mile")
 public class VehicleTotalMileEntity  extends IdEntity{
-    private Integer id;
+
+
     private String companyId;
     private Integer address;
     private String vehicleNo;
     private String totalMile;
     private Integer flag;
     private Long updateTime;
-
-
-
-
     @Column(name = "company_id", length = 32)
     public String getCompanyId() {
         return companyId;

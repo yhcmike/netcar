@@ -5,12 +5,13 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 /**
- * Created by ffd on 2017/4/19.
+ * Created by lyq on 2017/4/19.
+ * 网约车车辆保险信息
  */
 @Entity
 @Table(name = "vehicle_insurance")
 public class VehicleInsuranceEntity  extends IdEntity{
-    private Integer id;
+
     private String companyId;
     private String vehicleNo;
     private String insurCom;
@@ -21,9 +22,6 @@ public class VehicleInsuranceEntity  extends IdEntity{
     private Integer insurExp;
     private Integer flag;
     private Long updateTime;
-
-
-
 
     @Column(name = "company_id", length = 32)
     public String getCompanyId() {

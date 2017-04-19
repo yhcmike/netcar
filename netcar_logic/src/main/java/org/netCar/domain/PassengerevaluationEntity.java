@@ -5,12 +5,13 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 /**
- * Created by ffd on 2017/4/19.
+ * Created by lyq on 2017/4/19.
+ * 乘客评价信息
  */
 @Entity
 @Table(name = "passenger_evaluation")
 public class PassengerEvaluationEntity  extends IdEntity{
-    private Integer id;
+
     private String companyId;
     private String orderId;
     private Long evaluateTime;
@@ -18,9 +19,6 @@ public class PassengerEvaluationEntity  extends IdEntity{
     private Integer driverScore;
     private Integer vehicleScore;
     private String detail;
-
-
-
 
     @Column(name = "company_id", length = 32)
     public String getCompanyId() {

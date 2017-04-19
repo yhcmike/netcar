@@ -6,19 +6,18 @@ import javax.persistence.Table;
 
 /**
  * Created by ffd on 2017/4/19.
+ * 乘客投诉信息
  */
 @Entity
 @Table(name = "passenger_complaint")
 public class PassengerComplaintEntity  extends IdEntity{
-    private Integer id;
+
+
     private String companyId;
     private String orderId;
     private Long complaintTime;
     private String detail;
     private String result;
-
-
-
 
     @Column(name = "company_id", length = 32)
     public String getCompanyId() {
