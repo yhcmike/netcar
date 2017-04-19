@@ -42,7 +42,7 @@ public abstract class BaseHBDao<M extends Serializable, PK extends Serializable>
 				pkName = f.getName();
 			}
 		}
-		Assert.notNull(pkName);
+		Assert.notNull(pkName, "pkName is null");
 		listAllHql = "FROM " + entityClass.getSimpleName() + " ORDER BY " + pkName;
 		countAllHql = "SELECT COUNT(*) FROM " + entityClass.getSimpleName();
 	}
@@ -50,7 +50,7 @@ public abstract class BaseHBDao<M extends Serializable, PK extends Serializable>
 	public BaseHBDao(Class<M> c, String idName) {
 		entityClass = c;
 		pkName = idName;
-		Assert.notNull(pkName);
+		Assert.notNull(pkName, "pkName is null");
 		listAllHql = "FROM " + entityClass.getSimpleName() + " ORDER BY " + pkName;
 		countAllHql = "SELECT COUNT(*) FROM " + entityClass.getSimpleName();
 	}

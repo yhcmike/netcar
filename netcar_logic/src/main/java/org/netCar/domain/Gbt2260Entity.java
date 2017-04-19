@@ -7,12 +7,7 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "gbt2260")
-public class Gbt2260Entity {
-    private int id;
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
+public class Gbt2260Entity  extends  IdEntity{
 
     private String code;
     private String name;
@@ -24,17 +19,6 @@ public class Gbt2260Entity {
 
     private String remark;
     private Integer status;
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
 
     @Column(name = "code", length = 32)

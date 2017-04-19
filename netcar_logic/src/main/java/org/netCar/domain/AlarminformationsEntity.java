@@ -8,28 +8,12 @@ import java.sql.Date;
  */
 @Entity
 @Table(name = "alarminformations")
-public class AlarminformationsEntity {
-    private int id;
+public class AlarminformationsEntity  extends IdEntity{
     private String content;
     private String type;
     private Integer num;
     private Date date;
     private String remark;
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
 
     @Column(name = "content", length = 256)

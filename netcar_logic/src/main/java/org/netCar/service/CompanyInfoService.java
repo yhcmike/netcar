@@ -1,15 +1,16 @@
 package org.netCar.service;
 
-import org.netCar.domain.CompanyInfo;
+
+import org.netCar.domain.CompanyinfoEntity;
 
 public interface CompanyInfoService {
 
-	public void save(CompanyInfo companyInfo);
+	public void save(CompanyinfoEntity companyInfo);
 	/**
 	 * 更新
 	 */
-	public void update(CompanyInfo companyInfo);
+	public void update(CompanyinfoEntity companyInfo);
 	public void changeStatus(Integer id,Integer status);
-	public CompanyInfo getById(Integer id);
+	public CompanyinfoEntity getById(Integer id);
 	
 }

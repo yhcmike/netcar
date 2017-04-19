@@ -1,7 +1,7 @@
 package org.netCar.service.impl;
 
 import org.netCar.dao.CompanyInfoDao;
-import org.netCar.domain.CompanyInfo;
+import org.netCar.domain.CompanyinfoEntity;
 import org.netCar.service.CompanyInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,13 +14,13 @@ public class CompanyInfoServiceImpl implements CompanyInfoService {
 	CompanyInfoDao companyInfoDao;
 	
 	@Override
-	public void save(CompanyInfo companyInfo) {
+	public void save(CompanyinfoEntity companyInfo) {
 		companyInfoDao.save(companyInfo);
 	}
 	
 
 	@Override
-	public void update(CompanyInfo companyInfo) {
+	public void update(CompanyinfoEntity companyInfo) {
 
 	}
 
@@ -30,7 +30,7 @@ public class CompanyInfoServiceImpl implements CompanyInfoService {
 	}
 
 	@Override
-	public CompanyInfo getById(Integer id) {
+	public CompanyinfoEntity getById(Integer id) {
 		return null;
 	}
 

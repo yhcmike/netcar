@@ -7,12 +7,7 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "drivertraininfo")
-public class DrivertraininfoEntity {
-    private int id;
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
+public class DrivertraininfoEntity  extends  IdEntity{
 
     private String companyId;
     private Integer address;
@@ -24,17 +19,6 @@ public class DrivertraininfoEntity {
     private String duration;
     private Integer flag;
     private Long updateTime;
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
 
     @Column(name = "companyId", length = 32)

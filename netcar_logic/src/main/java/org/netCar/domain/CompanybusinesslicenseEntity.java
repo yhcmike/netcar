@@ -7,8 +7,7 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "companybusinesslicense")
-public class CompanybusinesslicenseEntity {
-    private int id;
+public class CompanybusinesslicenseEntity extends  IdEntity {
     private String companyId;
     private Integer address;
     private String certificate;
@@ -22,20 +21,6 @@ public class CompanybusinesslicenseEntity {
     private Integer flag;
     private Long updateTime;
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
 
     @Column(name = "companyId", length = 32)

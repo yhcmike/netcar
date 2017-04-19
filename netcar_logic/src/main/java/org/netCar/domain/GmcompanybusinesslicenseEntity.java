@@ -8,23 +8,8 @@ import java.util.Arrays;
  */
 @Entity
 @Table(name = "gmcompanybusinesslicense")
-public class GmcompanybusinesslicenseEntity {
-    private int id;
+public class GmcompanybusinesslicenseEntity  extends  IdEntity{
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     private String companyName;
 

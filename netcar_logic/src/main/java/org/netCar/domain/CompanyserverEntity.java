@@ -7,8 +7,7 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "companyserver")
-public class CompanyserverEntity {
-    private int id;
+public class CompanyserverEntity  extends  IdEntity{
 
     public void setId(Integer id) {
         this.id = id;
@@ -29,17 +28,6 @@ public class CompanyserverEntity {
     private Integer state;
     private Integer flag;
     private Long updateTime;
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
 
     @Column(name = "companyId", length = 32)

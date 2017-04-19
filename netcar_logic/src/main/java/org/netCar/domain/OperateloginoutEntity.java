@@ -7,12 +7,7 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "operateloginout")
-public class OperateloginoutEntity {
-    private int id;
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
+public class OperateloginoutEntity  extends  IdEntity{
 
     private String companyId;
     private String licenseId;
@@ -25,17 +20,6 @@ public class OperateloginoutEntity {
     private Integer outLongitude;
     private Integer outLatitude;
     private Integer outEncrypt;
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
 
     @Column(name = "companyId", length = 32)

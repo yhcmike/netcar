@@ -8,23 +8,8 @@ import java.sql.Date;
  */
 @Entity
 @Table(name = "gmdriverlicense")
-public class GmdriverlicenseEntity {
-    private int id;
+public class GmdriverlicenseEntity  extends  IdEntity{
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     private Integer address;
 

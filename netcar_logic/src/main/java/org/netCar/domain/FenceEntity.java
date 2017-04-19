@@ -7,12 +7,7 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "fence")
-public class FenceEntity {
-    private int id;
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
+public class FenceEntity  extends  IdEntity{
 
     private String name;
     private Integer shape;
@@ -21,17 +16,6 @@ public class FenceEntity {
     private String spots;
     private String remark;
     private Integer status;
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
 
     @Column(name = "name", length = 64)
