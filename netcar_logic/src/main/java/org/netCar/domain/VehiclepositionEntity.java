@@ -4,10 +4,11 @@ import javax.persistence.*;
 
 /**
  * Created by ffd on 2017/4/17.
+ * 车辆定位信息
  */
 @Entity
 @Table(name = "vehicleposition")
-public class VehiclepositionEntity  extends  IdEntity{
+public class VehiclePositionEntity extends  IdEntity{
 
     private String companyId;
     private String vehicleNo;
@@ -175,52 +176,4 @@ public class VehiclepositionEntity  extends  IdEntity{
         this.orderId = orderId;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        VehiclepositionEntity that = (VehiclepositionEntity) o;
-
-        if (id != that.id) return false;
-        if (companyId != null ? !companyId.equals(that.companyId) : that.companyId != null) return false;
-        if (vehicleNo != null ? !vehicleNo.equals(that.vehicleNo) : that.vehicleNo != null) return false;
-        if (vehicleRegionCode != null ? !vehicleRegionCode.equals(that.vehicleRegionCode) : that.vehicleRegionCode != null)
-            return false;
-        if (positionTime != null ? !positionTime.equals(that.positionTime) : that.positionTime != null) return false;
-        if (longitude != null ? !longitude.equals(that.longitude) : that.longitude != null) return false;
-        if (latitude != null ? !latitude.equals(that.latitude) : that.latitude != null) return false;
-        if (speed != null ? !speed.equals(that.speed) : that.speed != null) return false;
-        if (direction != null ? !direction.equals(that.direction) : that.direction != null) return false;
-        if (elevation != null ? !elevation.equals(that.elevation) : that.elevation != null) return false;
-        if (mileage != null ? !mileage.equals(that.mileage) : that.mileage != null) return false;
-        if (encrypt != null ? !encrypt.equals(that.encrypt) : that.encrypt != null) return false;
-        if (warnStatus != null ? !warnStatus.equals(that.warnStatus) : that.warnStatus != null) return false;
-        if (vehStatus != null ? !vehStatus.equals(that.vehStatus) : that.vehStatus != null) return false;
-        if (bizStatus != null ? !bizStatus.equals(that.bizStatus) : that.bizStatus != null) return false;
-        if (orderId != null ? !orderId.equals(that.orderId) : that.orderId != null) return false;
-
-        return true;
-    }
-
-    @Override
-    public int hashCode() {
-        int result = id;
-        result = 31 * result + (companyId != null ? companyId.hashCode() : 0);
-        result = 31 * result + (vehicleNo != null ? vehicleNo.hashCode() : 0);
-        result = 31 * result + (vehicleRegionCode != null ? vehicleRegionCode.hashCode() : 0);
-        result = 31 * result + (positionTime != null ? positionTime.hashCode() : 0);
-        result = 31 * result + (longitude != null ? longitude.hashCode() : 0);
-        result = 31 * result + (latitude != null ? latitude.hashCode() : 0);
-        result = 31 * result + (speed != null ? speed.hashCode() : 0);
-        result = 31 * result + (direction != null ? direction.hashCode() : 0);
-        result = 31 * result + (elevation != null ? elevation.hashCode() : 0);
-        result = 31 * result + (mileage != null ? mileage.hashCode() : 0);
-        result = 31 * result + (encrypt != null ? encrypt.hashCode() : 0);
-        result = 31 * result + (warnStatus != null ? warnStatus.hashCode() : 0);
-        result = 31 * result + (vehStatus != null ? vehStatus.hashCode() : 0);
-        result = 31 * result + (bizStatus != null ? bizStatus.hashCode() : 0);
-        result = 31 * result + (orderId != null ? orderId.hashCode() : 0);
-        return result;
-    }
 }

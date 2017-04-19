@@ -3,7 +3,8 @@ package org.netCar.domain;
 import javax.persistence.*;
 
 /**
- * Created by ffd on 2017/4/17.
+ * Created by lyq on 2017/4/17.
+ * 车辆保险信息
  */
 @Entity
 @Table(name = "vehicleinsurance")
