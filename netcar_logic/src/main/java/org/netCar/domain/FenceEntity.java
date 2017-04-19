@@ -10,7 +10,6 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "fence")
 public class FenceEntity  extends IdEntity{
-    private Integer id;
     private String name;
     private Integer shape;
     private Double radius;
