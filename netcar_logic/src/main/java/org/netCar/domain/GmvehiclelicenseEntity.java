@@ -1,18 +1,19 @@
 package org.netCar.domain;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Table;
 
 /**
  * Created by ffd on 2017/4/19.
  */
 @Entity
-@javax.persistence.Table(name = "gm_vehicle_license")
+@Table(name = "gm_vehicle_license")
 public class GmVehicleLicenseEntity  extends IdEntity{
 
     private Integer address;
 
-
-    @javax.persistence.Column(name = "address")
+    @Column(name = "address")
     public Integer getAddress() {
         return address;
     }
@@ -24,7 +25,7 @@ public class GmVehicleLicenseEntity  extends IdEntity{
     private String vehicleNo;
 
 
-    @javax.persistence.Column(name = "vehicle_no", length = 32)
+    @Column(name = "vehicle_no", length = 32)
     public String getVehicleNo() {
         return vehicleNo;
     }
@@ -36,7 +37,7 @@ public class GmVehicleLicenseEntity  extends IdEntity{
     private String plateColor;
 
 
-    @javax.persistence.Column(name = "plate_color", length = 32)
+    @Column(name = "plate_color", length = 32)
     public String getPlateColor() {
         return plateColor;
     }
@@ -48,7 +49,7 @@ public class GmVehicleLicenseEntity  extends IdEntity{
     private String brand;
 
 
-    @javax.persistence.Column(name = "brand", length = 64)
+    @Column(name = "brand", length = 64)
     public String getBrand() {
         return brand;
     }
@@ -60,7 +61,7 @@ public class GmVehicleLicenseEntity  extends IdEntity{
     private String model;
 
 
-    @javax.persistence.Column(name = "model", length = 64)
+    @Column(name = "model", length = 64)
     public String getModel() {
         return model;
     }
@@ -72,7 +73,7 @@ public class GmVehicleLicenseEntity  extends IdEntity{
     private String engineId;
 
 
-    @javax.persistence.Column(name = "engine_id", length = 32)
+    @Column(name = "engine_id", length = 32)
     public String getEngineId() {
         return engineId;
     }
@@ -84,7 +85,7 @@ public class GmVehicleLicenseEntity  extends IdEntity{
     private String vIn;
 
 
-    @javax.persistence.Column(name = "vIN", length = 17)
+    @Column(name = "vIN", length = 17)
     public String getvIn() {
         return vIn;
     }
@@ -96,7 +97,7 @@ public class GmVehicleLicenseEntity  extends IdEntity{
     private String vehicleType;
 
 
-    @javax.persistence.Column(name = "vehicle_type", length = 64)
+    @Column(name = "vehicle_type", length = 64)
     public String getVehicleType() {
         return vehicleType;
     }
@@ -108,7 +109,7 @@ public class GmVehicleLicenseEntity  extends IdEntity{
     private String vehicleTypeCode;
 
 
-    @javax.persistence.Column(name = "vehicle_type_code", length = 32)
+    @Column(name = "vehicle_type_code", length = 32)
     public String getVehicleTypeCode() {
         return vehicleTypeCode;
     }
@@ -120,7 +121,7 @@ public class GmVehicleLicenseEntity  extends IdEntity{
     private Integer deliveryDate;
 
 
-    @javax.persistence.Column(name = "delivery_date")
+    @Column(name = "delivery_date")
     public Integer getDeliveryDate() {
         return deliveryDate;
     }
@@ -132,7 +133,7 @@ public class GmVehicleLicenseEntity  extends IdEntity{
     private Integer certifyDateA;
 
 
-    @javax.persistence.Column(name = "certify_dateA")
+    @Column(name = "certify_dateA")
     public Integer getCertifyDateA() {
         return certifyDateA;
     }
@@ -144,7 +145,7 @@ public class GmVehicleLicenseEntity  extends IdEntity{
     private String fuelType;
 
 
-    @javax.persistence.Column(name = "fuel_type", length = 32)
+    @Column(name = "fuel_type", length = 32)
     public String getFuelType() {
         return fuelType;
     }
@@ -156,7 +157,7 @@ public class GmVehicleLicenseEntity  extends IdEntity{
     private Integer wheelbase;
 
 
-    @javax.persistence.Column(name = "wheelbase")
+    @Column(name = "wheelbase")
     public Integer getWheelbase() {
         return wheelbase;
     }
@@ -168,7 +169,7 @@ public class GmVehicleLicenseEntity  extends IdEntity{
     private Integer commander;
 
 
-    @javax.persistence.Column(name = "commander")
+    @Column(name = "commander")
     public Integer getCommander() {
         return commander;
     }
@@ -180,7 +181,7 @@ public class GmVehicleLicenseEntity  extends IdEntity{
     private Integer width;
 
 
-    @javax.persistence.Column(name = "width")
+    @Column(name = "width")
     public Integer getWidth() {
         return width;
     }
@@ -192,7 +193,7 @@ public class GmVehicleLicenseEntity  extends IdEntity{
     private Integer height;
 
 
-    @javax.persistence.Column(name = "height")
+    @Column(name = "height")
     public Integer getHeight() {
         return height;
     }
@@ -204,7 +205,7 @@ public class GmVehicleLicenseEntity  extends IdEntity{
     private Integer power;
 
 
-    @javax.persistence.Column(name = "power")
+    @Column(name = "power")
     public Integer getPower() {
         return power;
     }
@@ -216,7 +217,7 @@ public class GmVehicleLicenseEntity  extends IdEntity{
     private Integer seats;
 
 
-    @javax.persistence.Column(name = "seats")
+    @Column(name = "seats")
     public Integer getSeats() {
         return seats;
     }
@@ -228,7 +229,7 @@ public class GmVehicleLicenseEntity  extends IdEntity{
     private String gPsBrand;
 
 
-    @javax.persistence.Column(name = "gPS_brand", length = 256)
+    @Column(name = "gPS_brand", length = 256)
     public String getgPsBrand() {
         return gPsBrand;
     }
@@ -240,7 +241,7 @@ public class GmVehicleLicenseEntity  extends IdEntity{
     private String gPsModel;
 
 
-    @javax.persistence.Column(name = "gPS_model", length = 64)
+    @Column(name = "gPS_model", length = 64)
     public String getgPsModel() {
         return gPsModel;
     }
@@ -252,7 +253,7 @@ public class GmVehicleLicenseEntity  extends IdEntity{
     private Integer state;
 
 
-    @javax.persistence.Column(name = "state")
+    @Column(name = "state")
     public Integer getState() {
         return state;
     }
@@ -264,7 +265,7 @@ public class GmVehicleLicenseEntity  extends IdEntity{
     private String transArea;
 
 
-    @javax.persistence.Column(name = "trans_area", length = 256)
+    @Column(name = "trans_area", length = 256)
     public String getTransArea() {
         return transArea;
     }
@@ -276,7 +277,7 @@ public class GmVehicleLicenseEntity  extends IdEntity{
     private String certificate;
 
 
-    @javax.persistence.Column(name = "certificate", length = 64)
+    @Column(name = "certificate", length = 64)
     public String getCertificate() {
         return certificate;
     }
@@ -288,7 +289,7 @@ public class GmVehicleLicenseEntity  extends IdEntity{
     private String transAgency;
 
 
-    @javax.persistence.Column(name = "trans_agency", length = 256)
+    @Column(name = "trans_agency", length = 256)
     public String getTransAgency() {
         return transAgency;
     }

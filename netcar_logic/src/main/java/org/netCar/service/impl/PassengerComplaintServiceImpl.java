@@ -4,10 +4,12 @@ import org.netCar.dao.PassengerComplaintDao;
 import org.netCar.domain.PassengerComplaintEntity;
 import org.netCar.service.PassengerComplaintService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 /**
  * Created by lyq on 2017/4/19.
  */
+@Service
 public class PassengerComplaintServiceImpl implements PassengerComplaintService {
 
     @Autowired

@@ -4,10 +4,12 @@ import org.netCar.dao.OrderInfoDao;
 import org.netCar.domain.OrderInfoEntity;
 import org.netCar.service.OrderInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 /**
  * Created by lyq on 2017/4/19.
  */
+@Service
 public class OrderInfoServiceImpl implements OrderInfoService {
 
     @Autowired

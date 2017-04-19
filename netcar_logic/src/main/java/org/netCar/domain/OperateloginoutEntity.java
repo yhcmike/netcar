@@ -5,12 +5,12 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 /**
- * Created by ffd on 2017/4/19.
+ * Created by lyq on 2017/4/19.
+ * 车辆经营上下线
  */
 @Entity
 @Table(name = "operate_log_in_out")
 public class OperateLogInOutEntity  extends IdEntity{
-    private Integer id;
     private String companyId;
     private String licenseId;
     private String vehicleNo;
