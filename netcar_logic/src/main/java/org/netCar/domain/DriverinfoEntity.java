@@ -7,7 +7,7 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "driverinfo")
-public class DriverinfoEntity  extends  IdEntity{
+public class DriverInfoEntity extends  IdEntity{
 
     public void setId(Integer id) {
         this.id = id;
@@ -510,7 +510,7 @@ public class DriverinfoEntity  extends  IdEntity{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        DriverinfoEntity that = (DriverinfoEntity) o;
+        DriverInfoEntity that = (DriverInfoEntity) o;
 
         if (id != that.id) return false;
         if (companyId != null ? !companyId.equals(that.companyId) : that.companyId != null) return false;

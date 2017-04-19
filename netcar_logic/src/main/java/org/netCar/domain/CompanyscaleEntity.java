@@ -7,7 +7,7 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "companyscale")
-public class CompanyscaleEntity  extends  IdEntity{
+public class CompanyScaleEntity extends  IdEntity{
 
     private String companyId;
     private String vehicleNum;
@@ -70,7 +70,7 @@ public class CompanyscaleEntity  extends  IdEntity{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        CompanyscaleEntity that = (CompanyscaleEntity) o;
+        CompanyScaleEntity that = (CompanyScaleEntity) o;
 
         if (id != that.id) return false;
         if (companyId != null ? !companyId.equals(that.companyId) : that.companyId != null) return false;

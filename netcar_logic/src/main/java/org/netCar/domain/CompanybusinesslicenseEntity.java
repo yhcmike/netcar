@@ -7,7 +7,7 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "companybusinesslicense")
-public class CompanybusinesslicenseEntity extends  IdEntity {
+public class CompanyBusinessLicenseEntity extends  IdEntity {
     private String companyId;
     private Integer address;
     private String certificate;
@@ -147,7 +147,7 @@ public class CompanybusinesslicenseEntity extends  IdEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        CompanybusinesslicenseEntity that = (CompanybusinesslicenseEntity) o;
+        CompanyBusinessLicenseEntity that = (CompanyBusinessLicenseEntity) o;
 
         if (id != that.id) return false;
         if (companyId != null ? !companyId.equals(that.companyId) : that.companyId != null) return false;

@@ -4,10 +4,12 @@ import javax.persistence.*;
 
 /**
  * Created by ffd on 2017/4/17.
+ * desc:公司基本信息
+ *
  */
 @Entity
 @Table(name = "companyinfo")
-public class CompanyinfoEntity extends IdEntity {
+public class CompanyInfoEntity extends IdEntity {
     private String companyId;
     private String companyName;
     private String identifier;
@@ -180,7 +182,7 @@ public class CompanyinfoEntity extends IdEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        CompanyinfoEntity that = (CompanyinfoEntity) o;
+        CompanyInfoEntity that = (CompanyInfoEntity) o;
 
         if (id != that.id) return false;
         if (companyId != null ? !companyId.equals(that.companyId) : that.companyId != null) return false;

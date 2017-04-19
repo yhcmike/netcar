@@ -7,7 +7,7 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "companypay")
-public class CompanypayEntity extends  IdEntity {
+public class CompanyPayEntity extends  IdEntity {
     private String companyId;
     private String payName;
     private String payId;
@@ -124,7 +124,7 @@ public class CompanypayEntity extends  IdEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        CompanypayEntity that = (CompanypayEntity) o;
+        CompanyPayEntity that = (CompanyPayEntity) o;
 
         if (id != that.id) return false;
         if (companyId != null ? !companyId.equals(that.companyId) : that.companyId != null) return false;

@@ -8,7 +8,7 @@ import java.sql.Date;
  */
 @Entity
 @Table(name = "alarminformations")
-public class AlarminformationsEntity  extends IdEntity{
+public class AlarmInformationsEntity extends IdEntity{
     private String content;
     private String type;
     private Integer num;
@@ -70,7 +70,7 @@ public class AlarminformationsEntity  extends IdEntity{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        AlarminformationsEntity that = (AlarminformationsEntity) o;
+        AlarmInformationsEntity that = (AlarmInformationsEntity) o;
 
         if (id != that.id) return false;
         if (content != null ? !content.equals(that.content) : that.content != null) return false;

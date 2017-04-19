@@ -1,10 +1,10 @@
 package org.netCar.dao;
 
-import org.netCar.domain.CompanyinfoEntity;
+import org.netCar.domain.CompanyInfoEntity;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class CompanyInfoDao extends BaseHBDao<CompanyinfoEntity, Integer> {
+public class CompanyInfoDao extends BaseHBDao<CompanyInfoEntity, Integer> {
 	
 	
 	
