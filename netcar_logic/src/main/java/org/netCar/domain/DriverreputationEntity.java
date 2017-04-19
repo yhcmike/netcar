@@ -10,7 +10,6 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "driver_reputation")
 public class DriverReputationEntity  extends IdEntity{
-    private Integer id;
     private String companyId;
     private String licenseId;
     private Integer level;

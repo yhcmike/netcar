@@ -10,7 +10,6 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "driver_punish")
 public class DriverPunishEntity extends IdEntity{
-    private Integer id;
     private String companyId;
     private String licenseId;
     private Long punishTime;

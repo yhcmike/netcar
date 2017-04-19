@@ -7,5 +7,5 @@ import org.springframework.stereotype.Repository;
  * Created by gujgkjg on 2017/4/19.
  */
 @Repository
-public class CompanyBusinessLicenseDao extends BaseHBDao<CompanyPermitEntity, Integer> {
+public class CompanyPermitDao extends BaseHBDao<CompanyPermitEntity, Integer> {
 }

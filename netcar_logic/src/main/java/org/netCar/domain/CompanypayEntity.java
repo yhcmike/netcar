@@ -10,7 +10,6 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "company_pay")
 public class CompanyPayEntity extends IdEntity{
-    private Integer id;
     private String companyId;
     private String payName;
     private String payId;

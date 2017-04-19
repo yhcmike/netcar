@@ -11,7 +11,6 @@ import java.sql.Date;
 @Entity
 @Table(name = "alarm_informations")
 public class AlarmInformationsEntity extends IdEntity{
-    private Integer id;
     private String content;
     private String type;
     private Integer num;

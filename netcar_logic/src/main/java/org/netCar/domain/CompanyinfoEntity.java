@@ -10,7 +10,6 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "company_info")
 public class CompanyInfoEntity extends IdEntity{
-    private Integer id;
     private String companyId;
     private String companyName;
     private String identifier;

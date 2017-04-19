@@ -12,7 +12,6 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "company_scale")
 public class CompanyScaleEntity extends IdEntity{
-    private Integer id;
     private String companyId;
     private String vehicleNum;
     private String driverNum;
