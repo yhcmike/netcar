@@ -24,11 +24,4 @@
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
-<!--   <session-config> -->
-<!-- 		<session-timeout>-1</session-timeout> -->
-<!-- 	</session-config> -->
-<!--   <welcome-file-list> -->
-<!--   	<welcome-file>/main.do</welcome-file> -->
-<!--   </welcome-file-list> -->
-  
 </web-app>

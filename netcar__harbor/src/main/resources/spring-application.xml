@@ -21,7 +21,7 @@
 	<!-- 标注类型 的事务配置 -->
 	<tx:annotation-driven />
 	<!-- 使用Spring组件扫描的方式来实现自动注入bean -->
-	<context:component-scan base-package="org.netCar" />
+	<context:component-scan base-package="org.netCar"/>
 	
 	<!-- 读取资源文件 -->
 	<bean
@@ -157,4 +157,5 @@
 	<import resource="jms.xml"/>
 	<import resource="kafka-consumer.xml"/>
 	<import resource="kafka-producer.xml"/>
+	<import resource="applicationContext-mongodb.xml"/>
 </beans>
