@@ -5,7 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 /**
- * Created by ffd on 2017/4/19.
+ * Created by lyq on 2017/4/19.
  */
 @Entity
 @Table(name = "vehicle_total_mile")
