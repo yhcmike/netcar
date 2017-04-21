@@ -109,7 +109,7 @@
     </bean>  
     
     <!-- mongo config -->
-    <mongo:mongo id="mongo" replica-set="${mongo.cmd}">
+    <mongo:mongo id="mongo" replica-set="${mongo.hostport}">
 		<mongo:options 
 		 connections-per-host="${mongo.connectionsPerHost}" 
 		 threads-allowed-to-block-for-connection-multiplier="${mongo.threadsAllowedToBlockForConnectionMultiplier}"

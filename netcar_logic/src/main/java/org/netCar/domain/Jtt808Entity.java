@@ -10,7 +10,6 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "jtt808")
 public class Jtt808Entity  extends IdEntity{
-    private Integer id;
     private String code;
     private String name;
     private Integer year;

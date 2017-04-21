@@ -41,6 +41,10 @@ public class PositionCache {
 		redisTemplate.opsForHash().putAll(CAR+code,map);
 	}
 
+	public void deletePosition(String code,String vehicleNo){
+		redisTemplate.opsForHash().delete(CAR+code,vehicleNo);
+	}
+
 	/**
 	 * 获取该行政区域下面的所有车辆信息--实时信息，接收到位置信息时判断车辆是否在该区域。车辆状态：1：载客 2：接单 3：空驶 4：停运
 	 * @param code  行政区域编码
@@ -62,14 +66,14 @@ public class PositionCache {
 	 *  LicenseId  机动车驾驶证号
 	 *  code 行政区域编码
 	 */
-	public void setDriverCode(String vehicleNo , Integer code ) {
+	public void setVehicleNoCode(String vehicleNo , String code ) {
 		redisTemplate.opsForHash().put(CARCODE, vehicleNo,code);
 	}
 
 	/**
 	 * LicenseId  机动车驾驶证号
 	 */
-	public  String  getDriverbyVehicleNo(String vehicleNo){
+	public  String  getCodeByVehicleNo(String vehicleNo){
 		return (String) redisTemplate.opsForHash().get(CARCODE,vehicleNo);
 	}
 

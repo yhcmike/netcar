@@ -12,4 +12,6 @@ public interface VehiclepositionService {
     public void update(VehiclePositionEntity vehicleposition);
 
     public void delete(VehiclePositionEntity vehicleposition);
+
+    public void operationPostion(Integer id);
 }

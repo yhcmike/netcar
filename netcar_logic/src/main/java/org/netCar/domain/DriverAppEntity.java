@@ -10,7 +10,6 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "driver_app")
 public class DriverAppEntity extends IdEntity{
-    private Integer id;
     private String companyId;
     private Integer address;
     private String licenseId;
