@@ -28,17 +28,14 @@ http://www.springframework.org/schema/context/spring-context-3.1.xsd">
 			</bean>
 		</property>
 	</bean>
-	
-	<bean id="downloadNetCar" class="org.apache.activemq.command.ActiveMQQueue">
+
+	<bean id="uploadNetCar" class="org.apache.activemq.command.ActiveMQQueue">
 		<constructor-arg value="${mq.name}"></constructor-arg>
 	</bean>
 
-	<bean
-		class="org.springframework.jms.listener.DefaultMessageListenerContainer">
-		<property name="connectionFactory" ref="connectionFactory" />
-		<property name="destination" ref="downloadNetCar" />
-		<property name="messageListener" ref="jmsConsumer" />
-		<property name="concurrentConsumers" value="2"></property>
+	<bean id="jmsTemplate" class="org.springframework.jms.core.JmsTemplate">
+		<property name="connectionFactory" ref="connectionFactory"></property>
+		<property name="defaultDestination" ref="uploadNetCar" />
 	</bean>
 	
 </beans>

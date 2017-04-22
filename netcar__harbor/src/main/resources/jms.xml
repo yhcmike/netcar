@@ -34,8 +34,8 @@ http://www.springframework.org/schema/context/spring-context-3.1.xsd">
 	</bean>
 	
 	<bean id="jmsTemplate" class="org.springframework.jms.core.JmsTemplate">
-		<property name="connectionFactory" ref="connectionFactory"></property>
-		<property name="defaultDestination" ref="uploadNetCar" />
-	</bean>
+	<property name="connectionFactory" ref="connectionFactory"></property>
+	<property name="defaultDestination" ref="uploadNetCar" />
+</bean>
 	
 </beans>

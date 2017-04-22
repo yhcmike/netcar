@@ -64,11 +64,11 @@ public class VehiclepositionServiceImpl implements VehiclepositionService {
             codeInt++;
             nowCode = codeInt.toString();
         }
-        try {
-            TimeUnit.SECONDS.sleep(1);
+        /*try {
+            //TimeUnit.SECONDS.sleep(1);
         } catch (InterruptedException e) {
             e.printStackTrace();
-        }
+        }*/
 
         if(StringUtils.isBlank(lastCode)){
             positionCache.setVehicleNoCode(vehicleNo, nowCode);
