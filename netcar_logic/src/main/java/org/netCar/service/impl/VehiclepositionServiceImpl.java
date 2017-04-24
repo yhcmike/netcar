@@ -67,15 +67,15 @@ public class VehiclepositionServiceImpl implements VehiclepositionService {
         String lastCode = positionCache.getCodeByVehicleNo(vehicleNo);
 
         String nowCode = codeInt.toString();
-        if (id % 50 == 0){
+        if (id % 100 == 0){
             codeInt++;
             nowCode = codeInt.toString();
         }
-        try {
+        /*try {
             TimeUnit.SECONDS.sleep(1);
         } catch (InterruptedException e) {
             e.printStackTrace();
-        }
+        }*/
 
         if(StringUtils.isBlank(lastCode)){
             positionCache.setVehicleNoCode(vehicleNo, nowCode);
