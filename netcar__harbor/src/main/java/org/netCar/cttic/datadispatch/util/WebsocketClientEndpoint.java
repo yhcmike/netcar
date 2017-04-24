@@ -8,9 +8,7 @@ import java.io.IOException;
 import java.net.URI;
 import java.nio.ByteBuffer;
 
-/**
- * Created by caohui on 16/8/21.
- */
+
 @ClientEndpoint
 public class WebsocketClientEndpoint {
     private static Logger LOG = LoggerFactory.getLogger(WebsocketClientEndpoint.class);
