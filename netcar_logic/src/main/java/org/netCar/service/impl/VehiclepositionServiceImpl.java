@@ -24,7 +24,7 @@ public class VehiclepositionServiceImpl implements VehiclepositionService {
 
     private static Logger logger = LoggerFactory.getLogger(VehiclepositionServiceImpl.class);
 
-    private static  Integer codeInt = 100000;
+    private static  Integer codeInt = 340101;
 
     @Autowired
     VehiclepositionDao vehiclepositionDao;
@@ -53,22 +53,29 @@ public class VehiclepositionServiceImpl implements VehiclepositionService {
     @Override
     public void operationPostion(Integer id) {
         logger.info("operationPostion start id:"+id);
-
+     /* 340101	市辖区
+        340102	瑶海区
+        340103	庐阳区
+        340104	蜀山区
+        340111	包河区
+        340121	长丰县
+        340122	肥东县
+        340123	肥西县*/
         VehiclePositionEntity vehicleposition = vehiclepositionDao.get(id);
         //1:查询位置所在区域和上次所在区域比较
         String vehicleNo = vehicleposition.getVehicleNo();
         String lastCode = positionCache.getCodeByVehicleNo(vehicleNo);
 
         String nowCode = codeInt.toString();
-        if (id % 10 == 0){
+        if (id % 50 == 0){
             codeInt++;
             nowCode = codeInt.toString();
         }
-        /*try {
-            //TimeUnit.SECONDS.sleep(1);
+        try {
+            TimeUnit.SECONDS.sleep(1);
         } catch (InterruptedException e) {
             e.printStackTrace();
-        }*/
+        }
 
         if(StringUtils.isBlank(lastCode)){
             positionCache.setVehicleNoCode(vehicleNo, nowCode);
