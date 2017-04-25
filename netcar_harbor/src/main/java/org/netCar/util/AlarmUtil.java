@@ -6,6 +6,11 @@ import org.netCar.vo.SpotVo;
  * 报警工具类
  */
 public class AlarmUtil {
+	
+	public static boolean isInCircle(SpotVo vo, Double[] center, Integer radius) {
+		double distance = DistanceUtil.distance(vo.getLng(), vo.getLat(), center[0], center[1]);
+		return distance < radius;
+	}
 
     ///  判断指定的经纬度坐标点是否落在指定的多边形区域内
     /// </summary>
