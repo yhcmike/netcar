@@ -38,10 +38,18 @@ public class NewWebSocketThread implements Runnable {
 	private TopicsNameEnum topicsEnum;
 	
 	
-    public NewWebSocketThread(String topics, String token, TopicsNameEnum topicsEnum) {  
+    public NewWebSocketThread(String topics, String token, TopicsNameEnum topicsEnum,
+    		String serverBaseUri,String offsetReset,long timeout,boolean batch,boolean compress,
+    		boolean logMessage) {  
         this.topics = topics;  
         this.token = token;  
         this.topicsEnum = topicsEnum;
+        this.serverBaseUri = serverBaseUri;
+        this.offsetReset = offsetReset;
+        this.timeout = timeout;
+        this.batch = batch;
+        this.compress = compress;
+        this.logMessage = logMessage;
     }  
   
     @Override  
@@ -80,7 +88,7 @@ public class NewWebSocketThread implements Runnable {
 							LOG.error("", e);
 						}
 					});
-
+			LOG.info("==========================================="+Thread.currentThread().isInterrupted());
 			while (!Thread.currentThread().isInterrupted()) {
 				try {
 					TimeUnit.SECONDS.sleep(timeout);
@@ -88,7 +96,7 @@ public class NewWebSocketThread implements Runnable {
 				}
 				// 一般设计合理的阻塞方法都会响应中断，并抛出InterruptedException异常，需要捕获该异常并中断当前线程
 				catch (InterruptedException e) {
-					LOG.debug("interrupted from TimeUnit#sleep() ==> " + Thread.currentThread().getName());
+					LOG.info("interrupted from TimeUnit#sleep() ==> " + Thread.currentThread().getName());
 					Thread.currentThread().interrupt();
 				}
 			}

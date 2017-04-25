@@ -55,10 +55,11 @@ public class WebsocketClientEndpoint {
     }
 
     public void sendPing(String message) {
+    	LOG.info("send PingMessage start");
         try {
             if (userSession != null) {
                 this.userSession.getAsyncRemote().sendPing(ByteBuffer.wrap(message.getBytes()));
-                LOG.debug("send PingMessage");
+                LOG.info("send PingMessage end");
             }
         } catch (IOException e) {
             e.printStackTrace();
