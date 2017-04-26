@@ -1,5 +1,7 @@
 package org.netCar.domain;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
@@ -17,6 +19,10 @@ public class FenceEntity  extends IdEntity{
     private String spots;
     private String remark;
     private Integer status;
+    private String number;
+    private String purpose;
+    private Date createTime;
+    private Date endTime;
 
 
 
@@ -89,36 +95,42 @@ public class FenceEntity  extends IdEntity{
     public void setStatus(Integer status) {
         this.status = status;
     }
+    
+    @Column(name = "number")
+	public String getNumber() {
+		return number;
+	}
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+	public void setNumber(String number) {
+		this.number = number;
+	}
+	
+	@Column(name = "purpose")
+	public String getPurpose() {
+		return purpose;
+	}
 
-        FenceEntity that = (FenceEntity) o;
+	public void setPurpose(String purpose) {
+		this.purpose = purpose;
+	}
+	
+	@Column(name = "createTime")
+	public Date getCreateTime() {
+		return createTime;
+	}
 
-        if (id != null ? !id.equals(that.id) : that.id != null) return false;
-        if (name != null ? !name.equals(that.name) : that.name != null) return false;
-        if (shape != null ? !shape.equals(that.shape) : that.shape != null) return false;
-        if (radius != null ? !radius.equals(that.radius) : that.radius != null) return false;
-        if (type != null ? !type.equals(that.type) : that.type != null) return false;
-        if (spots != null ? !spots.equals(that.spots) : that.spots != null) return false;
-        if (remark != null ? !remark.equals(that.remark) : that.remark != null) return false;
-        if (status != null ? !status.equals(that.status) : that.status != null) return false;
+	public void setCreateTime(Date createTime) {
+		this.createTime = createTime;
+	}
+	
+	@Column(name = "endTime")
+	public Date getEndTime() {
+		return endTime;
+	}
 
-        return true;
-    }
+	public void setEndTime(Date endTime) {
+		this.endTime = endTime;
+	}
 
-    @Override
-    public int hashCode() {
-        int result = id != null ? id.hashCode() : 0;
-        result = 31 * result + (name != null ? name.hashCode() : 0);
-        result = 31 * result + (shape != null ? shape.hashCode() : 0);
-        result = 31 * result + (radius != null ? radius.hashCode() : 0);
-        result = 31 * result + (type != null ? type.hashCode() : 0);
-        result = 31 * result + (spots != null ? spots.hashCode() : 0);
-        result = 31 * result + (remark != null ? remark.hashCode() : 0);
-        result = 31 * result + (status != null ? status.hashCode() : 0);
-        return result;
-    }
+   
 }

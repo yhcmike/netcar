@@ -1,5 +1,7 @@
 package org.netCar.service.impl;
 
+import java.util.List;
+
 import org.netCar.dao.FenceDao;
 import org.netCar.domain.FenceEntity;
 import org.netCar.service.FenceService;
@@ -27,4 +29,9 @@ public class FenceServiceImpl implements FenceService {
     public void delete(FenceEntity entity) {
         dao.deleteObject(entity);
     }
+
+	@Override
+	public List<FenceEntity> listFencesByCounty(String remark,Integer status) {
+		return dao.listAllByCounty(remark,status);
+	}
 }

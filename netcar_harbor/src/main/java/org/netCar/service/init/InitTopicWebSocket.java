@@ -5,10 +5,12 @@ import java.util.concurrent.LinkedBlockingDeque;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
+import org.netCar.service.cttic.ProvCompanyInfoAdapterService;
 import org.netCar.util.NewWebSocketThread;
 import org.netCar.vo.TopicsNameEnum;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -64,7 +66,7 @@ public class InitTopicWebSocket {
 				//为每一个topics 初始化websocket 
 				for (TopicsNameEnum topicsEnum : TopicsNameEnum.values()) {
 		            if(topicsEnum.isEnable()){
-		            	NewWebSocketThread task = new NewWebSocketThread(topicsEnum.getEnName(),res.getBody(),topicsEnum,
+		            	NewWebSocketThread task = new NewWebSocketThread(res.getBody(),topicsEnum,
 		            			serverBaseUri, offsetReset, timeout, batch, compress, logMessage);  
 		                threadPool.execute(task); 
 		            }

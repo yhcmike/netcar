@@ -2,45 +2,50 @@ package org.netCar.vo;
 
 public enum TopicsNameEnum {
 	
-	PROVCOMPANY("网约车平台公司基本信息","ProvCompany","",true,false),
-	PROVCOMPANYSTAT("网约车平台公司营运规模信息","ProvCompanyStat","",true,false),
-	PROVCOMPANYPAY("网约车平台公司支付信息","ProvCompanyPay","",true,false),
-	PROVCOMPANYSERVICE("网约车平台公司服务机构","ProvCompanyService","",true,false);
+	PROVCOMPANYINFO("公司信息接口","ProvCompanyInfo","ProvCompany,ProvCompanyStat,ProvCompanyPay,ProvCompanyService,ProvCompanyPermit,ProvCompanyFare",true),
+	PROVVEHICLEINFO("车辆信息","ProvVehicleInfo","ProvVehicle,ProvVehicleInsurance,ProvVehicleTotalMile",true),
+	PROVDRIVERINFO("驾驶员接口","ProvDriverInfo","ProvDriver,ProvDriverEducate,ProvDriverApp,ProvDriverStat,ProvPassenger",true),
+	PROVORDERINFO("订单接口","ProvOrderInfo","ProvOrderCreate,ProvOrderMatch,ProvOrderCancel",true),
+	PROVOPERATEINFO("经营接口","ProvOperateInfo","ProvOperateLogin,ProvOperateLogout,ProvOperateDepart,ProvOperateArrive,ProvOperatePay",true),
+	PROVPOSITIONDRIVER("驾驶员定位信息","ProvPositionDriver","ProvPositionDriver",true),
+	PROVPOSITIONVEHICLE("车辆定位信息接口","ProvPositionVehicle","ProvPositionVehicle",true),
+	PROVRATEDPASSENGER("评价及投诉接口","ProvRatedPassenger","ProvRatedPassenger,ProvPassengerComplaint,ProvDriverPunish,ProvRatedDriver",true);
 	
 	private String zhName;
-	private String enName;
+	private String topics;
 	private String serviceName;
 	private boolean enable;
-	private boolean isComplex;
 	
-	private TopicsNameEnum(String zhName,String enName,String serviceName,boolean enable,boolean isComplex){
+	private TopicsNameEnum(String zhName,String serviceName,String topics,boolean enable){
 		this.zhName = zhName;
-		this.enName = enName;
 		this.serviceName = serviceName;
+		this.topics = topics;
 		this.enable = enable;
-		this.isComplex = isComplex;
 	}
-
 
 	public String getZhName() {
 		return zhName;
 	}
 
-
 	public void setZhName(String zhName) {
 		this.zhName = zhName;
 	}
 
-
-	public String getEnName() {
-		return enName;
+	public String getTopics() {
+		return topics;
 	}
 
-
-	public void setEnName(String enName) {
-		this.enName = enName;
+	public void setTopics(String topics) {
+		this.topics = topics;
 	}
 
+	public boolean isEnable() {
+		return enable;
+	}
+
+	public void setEnable(boolean enable) {
+		this.enable = enable;
+	}
 
 	public String getServiceName() {
 		return serviceName;
@@ -49,24 +54,6 @@ public enum TopicsNameEnum {
 	public void setServiceName(String serviceName) {
 		this.serviceName = serviceName;
 	}
-
-	public boolean isComplex() {
-		return isComplex;
-	}
-
-	public void setComplex(boolean isComplex) {
-		this.isComplex = isComplex;
-	}
-
-
-	public boolean isEnable() {
-		return enable;
-	}
-
-
-	public void setEnable(boolean enable) {
-		this.enable = enable;
-	}
 	
-	
+
 }
