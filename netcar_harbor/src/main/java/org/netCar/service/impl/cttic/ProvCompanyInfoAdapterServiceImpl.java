@@ -6,7 +6,6 @@ import java.util.zip.GZIPInputStream;
 
 import org.apache.commons.io.IOUtils;
 import org.netCar.service.cttic.ProvCompanyInfoAdapterService;
-import org.netCar.util.NewWebSocketThread;
 import org.netCar.vo.OTIpcDef;
 import org.netCar.vo.OTIpcDef.OTIpc;
 import org.slf4j.Logger;
@@ -22,6 +21,7 @@ public class ProvCompanyInfoAdapterServiceImpl implements ProvCompanyInfoAdapter
 	
 	@Override
 	public void adapterHandler(boolean batch,boolean compress,byte[] message) {
+		LOG.info("adapter service ==> " + message.length);
 		try {
 			if (batch) {
 				if (compress) {
