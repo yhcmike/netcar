@@ -1,22 +1,14 @@
 package org.netCar.util;
 
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
 import java.net.URI;
 import java.util.concurrent.TimeUnit;
-import java.util.zip.GZIPInputStream;
 
-import org.apache.commons.io.IOUtils;
 import org.netCar.service.cttic.ProvCompanyInfoAdapterService;
 import org.netCar.service.impl.WebsocketClientEndpoint;
-import org.netCar.vo.OTIpcDef;
-import org.netCar.vo.OTIpcDef.OTIpc;
 import org.netCar.vo.TopicsNameEnum;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-
-import com.google.protobuf.InvalidProtocolBufferException;
 
 public class NewWebSocketThread implements Runnable {  
 	

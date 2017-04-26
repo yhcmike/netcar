@@ -31,7 +31,7 @@
 		<property name="location" value="classpath:application.properties" />
 	</bean>
 	
-	<!-- <bean class="org.netCar.service.init.InitTopicWebSocket"  init-method="initWebSocket"></bean> -->
+	<bean class="org.netCar.service.init.InitTopicWebSocket"  init-method="initWebSocket"></bean>
 	<bean class="org.netCar.service.init.InitFenceData"  init-method="initFence"></bean>
 	
 	 <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource"  
