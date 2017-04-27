@@ -69,15 +69,15 @@ public class DriverInfoEntity extends IdEntity{
         this.driverGender = driverGender;
     }
 
-    private Integer driverBirthday;
+    private Long driverBirthday;
 
 
     @javax.persistence.Column(name = "driver_birthday")
-    public Integer getDriverBirthday() {
+    public Long getDriverBirthday() {
         return driverBirthday;
     }
 
-    public void setDriverBirthday(Integer driverBirthday) {
+    public void setDriverBirthday(Long driverBirthday) {
         this.driverBirthday = driverBirthday;
     }
 
@@ -225,39 +225,39 @@ public class DriverInfoEntity extends IdEntity{
         this.driverType = driverType;
     }
 
-    private Integer getDriverLicenseDate;
+    private Long getDriverLicenseDate;
 
 
     @javax.persistence.Column(name = "get_driver_license_date")
-    public Integer getGetDriverLicenseDate() {
+    public Long getGetDriverLicenseDate() {
         return getDriverLicenseDate;
     }
 
-    public void setGetDriverLicenseDate(Integer getDriverLicenseDate) {
+    public void setGetDriverLicenseDate(Long getDriverLicenseDate) {
         this.getDriverLicenseDate = getDriverLicenseDate;
     }
 
-    private Integer driverLicenseOn;
+    private Long driverLicenseOn;
 
 
     @javax.persistence.Column(name = "driver_license_on")
-    public Integer getDriverLicenseOn() {
+    public Long getDriverLicenseOn() {
         return driverLicenseOn;
     }
 
-    public void setDriverLicenseOn(Integer driverLicenseOn) {
+    public void setDriverLicenseOn(Long driverLicenseOn) {
         this.driverLicenseOn = driverLicenseOn;
     }
 
-    private Integer driverLicenseOff;
+    private Long driverLicenseOff;
 
 
     @javax.persistence.Column(name = "driver_license_off")
-    public Integer getDriverLicenseOff() {
+    public Long getDriverLicenseOff() {
         return driverLicenseOff;
     }
 
-    public void setDriverLicenseOff(Integer driverLicenseOff) {
+    public void setDriverLicenseOff(Long driverLicenseOff) {
         this.driverLicenseOff = driverLicenseOff;
     }
 
@@ -297,63 +297,63 @@ public class DriverInfoEntity extends IdEntity{
         this.networkCarIssueOrganization = networkCarIssueOrganization;
     }
 
-    private Integer networkCarIssueDate;
+    private Long networkCarIssueDate;
 
 
     @javax.persistence.Column(name = "network_car_issue_date")
-    public Integer getNetworkCarIssueDate() {
+    public Long getNetworkCarIssueDate() {
         return networkCarIssueDate;
     }
 
-    public void setNetworkCarIssueDate(Integer networkCarIssueDate) {
+    public void setNetworkCarIssueDate(Long networkCarIssueDate) {
         this.networkCarIssueDate = networkCarIssueDate;
     }
 
-    private Integer getNetworkCarProofDate;
+    private Long getNetworkCarProofDate;
 
 
     @javax.persistence.Column(name = "get_network_car_proof_date")
-    public Integer getGetNetworkCarProofDate() {
+    public Long getGetNetworkCarProofDate() {
         return getNetworkCarProofDate;
     }
 
-    public void setGetNetworkCarProofDate(Integer getNetworkCarProofDate) {
+    public void setGetNetworkCarProofDate(Long getNetworkCarProofDate) {
         this.getNetworkCarProofDate = getNetworkCarProofDate;
     }
 
-    private Integer networkCarProofOn;
+    private Long networkCarProofOn;
 
 
     @javax.persistence.Column(name = "network_car_proof_on")
-    public Integer getNetworkCarProofOn() {
+    public Long getNetworkCarProofOn() {
         return networkCarProofOn;
     }
 
-    public void setNetworkCarProofOn(Integer networkCarProofOn) {
+    public void setNetworkCarProofOn(Long networkCarProofOn) {
         this.networkCarProofOn = networkCarProofOn;
     }
 
-    private Integer networkCarProofOff;
+    private Long networkCarProofOff;
 
 
     @javax.persistence.Column(name = "network_car_proof_off")
-    public Integer getNetworkCarProofOff() {
+    public Long getNetworkCarProofOff() {
         return networkCarProofOff;
     }
 
-    public void setNetworkCarProofOff(Integer networkCarProofOff) {
+    public void setNetworkCarProofOff(Long networkCarProofOff) {
         this.networkCarProofOff = networkCarProofOff;
     }
 
-    private Integer registerDate;
+    private Long registerDate;
 
 
     @javax.persistence.Column(name = "register_date")
-    public Integer getRegisterDate() {
+    public Long getRegisterDate() {
         return registerDate;
     }
 
-    public void setRegisterDate(Integer registerDate) {
+    public void setRegisterDate(Long registerDate) {
         this.registerDate = registerDate;
     }
 
@@ -405,27 +405,27 @@ public class DriverInfoEntity extends IdEntity{
         this.contractCompany = contractCompany;
     }
 
-    private Integer contractOn;
+    private Long contractOn;
 
 
     @javax.persistence.Column(name = "contract_on")
-    public Integer getContractOn() {
+    public Long getContractOn() {
         return contractOn;
     }
 
-    public void setContractOn(Integer contractOn) {
+    public void setContractOn(Long contractOn) {
         this.contractOn = contractOn;
     }
 
-    private Integer contractOff;
+    private Long contractOff;
 
 
     @javax.persistence.Column(name = "contract_off")
-    public Integer getContractOff() {
+    public Long getContractOff() {
         return contractOff;
     }
 
-    public void setContractOff(Integer contractOff) {
+    public void setContractOff(Long contractOff) {
         this.contractOff = contractOff;
     }
 

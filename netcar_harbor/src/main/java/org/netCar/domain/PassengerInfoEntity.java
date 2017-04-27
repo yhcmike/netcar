@@ -14,7 +14,7 @@ public class PassengerInfoEntity  extends IdEntity{
 
 
     private String companyId;
-    private Integer registerDate;
+    private Long registerDate;
     private String passengerPhone;
     private String passengerName;
     private String passengerGender;
@@ -33,11 +33,11 @@ public class PassengerInfoEntity  extends IdEntity{
 
 
     @Column(name = "register_date")
-    public Integer getRegisterDate() {
+    public Long getRegisterDate() {
         return registerDate;
     }
 
-    public void setRegisterDate(Integer registerDate) {
+    public void setRegisterDate(Long registerDate) {
         this.registerDate = registerDate;
     }
 

@@ -156,15 +156,15 @@ public class VehicleInfoEntity  extends IdEntity{
         this.vIn = vIn;
     }
 
-    private Integer certifyDateA;
+    private Long certifyDateA;
 
 
     @Column(name = "certify_date_A")
-    public Integer getCertifyDateA() {
+    public Long getCertifyDateA() {
         return certifyDateA;
     }
 
-    public void setCertifyDateA(Integer certifyDateA) {
+    public void setCertifyDateA(Long certifyDateA) {
         this.certifyDateA = certifyDateA;
     }
 
@@ -240,39 +240,39 @@ public class VehicleInfoEntity  extends IdEntity{
         this.transArea = transArea;
     }
 
-    private Integer transDateStart;
+    private Long transDateStart;
 
 
     @Column(name = "trans_date_start")
-    public Integer getTransDateStart() {
+    public Long getTransDateStart() {
         return transDateStart;
     }
 
-    public void setTransDateStart(Integer transDateStart) {
+    public void setTransDateStart(Long transDateStart) {
         this.transDateStart = transDateStart;
     }
 
-    private Integer transDateStop;
+    private Long transDateStop;
 
 
     @Column(name = "trans_date_stop")
-    public Integer getTransDateStop() {
+    public Long getTransDateStop() {
         return transDateStop;
     }
 
-    public void setTransDateStop(Integer transDateStop) {
+    public void setTransDateStop(Long transDateStop) {
         this.transDateStop = transDateStop;
     }
 
-    private Integer certifyDateB;
+    private Long certifyDateB;
 
 
     @Column(name = "certify_date_B")
-    public Integer getCertifyDateB() {
+    public Long getCertifyDateB() {
         return certifyDateB;
     }
 
-    public void setCertifyDateB(Integer certifyDateB) {
+    public void setCertifyDateB(Long certifyDateB) {
         this.certifyDateB = certifyDateB;
     }
 
@@ -288,27 +288,27 @@ public class VehicleInfoEntity  extends IdEntity{
         this.fixState = fixState;
     }
 
-    private Integer nextFixDate;
+    private Long nextFixDate;
 
 
     @Column(name = "next_fix_date")
-    public Integer getNextFixDate() {
+    public Long getNextFixDate() {
         return nextFixDate;
     }
 
-    public void setNextFixDate(Integer nextFixDate) {
+    public void setNextFixDate(Long nextFixDate) {
         this.nextFixDate = nextFixDate;
     }
 
-    private Integer checkState;
+    private String checkState;
 
 
     @Column(name = "check_state")
-    public Integer getCheckState() {
+    public String getCheckState() {
         return checkState;
     }
 
-    public void setCheckState(Integer checkState) {
+    public void setCheckState(String checkState) {
         this.checkState = checkState;
     }
 
@@ -360,27 +360,27 @@ public class VehicleInfoEntity  extends IdEntity{
         this.gPsimei = gPsimei;
     }
 
-    private Integer gPsInstallDate;
+    private Long gPsInstallDate;
 
 
     @Column(name = "gPS_install_date")
-    public Integer getgPsInstallDate() {
+    public Long getgPsInstallDate() {
         return gPsInstallDate;
     }
 
-    public void setgPsInstallDate(Integer gPsInstallDate) {
+    public void setgPsInstallDate(Long gPsInstallDate) {
         this.gPsInstallDate = gPsInstallDate;
     }
 
-    private Integer registerDate;
+    private Long registerDate;
 
 
     @Column(name = "register_date")
-    public Integer getRegisterDate() {
+    public Long getRegisterDate() {
         return registerDate;
     }
 
-    public void setRegisterDate(Integer registerDate) {
+    public void setRegisterDate(Long registerDate) {
         this.registerDate = registerDate;
     }
 

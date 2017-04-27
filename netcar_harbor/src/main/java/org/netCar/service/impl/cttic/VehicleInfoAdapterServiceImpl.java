@@ -5,22 +5,31 @@ import java.io.ByteArrayOutputStream;
 import java.util.zip.GZIPInputStream;
 
 import org.apache.commons.io.IOUtils;
-import org.netCar.service.cttic.ProvCompanyInfoAdapterService;
+import org.netCar.service.VehicleInsuranceService;
+import org.netCar.service.VehicleTotalMileService;
+import org.netCar.service.VehicleinfoService;
+import org.netCar.service.cttic.VehicleInfoAdapterService;
 import org.netCar.vo.OTIpcDef;
 import org.netCar.vo.OTIpcDef.OTIpc;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.google.protobuf.InvalidProtocolBufferException;
 
 @Service
-public class ProvCompanyInfoAdapterServiceImpl implements ProvCompanyInfoAdapterService{
-	
-	private static Logger LOG = LoggerFactory.getLogger(ProvCompanyInfoAdapterServiceImpl.class);
+public class VehicleInfoAdapterServiceImpl implements VehicleInfoAdapterService {
+	private static Logger LOG = LoggerFactory.getLogger(VehicleInfoAdapterService.class);
+	@Autowired
+	private VehicleinfoService vehicleinfoService;
+	@Autowired
+	private VehicleInsuranceService vehicleInsuranceService;
+	@Autowired
+	private VehicleTotalMileService vehicleTotalMileService;
 	
 	@Override
-	public void adapterHandler(boolean batch,boolean compress,byte[] message) {
+	public void adapterHandler(boolean batch, boolean compress, byte[] message) {
 		LOG.info("adapter service ==> " + message.length);
 		try {
 			if (batch) {
@@ -32,17 +41,24 @@ public class ProvCompanyInfoAdapterServiceImpl implements ProvCompanyInfoAdapter
 					}*/
 					for(OTIpc obj : OTIpcDef.OTIpcList.parseFrom(decompress(message)).getOtpicList()){
                     	switch (obj.getIPCType()) {
-						case baseInfoCompany:
-							for(OTIpcDef.BaseInfoCompany company : obj.getBaseInfoCompanyList()){
-                                System.out.println(company.getCompanyName());
-                            }
-							break;
 						case baseInfoVehicle:
-							for(OTIpcDef.BaseInfoVehicle baseInfoVehicle : obj.getBaseInfoVehicleList()){
-                                System.out.println(baseInfoVehicle.getAddress());
+							for(OTIpcDef.BaseInfoVehicle vehicle : obj.getBaseInfoVehicleList()){
+								vehicleinfoService.opreate(vehicle);
                             }
 							break;
+						case baseInfoVehicleInsurance:
+							for(OTIpcDef.BaseInfoVehicleInsurance stat : obj.getBaseInfoVehicleInsuranceList()){
+								vehicleInsuranceService.opreate(stat);
+                            }
+							break;
+						case baseInfoVehicleTotalMile:
+							for(OTIpcDef.BaseInfoVehicleTotalMile fare: obj.getBaseInfoVehicleTotalMileList()){
+								vehicleTotalMileService.opreate(fare);
+							}
+							break;
+						
 						default:
+							LOG.error(String.format("%s获取IPCType有误:%s",this.getClass().getName(),obj.getIPCType().getNumber()));
 							break;
 						}
              
@@ -76,5 +92,5 @@ public class ProvCompanyInfoAdapterServiceImpl implements ProvCompanyInfoAdapter
             throw new RuntimeException("gunzip data error", e);
         }
     }
-
+  
 }

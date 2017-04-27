@@ -499,7 +499,7 @@ public abstract class BaseHBDao<M extends Serializable, PK extends Serializable>
 	 * @since    JDK 1.7
 	 */
 	@SuppressWarnings("unchecked")
-	protected <T> T unique(final String hql, Map<String,Object> params) {
+	public <T> T unique(final String hql, Map<String,Object> params) {
 		Query query = getCurrentSession().createQuery(hql);
 		if (params != null) {
 			setParameters(query, params);

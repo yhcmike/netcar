@@ -129,27 +129,27 @@ public class CompanyFareEntity extends IdEntity{
         this.unitPricePerMinute = unitPricePerMinute;
     }
 
-    private Integer upPrice;
+    private Float upPrice;
 
 
     @javax.persistence.Column(name = "up_price")
-    public Integer getUpPrice() {
+    public Float getUpPrice() {
         return upPrice;
     }
 
-    public void setUpPrice(Integer upPrice) {
+    public void setUpPrice(Float upPrice) {
         this.upPrice = upPrice;
     }
 
-    private Integer upPriceStartMile;
+    private Float upPriceStartMile;
 
 
     @javax.persistence.Column(name = "up_price_start_mile")
-    public Integer getUpPriceStartMile() {
+    public Float getUpPriceStartMile() {
         return upPriceStartMile;
     }
 
-    public void setUpPriceStartMile(Integer upPriceStartMile) {
+    public void setUpPriceStartMile(Float upPriceStartMile) {
         this.upPriceStartMile = upPriceStartMile;
     }
 
@@ -225,63 +225,63 @@ public class CompanyFareEntity extends IdEntity{
         this.otherPeakTimeOff = otherPeakTimeOff;
     }
 
-    private Integer peakUnitPrice;
+    private Float peakUnitPrice;
 
 
     @javax.persistence.Column(name = "peak_unit_price")
-    public Integer getPeakUnitPrice() {
+    public Float getPeakUnitPrice() {
         return peakUnitPrice;
     }
 
-    public void setPeakUnitPrice(Integer peakUnitPrice) {
+    public void setPeakUnitPrice(Float peakUnitPrice) {
         this.peakUnitPrice = peakUnitPrice;
     }
 
-    private Integer peakPriceStartMile;
+    private Float peakPriceStartMile;
 
 
     @javax.persistence.Column(name = "peak_price_start_mile")
-    public Integer getPeakPriceStartMile() {
+    public Float getPeakPriceStartMile() {
         return peakPriceStartMile;
     }
 
-    public void setPeakPriceStartMile(Integer peakPriceStartMile) {
+    public void setPeakPriceStartMile(Float peakPriceStartMile) {
         this.peakPriceStartMile = peakPriceStartMile;
     }
 
-    private Integer lowSpeedPricePerMinute;
+    private Float lowSpeedPricePerMinute;
 
 
     @javax.persistence.Column(name = "low_speed_price_per_minute")
-    public Integer getLowSpeedPricePerMinute() {
+    public float getLowSpeedPricePerMinute() {
         return lowSpeedPricePerMinute;
     }
 
-    public void setLowSpeedPricePerMinute(Integer lowSpeedPricePerMinute) {
+    public void setLowSpeedPricePerMinute(float lowSpeedPricePerMinute) {
         this.lowSpeedPricePerMinute = lowSpeedPricePerMinute;
     }
 
-    private Integer nightPricePerMile;
+    private Float nightPricePerMile;
 
 
     @javax.persistence.Column(name = "night_price_per_mile")
-    public Integer getNightPricePerMile() {
+    public Float getNightPricePerMile() {
         return nightPricePerMile;
     }
 
-    public void setNightPricePerMile(Integer nightPricePerMile) {
+    public void setNightPricePerMile(Float nightPricePerMile) {
         this.nightPricePerMile = nightPricePerMile;
     }
 
-    private Integer nightPricePerMinute;
+    private Float nightPricePerMinute;
 
 
     @javax.persistence.Column(name = "night_price_per_minute")
-    public Integer getNightPricePerMinute() {
+    public Float getNightPricePerMinute() {
         return nightPricePerMinute;
     }
 
-    public void setNightPricePerMinute(Integer nightPricePerMinute) {
+    public void setNightPricePerMinute(Float nightPricePerMinute) {
         this.nightPricePerMinute = nightPricePerMinute;
     }
 

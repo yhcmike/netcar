@@ -2,6 +2,7 @@ package org.netCar.service;
 
 
 import org.netCar.domain.CompanyInfoEntity;
+import org.netCar.vo.OTIpcDef;
 
 public interface CompanyInfoService {
 
@@ -11,5 +12,7 @@ public interface CompanyInfoService {
 	public void delete(CompanyInfoEntity companyInfo);
 	public void changeStatus(Integer id,Integer status);
 	public CompanyInfoEntity getById(Integer id);
+	
+	public void operate(OTIpcDef.BaseInfoCompany company);
 	
 }

@@ -17,9 +17,9 @@ public class VehicleInsuranceEntity  extends IdEntity{
     private String insurCom;
     private String insurNum;
     private String insurType;
-    private Integer insurCount;
-    private Integer insurEff;
-    private Integer insurExp;
+    private Float insurCount;
+    private Long insurEff;
+    private Long insurExp;
     private Integer flag;
     private Long updateTime;
 
@@ -74,31 +74,31 @@ public class VehicleInsuranceEntity  extends IdEntity{
 
 
     @Column(name = "insur_count")
-    public Integer getInsurCount() {
+    public Float getInsurCount() {
         return insurCount;
     }
 
-    public void setInsurCount(Integer insurCount) {
+    public void setInsurCount(Float insurCount) {
         this.insurCount = insurCount;
     }
 
 
     @Column(name = "insur_eff")
-    public Integer getInsurEff() {
+    public Long getInsurEff() {
         return insurEff;
     }
 
-    public void setInsurEff(Integer insurEff) {
+    public void setInsurEff(Long insurEff) {
         this.insurEff = insurEff;
     }
 
 
     @Column(name = "insur_exp")
-    public Integer getInsurExp() {
+    public Long getInsurExp() {
         return insurExp;
     }
 
-    public void setInsurExp(Integer insurExp) {
+    public void setInsurExp(Long insurExp) {
         this.insurExp = insurExp;
     }
 

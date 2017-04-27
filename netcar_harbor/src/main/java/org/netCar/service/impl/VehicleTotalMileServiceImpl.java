@@ -1,8 +1,15 @@
 package org.netCar.service.impl;
 
+import java.util.HashMap;
+import java.util.Map;
+
+import org.netCar.constant.TypeConstants;
 import org.netCar.dao.VehicleTotalMileDao;
 import org.netCar.domain.VehicleTotalMileEntity;
 import org.netCar.service.VehicleTotalMileService;
+import org.netCar.vo.OTIpcDef.BaseInfoVehicleTotalMile;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,6 +18,8 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class VehicleTotalMileServiceImpl implements VehicleTotalMileService {
+	
+	private static Logger LOG = LoggerFactory.getLogger(VehicleTotalMileService.class);
     @Autowired
     private VehicleTotalMileDao dao;
     @Override
@@ -27,4 +36,36 @@ public class VehicleTotalMileServiceImpl implements VehicleTotalMileService {
     public void delete(VehicleTotalMileEntity entity) {
       dao.deleteObject(entity);
     }
+
+	@Override
+	public void opreate(BaseInfoVehicleTotalMile entity) {
+		Map<String,Object> map = new HashMap<>();
+    	map.put("companyId", entity.getCompanyId());
+    	map.put("vehicleNo", entity.getVehicleNo());
+    	VehicleTotalMileEntity qentity = dao.unique("from VehicleTotalMileEntity where companyId =:companyId and vehicleNo = :vehicleNo", map);
+    	VehicleTotalMileEntity model = new VehicleTotalMileEntity();
+    	model.setAddress(entity.getAddress());
+    	model.setCompanyId(entity.getCompanyId());
+    	model.setFlag(entity.getFlag());
+    	model.setTotalMile(String.valueOf(entity.getTotalMile()));
+    	model.setUpdateTime(entity.getUpdateTime());
+    	model.setVehicleNo(entity.getVehicleNo());
+    	
+    	if (model.getFlag().equals(TypeConstants.ADD_FLAG)){
+    		this.save(model);
+    	}else if(model.getFlag().equals(TypeConstants.UPDATE_FLAG)){
+    		if(qentity != null){
+    			model.setId(qentity.getId());
+    			this.update(model);
+    		}
+    	}else if(model.getFlag().equals(TypeConstants.DELETE_FLAG)){
+    		this.delete(model);
+    	}else{
+    		LOG.error(String.format("类%s,操作标识有误：%s", this.getClass().getName(),String.valueOf(model.getFlag())));
+    	}
+		
+		
+	}
+    
+    
 }

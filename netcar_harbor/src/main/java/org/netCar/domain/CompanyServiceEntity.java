@@ -21,7 +21,7 @@ public class CompanyServiceEntity extends IdEntity{
     private String managerPhone;
     private String contactPhone;
     private String mailAddress;
-    private Integer createDate;
+    private Long createDate;
     private Integer state;
     private Integer flag;
     private Long updateTime;
@@ -140,11 +140,11 @@ public class CompanyServiceEntity extends IdEntity{
 
 
     @Column(name = "create_date")
-    public Integer getCreateDate() {
+    public Long getCreateDate() {
         return createDate;
     }
 
-    public void setCreateDate(Integer createDate) {
+    public void setCreateDate(Long createDate) {
         this.createDate = createDate;
     }
 

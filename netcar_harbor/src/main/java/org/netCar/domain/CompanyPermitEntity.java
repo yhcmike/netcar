@@ -16,9 +16,9 @@ public class CompanyPermitEntity extends IdEntity{
     private String operationArea;
     private String ownerName;
     private String organization;
-    private Integer startDate;
-    private Integer stopDate;
-    private Integer certifyDate;
+    private Long startDate;
+    private Long stopDate;
+    private Long certifyDate;
     private String state;
     private Integer flag;
     private Long updateTime;
@@ -87,31 +87,31 @@ public class CompanyPermitEntity extends IdEntity{
 
 
     @Column(name = "start_date")
-    public Integer getStartDate() {
+    public Long getStartDate() {
         return startDate;
     }
 
-    public void setStartDate(Integer startDate) {
+    public void setStartDate(Long startDate) {
         this.startDate = startDate;
     }
 
 
     @Column(name = "stop_date")
-    public Integer getStopDate() {
+    public Long getStopDate() {
         return stopDate;
     }
 
-    public void setStopDate(Integer stopDate) {
+    public void setStopDate(Long stopDate) {
         this.stopDate = stopDate;
     }
 
 
     @Column(name = "certify_date")
-    public Integer getCertifyDate() {
+    public Long getCertifyDate() {
         return certifyDate;
     }
 
-    public void setCertifyDate(Integer certifyDate) {
+    public void setCertifyDate(Long certifyDate) {
         this.certifyDate = certifyDate;
     }
 

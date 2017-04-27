@@ -13,7 +13,7 @@ public class DriverStatInfoEntity  extends IdEntity{
     private String companyId;
     private Integer address;
     private String licenseId;
-    private Integer cycle;
+    private Long cycle;
     private String orderCount;
     private String trafficViolationCount;
     private String complainedCount;
@@ -54,11 +54,11 @@ public class DriverStatInfoEntity  extends IdEntity{
 
 
     @Column(name = "cycle")
-    public Integer getCycle() {
+    public Long getCycle() {
         return cycle;
     }
 
-    public void setCycle(Integer cycle) {
+    public void setCycle(Long cycle) {
         this.cycle = cycle;
     }
 

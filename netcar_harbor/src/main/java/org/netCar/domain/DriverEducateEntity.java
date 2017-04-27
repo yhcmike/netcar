@@ -14,7 +14,7 @@ public class DriverEducateEntity extends IdEntity{
     private Integer address;
     private String licenseId;
     private String courseName;
-    private Integer courseDate;
+    private Long courseDate;
     private String startTime;
     private String stopTime;
     private String duration;
@@ -65,11 +65,11 @@ public class DriverEducateEntity extends IdEntity{
 
 
     @Column(name = "course_date")
-    public Integer getCourseDate() {
+    public Long getCourseDate() {
         return courseDate;
     }
 
-    public void setCourseDate(Integer courseDate) {
+    public void setCourseDate(Long courseDate) {
         this.courseDate = courseDate;
     }
 

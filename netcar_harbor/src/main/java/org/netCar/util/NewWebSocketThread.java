@@ -3,7 +3,8 @@ package org.netCar.util;
 import java.net.URI;
 import java.util.concurrent.TimeUnit;
 
-import org.netCar.service.cttic.ProvCompanyInfoAdapterService;
+import org.netCar.service.cttic.CompanyInfoAdapterService;
+import org.netCar.service.cttic.VehicleInfoAdapterService;
 import org.netCar.service.impl.WebsocketClientEndpoint;
 import org.netCar.vo.TopicsNameEnum;
 import org.slf4j.Logger;
@@ -15,7 +16,9 @@ public class NewWebSocketThread implements Runnable {
 	private static Logger LOG = LoggerFactory.getLogger(NewWebSocketThread.class);
 	
 	@Autowired
-	private ProvCompanyInfoAdapterService  provCompanyInfoAdapterService;
+	private CompanyInfoAdapterService  provCompanyInfoAdapterService;
+	@Autowired
+	private VehicleInfoAdapterService vehicleInfoAdapterService;
 	
 	private String serverBaseUri;
 
