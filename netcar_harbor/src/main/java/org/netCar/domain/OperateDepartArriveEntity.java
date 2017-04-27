@@ -108,39 +108,39 @@ public class OperateDepartArriveEntity  extends IdEntity{
         this.bookDepTime = bookDepTime;
     }
 
-    private Long waitTime;
+    private Integer waitTime;
 
 
     @Column(name = "wait_time")
-    public Long getWaitTime() {
+    public Integer getWaitTime() {
         return waitTime;
     }
 
-    public void setWaitTime(Long waitTime) {
+    public void setWaitTime(Integer waitTime) {
         this.waitTime = waitTime;
     }
 
-    private String depLongitude;
+    private Double depLongitude;
 
 
-    @Column(name = "dep_longitude", length = 10)
-    public String getDepLongitude() {
+    @Column(name = "dep_longitude")
+    public Double getDepLongitude() {
         return depLongitude;
     }
 
-    public void setDepLongitude(String depLongitude) {
+    public void setDepLongitude(Double depLongitude) {
         this.depLongitude = depLongitude;
     }
 
-    private String depLatitude;
+    private Double depLatitude;
 
 
-    @Column(name = "dep_latitude", length = 10)
-    public String getDepLatitude() {
+    @Column(name = "dep_latitude")
+    public Double getDepLatitude() {
         return depLatitude;
     }
 
-    public void setDepLatitude(String depLatitude) {
+    public void setDepLatitude(Double depLatitude) {
         this.depLatitude = depLatitude;
     }
 
@@ -180,27 +180,27 @@ public class OperateDepartArriveEntity  extends IdEntity{
         this.encrypt = encrypt;
     }
 
-    private Integer destLongitude;
+    private Double destLongitude;
 
 
     @Column(name = "dest_longitude")
-    public Integer getDestLongitude() {
+    public Double getDestLongitude() {
         return destLongitude;
     }
 
-    public void setDestLongitude(Integer destLongitude) {
+    public void setDestLongitude(Double destLongitude) {
         this.destLongitude = destLongitude;
     }
 
-    private Integer destLatitude;
+    private Double destLatitude;
 
 
     @Column(name = "dest_latitude")
-    public Integer getDestLatitude() {
+    public Double getDestLatitude() {
         return destLatitude;
     }
 
-    public void setDestLatitude(Integer destLatitude) {
+    public void setDestLatitude(Double destLatitude) {
         this.destLatitude = destLatitude;
     }
 
@@ -252,15 +252,15 @@ public class OperateDepartArriveEntity  extends IdEntity{
         this.model = model;
     }
 
-    private Integer driveMile;
+    private float driveMile;
 
 
     @Column(name = "drive_mile")
-    public Integer getDriveMile() {
+    public float getDriveMile() {
         return driveMile;
     }
 
-    public void setDriveMile(Integer driveMile) {
+    public void setDriveMile(float driveMile) {
         this.driveMile = driveMile;
     }
 
@@ -276,51 +276,51 @@ public class OperateDepartArriveEntity  extends IdEntity{
         this.driveTime = driveTime;
     }
 
-    private Integer waitMile;
+    private Float waitMile;
 
 
     @Column(name = "wait_mile")
-    public Integer getWaitMile() {
+    public Float getWaitMile() {
         return waitMile;
     }
 
-    public void setWaitMile(Integer waitMile) {
+    public void setWaitMile(Float waitMile) {
         this.waitMile = waitMile;
     }
 
-    private Integer factPrice;
+    private float factPrice;
 
 
     @Column(name = "fact_price")
-    public Integer getFactPrice() {
+    public float getFactPrice() {
         return factPrice;
     }
 
-    public void setFactPrice(Integer factPrice) {
+    public void setFactPrice(float factPrice) {
         this.factPrice = factPrice;
     }
 
-    private Integer price;
+    private float price;
 
 
     @Column(name = "price")
-    public Integer getPrice() {
+    public float getPrice() {
         return price;
     }
 
-    public void setPrice(Integer price) {
+    public void setPrice(float price) {
         this.price = price;
     }
 
-    private Integer cashPrice;
+    private float cashPrice;
 
 
     @Column(name = "cash_price")
-    public Integer getCashPrice() {
+    public float getCashPrice() {
         return cashPrice;
     }
 
-    public void setCashPrice(Integer cashPrice) {
+    public void setCashPrice(float cashPrice) {
         this.cashPrice = cashPrice;
     }
 
@@ -336,15 +336,15 @@ public class OperateDepartArriveEntity  extends IdEntity{
         this.lineName = lineName;
     }
 
-    private Integer linePrice;
+    private float linePrice;
 
 
     @Column(name = "line_price")
-    public Integer getLinePrice() {
+    public float getLinePrice() {
         return linePrice;
     }
 
-    public void setLinePrice(Integer linePrice) {
+    public void setLinePrice(float linePrice) {
         this.linePrice = linePrice;
     }
 
@@ -360,99 +360,99 @@ public class OperateDepartArriveEntity  extends IdEntity{
         this.posName = posName;
     }
 
-    private Integer posPrice;
+    private float posPrice;
 
 
     @Column(name = "pos_price")
-    public Integer getPosPrice() {
+    public float getPosPrice() {
         return posPrice;
     }
 
-    public void setPosPrice(Integer posPrice) {
+    public void setPosPrice(float posPrice) {
         this.posPrice = posPrice;
     }
 
-    private Integer benfitPrice;
+    private float benfitPrice;
 
 
     @Column(name = "benfit_price")
-    public Integer getBenfitPrice() {
+    public float getBenfitPrice() {
         return benfitPrice;
     }
 
-    public void setBenfitPrice(Integer benfitPrice) {
+    public void setBenfitPrice(float benfitPrice) {
         this.benfitPrice = benfitPrice;
     }
 
-    private Integer bookTip;
+    private float bookTip;
 
 
     @Column(name = "book_tip")
-    public Integer getBookTip() {
+    public float getBookTip() {
         return bookTip;
     }
 
-    public void setBookTip(Integer bookTip) {
+    public void setBookTip(float bookTip) {
         this.bookTip = bookTip;
     }
 
-    private Integer passengerTip;
+    private float passengerTip;
 
 
     @Column(name = "passenger_tip")
-    public Integer getPassengerTip() {
+    public float getPassengerTip() {
         return passengerTip;
     }
 
-    public void setPassengerTip(Integer passengerTip) {
+    public void setPassengerTip(float passengerTip) {
         this.passengerTip = passengerTip;
     }
 
-    private Integer peakUpPrice;
+    private float peakUpPrice;
 
 
     @Column(name = "peak_up_price")
-    public Integer getPeakUpPrice() {
+    public float getPeakUpPrice() {
         return peakUpPrice;
     }
 
-    public void setPeakUpPrice(Integer peakUpPrice) {
+    public void setPeakUpPrice(float peakUpPrice) {
         this.peakUpPrice = peakUpPrice;
     }
 
-    private Integer nightUpPrice;
+    private float nightUpPrice;
 
 
     @Column(name = "night_up_price")
-    public Integer getNightUpPrice() {
+    public float getNightUpPrice() {
         return nightUpPrice;
     }
 
-    public void setNightUpPrice(Integer nightUpPrice) {
+    public void setNightUpPrice(float nightUpPrice) {
         this.nightUpPrice = nightUpPrice;
     }
 
-    private Integer farUpPrice;
+    private float farUpPrice;
 
 
     @Column(name = "far_up_price")
-    public Integer getFarUpPrice() {
+    public float getFarUpPrice() {
         return farUpPrice;
     }
 
-    public void setFarUpPrice(Integer farUpPrice) {
+    public void setFarUpPrice(float farUpPrice) {
         this.farUpPrice = farUpPrice;
     }
 
-    private Integer otherUpPrice;
+    private float otherUpPrice;
 
 
     @Column(name = "other_up_price")
-    public Integer getOtherUpPrice() {
+    public float getOtherUpPrice() {
         return otherUpPrice;
     }
 
-    public void setOtherUpPrice(Integer otherUpPrice) {
+    public void setOtherUpPrice(float otherUpPrice) {
         this.otherUpPrice = otherUpPrice;
     }
 
@@ -515,110 +515,5 @@ public class OperateDepartArriveEntity  extends IdEntity{
     public void setIsBeyondOperate(Integer isBeyondOperate) {
         this.isBeyondOperate = isBeyondOperate;
     }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        OperateDepartArriveEntity that = (OperateDepartArriveEntity) o;
-
-        if (id != null ? !id.equals(that.id) : that.id != null) return false;
-        if (companyId != null ? !companyId.equals(that.companyId) : that.companyId != null) return false;
-        if (orderId != null ? !orderId.equals(that.orderId) : that.orderId != null) return false;
-        if (onArea != null ? !onArea.equals(that.onArea) : that.onArea != null) return false;
-        if (driverName != null ? !driverName.equals(that.driverName) : that.driverName != null) return false;
-        if (licenseId != null ? !licenseId.equals(that.licenseId) : that.licenseId != null) return false;
-        if (fareType != null ? !fareType.equals(that.fareType) : that.fareType != null) return false;
-        if (vehicleNo != null ? !vehicleNo.equals(that.vehicleNo) : that.vehicleNo != null) return false;
-        if (bookDepTime != null ? !bookDepTime.equals(that.bookDepTime) : that.bookDepTime != null) return false;
-        if (waitTime != null ? !waitTime.equals(that.waitTime) : that.waitTime != null) return false;
-        if (depLongitude != null ? !depLongitude.equals(that.depLongitude) : that.depLongitude != null) return false;
-        if (depLatitude != null ? !depLatitude.equals(that.depLatitude) : that.depLatitude != null) return false;
-        if (depArea != null ? !depArea.equals(that.depArea) : that.depArea != null) return false;
-        if (depTime != null ? !depTime.equals(that.depTime) : that.depTime != null) return false;
-        if (encrypt != null ? !encrypt.equals(that.encrypt) : that.encrypt != null) return false;
-        if (destLongitude != null ? !destLongitude.equals(that.destLongitude) : that.destLongitude != null)
-            return false;
-        if (destLatitude != null ? !destLatitude.equals(that.destLatitude) : that.destLatitude != null) return false;
-        if (destArea != null ? !destArea.equals(that.destArea) : that.destArea != null) return false;
-        if (destTime != null ? !destTime.equals(that.destTime) : that.destTime != null) return false;
-        if (bookModel != null ? !bookModel.equals(that.bookModel) : that.bookModel != null) return false;
-        if (model != null ? !model.equals(that.model) : that.model != null) return false;
-        if (driveMile != null ? !driveMile.equals(that.driveMile) : that.driveMile != null) return false;
-        if (driveTime != null ? !driveTime.equals(that.driveTime) : that.driveTime != null) return false;
-        if (waitMile != null ? !waitMile.equals(that.waitMile) : that.waitMile != null) return false;
-        if (factPrice != null ? !factPrice.equals(that.factPrice) : that.factPrice != null) return false;
-        if (price != null ? !price.equals(that.price) : that.price != null) return false;
-        if (cashPrice != null ? !cashPrice.equals(that.cashPrice) : that.cashPrice != null) return false;
-        if (lineName != null ? !lineName.equals(that.lineName) : that.lineName != null) return false;
-        if (linePrice != null ? !linePrice.equals(that.linePrice) : that.linePrice != null) return false;
-        if (posName != null ? !posName.equals(that.posName) : that.posName != null) return false;
-        if (posPrice != null ? !posPrice.equals(that.posPrice) : that.posPrice != null) return false;
-        if (benfitPrice != null ? !benfitPrice.equals(that.benfitPrice) : that.benfitPrice != null) return false;
-        if (bookTip != null ? !bookTip.equals(that.bookTip) : that.bookTip != null) return false;
-        if (passengerTip != null ? !passengerTip.equals(that.passengerTip) : that.passengerTip != null) return false;
-        if (peakUpPrice != null ? !peakUpPrice.equals(that.peakUpPrice) : that.peakUpPrice != null) return false;
-        if (nightUpPrice != null ? !nightUpPrice.equals(that.nightUpPrice) : that.nightUpPrice != null) return false;
-        if (farUpPrice != null ? !farUpPrice.equals(that.farUpPrice) : that.farUpPrice != null) return false;
-        if (otherUpPrice != null ? !otherUpPrice.equals(that.otherUpPrice) : that.otherUpPrice != null) return false;
-        if (payState != null ? !payState.equals(that.payState) : that.payState != null) return false;
-        if (payTime != null ? !payTime.equals(that.payTime) : that.payTime != null) return false;
-        if (orderMatchTime != null ? !orderMatchTime.equals(that.orderMatchTime) : that.orderMatchTime != null)
-            return false;
-        if (invoiceStatus != null ? !invoiceStatus.equals(that.invoiceStatus) : that.invoiceStatus != null)
-            return false;
-        if (isBeyondOperate != null ? !isBeyondOperate.equals(that.isBeyondOperate) : that.isBeyondOperate != null)
-            return false;
-
-        return true;
-    }
-
-    @Override
-    public int hashCode() {
-        int result = id != null ? id.hashCode() : 0;
-        result = 31 * result + (companyId != null ? companyId.hashCode() : 0);
-        result = 31 * result + (orderId != null ? orderId.hashCode() : 0);
-        result = 31 * result + (onArea != null ? onArea.hashCode() : 0);
-        result = 31 * result + (driverName != null ? driverName.hashCode() : 0);
-        result = 31 * result + (licenseId != null ? licenseId.hashCode() : 0);
-        result = 31 * result + (fareType != null ? fareType.hashCode() : 0);
-        result = 31 * result + (vehicleNo != null ? vehicleNo.hashCode() : 0);
-        result = 31 * result + (bookDepTime != null ? bookDepTime.hashCode() : 0);
-        result = 31 * result + (waitTime != null ? waitTime.hashCode() : 0);
-        result = 31 * result + (depLongitude != null ? depLongitude.hashCode() : 0);
-        result = 31 * result + (depLatitude != null ? depLatitude.hashCode() : 0);
-        result = 31 * result + (depArea != null ? depArea.hashCode() : 0);
-        result = 31 * result + (depTime != null ? depTime.hashCode() : 0);
-        result = 31 * result + (encrypt != null ? encrypt.hashCode() : 0);
-        result = 31 * result + (destLongitude != null ? destLongitude.hashCode() : 0);
-        result = 31 * result + (destLatitude != null ? destLatitude.hashCode() : 0);
-        result = 31 * result + (destArea != null ? destArea.hashCode() : 0);
-        result = 31 * result + (destTime != null ? destTime.hashCode() : 0);
-        result = 31 * result + (bookModel != null ? bookModel.hashCode() : 0);
-        result = 31 * result + (model != null ? model.hashCode() : 0);
-        result = 31 * result + (driveMile != null ? driveMile.hashCode() : 0);
-        result = 31 * result + (driveTime != null ? driveTime.hashCode() : 0);
-        result = 31 * result + (waitMile != null ? waitMile.hashCode() : 0);
-        result = 31 * result + (factPrice != null ? factPrice.hashCode() : 0);
-        result = 31 * result + (price != null ? price.hashCode() : 0);
-        result = 31 * result + (cashPrice != null ? cashPrice.hashCode() : 0);
-        result = 31 * result + (lineName != null ? lineName.hashCode() : 0);
-        result = 31 * result + (linePrice != null ? linePrice.hashCode() : 0);
-        result = 31 * result + (posName != null ? posName.hashCode() : 0);
-        result = 31 * result + (posPrice != null ? posPrice.hashCode() : 0);
-        result = 31 * result + (benfitPrice != null ? benfitPrice.hashCode() : 0);
-        result = 31 * result + (bookTip != null ? bookTip.hashCode() : 0);
-        result = 31 * result + (passengerTip != null ? passengerTip.hashCode() : 0);
-        result = 31 * result + (peakUpPrice != null ? peakUpPrice.hashCode() : 0);
-        result = 31 * result + (nightUpPrice != null ? nightUpPrice.hashCode() : 0);
-        result = 31 * result + (farUpPrice != null ? farUpPrice.hashCode() : 0);
-        result = 31 * result + (otherUpPrice != null ? otherUpPrice.hashCode() : 0);
-        result = 31 * result + (payState != null ? payState.hashCode() : 0);
-        result = 31 * result + (payTime != null ? payTime.hashCode() : 0);
-        result = 31 * result + (orderMatchTime != null ? orderMatchTime.hashCode() : 0);
-        result = 31 * result + (invoiceStatus != null ? invoiceStatus.hashCode() : 0);
-        result = 31 * result + (isBeyondOperate != null ? isBeyondOperate.hashCode() : 0);
-        return result;
-    }
+    
 }

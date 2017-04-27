@@ -8,4 +8,10 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public class OperateDepartArriveDao extends  BaseHBDao<OperateDepartArriveEntity, Integer> {
+	
+	public OperateDepartArriveEntity getOperateDepartArriveEntityByOrderId(String orderId){
+		String hql = " from  OperateDepartArriveEntity where orderId = ? ";
+		return unique(hql, orderId);
+	}
+	
 }

@@ -1,12 +1,12 @@
 package org.netCar.service;
 
-import org.netCar.domain.OrderInfoEntity;
+import org.netCar.vo.OTIpcDef;
 
 /**
  * Created by lyq on 2017/4/19.
  */
 public interface OrderInfoService {
-    public void save(OrderInfoEntity orderInfoEntity);
-    public void update(OrderInfoEntity orderInfoEntity);
-    public void delete(OrderInfoEntity orderInfoEntity);
+	public void operateOrderCreate(OTIpcDef.OrderCreate orderCreate);
+	public void operateOrderMatch(OTIpcDef.OrderMatch orderMatch);
+	public void operateOrderCancel(OTIpcDef.OrderCancel orderCancel);
 }

@@ -55,8 +55,8 @@ public class InitTopicWebSocket {
 				LOG.info("token ==> " + res.getBody());
 				
 		        LinkedBlockingDeque<Runnable> linkedWorkQueue = new LinkedBlockingDeque<Runnable>();  
-		        ExecutorService threadPool = new ThreadPoolExecutor(10,
-		                40, //线程池中最大线程数  
+		        ExecutorService threadPool = new ThreadPoolExecutor(5,
+		                10, //线程池中最大线程数  
 		                60, //线程池中线程的最大空闲时间，超过这个时间空闲线程将被回收  
 		                TimeUnit.SECONDS,//时间单位  
 		                linkedWorkQueue, //下面是采用有界队列和无界队列的区别  

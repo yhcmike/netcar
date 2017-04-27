@@ -96,27 +96,27 @@ public class OrderInfoEntity  extends IdEntity{
         this.departure = departure;
     }
 
-    private Integer depLongitude;
+    private Double depLongitude;
 
 
     @Column(name = "dep_longitude")
-    public Integer getDepLongitude() {
+    public Double getDepLongitude() {
         return depLongitude;
     }
 
-    public void setDepLongitude(Integer depLongitude) {
+    public void setDepLongitude(Double depLongitude) {
         this.depLongitude = depLongitude;
     }
 
-    private Integer depLatitude;
+    private Double depLatitude;
 
 
     @Column(name = "dep_latitude")
-    public Integer getDepLatitude() {
+    public Double getDepLatitude() {
         return depLatitude;
     }
 
-    public void setDepLatitude(Integer depLatitude) {
+    public void setDepLatitude(Double depLatitude) {
         this.depLatitude = depLatitude;
     }
 
@@ -132,27 +132,27 @@ public class OrderInfoEntity  extends IdEntity{
         this.destination = destination;
     }
 
-    private Integer destLongitude;
+    private Double destLongitude;
 
 
     @Column(name = "dest_longitude")
-    public Integer getDestLongitude() {
+    public Double getDestLongitude() {
         return destLongitude;
     }
 
-    public void setDestLongitude(Integer destLongitude) {
+    public void setDestLongitude(Double destLongitude) {
         this.destLongitude = destLongitude;
     }
 
-    private Integer destLatitude;
+    private Double destLatitude;
 
 
     @Column(name = "dest_latitude")
-    public Integer getDestLatitude() {
+    public Double getDestLatitude() {
         return destLatitude;
     }
 
-    public void setDestLatitude(Integer destLatitude) {
+    public void setDestLatitude(Double destLatitude) {
         this.destLatitude = destLatitude;
     }
 
@@ -180,27 +180,27 @@ public class OrderInfoEntity  extends IdEntity{
         this.fareType = fareType;
     }
 
-    private Integer longitude;
+    private Double longitude;
 
 
     @Column(name = "longitude")
-    public Integer getLongitude() {
+    public Double getLongitude() {
         return longitude;
     }
 
-    public void setLongitude(Integer longitude) {
+    public void setLongitude(Double longitude) {
         this.longitude = longitude;
     }
 
-    private Integer latitude;
+    private Double latitude;
 
 
     @Column(name = "latitude")
-    public Integer getLatitude() {
+    public Double getLatitude() {
         return latitude;
     }
 
-    public void setLatitude(Integer latitude) {
+    public void setLatitude(Double latitude) {
         this.latitude = latitude;
     }
 

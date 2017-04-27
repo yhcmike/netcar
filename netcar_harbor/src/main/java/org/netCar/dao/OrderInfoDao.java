@@ -8,4 +8,10 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public class OrderInfoDao extends BaseHBDao<OrderInfoEntity, Integer> {
+	
+	public OrderInfoEntity getOrderInfoEntityByOrderId(String orderId){
+		String hql = " from  OrderInfoEntity where orderId = ? ";
+		return unique(hql, orderId);
+	}
+	
 }

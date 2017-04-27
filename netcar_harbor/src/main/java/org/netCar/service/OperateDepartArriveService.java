@@ -1,12 +1,12 @@
 package org.netCar.service;
 
-import org.netCar.domain.OperateDepartArriveEntity;
+import org.netCar.vo.OTIpcDef;
 
 /**
  * Created by lyq on 2017/4/19.
  */
 public interface OperateDepartArriveService {
-    public void save(OperateDepartArriveEntity operateDepartArriveEntity);
-    public void update(OperateDepartArriveEntity operateDepartArriveEntity);
-    public void delete(OperateDepartArriveEntity operateDepartArriveEntity);
+	public void operateDepartData(OTIpcDef.OperateDepart operateDepart);
+	public void operateArriveData(OTIpcDef.OperateArrive operateArrive);
+	public void operatePayData(OTIpcDef.OperatePay operatePay);
 }

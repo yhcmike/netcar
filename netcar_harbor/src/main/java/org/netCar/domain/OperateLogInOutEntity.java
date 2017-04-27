@@ -11,20 +11,18 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "operate_log_in_out")
 public class OperateLogInOutEntity  extends IdEntity{
+	
     private String companyId;
     private String licenseId;
     private String vehicleNo;
     private Long loginTime;
-    private Integer inLongitude;
-    private Integer inLatitude;
+    private Double inLongitude;
+    private Double inLatitude;
     private Integer inEncrypt;
     private Long logoutTime;
-    private Integer outLongitude;
-    private Integer outLatitude;
+    private Double outLongitude;
+    private Double outLatitude;
     private Integer outEncrypt;
-
-
-
 
     @Column(name = "company_id", length = 32)
     public String getCompanyId() {
@@ -67,21 +65,21 @@ public class OperateLogInOutEntity  extends IdEntity{
 
 
     @Column(name = "in_longitude")
-    public Integer getInLongitude() {
+    public Double getInLongitude() {
         return inLongitude;
     }
 
-    public void setInLongitude(Integer inLongitude) {
+    public void setInLongitude(Double inLongitude) {
         this.inLongitude = inLongitude;
     }
 
 
     @Column(name = "in_latitude")
-    public Integer getInLatitude() {
+    public Double getInLatitude() {
         return inLatitude;
     }
 
-    public void setInLatitude(Integer inLatitude) {
+    public void setInLatitude(Double inLatitude) {
         this.inLatitude = inLatitude;
     }
 
@@ -107,21 +105,21 @@ public class OperateLogInOutEntity  extends IdEntity{
 
 
     @Column(name = "out_longitude")
-    public Integer getOutLongitude() {
+    public Double getOutLongitude() {
         return outLongitude;
     }
 
-    public void setOutLongitude(Integer outLongitude) {
+    public void setOutLongitude(Double outLongitude) {
         this.outLongitude = outLongitude;
     }
 
 
     @Column(name = "out_latitude")
-    public Integer getOutLatitude() {
+    public Double getOutLatitude() {
         return outLatitude;
     }
 
-    public void setOutLatitude(Integer outLatitude) {
+    public void setOutLatitude(Double outLatitude) {
         this.outLatitude = outLatitude;
     }
 
