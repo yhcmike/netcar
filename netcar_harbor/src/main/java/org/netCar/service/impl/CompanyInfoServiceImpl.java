@@ -54,7 +54,9 @@ public class CompanyInfoServiceImpl implements CompanyInfoService {
     			this.update(entity);
     		}
     	}else if(entity.getFlag().equals(TypeConstants.DELETE_FLAG)){
-    		this.delete(qentity);
+    		if(qentity != null){
+    			this.delete(qentity.getId());
+    		}
     	}else{
     		LOG.error(String.format("类%s,操作标识有误：%s", this.getClass().getName(),String.valueOf(company.getFlag())));
     	}
@@ -68,8 +70,8 @@ public class CompanyInfoServiceImpl implements CompanyInfoService {
 	}
 
 	@Override
-	public void delete(CompanyInfoEntity companyInfo) {
-		companyInfoDao.deleteObject(companyInfo);
+	public void delete(Integer id) {
+		companyInfoDao.delete(id);
 	}
 	
 	

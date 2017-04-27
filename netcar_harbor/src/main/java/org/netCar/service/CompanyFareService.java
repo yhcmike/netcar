@@ -9,6 +9,6 @@ import org.netCar.vo.OTIpcDef;
 public interface CompanyFareService {
     public void save(CompanyFareEntity entity);
     public void update(CompanyFareEntity entity);
-    public void delete(CompanyFareEntity entity);
+    public void delete(Integer id);
     public void opreate(OTIpcDef.BaseInfoCompanyFare entity);
 }

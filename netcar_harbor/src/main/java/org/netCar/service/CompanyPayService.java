@@ -9,6 +9,6 @@ import org.netCar.vo.OTIpcDef;
 public interface CompanyPayService {
     public void save(CompanyPayEntity companyPayEntity);
     public void update(CompanyPayEntity companyPayEntity);
-    public void delete(CompanyPayEntity companyPayEntity);
+    public void delete(Integer id);
     public void opreate(OTIpcDef.BaseInfoCompanyPay entity);
 }

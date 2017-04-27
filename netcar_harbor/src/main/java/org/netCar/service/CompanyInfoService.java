@@ -9,7 +9,7 @@ public interface CompanyInfoService {
 	public void save(CompanyInfoEntity companyInfo);
 	public void update(CompanyInfoEntity companyInfo);
 
-	public void delete(CompanyInfoEntity companyInfo);
+	public void delete(Integer id);
 	public void changeStatus(Integer id,Integer status);
 	public CompanyInfoEntity getById(Integer id);
 	

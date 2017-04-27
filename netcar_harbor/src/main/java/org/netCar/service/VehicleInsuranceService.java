@@ -9,6 +9,6 @@ import org.netCar.vo.OTIpcDef;
 public interface VehicleInsuranceService {
     public void save(VehicleInsuranceEntity vehicleInsuranceEntity);
     public void update(VehicleInsuranceEntity vehicleInsuranceEntity);
-    public void delete(VehicleInsuranceEntity vehicleInsuranceEntity);
+    public void delete(Integer id);
     public void opreate(OTIpcDef.BaseInfoVehicleInsurance entity);
 }

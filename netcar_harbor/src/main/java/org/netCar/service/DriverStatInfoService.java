@@ -9,6 +9,6 @@ import org.netCar.vo.OTIpcDef;
 public interface DriverStatInfoService {
     public void save(DriverStatInfoEntity entity);
     public void update(DriverStatInfoEntity entity);
-    public void delete(DriverStatInfoEntity entity);
+    public void delete(Integer id);
     public void operate(OTIpcDef.BaseInfoDriverStat entity);
 }

@@ -34,8 +34,8 @@ public class CompanyPermitServiceImpl implements CompanyPermitService {
     }
 
     @Override
-    public void delete(CompanyPermitEntity entity) {
-        dao.deleteObject(entity);
+    public void delete(Integer id) {
+        dao.delete(id);
     }
 
 	@Override
@@ -66,7 +66,9 @@ public class CompanyPermitServiceImpl implements CompanyPermitService {
     			this.update(model);
     		}
     	}else if(model.getFlag().equals(TypeConstants.DELETE_FLAG)){
-    		this.delete(model);
+    		if(qentity != null){
+    			this.delete(qentity.getId());
+    		}
     	}else{
     		LOG.error(String.format("类%s,操作标识有误：%s", this.getClass().getName(),String.valueOf(model.getFlag())));
     	}		

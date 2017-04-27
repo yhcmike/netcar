@@ -9,6 +9,6 @@ import org.netCar.vo.OTIpcDef;
 public interface DriverEducateService {
     public void save(DriverEducateEntity entity);
     public void update(DriverEducateEntity entity);
-    public void delete(DriverEducateEntity entity);
+    public void delete(Integer id);
     public void operate(OTIpcDef.BaseInfoDriverEducate entity);
 }

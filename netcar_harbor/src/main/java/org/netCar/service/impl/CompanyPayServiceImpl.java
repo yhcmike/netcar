@@ -33,8 +33,8 @@ public class CompanyPayServiceImpl implements CompanyPayService {
     }
 
     @Override
-    public void delete(CompanyPayEntity companyPayEntity) {
-        dao.deleteObject(companyPayEntity);
+    public void delete(Integer id) {
+        dao.delete(id);
     }
 
 	@Override
@@ -64,7 +64,9 @@ public class CompanyPayServiceImpl implements CompanyPayService {
     			this.update(model);
     		}
     	}else if(model.getFlag().equals(TypeConstants.DELETE_FLAG)){
-    		this.delete(model);
+    		if(qentity != null){
+    			this.delete(qentity.getId());
+    		}
     	}else{
     		LOG.error(String.format("类%s,操作标识有误：%s", this.getClass().getName(),String.valueOf(model.getFlag())));
     	}
