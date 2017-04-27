@@ -5,11 +5,16 @@ import java.io.ByteArrayOutputStream;
 import java.util.zip.GZIPInputStream;
 
 import org.apache.commons.io.IOUtils;
+import org.netCar.service.DriverPunishService;
+import org.netCar.service.DriverReputationService;
+import org.netCar.service.PassengerComplaintService;
+import org.netCar.service.PassengerEvaluationService;
 import org.netCar.service.cttic.ProvRatedPassengerAdapterService;
 import org.netCar.vo.OTIpcDef;
 import org.netCar.vo.OTIpcDef.OTIpc;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.google.protobuf.InvalidProtocolBufferException;
@@ -18,6 +23,15 @@ import com.google.protobuf.InvalidProtocolBufferException;
 public class ProvRatedPassengerAdapterServiceImpl implements ProvRatedPassengerAdapterService{
 	
 	private static Logger LOG = LoggerFactory.getLogger(ProvRatedPassengerAdapterServiceImpl.class);
+	
+	@Autowired
+	private PassengerComplaintService passengerComplaintService;
+	@Autowired
+	private PassengerEvaluationService passengerEvaluationService;
+	@Autowired
+	private DriverPunishService driverPunishService;
+	@Autowired
+	private DriverReputationService driverReputationService;
 	
 	@Override
 	public void adapterHandler(boolean batch,boolean compress,byte[] message) {
@@ -31,22 +45,22 @@ public class ProvRatedPassengerAdapterServiceImpl implements ProvRatedPassengerA
                     	switch (obj.getIPCType()) {
 						case ratedPassenger:
 							for(OTIpcDef.RatedPassenger ratedPassenger : obj.getRatedPassengerList()){
-                                System.out.println(ratedPassenger.getCompanyId());
+								passengerEvaluationService.operationPassengerEvaluate(ratedPassenger);
                             }
 							break;
 						case ratedPassengerComplaint:
 							for(OTIpcDef.RatedPassengerComplaint ratedPassengerComplaint : obj.getRatedPassengerComplaintList()){
-                                System.out.println(ratedPassengerComplaint.getCompanyId());
+								passengerComplaintService.operationPassengerComplaint(ratedPassengerComplaint);
                             }
 							break;
 						case ratedDriverPunish:
 							for(OTIpcDef.RatedDriverPunish ratedDriverPunish : obj.getRatedDriverPunishList()){
-                                System.out.println(ratedDriverPunish.getCompanyId());
+								driverPunishService.operationDriverPunish(ratedDriverPunish);
                             }
 							break;
 						case ratedDriver:
 							for(OTIpcDef.RatedDriver ratedDriver : obj.getRatedDriverList()){
-                                System.out.println(ratedDriver.getCompanyId());
+								driverReputationService.operationDriverReputation(ratedDriver);
                             }
 							break;
 						default:

@@ -13,7 +13,7 @@ public class DriverReputationEntity  extends IdEntity{
     private String companyId;
     private String licenseId;
     private Integer level;
-    private Integer testDate;
+    private Long testDate;
     private String testDepartment;
 
 
@@ -50,11 +50,11 @@ public class DriverReputationEntity  extends IdEntity{
 
 
     @Column(name = "test_date")
-    public Integer getTestDate() {
+    public Long getTestDate() {
         return testDate;
     }
 
-    public void setTestDate(Integer testDate) {
+    public void setTestDate(Long testDate) {
         this.testDate = testDate;
     }
 
