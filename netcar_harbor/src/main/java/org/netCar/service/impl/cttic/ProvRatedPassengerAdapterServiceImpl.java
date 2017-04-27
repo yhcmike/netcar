@@ -26,10 +26,7 @@ public class ProvRatedPassengerAdapterServiceImpl implements ProvRatedPassengerA
 			if (batch) {
 				if (compress) {
 					LOG.info("===" + OTIpcDef.OTIpcList.parseFrom(decompress(message)).getOtpicList().size() + "===");
-					/*if (logMessage) {
-						LOG.info(OTIpcDef.OTIpcList.parseFrom(decompress(message)).getOtpicList().toString());
-						
-					}*/
+					
 					for(OTIpc obj : OTIpcDef.OTIpcList.parseFrom(decompress(message)).getOtpicList()){
                     	switch (obj.getIPCType()) {
 						case ratedPassenger:
@@ -50,11 +47,6 @@ public class ProvRatedPassengerAdapterServiceImpl implements ProvRatedPassengerA
 						case ratedDriver:
 							for(OTIpcDef.RatedDriver ratedDriver : obj.getRatedDriverList()){
                                 System.out.println(ratedDriver.getCompanyId());
-                            }
-							break;
-						case shareCompany:
-							for(OTIpcDef.ShareCompany shareCompany : obj.getShareCompanyList()){
-                                System.out.println(shareCompany.getCompanyId());
                             }
 							break;
 						default:
