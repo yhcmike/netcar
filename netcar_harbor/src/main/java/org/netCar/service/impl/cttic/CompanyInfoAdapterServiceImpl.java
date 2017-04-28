@@ -1,10 +1,5 @@
 package org.netCar.service.impl.cttic;
 
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.util.zip.GZIPInputStream;
-
-import org.apache.commons.io.IOUtils;
 import org.netCar.service.CompanyFareService;
 import org.netCar.service.CompanyInfoService;
 import org.netCar.service.CompanyPayService;
@@ -12,6 +7,7 @@ import org.netCar.service.CompanyPermitService;
 import org.netCar.service.CompanyScaleService;
 import org.netCar.service.CompanyServiceService;
 import org.netCar.service.cttic.CompanyInfoAdapterService;
+import org.netCar.util.CtticDataUtils;
 import org.netCar.vo.OTIpcDef;
 import org.netCar.vo.OTIpcDef.OTIpc;
 import org.slf4j.Logger;
@@ -46,16 +42,16 @@ public class CompanyInfoAdapterServiceImpl implements CompanyInfoAdapterService{
 		try {
 			if (batch) {
 				if (compress) {
-					LOG.info("===" + OTIpcDef.OTIpcList.parseFrom(decompress(message)).getOtpicList().size() + "===");
+					LOG.info("===" + OTIpcDef.OTIpcList.parseFrom(CtticDataUtils.decompress(message)).getOtpicList().size() + "===");
 					/*if (logMessage) {
 						LOG.info(OTIpcDef.OTIpcList.parseFrom(decompress(message)).getOtpicList().toString());
 						
 					}*/
-					for(OTIpc obj : OTIpcDef.OTIpcList.parseFrom(decompress(message)).getOtpicList()){
+					for(OTIpc obj : OTIpcDef.OTIpcList.parseFrom(CtticDataUtils.decompress(message)).getOtpicList()){
                     	switch (obj.getIPCType()) {
 						case baseInfoCompany:
 							for(OTIpcDef.BaseInfoCompany company : obj.getBaseInfoCompanyList()){
-								companyInfoService. operate(company);
+								companyInfoService.operate(company);
                             }
 							break;
 						case baseInfoCompanyService:
@@ -88,10 +84,6 @@ public class CompanyInfoAdapterServiceImpl implements CompanyInfoAdapterService{
 						}
              
                     }
-					
-					
-					
-					
 				} else {
 					LOG.info("===" + OTIpcDef.OTIpcList.parseFrom(message).getOtpicList().size() + "===");
 				}
@@ -104,18 +96,5 @@ public class CompanyInfoAdapterServiceImpl implements CompanyInfoAdapterService{
 		
 	}
 	
-	public static byte[] decompress(byte[] data) {
-        try {
-            ByteArrayOutputStream out = new ByteArrayOutputStream();
-            IOUtils.copy(new GZIPInputStream(new ByteArrayInputStream(data)), out);
-            byte[] unzip = out.toByteArray();
-
-            LOG.debug("Original: " + data.length);
-            LOG.debug("Decompressed: " + unzip.length);
-            return unzip;
-        } catch (Exception e) {
-            throw new RuntimeException("gunzip data error", e);
-        }
-    }
 
 }

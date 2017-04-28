@@ -1,11 +1,8 @@
 package org.netCar.service.impl;
 
-import org.apache.commons.lang.StringUtils;
 import org.netCar.dao.DriverReputationDao;
 import org.netCar.domain.DriverReputationEntity;
-import org.netCar.domain.OrderInfoEntity;
 import org.netCar.service.DriverReputationService;
-import org.netCar.vo.OTIpcDef;
 import org.netCar.vo.OTIpcDef.RatedDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

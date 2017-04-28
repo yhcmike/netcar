@@ -3,7 +3,13 @@ package org.netCar.util;
 import java.net.URI;
 import java.util.concurrent.TimeUnit;
 
+import org.netCar.service.DriverPositionService;
+import org.netCar.service.VehiclepositionService;
 import org.netCar.service.cttic.CompanyInfoAdapterService;
+import org.netCar.service.cttic.DriverInfoAdapterService;
+import org.netCar.service.cttic.ProvOperateInfoAdapterService;
+import org.netCar.service.cttic.ProvOrderInfoAdapterService;
+import org.netCar.service.cttic.ProvRatedPassengerAdapterService;
 import org.netCar.service.cttic.VehicleInfoAdapterService;
 import org.netCar.service.impl.WebsocketClientEndpoint;
 import org.netCar.vo.TopicsNameEnum;
@@ -18,7 +24,19 @@ public class NewWebSocketThread implements Runnable {
 	@Autowired
 	private CompanyInfoAdapterService  provCompanyInfoAdapterService;
 	@Autowired
+	private DriverInfoAdapterService driverInfoAdapterService ;
+	@Autowired
 	private VehicleInfoAdapterService vehicleInfoAdapterService;
+	@Autowired
+	private ProvOrderInfoAdapterService provOrderInfoAdapterService;
+	@Autowired
+	private ProvOperateInfoAdapterService provOperateInfoAdapterService;
+	@Autowired
+	private ProvRatedPassengerAdapterService provRatedPassengerAdapterService;
+	@Autowired
+	private VehiclepositionService vehiclepositionService;
+	@Autowired
+	private DriverPositionService driverPositionService;
 	
 	private String serverBaseUri;
 
@@ -69,37 +87,42 @@ public class NewWebSocketThread implements Runnable {
 						LOG.info("message length ==> " + message.length);
 						
 						switch (topicsEnum.getServiceName()) {
-						case "ProvCompanyInfo":
+						case "ProvCompanyInfo"://公司基本信息
 							provCompanyInfoAdapterService.adapterHandler(batch,compress,message);
 							break;
-						case "ProvVehicleInfo":
-
+							
+						case "ProvVehicleInfo"://车辆基本信息
+							vehicleInfoAdapterService.adapterHandler(batch, compress, message);
 							break;
-						case "ProvDriverInfo":
-
+							
+						case "ProvDriverInfo"://驾驶员基本信息
+							driverInfoAdapterService.adapterHandler(batch, compress, message);
 							break;
-						case "ProvOrderInfo":
-
+							
+						case "ProvOrderInfo"://订单信息
+							provOrderInfoAdapterService.adapterHandler(batch, compress, message);
 							break;
-						case "ProvOperateInfo":
-
+							
+						case "ProvOperateInfo"://营运信息
+							provOperateInfoAdapterService.adapterHandler(batch, compress, message);
 							break;
-						case "ProvPositionDriver":
-
+							
+						case "ProvPositionDriver"://驾驶员位置定位
+							driverPositionService.operationDriverPostion(batch, compress, message);
 							break;
-						case "ProvPositionVehicle":
-
+							
+						case "ProvPositionVehicle"://车辆位置定位
+							vehiclepositionService.operationVehiclePostion(batch, compress, message);
 							break;
-						case "ProvRatedPassenger":
-
+							
+						case "ProvRatedPassenger"://乘客评价信息
+							provRatedPassengerAdapterService.adapterHandler(batch, compress, message);
 							break;
-
 						default:
 							break;
 						}
 						
 					});
-			LOG.info("==========================================="+Thread.currentThread().isInterrupted());
 			while (!Thread.currentThread().isInterrupted()) {
 				try {
 					TimeUnit.SECONDS.sleep(timeout);

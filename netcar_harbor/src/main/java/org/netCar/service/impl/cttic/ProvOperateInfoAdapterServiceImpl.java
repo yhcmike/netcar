@@ -1,13 +1,9 @@
 package org.netCar.service.impl.cttic;
 
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.util.zip.GZIPInputStream;
-
-import org.apache.commons.io.IOUtils;
 import org.netCar.service.OperateDepartArriveService;
 import org.netCar.service.OperateLogInOutService;
 import org.netCar.service.cttic.ProvOperateInfoAdapterService;
+import org.netCar.util.CtticDataUtils;
 import org.netCar.vo.OTIpcDef;
 import org.netCar.vo.OTIpcDef.OTIpc;
 import org.slf4j.Logger;
@@ -34,8 +30,8 @@ public class ProvOperateInfoAdapterServiceImpl implements ProvOperateInfoAdapter
 		try {
 			if (batch) {
 				if (compress) {
-					LOG.info("===" + OTIpcDef.OTIpcList.parseFrom(decompress(message)).getOtpicList().size() + "===");
-					for(OTIpc obj : OTIpcDef.OTIpcList.parseFrom(decompress(message)).getOtpicList()){
+					LOG.info("===" + OTIpcDef.OTIpcList.parseFrom(CtticDataUtils.decompress(message)).getOtpicList().size() + "===");
+					for(OTIpc obj : OTIpcDef.OTIpcList.parseFrom(CtticDataUtils.decompress(message)).getOtpicList()){
                     	switch (obj.getIPCType()) {
 						case operateLogin:
 							for(OTIpcDef.OperateLogin operateLogin : obj.getOperateLoginList()){
@@ -80,18 +76,4 @@ public class ProvOperateInfoAdapterServiceImpl implements ProvOperateInfoAdapter
 		
 	}
 	
-	public static byte[] decompress(byte[] data) {
-        try {
-            ByteArrayOutputStream out = new ByteArrayOutputStream();
-            IOUtils.copy(new GZIPInputStream(new ByteArrayInputStream(data)), out);
-            byte[] unzip = out.toByteArray();
-
-            LOG.debug("Original: " + data.length);
-            LOG.debug("Decompressed: " + unzip.length);
-            return unzip;
-        } catch (Exception e) {
-            throw new RuntimeException("gunzip data error", e);
-        }
-    }
-
 }

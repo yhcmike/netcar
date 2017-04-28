@@ -1,35 +1,29 @@
 package org.netCar.service.impl;
 
-import org.netCar.service.VehiclepositionService;
+import org.netCar.service.DriverPositionService;
 import org.netCar.util.CtticDataUtils;
 import org.netCar.vo.OTIpcDef;
 import org.netCar.vo.OTIpcDef.OTIpc;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Service;
 
 import com.google.protobuf.InvalidProtocolBufferException;
 
-/**
- * Created by lyq on 2017/4/19.
- * 车辆定位信息
- */
-@Service
-public class VehiclepositionServiceImpl implements VehiclepositionService {
-
-    private static Logger LOG = LoggerFactory.getLogger(VehiclepositionServiceImpl.class);
-
-    @Override
-    public void operationVehiclePostion(boolean batch,boolean compress,byte[] message) {
-    	LOG.info("adapter service ==> " + message.length);
+public class DriverPositionServiceImpl implements DriverPositionService{
+	
+	private static Logger LOG = LoggerFactory.getLogger(DriverPositionServiceImpl.class);
+	
+	@Override
+	public void operationDriverPostion(boolean batch, boolean compress, byte[] message) {
+		LOG.info("operationDriverPostion ==> " + message.length);
 		try {
 			if (batch) {
 				if (compress) {
 					LOG.info("===" + OTIpcDef.OTIpcList.parseFrom(CtticDataUtils.decompress(message)).getOtpicList().size() + "===");
 					for(OTIpc obj : OTIpcDef.OTIpcList.parseFrom(CtticDataUtils.decompress(message)).getOtpicList()){
                     	switch (obj.getIPCType()) {
-						case positionVehicle:
-							for(OTIpcDef.PositionVehicle positionVehicle : obj.getPositionVehicleList()){
+						case positionDriver:
+							for(OTIpcDef.PositionDriver positionDriver : obj.getPositionDriverList()){
 								//TODO解析为json 存放到mq
 					
                             }
@@ -48,6 +42,7 @@ public class VehiclepositionServiceImpl implements VehiclepositionService {
 		} catch (InvalidProtocolBufferException e) {
 			LOG.error("", e);
 		}
-    }
+		
+	}
 
 }
