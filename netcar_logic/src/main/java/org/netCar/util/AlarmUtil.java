@@ -3,12 +3,26 @@ package org.netCar.util;
 import org.netCar.vo.SpotVo;
 
 /**
- * 报警工具类
+ * 判断围栏工具类
  */
 public class AlarmUtil {
 	
+
+	
+	/**
+	 * 判断当前经纬度是否在圆形围栏中
+	 * @param vo
+	 * @param center
+	 * @param radius
+	 * @return
+	 */
 	public static boolean isInCircle(SpotVo vo, Double[] center, Integer radius) {
 		double distance = DistanceUtil.distance(vo.getLng(), vo.getLat(), center[0], center[1]);
+		return distance < radius;
+	}
+	
+	public static boolean isInCircle(double aLon, double aLat, Double[] center, Integer radius) {
+		double distance = DistanceUtil.distance(aLon, aLat, center[0], center[1]);
 		return distance < radius;
 	}
 
@@ -18,7 +32,7 @@ public class AlarmUtil {
     /// <param name="ALat">指定点的纬度</param>
     /// <param name="APoints">指定多边形区域各个节点坐标</param>
     /// <returns>True 落在范围内 False 不在范围内</returns>
-    public static boolean isPtInPoly(double ALon, double ALat, SpotVo[] region)
+    public static boolean isPtInPoly(double aLon, double aLat, SpotVo[] region)
     {
         int iSum, iCount, iIndex;
         double dLon1 = 0, dLon2 = 0, dLat1 = 0, dLat2 = 0, dLon;
@@ -48,12 +62,12 @@ public class AlarmUtil {
                 dLat2 = region[iIndex + 1].getLat();
             }
 
-            if (((ALat >= dLat1) && (ALat < dLat2)) || ((ALat >= dLat2) && (ALat < dLat1)))
+            if (((aLat >= dLat1) && (aLat < dLat2)) || ((aLat >= dLat2) && (aLat < dLat1)))
             {
                 if (Math.abs(dLat1 - dLat2) > 0)
                 {
-                    dLon = dLon1 - ((dLon1 - dLon2) * (dLat1 - ALat)) / (dLat1 - dLat2);
-                    if (dLon < ALon)
+                    dLon = dLon1 - ((dLon1 - dLon2) * (dLat1 - aLat)) / (dLat1 - dLat2);
+                    if (dLon < aLon)
                         iSum++;
                 }
             }

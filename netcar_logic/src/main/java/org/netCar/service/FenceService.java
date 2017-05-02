@@ -1,5 +1,7 @@
 package org.netCar.service;
 
+import java.util.List;
+
 import org.netCar.domain.FenceEntity;
 
 /**
@@ -9,4 +11,5 @@ public interface FenceService {
     public void save(FenceEntity entity);
     public void update(FenceEntity entity);
     public void delete(FenceEntity entity);
+	public List<FenceEntity> listFencesByCounty(String remark,Integer status);
 }
