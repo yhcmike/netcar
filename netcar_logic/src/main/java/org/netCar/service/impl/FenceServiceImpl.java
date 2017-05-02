@@ -31,7 +31,7 @@ public class FenceServiceImpl implements FenceService {
     }
 
 	@Override
-	public List<FenceEntity> listFencesByCounty(String remark,Integer status) {
-		return dao.listAllByCounty(remark,status);
+	public List<FenceEntity> listFencesByCounty(Integer type,Integer status) {
+		return dao.listAllByCounty(type,status);
 	}
 }

@@ -11,5 +11,5 @@ public interface FenceService {
     public void save(FenceEntity entity);
     public void update(FenceEntity entity);
     public void delete(FenceEntity entity);
-	public List<FenceEntity> listFencesByCounty(String remark,Integer status);
+	public List<FenceEntity> listFencesByCounty(Integer type,Integer status);
 }

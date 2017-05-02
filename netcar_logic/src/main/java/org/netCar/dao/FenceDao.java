@@ -14,12 +14,12 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class FenceDao extends BaseHBDao<FenceEntity, Integer> {
 
-	public List<FenceEntity> listAllByCounty(String remark, Integer status) {
+	public List<FenceEntity> listAllByCounty(Integer type, Integer status) {
 	   StringBuffer sql = new StringBuffer(" SELECT * FROM fence where 1=1 ");
 	   Map<String,Object> params = new HashMap<String,Object>();
-        if(StringUtils.isBlank(remark)){
-        	sql.append(" and remark = :remark ");
-        	params.put("remark", remark);
+        if(type != 0){
+        	sql.append(" and type = :type ");
+        	params.put("type", type);
         }
         if(status != 0){
         	sql.append(" and status = :status ");

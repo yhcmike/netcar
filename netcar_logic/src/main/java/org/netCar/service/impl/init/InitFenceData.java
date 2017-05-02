@@ -18,19 +18,29 @@ public class InitFenceData {
 	private static Logger LOG = LoggerFactory.getLogger(InitFenceData.class);
 	@Autowired
 	private FenceService fenceService;
-	
+
 	@Autowired
 	private FenceDataCache fenceDataCache;
-	
-	public void initFence(){
-		List<FenceEntity> datas = fenceService.listFencesByCounty("区围栏", 1);
-		LOG.info("init fences data,total:"+datas.size());
-		Map<String,String> map = new HashMap<String,String>();
-		for(FenceEntity entity : datas){
+
+	public void initFence() {
+		List<FenceEntity> datas1 = fenceService.listFencesByCounty(1, 1);
+		LOG.info("init area fence data,total:" + datas1.size());
+		Map<String, String> map1 = new HashMap<String, String>();
+		for (FenceEntity entity : datas1) {
 			String str = JsonUtil.obj2Str(entity);
-	        map.put(entity.getName(),str);
+			map1.put(entity.getName(), str);
 		}
-		fenceDataCache.setFencesData(map);
+		fenceDataCache.setFencesData(1, map1);
+		
+		
+		List<FenceEntity> datas2 = fenceService.listFencesByCounty(2, 1);
+		LOG.info("init Common fence data,total:" + datas2.size());
+		Map<String, String> map2 = new HashMap<String, String>();
+		for (FenceEntity entity : datas2) {
+			String str = JsonUtil.obj2Str(entity);
+			map2.put(entity.getName(), str);
+		}
+		fenceDataCache.setFencesData(2, map2);
 	}
 
 }
