@@ -20,7 +20,7 @@ import java.net.URI;
 /**
  * Created by ffd on 2017/4/12.
  */
-@Component("taskJob")
+//@Component("taskJob")
 public class TaskJob {
 
     @Autowired
@@ -28,9 +28,9 @@ public class TaskJob {
 
     public static int  id = 3;
 
-    @Scheduled(cron = "0/1 * * * * ?")
+    //@Scheduled(cron = "0/1 * * * * ?")
     public void job1() throws Exception {
         id++;
-        vehiclepositionService.operationPostion(id);
+        //vehiclepositionService.operationPostion(id);
     }
 }
