@@ -3,6 +3,8 @@ package org.netCar.handle;
 import javax.jms.Message;
 import javax.jms.MessageListener;
 import javax.jms.ObjectMessage;
+
+import org.netCar.dto.VehiclepositionJMS;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
@@ -25,11 +27,10 @@ public class JmsConsumer implements MessageListener {
 			try {
 				Object obj = msg.getObject();
 				logger.info("obj==================="+obj);
-//				if(obj instanceof Position){
-//					Position position = (Position)obj;
-//					logger.info("MQ_Consumer:" + position);
-//					positionService.savePosition(position);
-//				}
+				if(obj instanceof VehiclepositionJMS){
+					VehiclepositionJMS position = (VehiclepositionJMS)obj;
+					logger.info("MQ_Consumer:" + position);
+				}
 			} catch (Exception e) {
 				logger.error("", e);
 			}
