@@ -23,7 +23,7 @@
 	<!-- 使用Spring组件扫描的方式来实现自动注入bean -->
 	<context:component-scan base-package="org.netCar" />
 	<!-- 初始化围栏信息 -->
-	<bean class="org.netCar.service.init.InitFenceData"  init-method="initFence"></bean>
+	<bean class="org.netCar.service.impl.init.InitFenceData"  init-method="initFence"></bean>
 	
 	<!-- 读取资源文件 -->
 	<bean
