@@ -1,8 +1,14 @@
 package org.netCar.util;
 
 
-import org.codehaus.jackson.map.ObjectMapper;
+import java.io.IOException;
+import java.util.List;
 import java.util.Map;
+
+import org.apache.commons.lang.StringUtils;
+import org.codehaus.jackson.JsonParseException;
+import org.codehaus.jackson.map.ObjectMapper;
+import org.codehaus.jackson.type.JavaType;
 
 /**
  * json序列化工具类
@@ -56,6 +62,31 @@ public class JsonUtil {
 		try {
 			return objectMapper.writeValueAsString(obj);
 		} catch (Exception e) {
+			throw new RuntimeException(e);
+		}
+	}
+    
+    public static <T> List<T> extractList(String json, List<T> list) {
+		if (json == null || json.length() == 0) return list;
+		List<T> output = null;
+		try {
+			output = objectMapper.readValue(json, list.getClass());
+		} catch (JsonParseException e) {
+			throw new RuntimeException(e);
+		} catch (IOException e) {
+			throw new RuntimeException(e);
+		}
+		return (output == null) ? list : output;
+	}
+
+	public static <T> List<T> extractList(String json, Class c) {
+		if (StringUtils.isEmpty(json)) return null;
+		JavaType javaType = objectMapper.getTypeFactory().constructCollectionType(List.class, c);
+		try {
+			return objectMapper.readValue(json, javaType);
+		} catch (JsonParseException e) {
+			throw new RuntimeException(e);
+		} catch (IOException e) {
 			throw new RuntimeException(e);
 		}
 	}

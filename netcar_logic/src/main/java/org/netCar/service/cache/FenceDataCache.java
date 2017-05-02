@@ -1,5 +1,7 @@
 package org.netCar.service.cache;
 
+import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
 import org.slf4j.Logger;
@@ -13,9 +15,9 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class FenceDataCache {
-	
+
 	private static Logger LOG = LoggerFactory.getLogger(FenceDataCache.class);
-	
+
 	@Autowired
 	private RedisTemplate<String, Object> redisTemplate;
 
@@ -24,7 +26,7 @@ public class FenceDataCache {
 	 */
 	private static final String FENCEDATA1 = "fence_data_type1";
 
-	/**
+	/**	
 	 * 出入记录围栏
 	 */
 	private static final String FENCEDATA2 = "fence_data_type2";
@@ -38,8 +40,20 @@ public class FenceDataCache {
 		} else if (type == 2) {
 			redisTemplate.opsForHash().putAll(FENCEDATA2, map);
 		} else {
-			LOG.error(" add fence data,type:{} error ",type);
+			LOG.error(" add fence data,type:{} error ", type);
 		}
+	}
+
+	public Map<String, String> getAllFencesData(Integer type) {
+		Map<String, String> map = new HashMap<String, String>();
+		String tempKey = type == 1 ? FENCEDATA1 : FENCEDATA2;
+		Iterator<Object> iter = redisTemplate.opsForHash().keys(tempKey).iterator();
+		while (iter.hasNext()) {
+			String key = (String) iter.next();
+			String val = (String) redisTemplate.opsForHash().get(tempKey, key);
+			map.put(key, val);
+		}
+		return map;
 	}
 
 }

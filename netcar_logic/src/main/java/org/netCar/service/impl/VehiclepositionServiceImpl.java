@@ -1,20 +1,23 @@
 package org.netCar.service.impl;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import org.apache.commons.lang.StringUtils;
 import org.netCar.dao.VehiclepositionDao;
-import org.netCar.domain.VehiclePositionEntity;
+import org.netCar.dto.VehiclepositionJMS;
 import org.netCar.service.VehiclepositionService;
+import org.netCar.service.cache.FenceDataCache;
 import org.netCar.service.cache.PositionCache;
+import org.netCar.util.AlarmUtil;
 import org.netCar.util.JsonUtil;
+import org.netCar.vo.SpotVo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Service;
-
-import java.util.HashMap;
-import java.util.Map;
-import java.util.concurrent.TimeUnit;
 
 /**
  * Created by lyq on 2017/4/19.
@@ -22,77 +25,64 @@ import java.util.concurrent.TimeUnit;
 @Service
 public class VehiclepositionServiceImpl implements VehiclepositionService {
 
-    private static Logger logger = LoggerFactory.getLogger(VehiclepositionServiceImpl.class);
+	private static Logger logger = LoggerFactory.getLogger(VehiclepositionServiceImpl.class);
 
-    private static  Integer codeInt = 340101;
+	@Autowired
+	VehiclepositionDao vehiclepositionDao;
 
-    @Autowired
-    VehiclepositionDao vehiclepositionDao;
+	@Autowired
+	private PositionCache positionCache;
 
-    @Autowired
-    private PositionCache positionCache;
+	@Autowired
+	private MongoTemplate mongoTemplate;
 
-    @Autowired
-    private MongoTemplate mongoTemplate;
+	@Autowired
+	private FenceDataCache fenceDataCache;
 
-    @Override
-    public void save(VehiclePositionEntity vehicleposition) {
-        vehiclepositionDao.save(vehicleposition);
-    }
+	@Override
+	public void operationPostion(VehiclepositionJMS position) {
 
-    @Override
-    public void update(VehiclePositionEntity vehicleposition) {
-        vehiclepositionDao.update(vehicleposition);
-    }
+		// 1:查询位置所在区域和上次所在区域比较
+		String vehicleNo = position.getVehicleNo();
+		String lastCode = positionCache.getCodeByVehicleNo(vehicleNo);
 
-    @Override
-    public void delete(VehiclePositionEntity vehicleposition) {
-        vehiclepositionDao.deleteObject(vehicleposition);
-    }
+		// 判断当前在哪个区围栏
+		String nowCode = whereAreaFence(position.getLongitude(), position.getLatitude());
 
-    @Override
-    public void operationPostion(Integer id) {
-        logger.info("operationPostion start id:"+id);
-     /* 340101	市辖区
-        340102	瑶海区
-        340103	庐阳区
-        340104	蜀山区
-        340111	包河区
-        340121	长丰县
-        340122	肥东县
-        340123	肥西县*/
-        VehiclePositionEntity vehicleposition = vehiclepositionDao.get(id);
-        //1:查询位置所在区域和上次所在区域比较
-        String vehicleNo = vehicleposition.getVehicleNo();
-        String lastCode = positionCache.getCodeByVehicleNo(vehicleNo);
+		if (StringUtils.isBlank(lastCode)) {
+			positionCache.setVehicleNoCode(vehicleNo, nowCode);
+		} else if (StringUtils.isBlank(nowCode)) {
+			positionCache.deletePosition(lastCode, vehicleNo);
+		} else if (!lastCode.equals(nowCode)) {
+			positionCache.deletePosition(lastCode, vehicleNo);
+			positionCache.setVehicleNoCode(vehicleNo, nowCode);
+		}
 
-        String nowCode = codeInt.toString();
-        if (id % 100 == 0){
-            codeInt++;
-            nowCode = codeInt.toString();
-        }
-        /*try {
-            TimeUnit.SECONDS.sleep(1);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }*/
+		Map<String, String> map = new HashMap<String, String>();
+		String str = JsonUtil.obj2Str(position);
+		map.put(vehicleNo, str);
+		positionCache.setPosition(nowCode, map);
+		logger.info("redis insert success nowCode:" + nowCode);
 
-        if(StringUtils.isBlank(lastCode)){
-            positionCache.setVehicleNoCode(vehicleNo, nowCode);
-        }else if(!lastCode.equals(nowCode)){
-            positionCache.deletePosition(lastCode, vehicleNo);
-            positionCache.setVehicleNoCode(vehicleNo, nowCode);
-        }
+		// 存mongdb
+		mongoTemplate.insert(position);
+		logger.info("operationPostion end");
+	}
 
-        Map map = new HashMap();
-        String str = JsonUtil.obj2Str(vehicleposition);
-        map.put(vehicleposition.getVehicleNo(),str);
-        positionCache.setPosition(nowCode, map);
-        logger.info("redis insert success nowCode:"+nowCode);
+	private String whereAreaFence(double longitude, double latitude) {
+		Map<String, String> map = fenceDataCache.getAllFencesData(1);
+		for (String key : map.keySet()) {
+			String value = map.get(key);
+			List<SpotVo> spotVoList = JsonUtil.extractList(value, SpotVo.class);
+			SpotVo[] spotVoArr = new SpotVo[spotVoList.size()];
+			spotVoList.toArray(spotVoArr);
 
-        //存mongdb
-        mongoTemplate.insert(vehicleposition);
-        logger.info("operationPostion end");
-    }
+			boolean flag = AlarmUtil.isPtInPoly(longitude, latitude, spotVoArr);
+			if (flag) {
+				return key;
+			}
+		}
+		return null;
+	}
 
 }

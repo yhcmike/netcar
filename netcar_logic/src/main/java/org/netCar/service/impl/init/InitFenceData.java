@@ -7,7 +7,6 @@ import java.util.Map;
 import org.netCar.domain.FenceEntity;
 import org.netCar.service.FenceService;
 import org.netCar.service.cache.FenceDataCache;
-import org.netCar.util.JsonUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,18 +26,15 @@ public class InitFenceData {
 		LOG.info("init area fence data,total:" + datas1.size());
 		Map<String, String> map1 = new HashMap<String, String>();
 		for (FenceEntity entity : datas1) {
-			String str = JsonUtil.obj2Str(entity);
-			map1.put(entity.getName(), str);
+			map1.put(entity.getName(), entity.getSpots());
 		}
 		fenceDataCache.setFencesData(1, map1);
-		
 		
 		List<FenceEntity> datas2 = fenceService.listFencesByCounty(2, 1);
 		LOG.info("init Common fence data,total:" + datas2.size());
 		Map<String, String> map2 = new HashMap<String, String>();
 		for (FenceEntity entity : datas2) {
-			String str = JsonUtil.obj2Str(entity);
-			map2.put(entity.getName(), str);
+			map2.put(entity.getName(), entity.getSpots());
 		}
 		fenceDataCache.setFencesData(2, map2);
 	}
