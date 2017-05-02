@@ -1,5 +1,6 @@
 package org.netCar.service.impl;
 
+import org.netCar.dto.VehiclepositionJMS;
 import org.netCar.service.VehiclepositionService;
 import org.netCar.util.CtticDataUtils;
 import org.netCar.util.JsonUtil;
@@ -34,10 +35,26 @@ public class VehiclepositionServiceImpl implements VehiclepositionService {
 					for(OTIpc obj : OTIpcDef.OTIpcList.parseFrom(CtticDataUtils.decompress(message)).getOtpicList()){
                     	switch (obj.getIPCType()) {
 						case positionVehicle:
-							for(OTIpcDef.PositionVehicle positionVehicle : obj.getPositionVehicleList()){
-								//TODO解析为json 存放到mq
-								String jsonPosition = JsonUtil.obj2Str(positionVehicle);
-					
+							for(OTIpcDef.PositionVehicle p : obj.getPositionVehicleList()){
+								VehiclepositionJMS jms =  new VehiclepositionJMS();
+								jms.setBizStatus(p.getBizStatus());
+								jms.setCompanyId(p.getCompanyId());
+								jms.setDirection(p.getDirection());
+								jms.setEncrypt(p.getEncrypt());
+								jms.setLatitude(p.getLatitude());
+								jms.setLongitude(p.getLongitude());
+								jms.setSpeed(p.getSpeed());
+								jms.setElevation(p.getElevation());
+								jms.setVehicleNo(p.getVehicleNo());
+								jms.setMileage(p.getMileage());
+								jms.setVehicleRegionCode(p.getVehicleRegionCode());
+								jms.setVehStatus(p.getVehStatus());
+								jms.setOrderId(p.getOrderId());
+								jms.setWarnStatus(p.getWarnStatus());
+								//TODO解析为json
+//								String jsonPosition = JsonUtil.obj2Str(jms);
+								//存放到mq
+								jmsTemplate.send(jms);
                             }
 							break;
 						default:
