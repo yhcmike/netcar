@@ -2,10 +2,13 @@ package org.netCar.service.impl;
 
 import org.netCar.service.VehiclepositionService;
 import org.netCar.util.CtticDataUtils;
+import org.netCar.util.JsonUtil;
 import org.netCar.vo.OTIpcDef;
 import org.netCar.vo.OTIpcDef.OTIpc;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jms.core.JmsTemplate;
 import org.springframework.stereotype.Service;
 
 import com.google.protobuf.InvalidProtocolBufferException;
@@ -18,6 +21,8 @@ import com.google.protobuf.InvalidProtocolBufferException;
 public class VehiclepositionServiceImpl implements VehiclepositionService {
 
     private static Logger LOG = LoggerFactory.getLogger(VehiclepositionServiceImpl.class);
+    @Autowired
+    private JmsTemplate jmsTemplate;
 
     @Override
     public void operationVehiclePostion(boolean batch,boolean compress,byte[] message) {
@@ -31,6 +36,7 @@ public class VehiclepositionServiceImpl implements VehiclepositionService {
 						case positionVehicle:
 							for(OTIpcDef.PositionVehicle positionVehicle : obj.getPositionVehicleList()){
 								//TODO解析为json 存放到mq
+								String jsonPosition = JsonUtil.obj2Str(positionVehicle);
 					
                             }
 							break;

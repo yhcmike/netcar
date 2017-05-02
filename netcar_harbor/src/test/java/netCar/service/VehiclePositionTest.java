@@ -20,7 +20,7 @@ public class VehiclePositionTest {
     @Test
     public void testAdd(){
         for (int id = 3;id<300;id++){
-            vehiclepositionService.operationPostion(id);
+            //vehiclepositionService.operationPostion(id);
         }
     }
 }
