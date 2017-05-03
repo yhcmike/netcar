@@ -100,11 +100,15 @@ public class OrderInfoServiceImpl implements OrderInfoService {
     	}
     	
     	entity.setLongitude((double)orderMatch.getLongitude()/1000000);
-    	entity.setLatitude((double)orderMatch.getLatitude());
+    	entity.setLatitude((double)orderMatch.getLatitude()/1000000);
     	entity.setLicenseId(orderMatch.getLicenseId());
     	entity.setDriverPhone(orderMatch.getDriverPhone());
     	entity.setVehicleNo(orderMatch.getVehicleNo());
     	entity.setDistributeTime(orderMatch.getDistributeTime());
+    	
+    	//TODO 判断是否超运营
+    	
+    	
 		return entity;
     }
     

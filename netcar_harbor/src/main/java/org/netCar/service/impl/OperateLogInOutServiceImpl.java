@@ -49,8 +49,6 @@ public class OperateLogInOutServiceImpl implements OperateLogInOutService {
      * @return
      */
     private OperateLogInOutEntity transToModelFromLogin(OTIpcDef.OperateLogin operateLogin){
-    	//TODO 营运开始需要添加 进围栏判断（存redis 围栏进出记录和异常聚集记录）
-    	
     	OperateLogInOutEntity entity = new OperateLogInOutEntity();
     	
     	if(null == operateLogin){
