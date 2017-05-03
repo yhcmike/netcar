@@ -34,6 +34,7 @@ public class VehicleInsuranceServiceImpl implements VehicleInsuranceService{
 
     @Override
     public void update(VehicleInsuranceEntity vehicleInsuranceEntity) {
+    	vehicleInsuranceEntity = dao.merge(vehicleInsuranceEntity);
         dao.update(vehicleInsuranceEntity);
     }
 
@@ -43,7 +44,7 @@ public class VehicleInsuranceServiceImpl implements VehicleInsuranceService{
     }
 
 	@Override
-	public void opreate(BaseInfoVehicleInsurance entity) {
+	public void operate(BaseInfoVehicleInsurance entity) {
 		Map<String,Object> map = new HashMap<>();
     	map.put("companyId", entity.getCompanyId());
     	map.put("vehicleNo", entity.getVehicleNo());

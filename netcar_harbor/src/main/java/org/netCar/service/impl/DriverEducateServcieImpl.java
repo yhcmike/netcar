@@ -28,6 +28,7 @@ public class DriverEducateServcieImpl implements DriverEducateService {
 
     @Override
     public void update(DriverEducateEntity entity) {
+    	entity = dao.merge(entity);
         dao.update(entity);
     }
 

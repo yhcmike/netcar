@@ -10,5 +10,5 @@ public interface VehicleinfoService {
     public void save(VehicleInfoEntity vehicleInfoEntity);
     public void update(VehicleInfoEntity vehicleInfoEntity);
     public void delete(Integer id);
-    public void opreate(OTIpcDef.BaseInfoVehicle entity);
+    public void operate(OTIpcDef.BaseInfoVehicle entity);
 }

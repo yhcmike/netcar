@@ -29,6 +29,7 @@ public class CompanyFareServiceImpl implements CompanyFareService {
 
     @Override
     public void update(CompanyFareEntity entity) {
+    	entity = dao.merge(entity);
         dao.update(entity);
     }
 

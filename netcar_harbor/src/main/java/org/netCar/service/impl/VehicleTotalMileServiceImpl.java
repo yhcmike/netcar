@@ -29,6 +29,7 @@ public class VehicleTotalMileServiceImpl implements VehicleTotalMileService {
 
     @Override
     public void update(VehicleTotalMileEntity entity) {
+      entity = dao.merge(entity);
       dao.update(entity);
     }
 
@@ -38,7 +39,7 @@ public class VehicleTotalMileServiceImpl implements VehicleTotalMileService {
     }
 
 	@Override
-	public void opreate(BaseInfoVehicleTotalMile entity) {
+	public void operate(BaseInfoVehicleTotalMile entity) {
 		Map<String,Object> map = new HashMap<>();
     	map.put("companyId", entity.getCompanyId());
     	map.put("vehicleNo", entity.getVehicleNo());

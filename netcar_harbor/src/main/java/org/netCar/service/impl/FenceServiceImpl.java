@@ -22,6 +22,7 @@ public class FenceServiceImpl implements FenceService {
 
     @Override
     public void update(FenceEntity entity) {
+    	entity = dao.merge(entity);
         dao.update(entity);
     }
 

@@ -39,17 +39,17 @@ public class VehicleInfoAdapterServiceImpl implements VehicleInfoAdapterService 
                     	switch (obj.getIPCType()) {
 						case baseInfoVehicle:
 							for(OTIpcDef.BaseInfoVehicle vehicle : obj.getBaseInfoVehicleList()){
-								vehicleinfoService.opreate(vehicle);
+								vehicleinfoService.operate(vehicle);
                             }
 							break;
 						case baseInfoVehicleInsurance:
 							for(OTIpcDef.BaseInfoVehicleInsurance stat : obj.getBaseInfoVehicleInsuranceList()){
-								vehicleInsuranceService.opreate(stat);
+								vehicleInsuranceService.operate(stat);
                             }
 							break;
 						case baseInfoVehicleTotalMile:
 							for(OTIpcDef.BaseInfoVehicleTotalMile fare: obj.getBaseInfoVehicleTotalMileList()){
-								vehicleTotalMileService.opreate(fare);
+								vehicleTotalMileService.operate(fare);
 							}
 							break;
 						

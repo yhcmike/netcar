@@ -30,6 +30,7 @@ public class CompanyServiceServiceImpl implements CompanyServiceService {
 
     @Override
     public void update(CompanyServiceEntity entity) {
+    	entity = dao.merge(entity);
         dao.update(entity);
     }
 

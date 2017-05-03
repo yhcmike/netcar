@@ -11,5 +11,5 @@ public interface VehicleTotalMileService {
     void save(VehicleTotalMileEntity dirverMileageEntity);
     void update(VehicleTotalMileEntity dirverMileageEntity);
     void delete(Integer id);
-    public void opreate(OTIpcDef.BaseInfoVehicleTotalMile entity);
+    public void operate(OTIpcDef.BaseInfoVehicleTotalMile entity);
 }

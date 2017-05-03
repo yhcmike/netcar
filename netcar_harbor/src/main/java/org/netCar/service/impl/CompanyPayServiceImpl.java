@@ -29,6 +29,7 @@ public class CompanyPayServiceImpl implements CompanyPayService {
 
     @Override
     public void update(CompanyPayEntity companyPayEntity) {
+    	companyPayEntity = dao.merge(companyPayEntity);
         dao.update(companyPayEntity);
     }
 

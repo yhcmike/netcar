@@ -10,5 +10,5 @@ public interface VehicleInsuranceService {
     public void save(VehicleInsuranceEntity vehicleInsuranceEntity);
     public void update(VehicleInsuranceEntity vehicleInsuranceEntity);
     public void delete(Integer id);
-    public void opreate(OTIpcDef.BaseInfoVehicleInsurance entity);
+    public void operate(OTIpcDef.BaseInfoVehicleInsurance entity);
 }

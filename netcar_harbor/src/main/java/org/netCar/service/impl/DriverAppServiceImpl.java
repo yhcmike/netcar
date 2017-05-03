@@ -29,6 +29,7 @@ public class DriverAppServiceImpl implements DriverAppService {
 
     @Override
     public void update(DriverAppEntity entity) {
+    	entity = dao.merge(entity);
         dao.update(entity);
     }
 

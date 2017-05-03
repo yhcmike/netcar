@@ -29,6 +29,7 @@ public class DriverInfoServcieImpl implements DriverInfoService {
 
     @Override
     public void update(DriverInfoEntity driverInfoEntity) {
+    	driverInfoEntity = dao.merge(driverInfoEntity);
     	dao.update(driverInfoEntity);
     }
 

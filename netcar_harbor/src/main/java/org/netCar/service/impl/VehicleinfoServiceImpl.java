@@ -33,6 +33,7 @@ public class VehicleinfoServiceImpl implements VehicleinfoService {
 
     @Override
     public void update(VehicleInfoEntity vehicleInfoEntity) {
+    	vehicleInfoEntity = dao.merge(vehicleInfoEntity);
         dao.update(vehicleInfoEntity);
     }
 
@@ -42,7 +43,7 @@ public class VehicleinfoServiceImpl implements VehicleinfoService {
     }
 
 	@Override
-	public void opreate(BaseInfoVehicle entity) {
+	public void operate(BaseInfoVehicle entity) {
 		Map<String,Object> map = new HashMap<>();
     	map.put("companyId", entity.getCompanyId());
     	map.put("vehicleNo", entity.getVehicleNo());

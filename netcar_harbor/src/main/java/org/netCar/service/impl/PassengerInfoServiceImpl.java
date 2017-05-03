@@ -31,6 +31,7 @@ public class PassengerInfoServiceImpl implements PassengerInfoService {
 
     @Override
     public void update(PassengerInfoEntity passengerInfoEntity) {
+    	passengerInfoEntity = dao.merge(passengerInfoEntity);
     	dao.update(passengerInfoEntity);
     }
 
@@ -44,7 +45,7 @@ public class PassengerInfoServiceImpl implements PassengerInfoService {
 		Map<String,Object> map = new HashMap<>();
     	map.put("companyId", entity.getCompanyId());
     	map.put("passengerPhone", entity.getPassengerPhone());
-    	PassengerInfoEntity qentity = dao.unique("from PassengerInfoEntity where companyId =:companyId and licenseId =:passengerPhone", map);
+    	PassengerInfoEntity qentity = dao.unique("from PassengerInfoEntity where companyId =:companyId and passengerPhone =:passengerPhone", map);
     	PassengerInfoEntity model = new PassengerInfoEntity();
     	model.setCompanyId(entity.getCompanyId());
     	model.setFlag(entity.getFlag());

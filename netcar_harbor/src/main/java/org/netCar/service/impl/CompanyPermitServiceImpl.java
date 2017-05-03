@@ -30,6 +30,7 @@ public class CompanyPermitServiceImpl implements CompanyPermitService {
 
     @Override
     public void update(CompanyPermitEntity entity) {
+    	entity = dao.merge(entity);
         dao.update(entity);
     }
 

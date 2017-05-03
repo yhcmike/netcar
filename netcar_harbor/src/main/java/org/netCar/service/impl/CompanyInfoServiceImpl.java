@@ -62,7 +62,8 @@ public class CompanyInfoServiceImpl implements CompanyInfoService {
 	
 	@Override
 	public void update(CompanyInfoEntity companyInfo) {
-           companyInfoDao.update(companyInfo);
+		companyInfo = companyInfoDao.merge(companyInfo);
+        companyInfoDao.update(companyInfo);
 	}
 
 	@Override

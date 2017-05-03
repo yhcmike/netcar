@@ -29,6 +29,7 @@ public class CompanyScaleServiceImpl implements CompanyScaleService {
 
     @Override
     public void update(CompanyScaleEntity companyScaleEntity) {
+    	companyScaleEntity = dao.merge(companyScaleEntity);
         dao.update(companyScaleEntity);
     }
 

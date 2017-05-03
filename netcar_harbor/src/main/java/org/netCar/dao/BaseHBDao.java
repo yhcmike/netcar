@@ -21,7 +21,7 @@ import org.hibernate.transform.Transformers;
 import org.netCar.util.Assert;
 import org.netCar.util.Page;
 import org.netCar.util.PageUtil;
-
+ 
 public abstract class BaseHBDao<M extends Serializable, PK extends Serializable> {
 
 	private String pkName = "id";
@@ -107,9 +107,12 @@ public abstract class BaseHBDao<M extends Serializable, PK extends Serializable>
 		}
 	}
 
-	public void merge(M model) {
+
+	public M merge(M model) {
 		try {
-			getCurrentSession().merge(model);
+			@SuppressWarnings("unchecked")
+			M merge = (M) getCurrentSession().merge(model);
+			return merge;
 		} catch (RuntimeException e) {
 			throw e;
 		}
