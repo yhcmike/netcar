@@ -38,7 +38,7 @@ public class CompanyScaleServiceImpl implements CompanyScaleService {
     }
 
 	@Override
-	public void opreate(BaseInfoCompanyStat entity) {
+	public void operate(BaseInfoCompanyStat entity) {
 		Map<String,Object> map = new HashMap<>();
     	map.put("companyId", entity.getCompanyId());
     	CompanyScaleEntity qentity = dao.unique("from CompanyScaleEntity where companyId =:companyId", map);

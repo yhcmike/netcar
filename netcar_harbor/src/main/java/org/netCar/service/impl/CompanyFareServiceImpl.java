@@ -38,7 +38,7 @@ public class CompanyFareServiceImpl implements CompanyFareService {
     }
 
 	@Override
-	public void opreate(BaseInfoCompanyFare entity) {
+	public void operate(BaseInfoCompanyFare entity) {
 		Map<String,Object> map = new HashMap<>();
     	map.put("companyId", entity.getCompanyId());
     	map.put("fareType", entity.getFareType());

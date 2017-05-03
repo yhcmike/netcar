@@ -39,7 +39,7 @@ public class CompanyPermitServiceImpl implements CompanyPermitService {
     }
 
 	@Override
-	public void opreate(BaseInfoCompanyPermit entity) {
+	public void operate(BaseInfoCompanyPermit entity) {
 		Map<String,Object> map = new HashMap<>();
     	map.put("companyId", entity.getCompanyId());
     	CompanyPermitEntity qentity = dao.unique("from CompanyPermitEntity where companyId =:companyId", map);

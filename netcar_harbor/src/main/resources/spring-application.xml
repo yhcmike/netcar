@@ -98,6 +98,7 @@
 			<tx:method name="modify*" propagation="REQUIRED" />
 			<tx:method name="update*" propagation="REQUIRED" />
 			<tx:method name="change*" propagation="REQUIRED" />
+			<tx:method name="operate*" propagation="REQUIRED" />
 			<tx:method name="*" read-only="true" />
 		</tx:attributes>
 	</tx:advice>

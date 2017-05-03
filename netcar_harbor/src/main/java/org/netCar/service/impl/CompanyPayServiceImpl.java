@@ -38,7 +38,7 @@ public class CompanyPayServiceImpl implements CompanyPayService {
     }
 
 	@Override
-	public void opreate(BaseInfoCompanyPay entity) {
+	public void operate(BaseInfoCompanyPay entity) {
 		Map<String,Object> map = new HashMap<>();
     	map.put("companyId", entity.getCompanyId());
     	map.put("payId", entity.getPayId());

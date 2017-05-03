@@ -10,5 +10,5 @@ public interface CompanyPermitService {
     public void save(CompanyPermitEntity entity);
     public void update(CompanyPermitEntity entity);
     public void delete(Integer id);
-    public void opreate(OTIpcDef.BaseInfoCompanyPermit entity);
+    public void operate(OTIpcDef.BaseInfoCompanyPermit entity);
 }

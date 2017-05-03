@@ -61,22 +61,22 @@ public class CompanyInfoAdapterServiceImpl implements CompanyInfoAdapterService{
 							break;
 						case baseInfoCompanyFare:
 							for(OTIpcDef.BaseInfoCompanyFare fare: obj.getBaseInfoCompanyFareList()){
-								companyFareService.opreate(fare);
+								companyFareService.operate(fare);
 							}
 							break;
 						case baseInfoCompanyPay:
 							for(OTIpcDef.BaseInfoCompanyPay pay : obj.getBaseInfoCompanyPayList()){
-								companyPayService.opreate(pay);
+								companyPayService.operate(pay);
 							}
 							break;
 						case baseInfoCompanyStat:
 						    for(OTIpcDef.BaseInfoCompanyStat stat : obj.getBaseInfoCompanyStatList()){
-						    	companyScaleService.opreate(stat);
+						    	companyScaleService.operate(stat);
 						    }
 						    break;
 						case baseInfoCompanyPermit:
 							for(OTIpcDef.BaseInfoCompanyPermit permit : obj.getBaseInfoCompanyPermitList()){
-								companyPermitService.opreate(permit);
+								companyPermitService.operate(permit);
 							}
 						default:
 							LOG.error(String.format("%s获取IPCType有误:%s",this.getClass().getName(),obj.getIPCType().getNumber()));

@@ -10,5 +10,5 @@ public interface CompanyFareService {
     public void save(CompanyFareEntity entity);
     public void update(CompanyFareEntity entity);
     public void delete(Integer id);
-    public void opreate(OTIpcDef.BaseInfoCompanyFare entity);
+    public void operate(OTIpcDef.BaseInfoCompanyFare entity);
 }

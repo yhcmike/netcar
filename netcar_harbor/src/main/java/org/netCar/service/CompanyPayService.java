@@ -10,5 +10,5 @@ public interface CompanyPayService {
     public void save(CompanyPayEntity companyPayEntity);
     public void update(CompanyPayEntity companyPayEntity);
     public void delete(Integer id);
-    public void opreate(OTIpcDef.BaseInfoCompanyPay entity);
+    public void operate(OTIpcDef.BaseInfoCompanyPay entity);
 }

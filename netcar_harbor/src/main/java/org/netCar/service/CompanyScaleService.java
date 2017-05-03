@@ -10,5 +10,5 @@ public interface CompanyScaleService {
     public void save(CompanyScaleEntity companyScaleEntity);
     public void update(CompanyScaleEntity companyScaleEntity);
     public void delete(Integer id);
-    public void opreate(OTIpcDef.BaseInfoCompanyStat entity);
+    public void operate(OTIpcDef.BaseInfoCompanyStat entity);
 }
