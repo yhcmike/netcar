@@ -12,18 +12,27 @@ import javax.persistence.Table;
 @Table(name = "vehicle_insurance")
 public class VehicleInsuranceEntity  extends IdEntity{
 
+	@Column(name = "company_id", length = 32)
     private String companyId;
+	@Column(name = "vehicle_no", length = 32)
     private String vehicleNo;
+	@Column(name = "insur_com", length = 64)
     private String insurCom;
+	@Column(name = "insur_num", length = 64)
     private String insurNum;
+	@Column(name = "insur_type", length = 32)
     private String insurType;
+    @Column(name = "insur_count")
     private Float insurCount;
+    @Column(name = "insur_eff")
     private Long insurEff;
+    @Column(name = "insur_exp")
     private Long insurExp;
+    @Column(name = "flag")
     private Integer flag;
+    @Column(name = "update_time")
     private Long updateTime;
 
-    @Column(name = "company_id", length = 32)
     public String getCompanyId() {
         return companyId;
     }
@@ -33,7 +42,6 @@ public class VehicleInsuranceEntity  extends IdEntity{
     }
 
 
-    @Column(name = "vehicle_no", length = 32)
     public String getVehicleNo() {
         return vehicleNo;
     }
@@ -43,7 +51,6 @@ public class VehicleInsuranceEntity  extends IdEntity{
     }
 
 
-    @Column(name = "insur_com", length = 64)
     public String getInsurCom() {
         return insurCom;
     }
@@ -53,7 +60,6 @@ public class VehicleInsuranceEntity  extends IdEntity{
     }
 
 
-    @Column(name = "insur_num", length = 64)
     public String getInsurNum() {
         return insurNum;
     }
@@ -63,7 +69,6 @@ public class VehicleInsuranceEntity  extends IdEntity{
     }
 
 
-    @Column(name = "insur_type", length = 32)
     public String getInsurType() {
         return insurType;
     }
@@ -73,7 +78,6 @@ public class VehicleInsuranceEntity  extends IdEntity{
     }
 
 
-    @Column(name = "insur_count")
     public Float getInsurCount() {
         return insurCount;
     }
@@ -83,7 +87,6 @@ public class VehicleInsuranceEntity  extends IdEntity{
     }
 
 
-    @Column(name = "insur_eff")
     public Long getInsurEff() {
         return insurEff;
     }
@@ -93,7 +96,6 @@ public class VehicleInsuranceEntity  extends IdEntity{
     }
 
 
-    @Column(name = "insur_exp")
     public Long getInsurExp() {
         return insurExp;
     }
@@ -103,7 +105,6 @@ public class VehicleInsuranceEntity  extends IdEntity{
     }
 
 
-    @Column(name = "flag")
     public Integer getFlag() {
         return flag;
     }
@@ -113,7 +114,6 @@ public class VehicleInsuranceEntity  extends IdEntity{
     }
 
 
-    @Column(name = "update_time")
     public Long getUpdateTime() {
         return updateTime;
     }

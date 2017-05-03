@@ -12,16 +12,20 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "company_scale")
 public class CompanyScaleEntity extends IdEntity{
+	@Column(name = "company_id", length = 32)
     private String companyId;
+	@Column(name = "vehicle_num", length = 64)
     private String vehicleNum;
+	@Column(name = "driver_num", length = 64)
     private String driverNum;
+	@Column(name = "flag")
     private Integer flag;
+	@Column(name = "update_time")
     private Long updateTime;
 
 
 
 
-    @Column(name = "company_id", length = 32)
     public String getCompanyId() {
         return companyId;
     }
@@ -31,7 +35,6 @@ public class CompanyScaleEntity extends IdEntity{
     }
 
 
-    @Column(name = "vehicle_num", length = 64)
     public String getVehicleNum() {
         return vehicleNum;
     }
@@ -41,7 +44,6 @@ public class CompanyScaleEntity extends IdEntity{
     }
 
 
-    @Column(name = "driver_num", length = 64)
     public String getDriverNum() {
         return driverNum;
     }
@@ -51,7 +53,6 @@ public class CompanyScaleEntity extends IdEntity{
     }
 
 
-    @Column(name = "flag")
     public Integer getFlag() {
         return flag;
     }
@@ -61,7 +62,6 @@ public class CompanyScaleEntity extends IdEntity{
     }
 
 
-    @Column(name = "update_time")
     public Long getUpdateTime() {
         return updateTime;
     }

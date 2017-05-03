@@ -11,16 +11,20 @@ import java.sql.Date;
 @Entity
 @Table(name = "alarm_informations")
 public class AlarmInformationsEntity extends IdEntity{
+	@Column(name = "content", length = 256)
     private String content;
+	@Column(name = "type", length = 64)
     private String type;
+	@Column(name = "num")
     private Integer num;
+	@Column(name = "date")
     private Date date;
+	@Column(name = "remark", length = 256)
     private String remark;
 
 
 
 
-    @Column(name = "content", length = 256)
     public String getContent() {
         return content;
     }
@@ -30,7 +34,6 @@ public class AlarmInformationsEntity extends IdEntity{
     }
 
 
-    @Column(name = "type", length = 64)
     public String getType() {
         return type;
     }
@@ -40,7 +43,6 @@ public class AlarmInformationsEntity extends IdEntity{
     }
 
 
-    @Column(name = "num")
     public Integer getNum() {
         return num;
     }
@@ -50,7 +52,6 @@ public class AlarmInformationsEntity extends IdEntity{
     }
 
 
-    @Column(name = "date")
     public Date getDate() {
         return date;
     }
@@ -60,7 +61,6 @@ public class AlarmInformationsEntity extends IdEntity{
     }
 
 
-    @Column(name = "remark", length = 256)
     public String getRemark() {
         return remark;
     }

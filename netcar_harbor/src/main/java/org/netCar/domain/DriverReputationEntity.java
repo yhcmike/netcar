@@ -10,16 +10,20 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "driver_reputation")
 public class DriverReputationEntity  extends IdEntity{
+	@Column(name = "company_id", length = 32)
     private String companyId;
+	@Column(name = "license_id", length = 32)
     private String licenseId;
+	@Column(name = "level")
     private Integer level;
+	@Column(name = "test_date")
     private Long testDate;
+	@Column(name = "test_department", length = 128)
     private String testDepartment;
 
 
 
 
-    @Column(name = "company_id", length = 32)
     public String getCompanyId() {
         return companyId;
     }
@@ -29,7 +33,6 @@ public class DriverReputationEntity  extends IdEntity{
     }
 
 
-    @Column(name = "license_id", length = 32)
     public String getLicenseId() {
         return licenseId;
     }
@@ -39,7 +42,6 @@ public class DriverReputationEntity  extends IdEntity{
     }
 
 
-    @Column(name = "level")
     public Integer getLevel() {
         return level;
     }
@@ -49,7 +51,6 @@ public class DriverReputationEntity  extends IdEntity{
     }
 
 
-    @Column(name = "test_date")
     public Long getTestDate() {
         return testDate;
     }
@@ -59,7 +60,6 @@ public class DriverReputationEntity  extends IdEntity{
     }
 
 
-    @Column(name = "test_department", length = 128)
     public String getTestDepartment() {
         return testDepartment;
     }

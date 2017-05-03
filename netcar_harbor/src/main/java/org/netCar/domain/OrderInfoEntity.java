@@ -12,10 +12,10 @@ import javax.persistence.Table;
 @Table(name = "order_info")
 public class OrderInfoEntity  extends IdEntity{
 
+	@Column(name = "company_id", length = 32)
     private String companyId;
 
 
-    @Column(name = "company_id", length = 32)
     public String getCompanyId() {
         return companyId;
     }
@@ -24,10 +24,10 @@ public class OrderInfoEntity  extends IdEntity{
         this.companyId = companyId;
     }
 
+    @Column(name = "address")
     private Integer address;
 
 
-    @Column(name = "address")
     public Integer getAddress() {
         return address;
     }
@@ -36,10 +36,10 @@ public class OrderInfoEntity  extends IdEntity{
         this.address = address;
     }
 
+    @Column(name = "order_id", length = 64)
     private String orderId;
 
 
-    @Column(name = "order_id", length = 64)
     public String getOrderId() {
         return orderId;
     }
@@ -48,10 +48,10 @@ public class OrderInfoEntity  extends IdEntity{
         this.orderId = orderId;
     }
 
+    @Column(name = "depart_time")
     private Long departTime;
 
 
-    @Column(name = "depart_time")
     public Long getDepartTime() {
         return departTime;
     }
@@ -60,10 +60,10 @@ public class OrderInfoEntity  extends IdEntity{
         this.departTime = departTime;
     }
 
+    @Column(name = "order_time")
     private Long orderTime;
 
 
-    @Column(name = "order_time")
     public Long getOrderTime() {
         return orderTime;
     }
@@ -72,10 +72,10 @@ public class OrderInfoEntity  extends IdEntity{
         this.orderTime = orderTime;
     }
 
+    @Column(name = "passenger_note", length = 128)
     private String passengerNote;
 
 
-    @Column(name = "passenger_note", length = 128)
     public String getPassengerNote() {
         return passengerNote;
     }
@@ -84,10 +84,10 @@ public class OrderInfoEntity  extends IdEntity{
         this.passengerNote = passengerNote;
     }
 
+    @Column(name = "departure", length = 128)
     private String departure;
 
 
-    @Column(name = "departure", length = 128)
     public String getDeparture() {
         return departure;
     }
@@ -96,10 +96,10 @@ public class OrderInfoEntity  extends IdEntity{
         this.departure = departure;
     }
 
+    @Column(name = "dep_longitude")
     private Double depLongitude;
 
 
-    @Column(name = "dep_longitude")
     public Double getDepLongitude() {
         return depLongitude;
     }
@@ -108,10 +108,10 @@ public class OrderInfoEntity  extends IdEntity{
         this.depLongitude = depLongitude;
     }
 
+    @Column(name = "dep_latitude")
     private Double depLatitude;
 
 
-    @Column(name = "dep_latitude")
     public Double getDepLatitude() {
         return depLatitude;
     }
@@ -120,10 +120,10 @@ public class OrderInfoEntity  extends IdEntity{
         this.depLatitude = depLatitude;
     }
 
+    @Column(name = "destination", length = 128)
     private String destination;
 
 
-    @Column(name = "destination", length = 128)
     public String getDestination() {
         return destination;
     }
@@ -132,10 +132,10 @@ public class OrderInfoEntity  extends IdEntity{
         this.destination = destination;
     }
 
+    @Column(name = "dest_longitude")
     private Double destLongitude;
 
 
-    @Column(name = "dest_longitude")
     public Double getDestLongitude() {
         return destLongitude;
     }
@@ -144,10 +144,10 @@ public class OrderInfoEntity  extends IdEntity{
         this.destLongitude = destLongitude;
     }
 
+    @Column(name = "dest_latitude")
     private Double destLatitude;
 
 
-    @Column(name = "dest_latitude")
     public Double getDestLatitude() {
         return destLatitude;
     }
@@ -156,10 +156,10 @@ public class OrderInfoEntity  extends IdEntity{
         this.destLatitude = destLatitude;
     }
 
+    @Column(name = "encrypt")
     private Integer encrypt;
 
 
-    @Column(name = "encrypt")
     public Integer getEncrypt() {
         return encrypt;
     }
@@ -168,10 +168,10 @@ public class OrderInfoEntity  extends IdEntity{
         this.encrypt = encrypt;
     }
 
+    @Column(name = "fare_type", length = 16)
     private String fareType;
 
 
-    @Column(name = "fare_type", length = 16)
     public String getFareType() {
         return fareType;
     }
@@ -180,10 +180,10 @@ public class OrderInfoEntity  extends IdEntity{
         this.fareType = fareType;
     }
 
+    @Column(name = "longitude")
     private Double longitude;
 
 
-    @Column(name = "longitude")
     public Double getLongitude() {
         return longitude;
     }
@@ -192,10 +192,10 @@ public class OrderInfoEntity  extends IdEntity{
         this.longitude = longitude;
     }
 
+    @Column(name = "latitude")
     private Double latitude;
 
 
-    @Column(name = "latitude")
     public Double getLatitude() {
         return latitude;
     }
@@ -204,10 +204,10 @@ public class OrderInfoEntity  extends IdEntity{
         this.latitude = latitude;
     }
 
+    @Column(name = "license_id", length = 32)
     private String licenseId;
 
 
-    @Column(name = "license_id", length = 32)
     public String getLicenseId() {
         return licenseId;
     }
@@ -216,10 +216,10 @@ public class OrderInfoEntity  extends IdEntity{
         this.licenseId = licenseId;
     }
 
+    @Column(name = "driver_phone", length = 32)
     private String driverPhone;
 
 
-    @Column(name = "driver_phone", length = 32)
     public String getDriverPhone() {
         return driverPhone;
     }
@@ -228,10 +228,10 @@ public class OrderInfoEntity  extends IdEntity{
         this.driverPhone = driverPhone;
     }
 
+    @Column(name = "vehicle_no", length = 32)
     private String vehicleNo;
 
 
-    @Column(name = "vehicle_no", length = 32)
     public String getVehicleNo() {
         return vehicleNo;
     }
@@ -240,10 +240,10 @@ public class OrderInfoEntity  extends IdEntity{
         this.vehicleNo = vehicleNo;
     }
 
+    @Column(name = "distribute_time")
     private Long distributeTime;
 
 
-    @Column(name = "distribute_time")
     public Long getDistributeTime() {
         return distributeTime;
     }
@@ -252,10 +252,10 @@ public class OrderInfoEntity  extends IdEntity{
         this.distributeTime = distributeTime;
     }
 
+    @Column(name = "cancel_time")
     private Long cancelTime;
 
 
-    @Column(name = "cancel_time")
     public Long getCancelTime() {
         return cancelTime;
     }
@@ -264,10 +264,10 @@ public class OrderInfoEntity  extends IdEntity{
         this.cancelTime = cancelTime;
     }
 
+    @Column(name = "operator", length = 64)
     private String operator;
 
 
-    @Column(name = "operator", length = 64)
     public String getOperator() {
         return operator;
     }
@@ -276,10 +276,10 @@ public class OrderInfoEntity  extends IdEntity{
         this.operator = operator;
     }
 
+    @Column(name = "cancel_type_code", length = 32)
     private String cancelTypeCode;
 
 
-    @Column(name = "cancel_type_code", length = 32)
     public String getCancelTypeCode() {
         return cancelTypeCode;
     }
@@ -288,10 +288,10 @@ public class OrderInfoEntity  extends IdEntity{
         this.cancelTypeCode = cancelTypeCode;
     }
 
+    @Column(name = "cancel_reason", length = 128)
     private String cancelReason;
 
 
-    @Column(name = "cancel_reason", length = 128)
     public String getCancelReason() {
         return cancelReason;
     }

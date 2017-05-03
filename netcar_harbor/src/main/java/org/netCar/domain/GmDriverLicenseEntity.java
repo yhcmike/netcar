@@ -12,10 +12,10 @@ import java.sql.Date;
 @Table(name = "gm_driver_license")
 public class GmDriverLicenseEntity  extends IdEntity{
 
+	@Column(name = "address")
     private Integer address;
 
 
-    @Column(name = "address")
     public Integer getAddress() {
         return address;
     }
@@ -24,10 +24,10 @@ public class GmDriverLicenseEntity  extends IdEntity{
         this.address = address;
     }
 
+    @Column(name = "driver_name", length = 64)
     private String driverName;
 
 
-    @Column(name = "driver_name", length = 64)
     public String getDriverName() {
         return driverName;
     }
@@ -36,10 +36,10 @@ public class GmDriverLicenseEntity  extends IdEntity{
         this.driverName = driverName;
     }
 
+    @Column(name = "driver_gender")
     private Integer driverGender;
 
 
-    @Column(name = "driver_gender")
     public Integer getDriverGender() {
         return driverGender;
     }
@@ -48,10 +48,10 @@ public class GmDriverLicenseEntity  extends IdEntity{
         this.driverGender = driverGender;
     }
 
+    @Column(name = "document_type")
     private Integer documentType;
 
 
-    @Column(name = "document_type")
     public Integer getDocumentType() {
         return documentType;
     }
@@ -60,10 +60,10 @@ public class GmDriverLicenseEntity  extends IdEntity{
         this.documentType = documentType;
     }
 
+    @Column(name = "id_number", length = 32)
     private String idNumber;
 
 
-    @Column(name = "id_number", length = 32)
     public String getIdNumber() {
         return idNumber;
     }
@@ -72,10 +72,10 @@ public class GmDriverLicenseEntity  extends IdEntity{
         this.idNumber = idNumber;
     }
 
+    @Column(name = "nation", length = 32)
     private String nation;
 
 
-    @Column(name = "nation", length = 32)
     public String getNation() {
         return nation;
     }
@@ -84,10 +84,10 @@ public class GmDriverLicenseEntity  extends IdEntity{
         this.nation = nation;
     }
 
+    @Column(name = "driver_phone", length = 32)
     private String driverPhone;
 
 
-    @Column(name = "driver_phone", length = 32)
     public String getDriverPhone() {
         return driverPhone;
     }
@@ -96,10 +96,10 @@ public class GmDriverLicenseEntity  extends IdEntity{
         this.driverPhone = driverPhone;
     }
 
+    @Column(name = "driver_address", length = 256)
     private String driverAddress;
 
 
-    @Column(name = "driver_address", length = 256)
     public String getDriverAddress() {
         return driverAddress;
     }
@@ -108,10 +108,10 @@ public class GmDriverLicenseEntity  extends IdEntity{
         this.driverAddress = driverAddress;
     }
 
+    @Column(name = "driver_education", length = 64)
     private String driverEducation;
 
 
-    @Column(name = "driver_education", length = 64)
     public String getDriverEducation() {
         return driverEducation;
     }
@@ -120,10 +120,10 @@ public class GmDriverLicenseEntity  extends IdEntity{
         this.driverEducation = driverEducation;
     }
 
+    @Column(name = "technical_title", length = 32)
     private String technicalTitle;
 
 
-    @Column(name = "technical_title", length = 32)
     public String getTechnicalTitle() {
         return technicalTitle;
     }
@@ -132,10 +132,10 @@ public class GmDriverLicenseEntity  extends IdEntity{
         this.technicalTitle = technicalTitle;
     }
 
+    @Column(name = "employee_status", length = 32)
     private String employeeStatus;
 
 
-    @Column(name = "employee_status", length = 32)
     public String getEmployeeStatus() {
         return employeeStatus;
     }
@@ -144,10 +144,10 @@ public class GmDriverLicenseEntity  extends IdEntity{
         this.employeeStatus = employeeStatus;
     }
 
+    @Column(name = "household_registration", length = 32)
     private String householdRegistration;
 
 
-    @Column(name = "household_registration", length = 32)
     public String getHouseholdRegistration() {
         return householdRegistration;
     }
@@ -156,10 +156,10 @@ public class GmDriverLicenseEntity  extends IdEntity{
         this.householdRegistration = householdRegistration;
     }
 
+    @Column(name = "certificate_no", length = 128)
     private String certificateNo;
 
 
-    @Column(name = "certificate_no", length = 128)
     public String getCertificateNo() {
         return certificateNo;
     }
@@ -168,10 +168,10 @@ public class GmDriverLicenseEntity  extends IdEntity{
         this.certificateNo = certificateNo;
     }
 
+    @Column(name = "driver_birthday")
     private Integer driverBirthday;
 
 
-    @Column(name = "driver_birthday")
     public Integer getDriverBirthday() {
         return driverBirthday;
     }
@@ -180,10 +180,10 @@ public class GmDriverLicenseEntity  extends IdEntity{
         this.driverBirthday = driverBirthday;
     }
 
+    @Column(name = "get_driver_license_date")
     private Date getDriverLicenseDate;
 
 
-    @Column(name = "get_driver_license_date")
     public Date getGetDriverLicenseDate() {
         return getDriverLicenseDate;
     }
@@ -192,10 +192,10 @@ public class GmDriverLicenseEntity  extends IdEntity{
         this.getDriverLicenseDate = getDriverLicenseDate;
     }
 
+    @Column(name = "network_car_issue_date")
     private Integer networkCarIssueDate;
 
 
-    @Column(name = "network_car_issue_date")
     public Integer getNetworkCarIssueDate() {
         return networkCarIssueDate;
     }
@@ -204,10 +204,10 @@ public class GmDriverLicenseEntity  extends IdEntity{
         this.networkCarIssueDate = networkCarIssueDate;
     }
 
+    @Column(name = "network_car_proof_on")
     private Integer networkCarProofOn;
 
 
-    @Column(name = "network_car_proof_on")
     public Integer getNetworkCarProofOn() {
         return networkCarProofOn;
     }
@@ -216,10 +216,10 @@ public class GmDriverLicenseEntity  extends IdEntity{
         this.networkCarProofOn = networkCarProofOn;
     }
 
+    @Column(name = "network_car_proof_off")
     private Integer networkCarProofOff;
 
 
-    @Column(name = "network_car_proof_off")
     public Integer getNetworkCarProofOff() {
         return networkCarProofOff;
     }
@@ -228,10 +228,10 @@ public class GmDriverLicenseEntity  extends IdEntity{
         this.networkCarProofOff = networkCarProofOff;
     }
 
+    @Column(name = "network_car_issue_organization", length = 256)
     private String networkCarIssueOrganization;
 
 
-    @Column(name = "network_car_issue_organization", length = 256)
     public String getNetworkCarIssueOrganization() {
         return networkCarIssueOrganization;
     }
@@ -240,10 +240,10 @@ public class GmDriverLicenseEntity  extends IdEntity{
         this.networkCarIssueOrganization = networkCarIssueOrganization;
     }
 
+    @Column(name = "network_car_issue_organization_code", length = 32)
     private String networkCarIssueOrganizationCode;
 
 
-    @Column(name = "network_car_issue_organization_code", length = 32)
     public String getNetworkCarIssueOrganizationCode() {
         return networkCarIssueOrganizationCode;
     }
@@ -252,10 +252,10 @@ public class GmDriverLicenseEntity  extends IdEntity{
         this.networkCarIssueOrganizationCode = networkCarIssueOrganizationCode;
     }
 
+    @Column(name = "adhere_address", length = 32)
     private String adhereAddress;
 
 
-    @Column(name = "adhere_address", length = 32)
     public String getAdhereAddress() {
         return adhereAddress;
     }
@@ -264,10 +264,10 @@ public class GmDriverLicenseEntity  extends IdEntity{
         this.adhereAddress = adhereAddress;
     }
 
+    @Column(name = "card_type", length = 32)
     private String cardType;
 
 
-    @Column(name = "card_type", length = 32)
     public String getCardType() {
         return cardType;
     }
@@ -276,10 +276,10 @@ public class GmDriverLicenseEntity  extends IdEntity{
         this.cardType = cardType;
     }
 
+    @Column(name = "ic_card", length = 32)
     private String icCard;
 
 
-    @Column(name = "ic_card", length = 32)
     public String getIcCard() {
         return icCard;
     }
@@ -288,10 +288,10 @@ public class GmDriverLicenseEntity  extends IdEntity{
         this.icCard = icCard;
     }
 
+    @Column(name = "license_id", length = 32)
     private String licenseId;
 
 
-    @Column(name = "license_id", length = 32)
     public String getLicenseId() {
         return licenseId;
     }
@@ -300,10 +300,10 @@ public class GmDriverLicenseEntity  extends IdEntity{
         this.licenseId = licenseId;
     }
 
+    @Column(name = "emergency_contact", length = 64)
     private String emergencyContact;
 
 
-    @Column(name = "emergency_contact", length = 64)
     public String getEmergencyContact() {
         return emergencyContact;
     }
@@ -312,10 +312,10 @@ public class GmDriverLicenseEntity  extends IdEntity{
         this.emergencyContact = emergencyContact;
     }
 
+    @Column(name = "emergency_contact_phone", length = 32)
     private String emergencyContactPhone;
 
 
-    @Column(name = "emergency_contact_phone", length = 32)
     public String getEmergencyContactPhone() {
         return emergencyContactPhone;
     }
@@ -324,10 +324,10 @@ public class GmDriverLicenseEntity  extends IdEntity{
         this.emergencyContactPhone = emergencyContactPhone;
     }
 
+    @Column(name = "emergency_contact_address", length = 256)
     private String emergencyContactAddress;
 
 
-    @Column(name = "emergency_contact_address", length = 256)
     public String getEmergencyContactAddress() {
         return emergencyContactAddress;
     }
@@ -336,10 +336,10 @@ public class GmDriverLicenseEntity  extends IdEntity{
         this.emergencyContactAddress = emergencyContactAddress;
     }
 
+    @Column(name = "state")
     private Integer state;
 
 
-    @Column(name = "state")
     public Integer getState() {
         return state;
     }
@@ -348,10 +348,10 @@ public class GmDriverLicenseEntity  extends IdEntity{
         this.state = state;
     }
 
+    @Column(name = "flag")
     private Integer flag;
 
 
-    @Column(name = "flag")
     public Integer getFlag() {
         return flag;
     }
@@ -360,10 +360,10 @@ public class GmDriverLicenseEntity  extends IdEntity{
         this.flag = flag;
     }
 
+    @Column(name = "update_time")
     private Long updateTime;
 
 
-    @Column(name = "update_time")
     public Long getUpdateTime() {
         return updateTime;
     }

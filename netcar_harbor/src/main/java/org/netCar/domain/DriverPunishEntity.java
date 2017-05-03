@@ -10,16 +10,20 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "driver_punish")
 public class DriverPunishEntity extends IdEntity{
+	@Column(name = "company_id", length = 32)
     private String companyId;
+	@Column(name = "license_id", length = 32)
     private String licenseId;
+	@Column(name = "punish_time")
     private Long punishTime;
+	@Column(name = "punish_reason", length = 128)
     private String punishReason;
+	@Column(name = "punish_result", length = 128)
     private String punishResult;
 
 
 
 
-    @Column(name = "company_id", length = 32)
     public String getCompanyId() {
         return companyId;
     }
@@ -29,7 +33,6 @@ public class DriverPunishEntity extends IdEntity{
     }
 
 
-    @Column(name = "license_id", length = 32)
     public String getLicenseId() {
         return licenseId;
     }
@@ -39,7 +42,6 @@ public class DriverPunishEntity extends IdEntity{
     }
 
 
-    @Column(name = "punish_time")
     public Long getPunishTime() {
         return punishTime;
     }
@@ -49,7 +51,6 @@ public class DriverPunishEntity extends IdEntity{
     }
 
 
-    @Column(name = "punish_reason", length = 128)
     public String getPunishReason() {
         return punishReason;
     }
@@ -59,7 +60,6 @@ public class DriverPunishEntity extends IdEntity{
     }
 
 
-    @Column(name = "punish_result", length = 128)
     public String getPunishResult() {
         return punishResult;
     }

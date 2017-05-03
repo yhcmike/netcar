@@ -10,21 +10,30 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "company_pay")
 public class CompanyPayEntity extends IdEntity{
+	@Column(name = "company_id", length = 32)
     private String companyId;
+	@Column(name = "pay_name", length = 256)
     private String payName;
+	@Column(name = "pay_id", length = 32)
     private String payId;
+	@Column(name = "pay_type", length = 64)
     private String payType;
+	@Column(name = "pay_scope", length = 64)
     private String payScope;
+	@Column(name = "prepare_bank", length = 256)
     private String prepareBank;
+	@Column(name = "count_date", length = 10)
     private String countDate;
+	@Column(name = "state")
     private Integer state;
+	@Column(name = "flag")
     private Integer flag;
+	@Column(name = "update_time")
     private Long updateTime;
 
 
 
 
-    @Column(name = "company_id", length = 32)
     public String getCompanyId() {
         return companyId;
     }
@@ -34,7 +43,6 @@ public class CompanyPayEntity extends IdEntity{
     }
 
 
-    @Column(name = "pay_name", length = 256)
     public String getPayName() {
         return payName;
     }
@@ -44,7 +52,6 @@ public class CompanyPayEntity extends IdEntity{
     }
 
 
-    @Column(name = "pay_id", length = 32)
     public String getPayId() {
         return payId;
     }
@@ -54,7 +61,6 @@ public class CompanyPayEntity extends IdEntity{
     }
 
 
-    @Column(name = "pay_type", length = 64)
     public String getPayType() {
         return payType;
     }
@@ -64,7 +70,6 @@ public class CompanyPayEntity extends IdEntity{
     }
 
 
-    @Column(name = "pay_scope", length = 64)
     public String getPayScope() {
         return payScope;
     }
@@ -74,7 +79,6 @@ public class CompanyPayEntity extends IdEntity{
     }
 
 
-    @Column(name = "prepare_bank", length = 256)
     public String getPrepareBank() {
         return prepareBank;
     }
@@ -84,7 +88,6 @@ public class CompanyPayEntity extends IdEntity{
     }
 
 
-    @Column(name = "count_date", length = 10)
     public String getCountDate() {
         return countDate;
     }
@@ -94,7 +97,6 @@ public class CompanyPayEntity extends IdEntity{
     }
 
 
-    @Column(name = "state")
     public Integer getState() {
         return state;
     }
@@ -104,7 +106,6 @@ public class CompanyPayEntity extends IdEntity{
     }
 
 
-    @Column(name = "flag")
     public Integer getFlag() {
         return flag;
     }
@@ -114,7 +115,6 @@ public class CompanyPayEntity extends IdEntity{
     }
 
 
-    @Column(name = "update_time")
     public Long getUpdateTime() {
         return updateTime;
     }

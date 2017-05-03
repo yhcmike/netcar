@@ -12,19 +12,29 @@ import javax.persistence.Table;
 @Table(name = "operate_log_in_out")
 public class OperateLogInOutEntity  extends IdEntity{
 	
+	@Column(name = "company_id", length = 32)
     private String companyId;
+	@Column(name = "license_id", length = 32)
     private String licenseId;
+	@Column(name = "vehicle_no", length = 32)
     private String vehicleNo;
+	@Column(name = "login_time")
     private Long loginTime;
+	@Column(name = "in_longitude")
     private Double inLongitude;
+    @Column(name = "in_latitude")
     private Double inLatitude;
+    @Column(name = "in_encrypt")
     private Integer inEncrypt;
+    @Column(name = "logout_time")
     private Long logoutTime;
+    @Column(name = "out_longitude")
     private Double outLongitude;
+    @Column(name = "out_latitude")
     private Double outLatitude;
+    @Column(name = "out_encrypt")
     private Integer outEncrypt;
 
-    @Column(name = "company_id", length = 32)
     public String getCompanyId() {
         return companyId;
     }
@@ -34,7 +44,6 @@ public class OperateLogInOutEntity  extends IdEntity{
     }
 
 
-    @Column(name = "license_id", length = 32)
     public String getLicenseId() {
         return licenseId;
     }
@@ -44,7 +53,6 @@ public class OperateLogInOutEntity  extends IdEntity{
     }
 
 
-    @Column(name = "vehicle_no", length = 32)
     public String getVehicleNo() {
         return vehicleNo;
     }
@@ -54,7 +62,6 @@ public class OperateLogInOutEntity  extends IdEntity{
     }
 
 
-    @Column(name = "login_time")
     public Long getLoginTime() {
         return loginTime;
     }
@@ -64,7 +71,6 @@ public class OperateLogInOutEntity  extends IdEntity{
     }
 
 
-    @Column(name = "in_longitude")
     public Double getInLongitude() {
         return inLongitude;
     }
@@ -74,7 +80,6 @@ public class OperateLogInOutEntity  extends IdEntity{
     }
 
 
-    @Column(name = "in_latitude")
     public Double getInLatitude() {
         return inLatitude;
     }
@@ -84,7 +89,6 @@ public class OperateLogInOutEntity  extends IdEntity{
     }
 
 
-    @Column(name = "in_encrypt")
     public Integer getInEncrypt() {
         return inEncrypt;
     }
@@ -94,7 +98,6 @@ public class OperateLogInOutEntity  extends IdEntity{
     }
 
 
-    @Column(name = "logout_time")
     public Long getLogoutTime() {
         return logoutTime;
     }
@@ -104,7 +107,6 @@ public class OperateLogInOutEntity  extends IdEntity{
     }
 
 
-    @Column(name = "out_longitude")
     public Double getOutLongitude() {
         return outLongitude;
     }
@@ -114,7 +116,6 @@ public class OperateLogInOutEntity  extends IdEntity{
     }
 
 
-    @Column(name = "out_latitude")
     public Double getOutLatitude() {
         return outLatitude;
     }
@@ -124,7 +125,6 @@ public class OperateLogInOutEntity  extends IdEntity{
     }
 
 
-    @Column(name = "out_encrypt")
     public Integer getOutEncrypt() {
         return outEncrypt;
     }

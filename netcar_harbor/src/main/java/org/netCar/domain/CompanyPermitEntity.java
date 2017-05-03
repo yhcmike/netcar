@@ -10,23 +10,34 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "company_permit")
 public class CompanyPermitEntity extends IdEntity{
+	@Column(name = "company_id", length = 32)
     private String companyId;
+	@Column(name = "address")
     private Integer address;
+	@Column(name = "certificate", length = 64)
     private String certificate;
+	@Column(name = "operation_area", length = 128)
     private String operationArea;
+	@Column(name = "owner_name", length = 256)
     private String ownerName;
+	@Column(name = "organization", length = 256)
     private String organization;
+	@Column(name = "start_date")
     private Long startDate;
+	@Column(name = "stop_date")
     private Long stopDate;
+	@Column(name = "certify_date")
     private Long certifyDate;
+	@Column(name = "state", length = 8)
     private String state;
+	@Column(name = "flag")
     private Integer flag;
+	@Column(name = "update_time")
     private Long updateTime;
 
 
 
 
-    @Column(name = "company_id", length = 32)
     public String getCompanyId() {
         return companyId;
     }
@@ -36,7 +47,6 @@ public class CompanyPermitEntity extends IdEntity{
     }
 
 
-    @Column(name = "address")
     public Integer getAddress() {
         return address;
     }
@@ -46,7 +56,6 @@ public class CompanyPermitEntity extends IdEntity{
     }
 
 
-    @Column(name = "certificate", length = 64)
     public String getCertificate() {
         return certificate;
     }
@@ -56,7 +65,6 @@ public class CompanyPermitEntity extends IdEntity{
     }
 
 
-    @Column(name = "operation_area", length = 128)
     public String getOperationArea() {
         return operationArea;
     }
@@ -66,7 +74,6 @@ public class CompanyPermitEntity extends IdEntity{
     }
 
 
-    @Column(name = "owner_name", length = 256)
     public String getOwnerName() {
         return ownerName;
     }
@@ -76,7 +83,6 @@ public class CompanyPermitEntity extends IdEntity{
     }
 
 
-    @Column(name = "organization", length = 256)
     public String getOrganization() {
         return organization;
     }
@@ -86,7 +92,6 @@ public class CompanyPermitEntity extends IdEntity{
     }
 
 
-    @Column(name = "start_date")
     public Long getStartDate() {
         return startDate;
     }
@@ -96,7 +101,6 @@ public class CompanyPermitEntity extends IdEntity{
     }
 
 
-    @Column(name = "stop_date")
     public Long getStopDate() {
         return stopDate;
     }
@@ -106,7 +110,6 @@ public class CompanyPermitEntity extends IdEntity{
     }
 
 
-    @Column(name = "certify_date")
     public Long getCertifyDate() {
         return certifyDate;
     }
@@ -116,7 +119,6 @@ public class CompanyPermitEntity extends IdEntity{
     }
 
 
-    @Column(name = "state", length = 8)
     public String getState() {
         return state;
     }
@@ -126,7 +128,6 @@ public class CompanyPermitEntity extends IdEntity{
     }
 
 
-    @Column(name = "flag")
     public Integer getFlag() {
         return flag;
     }
@@ -136,7 +137,6 @@ public class CompanyPermitEntity extends IdEntity{
     }
 
 
-    @Column(name = "update_time")
     public Long getUpdateTime() {
         return updateTime;
     }

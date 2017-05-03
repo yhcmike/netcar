@@ -13,13 +13,17 @@ import javax.persistence.Table;
 public class PassengerComplaintEntity  extends IdEntity{
 
 
+	@Column(name = "company_id", length = 32)
     private String companyId;
+	@Column(name = "order_id", length = 64)
     private String orderId;
+	@Column(name = "complaint_time")
     private Long complaintTime;
+	@Column(name = "detail", length = 256)
     private String detail;
+	@Column(name = "result", length = 128)
     private String result;
 
-    @Column(name = "company_id", length = 32)
     public String getCompanyId() {
         return companyId;
     }
@@ -29,7 +33,6 @@ public class PassengerComplaintEntity  extends IdEntity{
     }
 
 
-    @Column(name = "order_id", length = 64)
     public String getOrderId() {
         return orderId;
     }
@@ -39,7 +42,6 @@ public class PassengerComplaintEntity  extends IdEntity{
     }
 
 
-    @Column(name = "complaint_time")
     public Long getComplaintTime() {
         return complaintTime;
     }
@@ -49,7 +51,6 @@ public class PassengerComplaintEntity  extends IdEntity{
     }
 
 
-    @Column(name = "detail", length = 256)
     public String getDetail() {
         return detail;
     }
@@ -59,7 +60,6 @@ public class PassengerComplaintEntity  extends IdEntity{
     }
 
 
-    @Column(name = "result", length = 128)
     public String getResult() {
         return result;
     }

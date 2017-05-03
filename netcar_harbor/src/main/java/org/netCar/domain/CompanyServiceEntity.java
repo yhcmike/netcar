@@ -10,26 +10,40 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "company_service")
 public class CompanyServiceEntity extends IdEntity{
+	@Column(name = "company_id", length = 32)
     private String companyId;
+	@Column(name = "address")
     private Integer address;
+	@Column(name = "service_name", length = 128)
     private String serviceName;
+	@Column(name = "service_no", length = 64)
     private String serviceNo;
+	@Column(name = "detail_address", length = 128)
     private String detailAddress;
+	@Column(name = "responsible_name", length = 128)
     private String responsibleName;
+	@Column(name = "responsible_phone", length = 32)
     private String responsiblePhone;
+	@Column(name = "manager_name", length = 64)
     private String managerName;
+	@Column(name = "manager_phone", length = 32)
     private String managerPhone;
+	@Column(name = "contact_phone", length = 32)
     private String contactPhone;
+	@Column(name = "mail_address", length = 128)
     private String mailAddress;
+	@Column(name = "create_date")
     private Long createDate;
+	@Column(name = "state")
     private Integer state;
+	@Column(name = "flag")
     private Integer flag;
+	@Column(name = "update_time")
     private Long updateTime;
 
 
 
 
-    @Column(name = "company_id", length = 32)
     public String getCompanyId() {
         return companyId;
     }
@@ -39,7 +53,6 @@ public class CompanyServiceEntity extends IdEntity{
     }
 
 
-    @Column(name = "address")
     public Integer getAddress() {
         return address;
     }
@@ -49,7 +62,6 @@ public class CompanyServiceEntity extends IdEntity{
     }
 
 
-    @Column(name = "service_name", length = 128)
     public String getServiceName() {
         return serviceName;
     }
@@ -59,7 +71,6 @@ public class CompanyServiceEntity extends IdEntity{
     }
 
 
-    @Column(name = "service_no", length = 64)
     public String getServiceNo() {
         return serviceNo;
     }
@@ -69,7 +80,6 @@ public class CompanyServiceEntity extends IdEntity{
     }
 
 
-    @Column(name = "detail_address", length = 128)
     public String getDetailAddress() {
         return detailAddress;
     }
@@ -79,7 +89,6 @@ public class CompanyServiceEntity extends IdEntity{
     }
 
 
-    @Column(name = "responsible_name", length = 128)
     public String getResponsibleName() {
         return responsibleName;
     }
@@ -89,7 +98,6 @@ public class CompanyServiceEntity extends IdEntity{
     }
 
 
-    @Column(name = "responsible_phone", length = 32)
     public String getResponsiblePhone() {
         return responsiblePhone;
     }
@@ -99,7 +107,6 @@ public class CompanyServiceEntity extends IdEntity{
     }
 
 
-    @Column(name = "manager_name", length = 64)
     public String getManagerName() {
         return managerName;
     }
@@ -109,7 +116,6 @@ public class CompanyServiceEntity extends IdEntity{
     }
 
 
-    @Column(name = "manager_phone", length = 32)
     public String getManagerPhone() {
         return managerPhone;
     }
@@ -119,7 +125,6 @@ public class CompanyServiceEntity extends IdEntity{
     }
 
 
-    @Column(name = "contact_phone", length = 32)
     public String getContactPhone() {
         return contactPhone;
     }
@@ -129,7 +134,6 @@ public class CompanyServiceEntity extends IdEntity{
     }
 
 
-    @Column(name = "mail_address", length = 128)
     public String getMailAddress() {
         return mailAddress;
     }
@@ -139,7 +143,6 @@ public class CompanyServiceEntity extends IdEntity{
     }
 
 
-    @Column(name = "create_date")
     public Long getCreateDate() {
         return createDate;
     }
@@ -149,7 +152,6 @@ public class CompanyServiceEntity extends IdEntity{
     }
 
 
-    @Column(name = "state")
     public Integer getState() {
         return state;
     }
@@ -159,7 +161,6 @@ public class CompanyServiceEntity extends IdEntity{
     }
 
 
-    @Column(name = "flag")
     public Integer getFlag() {
         return flag;
     }
@@ -169,7 +170,6 @@ public class CompanyServiceEntity extends IdEntity{
     }
 
 
-    @Column(name = "update_time")
     public Long getUpdateTime() {
         return updateTime;
     }

@@ -12,10 +12,10 @@ import javax.persistence.Table;
 @Table(name = "operate_depart_arrive")
 public class OperateDepartArriveEntity  extends IdEntity{
 
+	@Column(name = "company_id", length = 32)
     private String companyId;
 
 
-    @Column(name = "company_id", length = 32)
     public String getCompanyId() {
         return companyId;
     }
@@ -24,10 +24,10 @@ public class OperateDepartArriveEntity  extends IdEntity{
         this.companyId = companyId;
     }
 
+    @Column(name = "order_id", length = 64)
     private String orderId;
 
 
-    @Column(name = "order_id", length = 64)
     public String getOrderId() {
         return orderId;
     }
@@ -36,10 +36,10 @@ public class OperateDepartArriveEntity  extends IdEntity{
         this.orderId = orderId;
     }
 
+    @Column(name = "on_area")
     private Integer onArea;
 
 
-    @Column(name = "on_area")
     public Integer getOnArea() {
         return onArea;
     }
@@ -48,10 +48,10 @@ public class OperateDepartArriveEntity  extends IdEntity{
         this.onArea = onArea;
     }
 
+    @Column(name = "driver_name", length = 64)
     private String driverName;
 
 
-    @Column(name = "driver_name", length = 64)
     public String getDriverName() {
         return driverName;
     }
@@ -60,10 +60,10 @@ public class OperateDepartArriveEntity  extends IdEntity{
         this.driverName = driverName;
     }
 
+    @Column(name = "license_id", length = 32)
     private String licenseId;
 
 
-    @Column(name = "license_id", length = 32)
     public String getLicenseId() {
         return licenseId;
     }
@@ -72,10 +72,10 @@ public class OperateDepartArriveEntity  extends IdEntity{
         this.licenseId = licenseId;
     }
 
+    @Column(name = "fare_type", length = 16)
     private String fareType;
 
 
-    @Column(name = "fare_type", length = 16)
     public String getFareType() {
         return fareType;
     }
@@ -84,10 +84,10 @@ public class OperateDepartArriveEntity  extends IdEntity{
         this.fareType = fareType;
     }
 
+    @Column(name = "vehicle_no", length = 32)
     private String vehicleNo;
 
 
-    @Column(name = "vehicle_no", length = 32)
     public String getVehicleNo() {
         return vehicleNo;
     }
@@ -96,10 +96,10 @@ public class OperateDepartArriveEntity  extends IdEntity{
         this.vehicleNo = vehicleNo;
     }
 
+    @Column(name = "book_dep_time")
     private Long bookDepTime;
 
 
-    @Column(name = "book_dep_time")
     public Long getBookDepTime() {
         return bookDepTime;
     }
@@ -108,10 +108,10 @@ public class OperateDepartArriveEntity  extends IdEntity{
         this.bookDepTime = bookDepTime;
     }
 
+    @Column(name = "wait_time")
     private Integer waitTime;
 
 
-    @Column(name = "wait_time")
     public Integer getWaitTime() {
         return waitTime;
     }
@@ -120,10 +120,10 @@ public class OperateDepartArriveEntity  extends IdEntity{
         this.waitTime = waitTime;
     }
 
+    @Column(name = "dep_longitude")
     private Double depLongitude;
 
 
-    @Column(name = "dep_longitude")
     public Double getDepLongitude() {
         return depLongitude;
     }
@@ -132,10 +132,10 @@ public class OperateDepartArriveEntity  extends IdEntity{
         this.depLongitude = depLongitude;
     }
 
+    @Column(name = "dep_latitude")
     private Double depLatitude;
 
 
-    @Column(name = "dep_latitude")
     public Double getDepLatitude() {
         return depLatitude;
     }
@@ -144,10 +144,10 @@ public class OperateDepartArriveEntity  extends IdEntity{
         this.depLatitude = depLatitude;
     }
 
+    @Column(name = "dep_area", length = 128)
     private String depArea;
 
 
-    @Column(name = "dep_area", length = 128)
     public String getDepArea() {
         return depArea;
     }
@@ -156,10 +156,10 @@ public class OperateDepartArriveEntity  extends IdEntity{
         this.depArea = depArea;
     }
 
+    @Column(name = "dep_time")
     private Long depTime;
 
 
-    @Column(name = "dep_time")
     public Long getDepTime() {
         return depTime;
     }
@@ -168,10 +168,10 @@ public class OperateDepartArriveEntity  extends IdEntity{
         this.depTime = depTime;
     }
 
+    @Column(name = "encrypt")
     private Integer encrypt;
 
 
-    @Column(name = "encrypt")
     public Integer getEncrypt() {
         return encrypt;
     }
@@ -180,10 +180,10 @@ public class OperateDepartArriveEntity  extends IdEntity{
         this.encrypt = encrypt;
     }
 
+    @Column(name = "dest_longitude")
     private Double destLongitude;
 
 
-    @Column(name = "dest_longitude")
     public Double getDestLongitude() {
         return destLongitude;
     }
@@ -192,10 +192,10 @@ public class OperateDepartArriveEntity  extends IdEntity{
         this.destLongitude = destLongitude;
     }
 
+    @Column(name = "dest_latitude")
     private Double destLatitude;
 
 
-    @Column(name = "dest_latitude")
     public Double getDestLatitude() {
         return destLatitude;
     }
@@ -204,10 +204,10 @@ public class OperateDepartArriveEntity  extends IdEntity{
         this.destLatitude = destLatitude;
     }
 
+    @Column(name = "dest_area", length = 128)
     private String destArea;
 
 
-    @Column(name = "dest_area", length = 128)
     public String getDestArea() {
         return destArea;
     }
@@ -216,10 +216,10 @@ public class OperateDepartArriveEntity  extends IdEntity{
         this.destArea = destArea;
     }
 
+    @Column(name = "dest_time")
     private Long destTime;
 
 
-    @Column(name = "dest_time")
     public Long getDestTime() {
         return destTime;
     }
@@ -228,10 +228,10 @@ public class OperateDepartArriveEntity  extends IdEntity{
         this.destTime = destTime;
     }
 
+    @Column(name = "book_model", length = 64)
     private String bookModel;
 
 
-    @Column(name = "book_model", length = 64)
     public String getBookModel() {
         return bookModel;
     }
@@ -240,10 +240,10 @@ public class OperateDepartArriveEntity  extends IdEntity{
         this.bookModel = bookModel;
     }
 
+    @Column(name = "model", length = 64)
     private String model;
 
 
-    @Column(name = "model", length = 64)
     public String getModel() {
         return model;
     }
@@ -252,10 +252,10 @@ public class OperateDepartArriveEntity  extends IdEntity{
         this.model = model;
     }
 
+    @Column(name = "drive_mile")
     private float driveMile;
 
 
-    @Column(name = "drive_mile")
     public float getDriveMile() {
         return driveMile;
     }
@@ -264,10 +264,10 @@ public class OperateDepartArriveEntity  extends IdEntity{
         this.driveMile = driveMile;
     }
 
+    @Column(name = "drive_time")
     private Integer driveTime;
 
 
-    @Column(name = "drive_time")
     public Integer getDriveTime() {
         return driveTime;
     }
@@ -276,10 +276,10 @@ public class OperateDepartArriveEntity  extends IdEntity{
         this.driveTime = driveTime;
     }
 
+    @Column(name = "wait_mile")
     private Float waitMile;
 
 
-    @Column(name = "wait_mile")
     public Float getWaitMile() {
         return waitMile;
     }
@@ -288,10 +288,10 @@ public class OperateDepartArriveEntity  extends IdEntity{
         this.waitMile = waitMile;
     }
 
+    @Column(name = "fact_price")
     private float factPrice;
 
 
-    @Column(name = "fact_price")
     public float getFactPrice() {
         return factPrice;
     }
@@ -300,10 +300,10 @@ public class OperateDepartArriveEntity  extends IdEntity{
         this.factPrice = factPrice;
     }
 
+    @Column(name = "price")
     private float price;
 
 
-    @Column(name = "price")
     public float getPrice() {
         return price;
     }
@@ -312,10 +312,10 @@ public class OperateDepartArriveEntity  extends IdEntity{
         this.price = price;
     }
 
+    @Column(name = "cash_price")
     private float cashPrice;
 
 
-    @Column(name = "cash_price")
     public float getCashPrice() {
         return cashPrice;
     }
@@ -324,10 +324,10 @@ public class OperateDepartArriveEntity  extends IdEntity{
         this.cashPrice = cashPrice;
     }
 
+    @Column(name = "line_name", length = 64)
     private String lineName;
 
 
-    @Column(name = "line_name", length = 64)
     public String getLineName() {
         return lineName;
     }
@@ -336,10 +336,10 @@ public class OperateDepartArriveEntity  extends IdEntity{
         this.lineName = lineName;
     }
 
+    @Column(name = "line_price")
     private float linePrice;
 
 
-    @Column(name = "line_price")
     public float getLinePrice() {
         return linePrice;
     }
@@ -348,10 +348,10 @@ public class OperateDepartArriveEntity  extends IdEntity{
         this.linePrice = linePrice;
     }
 
+    @Column(name = "pos_name", length = 64)
     private String posName;
 
 
-    @Column(name = "pos_name", length = 64)
     public String getPosName() {
         return posName;
     }
@@ -360,10 +360,10 @@ public class OperateDepartArriveEntity  extends IdEntity{
         this.posName = posName;
     }
 
+    @Column(name = "pos_price")
     private float posPrice;
 
 
-    @Column(name = "pos_price")
     public float getPosPrice() {
         return posPrice;
     }
@@ -372,10 +372,10 @@ public class OperateDepartArriveEntity  extends IdEntity{
         this.posPrice = posPrice;
     }
 
+    @Column(name = "benfit_price")
     private float benfitPrice;
 
 
-    @Column(name = "benfit_price")
     public float getBenfitPrice() {
         return benfitPrice;
     }
@@ -384,10 +384,10 @@ public class OperateDepartArriveEntity  extends IdEntity{
         this.benfitPrice = benfitPrice;
     }
 
+    @Column(name = "book_tip")
     private float bookTip;
 
 
-    @Column(name = "book_tip")
     public float getBookTip() {
         return bookTip;
     }
@@ -396,10 +396,10 @@ public class OperateDepartArriveEntity  extends IdEntity{
         this.bookTip = bookTip;
     }
 
+    @Column(name = "passenger_tip")
     private float passengerTip;
 
 
-    @Column(name = "passenger_tip")
     public float getPassengerTip() {
         return passengerTip;
     }
@@ -408,10 +408,10 @@ public class OperateDepartArriveEntity  extends IdEntity{
         this.passengerTip = passengerTip;
     }
 
+    @Column(name = "peak_up_price")
     private float peakUpPrice;
 
 
-    @Column(name = "peak_up_price")
     public float getPeakUpPrice() {
         return peakUpPrice;
     }
@@ -420,10 +420,10 @@ public class OperateDepartArriveEntity  extends IdEntity{
         this.peakUpPrice = peakUpPrice;
     }
 
+    @Column(name = "night_up_price")
     private float nightUpPrice;
 
 
-    @Column(name = "night_up_price")
     public float getNightUpPrice() {
         return nightUpPrice;
     }
@@ -432,10 +432,10 @@ public class OperateDepartArriveEntity  extends IdEntity{
         this.nightUpPrice = nightUpPrice;
     }
 
+    @Column(name = "far_up_price")
     private float farUpPrice;
 
 
-    @Column(name = "far_up_price")
     public float getFarUpPrice() {
         return farUpPrice;
     }
@@ -444,10 +444,10 @@ public class OperateDepartArriveEntity  extends IdEntity{
         this.farUpPrice = farUpPrice;
     }
 
+    @Column(name = "other_up_price")
     private float otherUpPrice;
 
 
-    @Column(name = "other_up_price")
     public float getOtherUpPrice() {
         return otherUpPrice;
     }
@@ -456,10 +456,10 @@ public class OperateDepartArriveEntity  extends IdEntity{
         this.otherUpPrice = otherUpPrice;
     }
 
+    @Column(name = "pay_state", length = 32)
     private String payState;
 
 
-    @Column(name = "pay_state", length = 32)
     public String getPayState() {
         return payState;
     }
@@ -468,10 +468,10 @@ public class OperateDepartArriveEntity  extends IdEntity{
         this.payState = payState;
     }
 
+    @Column(name = "pay_time")
     private Long payTime;
 
 
-    @Column(name = "pay_time")
     public Long getPayTime() {
         return payTime;
     }
@@ -480,10 +480,10 @@ public class OperateDepartArriveEntity  extends IdEntity{
         this.payTime = payTime;
     }
 
+    @Column(name = "order_match_time")
     private Long orderMatchTime;
 
 
-    @Column(name = "order_match_time")
     public Long getOrderMatchTime() {
         return orderMatchTime;
     }
@@ -492,10 +492,10 @@ public class OperateDepartArriveEntity  extends IdEntity{
         this.orderMatchTime = orderMatchTime;
     }
 
+    @Column(name = "invoice_status", length = 32)
     private String invoiceStatus;
 
 
-    @Column(name = "invoice_status", length = 32)
     public String getInvoiceStatus() {
         return invoiceStatus;
     }
@@ -507,7 +507,6 @@ public class OperateDepartArriveEntity  extends IdEntity{
     private Integer isBeyondOperate;
 
 
-    @Column(name = "is_beyond_operate")
     public Integer getIsBeyondOperate() {
         return isBeyondOperate;
     }

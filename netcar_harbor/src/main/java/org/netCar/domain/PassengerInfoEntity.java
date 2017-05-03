@@ -13,16 +13,23 @@ import javax.persistence.Table;
 public class PassengerInfoEntity  extends IdEntity{
 
 
+	@Column(name = "company_id", length = 32)
     private String companyId;
+	@Column(name = "register_date")
     private Long registerDate;
+	@Column(name = "passenger_phone", length = 32)
     private String passengerPhone;
+	@Column(name = "passenger_name", length = 64)
     private String passengerName;
+	@Column(name = "passenger_gender", length = 2)
     private String passengerGender;
+	@Column(name = "state")
     private Integer state;
+    @Column(name = "flag")
     private Integer flag;
+    @Column(name = "update_time")
     private Long updateTime;
 
-    @Column(name = "company_id", length = 32)
     public String getCompanyId() {
         return companyId;
     }
@@ -32,7 +39,6 @@ public class PassengerInfoEntity  extends IdEntity{
     }
 
 
-    @Column(name = "register_date")
     public Long getRegisterDate() {
         return registerDate;
     }
@@ -42,7 +48,6 @@ public class PassengerInfoEntity  extends IdEntity{
     }
 
 
-    @Column(name = "passenger_phone", length = 32)
     public String getPassengerPhone() {
         return passengerPhone;
     }
@@ -52,7 +57,6 @@ public class PassengerInfoEntity  extends IdEntity{
     }
 
 
-    @Column(name = "passenger_name", length = 64)
     public String getPassengerName() {
         return passengerName;
     }
@@ -62,7 +66,6 @@ public class PassengerInfoEntity  extends IdEntity{
     }
 
 
-    @Column(name = "passenger_gender", length = 2)
     public String getPassengerGender() {
         return passengerGender;
     }
@@ -72,7 +75,6 @@ public class PassengerInfoEntity  extends IdEntity{
     }
 
 
-    @Column(name = "state")
     public Integer getState() {
         return state;
     }
@@ -82,7 +84,6 @@ public class PassengerInfoEntity  extends IdEntity{
     }
 
 
-    @Column(name = "flag")
     public Integer getFlag() {
         return flag;
     }
@@ -92,7 +93,6 @@ public class PassengerInfoEntity  extends IdEntity{
     }
 
 
-    @Column(name = "update_time")
     public Long getUpdateTime() {
         return updateTime;
     }

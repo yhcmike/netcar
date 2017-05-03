@@ -11,9 +11,9 @@ import javax.persistence.Table;
 @Table(name = "gm_vehicle_license")
 public class GmVehicleLicenseEntity  extends IdEntity{
 
+	@Column(name = "address")
     private Integer address;
 
-    @Column(name = "address")
     public Integer getAddress() {
         return address;
     }
@@ -22,10 +22,10 @@ public class GmVehicleLicenseEntity  extends IdEntity{
         this.address = address;
     }
 
+    @Column(name = "vehicle_no", length = 32)
     private String vehicleNo;
 
 
-    @Column(name = "vehicle_no", length = 32)
     public String getVehicleNo() {
         return vehicleNo;
     }
@@ -34,10 +34,10 @@ public class GmVehicleLicenseEntity  extends IdEntity{
         this.vehicleNo = vehicleNo;
     }
 
+    @Column(name = "plate_color", length = 32)
     private String plateColor;
 
 
-    @Column(name = "plate_color", length = 32)
     public String getPlateColor() {
         return plateColor;
     }
@@ -46,10 +46,10 @@ public class GmVehicleLicenseEntity  extends IdEntity{
         this.plateColor = plateColor;
     }
 
+    @Column(name = "brand", length = 64)
     private String brand;
 
 
-    @Column(name = "brand", length = 64)
     public String getBrand() {
         return brand;
     }
@@ -58,10 +58,10 @@ public class GmVehicleLicenseEntity  extends IdEntity{
         this.brand = brand;
     }
 
+    @Column(name = "model", length = 64)
     private String model;
 
 
-    @Column(name = "model", length = 64)
     public String getModel() {
         return model;
     }
@@ -70,10 +70,10 @@ public class GmVehicleLicenseEntity  extends IdEntity{
         this.model = model;
     }
 
+    @Column(name = "engine_id", length = 32)
     private String engineId;
 
 
-    @Column(name = "engine_id", length = 32)
     public String getEngineId() {
         return engineId;
     }
@@ -82,10 +82,10 @@ public class GmVehicleLicenseEntity  extends IdEntity{
         this.engineId = engineId;
     }
 
+    @Column(name = "vIN", length = 17)
     private String vIn;
 
 
-    @Column(name = "vIN", length = 17)
     public String getvIn() {
         return vIn;
     }
@@ -94,10 +94,10 @@ public class GmVehicleLicenseEntity  extends IdEntity{
         this.vIn = vIn;
     }
 
+    @Column(name = "vehicle_type", length = 64)
     private String vehicleType;
 
 
-    @Column(name = "vehicle_type", length = 64)
     public String getVehicleType() {
         return vehicleType;
     }
@@ -106,10 +106,10 @@ public class GmVehicleLicenseEntity  extends IdEntity{
         this.vehicleType = vehicleType;
     }
 
+    @Column(name = "vehicle_type_code", length = 32)
     private String vehicleTypeCode;
 
 
-    @Column(name = "vehicle_type_code", length = 32)
     public String getVehicleTypeCode() {
         return vehicleTypeCode;
     }
@@ -118,10 +118,10 @@ public class GmVehicleLicenseEntity  extends IdEntity{
         this.vehicleTypeCode = vehicleTypeCode;
     }
 
+    @Column(name = "delivery_date")
     private Integer deliveryDate;
 
 
-    @Column(name = "delivery_date")
     public Integer getDeliveryDate() {
         return deliveryDate;
     }
@@ -130,10 +130,10 @@ public class GmVehicleLicenseEntity  extends IdEntity{
         this.deliveryDate = deliveryDate;
     }
 
+    @Column(name = "certify_dateA")
     private Integer certifyDateA;
 
 
-    @Column(name = "certify_dateA")
     public Integer getCertifyDateA() {
         return certifyDateA;
     }
@@ -142,10 +142,10 @@ public class GmVehicleLicenseEntity  extends IdEntity{
         this.certifyDateA = certifyDateA;
     }
 
+    @Column(name = "fuel_type", length = 32)
     private String fuelType;
 
 
-    @Column(name = "fuel_type", length = 32)
     public String getFuelType() {
         return fuelType;
     }
@@ -154,10 +154,10 @@ public class GmVehicleLicenseEntity  extends IdEntity{
         this.fuelType = fuelType;
     }
 
+    @Column(name = "wheelbase")
     private Integer wheelbase;
 
 
-    @Column(name = "wheelbase")
     public Integer getWheelbase() {
         return wheelbase;
     }
@@ -166,10 +166,10 @@ public class GmVehicleLicenseEntity  extends IdEntity{
         this.wheelbase = wheelbase;
     }
 
+    @Column(name = "commander")
     private Integer commander;
 
 
-    @Column(name = "commander")
     public Integer getCommander() {
         return commander;
     }
@@ -178,10 +178,10 @@ public class GmVehicleLicenseEntity  extends IdEntity{
         this.commander = commander;
     }
 
+    @Column(name = "width")
     private Integer width;
 
 
-    @Column(name = "width")
     public Integer getWidth() {
         return width;
     }
@@ -190,10 +190,10 @@ public class GmVehicleLicenseEntity  extends IdEntity{
         this.width = width;
     }
 
+    @Column(name = "height")
     private Integer height;
 
 
-    @Column(name = "height")
     public Integer getHeight() {
         return height;
     }
@@ -202,10 +202,10 @@ public class GmVehicleLicenseEntity  extends IdEntity{
         this.height = height;
     }
 
+    @Column(name = "power")
     private Integer power;
 
 
-    @Column(name = "power")
     public Integer getPower() {
         return power;
     }
@@ -214,10 +214,10 @@ public class GmVehicleLicenseEntity  extends IdEntity{
         this.power = power;
     }
 
+    @Column(name = "seats")
     private Integer seats;
 
 
-    @Column(name = "seats")
     public Integer getSeats() {
         return seats;
     }
@@ -226,10 +226,10 @@ public class GmVehicleLicenseEntity  extends IdEntity{
         this.seats = seats;
     }
 
+    @Column(name = "gPS_brand", length = 256)
     private String gPsBrand;
 
 
-    @Column(name = "gPS_brand", length = 256)
     public String getgPsBrand() {
         return gPsBrand;
     }
@@ -238,10 +238,10 @@ public class GmVehicleLicenseEntity  extends IdEntity{
         this.gPsBrand = gPsBrand;
     }
 
+    @Column(name = "gPS_model", length = 64)
     private String gPsModel;
 
 
-    @Column(name = "gPS_model", length = 64)
     public String getgPsModel() {
         return gPsModel;
     }
@@ -250,10 +250,10 @@ public class GmVehicleLicenseEntity  extends IdEntity{
         this.gPsModel = gPsModel;
     }
 
+    @Column(name = "state")
     private Integer state;
 
 
-    @Column(name = "state")
     public Integer getState() {
         return state;
     }
@@ -262,10 +262,10 @@ public class GmVehicleLicenseEntity  extends IdEntity{
         this.state = state;
     }
 
+    @Column(name = "trans_area", length = 256)
     private String transArea;
 
 
-    @Column(name = "trans_area", length = 256)
     public String getTransArea() {
         return transArea;
     }
@@ -274,10 +274,10 @@ public class GmVehicleLicenseEntity  extends IdEntity{
         this.transArea = transArea;
     }
 
+    @Column(name = "certificate", length = 64)
     private String certificate;
 
 
-    @Column(name = "certificate", length = 64)
     public String getCertificate() {
         return certificate;
     }
@@ -286,10 +286,10 @@ public class GmVehicleLicenseEntity  extends IdEntity{
         this.certificate = certificate;
     }
 
+    @Column(name = "trans_agency", length = 256)
     private String transAgency;
 
 
-    @Column(name = "trans_agency", length = 256)
     public String getTransAgency() {
         return transAgency;
     }

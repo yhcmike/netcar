@@ -12,10 +12,10 @@ import javax.persistence.Table;
 @Table(name = "vehicle_info")
 public class VehicleInfoEntity  extends IdEntity{
 
+	@Column(name = "company_id", length = 32)
     private String companyId;
 
 
-    @Column(name = "company_id", length = 32)
     public String getCompanyId() {
         return companyId;
     }
@@ -24,10 +24,10 @@ public class VehicleInfoEntity  extends IdEntity{
         this.companyId = companyId;
     }
 
+    @Column(name = "address")
     private Integer address;
 
 
-    @Column(name = "address")
     public Integer getAddress() {
         return address;
     }
@@ -36,10 +36,10 @@ public class VehicleInfoEntity  extends IdEntity{
         this.address = address;
     }
 
+    @Column(name = "vehicle_no", length = 32)
     private String vehicleNo;
 
 
-    @Column(name = "vehicle_no", length = 32)
     public String getVehicleNo() {
         return vehicleNo;
     }
@@ -48,10 +48,10 @@ public class VehicleInfoEntity  extends IdEntity{
         this.vehicleNo = vehicleNo;
     }
 
+    @Column(name = "plate_color", length = 32)
     private String plateColor;
 
 
-    @Column(name = "plate_color", length = 32)
     public String getPlateColor() {
         return plateColor;
     }
@@ -60,10 +60,10 @@ public class VehicleInfoEntity  extends IdEntity{
         this.plateColor = plateColor;
     }
 
+    @Column(name = "seats")
     private Integer seats;
 
 
-    @Column(name = "seats")
     public Integer getSeats() {
         return seats;
     }
@@ -72,10 +72,10 @@ public class VehicleInfoEntity  extends IdEntity{
         this.seats = seats;
     }
 
+    @Column(name = "brand", length = 64)
     private String brand;
 
 
-    @Column(name = "brand", length = 64)
     public String getBrand() {
         return brand;
     }
@@ -84,10 +84,10 @@ public class VehicleInfoEntity  extends IdEntity{
         this.brand = brand;
     }
 
+    @Column(name = "model", length = 64)
     private String model;
 
 
-    @Column(name = "model", length = 64)
     public String getModel() {
         return model;
     }
@@ -96,10 +96,10 @@ public class VehicleInfoEntity  extends IdEntity{
         this.model = model;
     }
 
+    @Column(name = "vehicle_type", length = 64)
     private String vehicleType;
 
 
-    @Column(name = "vehicle_type", length = 64)
     public String getVehicleType() {
         return vehicleType;
     }
@@ -108,10 +108,10 @@ public class VehicleInfoEntity  extends IdEntity{
         this.vehicleType = vehicleType;
     }
 
+    @Column(name = "owner_name", length = 64)
     private String ownerName;
 
 
-    @Column(name = "owner_name", length = 64)
     public String getOwnerName() {
         return ownerName;
     }
@@ -120,10 +120,10 @@ public class VehicleInfoEntity  extends IdEntity{
         this.ownerName = ownerName;
     }
 
+    @Column(name = "vehicle_color", length = 32)
     private String vehicleColor;
 
 
-    @Column(name = "vehicle_color", length = 32)
     public String getVehicleColor() {
         return vehicleColor;
     }
@@ -132,10 +132,10 @@ public class VehicleInfoEntity  extends IdEntity{
         this.vehicleColor = vehicleColor;
     }
 
+    @Column(name = "engine_id", length = 32)
     private String engineId;
 
 
-    @Column(name = "engine_id", length = 32)
     public String getEngineId() {
         return engineId;
     }
@@ -144,10 +144,10 @@ public class VehicleInfoEntity  extends IdEntity{
         this.engineId = engineId;
     }
 
+    @Column(name = "vIN", length = 17)
     private String vIn;
 
 
-    @Column(name = "vIN", length = 17)
     public String getvIn() {
         return vIn;
     }
@@ -156,10 +156,10 @@ public class VehicleInfoEntity  extends IdEntity{
         this.vIn = vIn;
     }
 
+    @Column(name = "certify_date_A")
     private Long certifyDateA;
 
 
-    @Column(name = "certify_date_A")
     public Long getCertifyDateA() {
         return certifyDateA;
     }
@@ -168,10 +168,10 @@ public class VehicleInfoEntity  extends IdEntity{
         this.certifyDateA = certifyDateA;
     }
 
+    @Column(name = "fuel_type", length = 32)
     private String fuelType;
 
 
-    @Column(name = "fuel_type", length = 32)
     public String getFuelType() {
         return fuelType;
     }
@@ -180,10 +180,10 @@ public class VehicleInfoEntity  extends IdEntity{
         this.fuelType = fuelType;
     }
 
+    @Column(name = "engine_displace", length = 32)
     private String engineDisplace;
 
 
-    @Column(name = "engine_displace", length = 32)
     public String getEngineDisplace() {
         return engineDisplace;
     }
@@ -192,10 +192,10 @@ public class VehicleInfoEntity  extends IdEntity{
         this.engineDisplace = engineDisplace;
     }
 
+    @Column(name = "photo_id", length = 128)
     private String photoId;
 
 
-    @Column(name = "photo_id", length = 128)
     public String getPhotoId() {
         return photoId;
     }
@@ -204,10 +204,10 @@ public class VehicleInfoEntity  extends IdEntity{
         this.photoId = photoId;
     }
 
+    @Column(name = "certificate", length = 64)
     private String certificate;
 
 
-    @Column(name = "certificate", length = 64)
     public String getCertificate() {
         return certificate;
     }
@@ -216,10 +216,10 @@ public class VehicleInfoEntity  extends IdEntity{
         this.certificate = certificate;
     }
 
+    @Column(name = "trans_agency", length = 256)
     private String transAgency;
 
 
-    @Column(name = "trans_agency", length = 256)
     public String getTransAgency() {
         return transAgency;
     }
@@ -228,10 +228,10 @@ public class VehicleInfoEntity  extends IdEntity{
         this.transAgency = transAgency;
     }
 
+    @Column(name = "trans_area", length = 256)
     private String transArea;
 
 
-    @Column(name = "trans_area", length = 256)
     public String getTransArea() {
         return transArea;
     }
@@ -240,10 +240,10 @@ public class VehicleInfoEntity  extends IdEntity{
         this.transArea = transArea;
     }
 
+    @Column(name = "trans_date_start")
     private Long transDateStart;
 
 
-    @Column(name = "trans_date_start")
     public Long getTransDateStart() {
         return transDateStart;
     }
@@ -252,10 +252,10 @@ public class VehicleInfoEntity  extends IdEntity{
         this.transDateStart = transDateStart;
     }
 
+    @Column(name = "trans_date_stop")
     private Long transDateStop;
 
 
-    @Column(name = "trans_date_stop")
     public Long getTransDateStop() {
         return transDateStop;
     }
@@ -264,10 +264,10 @@ public class VehicleInfoEntity  extends IdEntity{
         this.transDateStop = transDateStop;
     }
 
+    @Column(name = "certify_date_B")
     private Long certifyDateB;
 
 
-    @Column(name = "certify_date_B")
     public Long getCertifyDateB() {
         return certifyDateB;
     }
@@ -276,10 +276,10 @@ public class VehicleInfoEntity  extends IdEntity{
         this.certifyDateB = certifyDateB;
     }
 
+    @Column(name = "fix_state", length = 64)
     private String fixState;
 
 
-    @Column(name = "fix_state", length = 64)
     public String getFixState() {
         return fixState;
     }
@@ -288,10 +288,10 @@ public class VehicleInfoEntity  extends IdEntity{
         this.fixState = fixState;
     }
 
+    @Column(name = "next_fix_date")
     private Long nextFixDate;
 
 
-    @Column(name = "next_fix_date")
     public Long getNextFixDate() {
         return nextFixDate;
     }
@@ -300,10 +300,10 @@ public class VehicleInfoEntity  extends IdEntity{
         this.nextFixDate = nextFixDate;
     }
 
+    @Column(name = "check_state")
     private String checkState;
 
 
-    @Column(name = "check_state")
     public String getCheckState() {
         return checkState;
     }
@@ -312,10 +312,10 @@ public class VehicleInfoEntity  extends IdEntity{
         this.checkState = checkState;
     }
 
+    @Column(name = "fee_print_id", length = 32)
     private String feePrintId;
 
 
-    @Column(name = "fee_print_id", length = 32)
     public String getFeePrintId() {
         return feePrintId;
     }
@@ -324,10 +324,10 @@ public class VehicleInfoEntity  extends IdEntity{
         this.feePrintId = feePrintId;
     }
 
+    @Column(name = "gPS_brand", length = 256)
     private String gPsBrand;
 
 
-    @Column(name = "gPS_brand", length = 256)
     public String getgPsBrand() {
         return gPsBrand;
     }
@@ -336,10 +336,10 @@ public class VehicleInfoEntity  extends IdEntity{
         this.gPsBrand = gPsBrand;
     }
 
+    @Column(name = "gPS_model", length = 64)
     private String gPsModel;
 
 
-    @Column(name = "gPS_model", length = 64)
     public String getgPsModel() {
         return gPsModel;
     }
@@ -348,10 +348,10 @@ public class VehicleInfoEntity  extends IdEntity{
         this.gPsModel = gPsModel;
     }
 
+    @Column(name = "gPSIMEI", length = 128)
     private String gPsimei;
 
 
-    @Column(name = "gPSIMEI", length = 128)
     public String getgPsimei() {
         return gPsimei;
     }
@@ -360,10 +360,10 @@ public class VehicleInfoEntity  extends IdEntity{
         this.gPsimei = gPsimei;
     }
 
+    @Column(name = "gPS_install_date")
     private Long gPsInstallDate;
 
 
-    @Column(name = "gPS_install_date")
     public Long getgPsInstallDate() {
         return gPsInstallDate;
     }
@@ -372,10 +372,10 @@ public class VehicleInfoEntity  extends IdEntity{
         this.gPsInstallDate = gPsInstallDate;
     }
 
+    @Column(name = "register_date")
     private Long registerDate;
 
 
-    @Column(name = "register_date")
     public Long getRegisterDate() {
         return registerDate;
     }
@@ -384,10 +384,10 @@ public class VehicleInfoEntity  extends IdEntity{
         this.registerDate = registerDate;
     }
 
+    @Column(name = "commercial_type")
     private Integer commercialType;
 
 
-    @Column(name = "commercial_type")
     public Integer getCommercialType() {
         return commercialType;
     }
@@ -396,10 +396,10 @@ public class VehicleInfoEntity  extends IdEntity{
         this.commercialType = commercialType;
     }
 
+    @Column(name = "fare_type", length = 16)
     private String fareType;
 
 
-    @Column(name = "fare_type", length = 16)
     public String getFareType() {
         return fareType;
     }
@@ -408,10 +408,10 @@ public class VehicleInfoEntity  extends IdEntity{
         this.fareType = fareType;
     }
 
+    @Column(name = "state")
     private Integer state;
 
 
-    @Column(name = "state")
     public Integer getState() {
         return state;
     }
@@ -420,10 +420,10 @@ public class VehicleInfoEntity  extends IdEntity{
         this.state = state;
     }
 
+    @Column(name = "flag")
     private Integer flag;
 
 
-    @Column(name = "flag")
     public Integer getFlag() {
         return flag;
     }
@@ -432,10 +432,10 @@ public class VehicleInfoEntity  extends IdEntity{
         this.flag = flag;
     }
 
+    @Column(name = "update_time")
     private Long updateTime;
 
 
-    @Column(name = "update_time")
     public Long getUpdateTime() {
         return updateTime;
     }

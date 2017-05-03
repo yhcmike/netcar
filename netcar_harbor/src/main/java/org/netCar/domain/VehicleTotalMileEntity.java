@@ -13,13 +13,18 @@ import javax.persistence.Table;
 public class VehicleTotalMileEntity  extends IdEntity{
 
 
+	@Column(name = "company_id", length = 32)
     private String companyId;
+	@Column(name = "address")
     private Integer address;
+	@Column(name = "vehicle_no", length = 32)
     private String vehicleNo;
+	@Column(name = "total_mile", length = 64)
     private String totalMile;
+	@Column(name = "flag")
     private Integer flag;
+	@Column(name = "update_time")
     private Long updateTime;
-    @Column(name = "company_id", length = 32)
     public String getCompanyId() {
         return companyId;
     }
@@ -29,7 +34,6 @@ public class VehicleTotalMileEntity  extends IdEntity{
     }
 
 
-    @Column(name = "address")
     public Integer getAddress() {
         return address;
     }
@@ -39,7 +43,6 @@ public class VehicleTotalMileEntity  extends IdEntity{
     }
 
 
-    @Column(name = "vehicle_no", length = 32)
     public String getVehicleNo() {
         return vehicleNo;
     }
@@ -49,7 +52,6 @@ public class VehicleTotalMileEntity  extends IdEntity{
     }
 
 
-    @Column(name = "total_mile", length = 64)
     public String getTotalMile() {
         return totalMile;
     }
@@ -59,7 +61,6 @@ public class VehicleTotalMileEntity  extends IdEntity{
     }
 
 
-    @Column(name = "flag")
     public Integer getFlag() {
         return flag;
     }
@@ -69,7 +70,6 @@ public class VehicleTotalMileEntity  extends IdEntity{
     }
 
 
-    @Column(name = "update_time")
     public Long getUpdateTime() {
         return updateTime;
     }

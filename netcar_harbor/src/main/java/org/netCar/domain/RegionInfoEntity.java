@@ -10,11 +10,13 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "region_info")
 public class RegionInfoEntity extends IdEntity{
+	@Column(name = "region_code", length = 64)
     private String regionCode;
+	@Column(name = "region_name", length = 64)
     private String regionName;
+    @Column(name = "parent_code", length = 64)
     private String parentCode;
 
-    @Column(name = "parent_code", length = 64)
     public String getParentCode() {
         return parentCode;
     }
@@ -22,7 +24,6 @@ public class RegionInfoEntity extends IdEntity{
     public void setParentCode(String parentCode) {
         this.parentCode = parentCode;
     }
-    @Column(name = "region_code", length = 64)
     public String getRegionCode() {
         return regionCode;
     }
@@ -30,7 +31,6 @@ public class RegionInfoEntity extends IdEntity{
     public void setRegionCode(String regionCode) {
         this.regionCode = regionCode;
     }
-    @Column(name = "region_name", length = 64)
     public String getRegionName() {
         return regionName;
     }

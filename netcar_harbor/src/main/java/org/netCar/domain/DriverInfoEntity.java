@@ -9,10 +9,10 @@ import javax.persistence.Entity;
 @javax.persistence.Table(name = "driver_info")
 public class DriverInfoEntity extends IdEntity{
 
+	@javax.persistence.Column(name = "company_id", length = 32)
     private String companyId;
 
 
-    @javax.persistence.Column(name = "company_id", length = 32)
     public String getCompanyId() {
         return companyId;
     }
@@ -21,10 +21,10 @@ public class DriverInfoEntity extends IdEntity{
         this.companyId = companyId;
     }
 
+    @javax.persistence.Column(name = "address")
     private Integer address;
 
 
-    @javax.persistence.Column(name = "address")
     public Integer getAddress() {
         return address;
     }
@@ -33,10 +33,10 @@ public class DriverInfoEntity extends IdEntity{
         this.address = address;
     }
 
+    @javax.persistence.Column(name = "driver_name", length = 64)
     private String driverName;
 
 
-    @javax.persistence.Column(name = "driver_name", length = 64)
     public String getDriverName() {
         return driverName;
     }
@@ -45,10 +45,10 @@ public class DriverInfoEntity extends IdEntity{
         this.driverName = driverName;
     }
 
+    @javax.persistence.Column(name = "driver_phone", length = 32)
     private String driverPhone;
 
 
-    @javax.persistence.Column(name = "driver_phone", length = 32)
     public String getDriverPhone() {
         return driverPhone;
     }
@@ -57,10 +57,10 @@ public class DriverInfoEntity extends IdEntity{
         this.driverPhone = driverPhone;
     }
 
+    @javax.persistence.Column(name = "driver_gender", length = 2)
     private String driverGender;
 
 
-    @javax.persistence.Column(name = "driver_gender", length = 2)
     public String getDriverGender() {
         return driverGender;
     }
@@ -69,10 +69,10 @@ public class DriverInfoEntity extends IdEntity{
         this.driverGender = driverGender;
     }
 
+    @javax.persistence.Column(name = "driver_birthday")
     private Long driverBirthday;
 
 
-    @javax.persistence.Column(name = "driver_birthday")
     public Long getDriverBirthday() {
         return driverBirthday;
     }
@@ -81,10 +81,10 @@ public class DriverInfoEntity extends IdEntity{
         this.driverBirthday = driverBirthday;
     }
 
+    @javax.persistence.Column(name = "driver_nationality", length = 32)
     private String driverNationality;
 
 
-    @javax.persistence.Column(name = "driver_nationality", length = 32)
     public String getDriverNationality() {
         return driverNationality;
     }
@@ -93,10 +93,10 @@ public class DriverInfoEntity extends IdEntity{
         this.driverNationality = driverNationality;
     }
 
+    @javax.persistence.Column(name = "driver_nation", length = 32)
     private String driverNation;
 
 
-    @javax.persistence.Column(name = "driver_nation", length = 32)
     public String getDriverNation() {
         return driverNation;
     }
@@ -105,10 +105,10 @@ public class DriverInfoEntity extends IdEntity{
         this.driverNation = driverNation;
     }
 
+    @javax.persistence.Column(name = "driver_marital_status", length = 64)
     private String driverMaritalStatus;
 
 
-    @javax.persistence.Column(name = "driver_marital_status", length = 64)
     public String getDriverMaritalStatus() {
         return driverMaritalStatus;
     }
@@ -117,10 +117,10 @@ public class DriverInfoEntity extends IdEntity{
         this.driverMaritalStatus = driverMaritalStatus;
     }
 
+    @javax.persistence.Column(name = "driver_language_level", length = 64)
     private String driverLanguageLevel;
 
 
-    @javax.persistence.Column(name = "driver_language_level", length = 64)
     public String getDriverLanguageLevel() {
         return driverLanguageLevel;
     }
@@ -129,10 +129,10 @@ public class DriverInfoEntity extends IdEntity{
         this.driverLanguageLevel = driverLanguageLevel;
     }
 
+    @javax.persistence.Column(name = "driver_education", length = 64)
     private String driverEducation;
 
 
-    @javax.persistence.Column(name = "driver_education", length = 64)
     public String getDriverEducation() {
         return driverEducation;
     }
@@ -141,10 +141,10 @@ public class DriverInfoEntity extends IdEntity{
         this.driverEducation = driverEducation;
     }
 
+    @javax.persistence.Column(name = "driver_census", length = 256)
     private String driverCensus;
 
 
-    @javax.persistence.Column(name = "driver_census", length = 256)
     public String getDriverCensus() {
         return driverCensus;
     }
@@ -153,10 +153,10 @@ public class DriverInfoEntity extends IdEntity{
         this.driverCensus = driverCensus;
     }
 
+    @javax.persistence.Column(name = "driver_address", length = 256)
     private String driverAddress;
 
 
-    @javax.persistence.Column(name = "driver_address", length = 256)
     public String getDriverAddress() {
         return driverAddress;
     }
@@ -165,10 +165,10 @@ public class DriverInfoEntity extends IdEntity{
         this.driverAddress = driverAddress;
     }
 
+    @javax.persistence.Column(name = "driver_contact_address", length = 256)
     private String driverContactAddress;
 
 
-    @javax.persistence.Column(name = "driver_contact_address", length = 256)
     public String getDriverContactAddress() {
         return driverContactAddress;
     }
@@ -177,10 +177,10 @@ public class DriverInfoEntity extends IdEntity{
         this.driverContactAddress = driverContactAddress;
     }
 
+    @javax.persistence.Column(name = "photo_id", length = 128)
     private String photoId;
 
 
-    @javax.persistence.Column(name = "photo_id", length = 128)
     public String getPhotoId() {
         return photoId;
     }
@@ -189,10 +189,10 @@ public class DriverInfoEntity extends IdEntity{
         this.photoId = photoId;
     }
 
+    @javax.persistence.Column(name = "license_id", length = 32)
     private String licenseId;
 
 
-    @javax.persistence.Column(name = "license_id", length = 32)
     public String getLicenseId() {
         return licenseId;
     }
@@ -201,10 +201,10 @@ public class DriverInfoEntity extends IdEntity{
         this.licenseId = licenseId;
     }
 
+    @javax.persistence.Column(name = "license_photo_id", length = 128)
     private String licensePhotoId;
 
 
-    @javax.persistence.Column(name = "license_photo_id", length = 128)
     public String getLicensePhotoId() {
         return licensePhotoId;
     }
@@ -213,10 +213,10 @@ public class DriverInfoEntity extends IdEntity{
         this.licensePhotoId = licensePhotoId;
     }
 
+    @javax.persistence.Column(name = "driver_type", length = 16)
     private String driverType;
 
 
-    @javax.persistence.Column(name = "driver_type", length = 16)
     public String getDriverType() {
         return driverType;
     }
@@ -225,10 +225,10 @@ public class DriverInfoEntity extends IdEntity{
         this.driverType = driverType;
     }
 
+    @javax.persistence.Column(name = "get_driver_license_date")
     private Long getDriverLicenseDate;
 
 
-    @javax.persistence.Column(name = "get_driver_license_date")
     public Long getGetDriverLicenseDate() {
         return getDriverLicenseDate;
     }
@@ -237,10 +237,10 @@ public class DriverInfoEntity extends IdEntity{
         this.getDriverLicenseDate = getDriverLicenseDate;
     }
 
+    @javax.persistence.Column(name = "driver_license_on")
     private Long driverLicenseOn;
 
 
-    @javax.persistence.Column(name = "driver_license_on")
     public Long getDriverLicenseOn() {
         return driverLicenseOn;
     }
@@ -249,10 +249,10 @@ public class DriverInfoEntity extends IdEntity{
         this.driverLicenseOn = driverLicenseOn;
     }
 
+    @javax.persistence.Column(name = "driver_license_off")
     private Long driverLicenseOff;
 
 
-    @javax.persistence.Column(name = "driver_license_off")
     public Long getDriverLicenseOff() {
         return driverLicenseOff;
     }
@@ -261,10 +261,10 @@ public class DriverInfoEntity extends IdEntity{
         this.driverLicenseOff = driverLicenseOff;
     }
 
+    @javax.persistence.Column(name = "taxi_driver")
     private Integer taxiDriver;
 
 
-    @javax.persistence.Column(name = "taxi_driver")
     public Integer getTaxiDriver() {
         return taxiDriver;
     }
@@ -273,10 +273,10 @@ public class DriverInfoEntity extends IdEntity{
         this.taxiDriver = taxiDriver;
     }
 
+    @javax.persistence.Column(name = "certificate_no", length = 128)
     private String certificateNo;
 
 
-    @javax.persistence.Column(name = "certificate_no", length = 128)
     public String getCertificateNo() {
         return certificateNo;
     }
@@ -285,10 +285,10 @@ public class DriverInfoEntity extends IdEntity{
         this.certificateNo = certificateNo;
     }
 
+    @javax.persistence.Column(name = "network_car_issue_organization", length = 256)
     private String networkCarIssueOrganization;
 
 
-    @javax.persistence.Column(name = "network_car_issue_organization", length = 256)
     public String getNetworkCarIssueOrganization() {
         return networkCarIssueOrganization;
     }
@@ -297,10 +297,10 @@ public class DriverInfoEntity extends IdEntity{
         this.networkCarIssueOrganization = networkCarIssueOrganization;
     }
 
+    @javax.persistence.Column(name = "network_car_issue_date")
     private Long networkCarIssueDate;
 
 
-    @javax.persistence.Column(name = "network_car_issue_date")
     public Long getNetworkCarIssueDate() {
         return networkCarIssueDate;
     }
@@ -309,10 +309,10 @@ public class DriverInfoEntity extends IdEntity{
         this.networkCarIssueDate = networkCarIssueDate;
     }
 
+    @javax.persistence.Column(name = "get_network_car_proof_date")
     private Long getNetworkCarProofDate;
 
 
-    @javax.persistence.Column(name = "get_network_car_proof_date")
     public Long getGetNetworkCarProofDate() {
         return getNetworkCarProofDate;
     }
@@ -321,10 +321,10 @@ public class DriverInfoEntity extends IdEntity{
         this.getNetworkCarProofDate = getNetworkCarProofDate;
     }
 
+    @javax.persistence.Column(name = "network_car_proof_on")
     private Long networkCarProofOn;
 
 
-    @javax.persistence.Column(name = "network_car_proof_on")
     public Long getNetworkCarProofOn() {
         return networkCarProofOn;
     }
@@ -333,10 +333,10 @@ public class DriverInfoEntity extends IdEntity{
         this.networkCarProofOn = networkCarProofOn;
     }
 
+    @javax.persistence.Column(name = "network_car_proof_off")
     private Long networkCarProofOff;
 
 
-    @javax.persistence.Column(name = "network_car_proof_off")
     public Long getNetworkCarProofOff() {
         return networkCarProofOff;
     }
@@ -345,10 +345,10 @@ public class DriverInfoEntity extends IdEntity{
         this.networkCarProofOff = networkCarProofOff;
     }
 
+    @javax.persistence.Column(name = "register_date")
     private Long registerDate;
 
 
-    @javax.persistence.Column(name = "register_date")
     public Long getRegisterDate() {
         return registerDate;
     }
@@ -357,10 +357,10 @@ public class DriverInfoEntity extends IdEntity{
         this.registerDate = registerDate;
     }
 
+    @javax.persistence.Column(name = "fullTime_driver")
     private Integer fullTimeDriver;
 
 
-    @javax.persistence.Column(name = "fullTime_driver")
     public Integer getFullTimeDriver() {
         return fullTimeDriver;
     }
@@ -369,10 +369,10 @@ public class DriverInfoEntity extends IdEntity{
         this.fullTimeDriver = fullTimeDriver;
     }
 
+    @javax.persistence.Column(name = "in_driver_blacklist")
     private Integer inDriverBlacklist;
 
 
-    @javax.persistence.Column(name = "in_driver_blacklist")
     public Integer getInDriverBlacklist() {
         return inDriverBlacklist;
     }
@@ -381,10 +381,10 @@ public class DriverInfoEntity extends IdEntity{
         this.inDriverBlacklist = inDriverBlacklist;
     }
 
+    @javax.persistence.Column(name = "commercial_type")
     private Integer commercialType;
 
 
-    @javax.persistence.Column(name = "commercial_type")
     public Integer getCommercialType() {
         return commercialType;
     }
@@ -393,10 +393,10 @@ public class DriverInfoEntity extends IdEntity{
         this.commercialType = commercialType;
     }
 
+    @javax.persistence.Column(name = "contract_company", length = 256)
     private String contractCompany;
 
 
-    @javax.persistence.Column(name = "contract_company", length = 256)
     public String getContractCompany() {
         return contractCompany;
     }
@@ -405,10 +405,10 @@ public class DriverInfoEntity extends IdEntity{
         this.contractCompany = contractCompany;
     }
 
+    @javax.persistence.Column(name = "contract_on")
     private Long contractOn;
 
 
-    @javax.persistence.Column(name = "contract_on")
     public Long getContractOn() {
         return contractOn;
     }
@@ -417,10 +417,10 @@ public class DriverInfoEntity extends IdEntity{
         this.contractOn = contractOn;
     }
 
+    @javax.persistence.Column(name = "contract_off")
     private Long contractOff;
 
 
-    @javax.persistence.Column(name = "contract_off")
     public Long getContractOff() {
         return contractOff;
     }
@@ -429,10 +429,10 @@ public class DriverInfoEntity extends IdEntity{
         this.contractOff = contractOff;
     }
 
+    @javax.persistence.Column(name = "emergency_contact", length = 64)
     private String emergencyContact;
 
 
-    @javax.persistence.Column(name = "emergency_contact", length = 64)
     public String getEmergencyContact() {
         return emergencyContact;
     }
@@ -441,10 +441,10 @@ public class DriverInfoEntity extends IdEntity{
         this.emergencyContact = emergencyContact;
     }
 
+    @javax.persistence.Column(name = "emergency_contact_phone", length = 32)
     private String emergencyContactPhone;
 
 
-    @javax.persistence.Column(name = "emergency_contact_phone", length = 32)
     public String getEmergencyContactPhone() {
         return emergencyContactPhone;
     }
@@ -453,10 +453,10 @@ public class DriverInfoEntity extends IdEntity{
         this.emergencyContactPhone = emergencyContactPhone;
     }
 
+    @javax.persistence.Column(name = "emergency_contact_address", length = 256)
     private String emergencyContactAddress;
 
 
-    @javax.persistence.Column(name = "emergency_contact_address", length = 256)
     public String getEmergencyContactAddress() {
         return emergencyContactAddress;
     }
@@ -465,10 +465,10 @@ public class DriverInfoEntity extends IdEntity{
         this.emergencyContactAddress = emergencyContactAddress;
     }
 
+    @javax.persistence.Column(name = "state")
     private Integer state;
 
 
-    @javax.persistence.Column(name = "state")
     public Integer getState() {
         return state;
     }
@@ -477,10 +477,10 @@ public class DriverInfoEntity extends IdEntity{
         this.state = state;
     }
 
+    @javax.persistence.Column(name = "flag")
     private Integer flag;
 
 
-    @javax.persistence.Column(name = "flag")
     public Integer getFlag() {
         return flag;
     }
@@ -489,10 +489,10 @@ public class DriverInfoEntity extends IdEntity{
         this.flag = flag;
     }
 
+    @javax.persistence.Column(name = "update_time")
     private Long updateTime;
 
 
-    @javax.persistence.Column(name = "update_time")
     public Long getUpdateTime() {
         return updateTime;
     }

@@ -12,15 +12,21 @@ import javax.persistence.Table;
 @Table(name = "passenger_evaluation")
 public class PassengerEvaluationEntity  extends IdEntity{
 
+	@Column(name = "company_id", length = 32)
     private String companyId;
+	@Column(name = "order_id", length = 64)
     private String orderId;
+	@Column(name = "evaluate_time")
     private Long evaluateTime;
+	@Column(name = "service_score")
     private Integer serviceScore;
+	@Column(name = "driver_score")
     private Integer driverScore;
+	@Column(name = "vehicle_score")
     private Integer vehicleScore;
+	@Column(name = "detail", length = 128)
     private String detail;
 
-    @Column(name = "company_id", length = 32)
     public String getCompanyId() {
         return companyId;
     }
@@ -30,7 +36,6 @@ public class PassengerEvaluationEntity  extends IdEntity{
     }
 
 
-    @Column(name = "order_id", length = 64)
     public String getOrderId() {
         return orderId;
     }
@@ -40,7 +45,6 @@ public class PassengerEvaluationEntity  extends IdEntity{
     }
 
 
-    @Column(name = "evaluate_time")
     public Long getEvaluateTime() {
         return evaluateTime;
     }
@@ -50,7 +54,6 @@ public class PassengerEvaluationEntity  extends IdEntity{
     }
 
 
-    @Column(name = "service_score")
     public Integer getServiceScore() {
         return serviceScore;
     }
@@ -60,7 +63,6 @@ public class PassengerEvaluationEntity  extends IdEntity{
     }
 
 
-    @Column(name = "driver_score")
     public Integer getDriverScore() {
         return driverScore;
     }
@@ -70,7 +72,6 @@ public class PassengerEvaluationEntity  extends IdEntity{
     }
 
 
-    @Column(name = "vehicle_score")
     public Integer getVehicleScore() {
         return vehicleScore;
     }
@@ -80,7 +81,6 @@ public class PassengerEvaluationEntity  extends IdEntity{
     }
 
 
-    @Column(name = "detail", length = 128)
     public String getDetail() {
         return detail;
     }

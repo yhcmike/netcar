@@ -10,10 +10,10 @@ import java.util.Arrays;
 @javax.persistence.Table(name = "gm_company_business_license")
 public class GmCompanyBusinessLicenseEntity  extends IdEntity{
 
+	@javax.persistence.Column(name = "company_name", length = 32)
     private String companyName;
 
 
-    @javax.persistence.Column(name = "company_name", length = 32)
     public String getCompanyName() {
         return companyName;
     }
@@ -22,10 +22,10 @@ public class GmCompanyBusinessLicenseEntity  extends IdEntity{
         this.companyName = companyName;
     }
 
+    @javax.persistence.Column(name = "address_code")
     private Integer addressCode;
 
 
-    @javax.persistence.Column(name = "address_code")
     public Integer getAddressCode() {
         return addressCode;
     }
@@ -34,10 +34,10 @@ public class GmCompanyBusinessLicenseEntity  extends IdEntity{
         this.addressCode = addressCode;
     }
 
+    @javax.persistence.Column(name = "address_name", length = 64)
     private String addressName;
 
 
-    @javax.persistence.Column(name = "address_name", length = 64)
     public String getAddressName() {
         return addressName;
     }
@@ -46,10 +46,10 @@ public class GmCompanyBusinessLicenseEntity  extends IdEntity{
         this.addressName = addressName;
     }
 
+    @javax.persistence.Column(name = "address", length = 128)
     private String address;
 
 
-    @javax.persistence.Column(name = "address", length = 128)
     public String getAddress() {
         return address;
     }
@@ -58,10 +58,10 @@ public class GmCompanyBusinessLicenseEntity  extends IdEntity{
         this.address = address;
     }
 
+    @javax.persistence.Column(name = "operating_state", length = 8)
     private String operatingState;
 
 
-    @javax.persistence.Column(name = "operating_state", length = 8)
     public String getOperatingState() {
         return operatingState;
     }
@@ -70,10 +70,10 @@ public class GmCompanyBusinessLicenseEntity  extends IdEntity{
         this.operatingState = operatingState;
     }
 
+    @javax.persistence.Column(name = "economic_nature", length = 8)
     private String economicNature;
 
 
-    @javax.persistence.Column(name = "economic_nature", length = 8)
     public String getEconomicNature() {
         return economicNature;
     }
@@ -82,10 +82,10 @@ public class GmCompanyBusinessLicenseEntity  extends IdEntity{
         this.economicNature = economicNature;
     }
 
+    @javax.persistence.Column(name = "latitude", precision = 0)
     private Double latitude;
 
 
-    @javax.persistence.Column(name = "latitude", precision = 0)
     public Double getLatitude() {
         return latitude;
     }
@@ -94,10 +94,10 @@ public class GmCompanyBusinessLicenseEntity  extends IdEntity{
         this.latitude = latitude;
     }
 
+    @javax.persistence.Column(name = "longitude", precision = 0)
     private Double longitude;
 
 
-    @javax.persistence.Column(name = "longitude", precision = 0)
     public Double getLongitude() {
         return longitude;
     }
@@ -106,10 +106,10 @@ public class GmCompanyBusinessLicenseEntity  extends IdEntity{
         this.longitude = longitude;
     }
 
+    @javax.persistence.Column(name = "operation_area", length = 128)
     private String operationArea;
 
 
-    @javax.persistence.Column(name = "operation_area", length = 128)
     public String getOperationArea() {
         return operationArea;
     }
@@ -118,10 +118,10 @@ public class GmCompanyBusinessLicenseEntity  extends IdEntity{
         this.operationArea = operationArea;
     }
 
+    @javax.persistence.Column(name = "operation_area2", length = 128)
     private String operationArea2;
 
 
-    @javax.persistence.Column(name = "operation_area2", length = 128)
     public String getOperationArea2() {
         return operationArea2;
     }
@@ -130,10 +130,10 @@ public class GmCompanyBusinessLicenseEntity  extends IdEntity{
         this.operationArea2 = operationArea2;
     }
 
+    @javax.persistence.Column(name = "certificate", length = 64)
     private String certificate;
 
 
-    @javax.persistence.Column(name = "certificate", length = 64)
     public String getCertificate() {
         return certificate;
     }
@@ -142,10 +142,10 @@ public class GmCompanyBusinessLicenseEntity  extends IdEntity{
         this.certificate = certificate;
     }
 
+    @javax.persistence.Column(name = "start_date")
     private Integer startDate;
 
 
-    @javax.persistence.Column(name = "start_date")
     public Integer getStartDate() {
         return startDate;
     }
@@ -154,10 +154,10 @@ public class GmCompanyBusinessLicenseEntity  extends IdEntity{
         this.startDate = startDate;
     }
 
+    @javax.persistence.Column(name = "stop_date")
     private Integer stopDate;
 
 
-    @javax.persistence.Column(name = "stop_date")
     public Integer getStopDate() {
         return stopDate;
     }
@@ -166,10 +166,10 @@ public class GmCompanyBusinessLicenseEntity  extends IdEntity{
         this.stopDate = stopDate;
     }
 
+    @javax.persistence.Column(name = "organization", length = 256)
     private String organization;
 
 
-    @javax.persistence.Column(name = "organization", length = 256)
     public String getOrganization() {
         return organization;
     }
@@ -178,10 +178,10 @@ public class GmCompanyBusinessLicenseEntity  extends IdEntity{
         this.organization = organization;
     }
 
+    @javax.persistence.Column(name = "certify_date")
     private Integer certifyDate;
 
 
-    @javax.persistence.Column(name = "certify_date")
     public Integer getCertifyDate() {
         return certifyDate;
     }
@@ -190,10 +190,10 @@ public class GmCompanyBusinessLicenseEntity  extends IdEntity{
         this.certifyDate = certifyDate;
     }
 
+    @javax.persistence.Column(name = "type")
     private byte[] type;
 
 
-    @javax.persistence.Column(name = "type")
     public byte[] getType() {
         return type;
     }
@@ -202,10 +202,10 @@ public class GmCompanyBusinessLicenseEntity  extends IdEntity{
         this.type = type;
     }
 
+    @javax.persistence.Column(name = "flag")
     private Integer flag;
 
 
-    @javax.persistence.Column(name = "flag")
     public Integer getFlag() {
         return flag;
     }
@@ -214,10 +214,10 @@ public class GmCompanyBusinessLicenseEntity  extends IdEntity{
         this.flag = flag;
     }
 
+    @javax.persistence.Column(name = "update_time")
     private Long updateTime;
 
 
-    @javax.persistence.Column(name = "update_time")
     public Long getUpdateTime() {
         return updateTime;
     }

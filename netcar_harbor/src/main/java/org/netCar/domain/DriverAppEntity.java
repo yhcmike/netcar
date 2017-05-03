@@ -10,21 +10,30 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "driver_app")
 public class DriverAppEntity extends IdEntity{
+	@Column(name = "company_id", length = 32)
     private String companyId;
+	@Column(name = "address")
     private Integer address;
+	@Column(name = "license_id", length = 32)
     private String licenseId;
+	@Column(name = "driver_phone", length = 32)
     private String driverPhone;
+	@Column(name = "net_type")
     private Integer netType;
+	@Column(name = "app_version", length = 32)
     private String appVersion;
+	@Column(name = "map_type")
     private Integer mapType;
+	@Column(name = "state")
     private Integer state;
+	@Column(name = "flag")
     private Integer flag;
+	@Column(name = "update_time")
     private Long updateTime;
 
 
 
 
-    @Column(name = "company_id", length = 32)
     public String getCompanyId() {
         return companyId;
     }
@@ -34,7 +43,6 @@ public class DriverAppEntity extends IdEntity{
     }
 
 
-    @Column(name = "address")
     public Integer getAddress() {
         return address;
     }
@@ -44,7 +52,6 @@ public class DriverAppEntity extends IdEntity{
     }
 
 
-    @Column(name = "license_id", length = 32)
     public String getLicenseId() {
         return licenseId;
     }
@@ -54,7 +61,6 @@ public class DriverAppEntity extends IdEntity{
     }
 
 
-    @Column(name = "driver_phone", length = 32)
     public String getDriverPhone() {
         return driverPhone;
     }
@@ -64,7 +70,6 @@ public class DriverAppEntity extends IdEntity{
     }
 
 
-    @Column(name = "net_type")
     public Integer getNetType() {
         return netType;
     }
@@ -74,7 +79,6 @@ public class DriverAppEntity extends IdEntity{
     }
 
 
-    @Column(name = "app_version", length = 32)
     public String getAppVersion() {
         return appVersion;
     }
@@ -84,7 +88,6 @@ public class DriverAppEntity extends IdEntity{
     }
 
 
-    @Column(name = "map_type")
     public Integer getMapType() {
         return mapType;
     }
@@ -94,7 +97,6 @@ public class DriverAppEntity extends IdEntity{
     }
 
 
-    @Column(name = "state")
     public Integer getState() {
         return state;
     }
@@ -104,7 +106,6 @@ public class DriverAppEntity extends IdEntity{
     }
 
 
-    @Column(name = "flag")
     public Integer getFlag() {
         return flag;
     }
@@ -114,7 +115,6 @@ public class DriverAppEntity extends IdEntity{
     }
 
 
-    @Column(name = "update_time")
     public Long getUpdateTime() {
         return updateTime;
     }

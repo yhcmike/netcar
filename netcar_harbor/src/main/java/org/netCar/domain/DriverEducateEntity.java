@@ -10,21 +10,30 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "driver_educate")
 public class DriverEducateEntity extends IdEntity{
+	@Column(name = "company_id", length = 32)
     private String companyId;
+	@Column(name = "address")
     private Integer address;
+	@Column(name = "license_id", length = 32)
     private String licenseId;
+	@Column(name = "course_name", length = 64)
     private String courseName;
+	@Column(name = "course_date")
     private Long courseDate;
+	@Column(name = "start_time", length = 8)
     private String startTime;
+	@Column(name = "stop_time", length = 8)
     private String stopTime;
+	@Column(name = "duration", length = 10)
     private String duration;
+	@Column(name = "flag")
     private Integer flag;
+	@Column(name = "updateTime")
     private Long updateTime;
 
 
 
 
-    @Column(name = "company_id", length = 32)
     public String getCompanyId() {
         return companyId;
     }
@@ -34,7 +43,6 @@ public class DriverEducateEntity extends IdEntity{
     }
 
 
-    @Column(name = "address")
     public Integer getAddress() {
         return address;
     }
@@ -44,7 +52,6 @@ public class DriverEducateEntity extends IdEntity{
     }
 
 
-    @Column(name = "license_id", length = 32)
     public String getLicenseId() {
         return licenseId;
     }
@@ -54,7 +61,6 @@ public class DriverEducateEntity extends IdEntity{
     }
 
 
-    @Column(name = "course_name", length = 64)
     public String getCourseName() {
         return courseName;
     }
@@ -64,7 +70,6 @@ public class DriverEducateEntity extends IdEntity{
     }
 
 
-    @Column(name = "course_date")
     public Long getCourseDate() {
         return courseDate;
     }
@@ -74,7 +79,6 @@ public class DriverEducateEntity extends IdEntity{
     }
 
 
-    @Column(name = "start_time", length = 8)
     public String getStartTime() {
         return startTime;
     }
@@ -84,7 +88,6 @@ public class DriverEducateEntity extends IdEntity{
     }
 
 
-    @Column(name = "stop_time", length = 8)
     public String getStopTime() {
         return stopTime;
     }
@@ -94,7 +97,6 @@ public class DriverEducateEntity extends IdEntity{
     }
 
 
-    @Column(name = "duration", length = 10)
     public String getDuration() {
         return duration;
     }
@@ -104,7 +106,6 @@ public class DriverEducateEntity extends IdEntity{
     }
 
 
-    @Column(name = "flag")
     public Integer getFlag() {
         return flag;
     }
@@ -114,7 +115,6 @@ public class DriverEducateEntity extends IdEntity{
     }
 
 
-    @Column(name = "updateTime")
     public Long getUpdateTime() {
         return updateTime;
     }

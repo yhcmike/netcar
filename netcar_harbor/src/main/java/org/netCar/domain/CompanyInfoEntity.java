@@ -10,26 +10,40 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "company_info")
 public class CompanyInfoEntity extends IdEntity{
+	@Column(name = "company_id", length = 32)
     private String companyId;
+	@Column(name = "company_name", length = 256)
     private String companyName;
+	@Column(name = "identifier", length = 32)
     private String identifier;
+	@Column(name = "address")
     private Integer address;
+	@Column(name = "business_scope", length = 256)
     private String businessScope;
+	@Column(name = "contact_address", length = 256)
     private String contactAddress;
+	@Column(name = "economic_type", length = 128)
     private String economicType;
+	@Column(name = "reg_capital", length = 128)
     private String regCapital;
+	@Column(name = "legal_name", length = 256)
     private String legalName;
+	@Column(name = "legal_ID", length = 32)
     private String legalId;
+	@Column(name = "legal_phone", length = 32)
     private String legalPhone;
+	@Column(name = "legal_photo", length = 128)
     private String legalPhoto;
+	@Column(name = "state")
     private Integer state;
+	@Column(name = "flag")
     private Integer flag;
+	@Column(name = "update_time")
     private Long updateTime;
 
 
 
 
-    @Column(name = "company_id", length = 32)
     public String getCompanyId() {
         return companyId;
     }
@@ -39,7 +53,6 @@ public class CompanyInfoEntity extends IdEntity{
     }
 
 
-    @Column(name = "company_name", length = 256)
     public String getCompanyName() {
         return companyName;
     }
@@ -49,7 +62,6 @@ public class CompanyInfoEntity extends IdEntity{
     }
 
 
-    @Column(name = "identifier", length = 32)
     public String getIdentifier() {
         return identifier;
     }
@@ -59,7 +71,6 @@ public class CompanyInfoEntity extends IdEntity{
     }
 
 
-    @Column(name = "address")
     public Integer getAddress() {
         return address;
     }
@@ -69,7 +80,6 @@ public class CompanyInfoEntity extends IdEntity{
     }
 
 
-    @Column(name = "business_scope", length = 256)
     public String getBusinessScope() {
         return businessScope;
     }
@@ -79,7 +89,6 @@ public class CompanyInfoEntity extends IdEntity{
     }
 
 
-    @Column(name = "contact_address", length = 256)
     public String getContactAddress() {
         return contactAddress;
     }
@@ -89,7 +98,6 @@ public class CompanyInfoEntity extends IdEntity{
     }
 
 
-    @Column(name = "economic_type", length = 128)
     public String getEconomicType() {
         return economicType;
     }
@@ -99,7 +107,6 @@ public class CompanyInfoEntity extends IdEntity{
     }
 
 
-    @Column(name = "reg_capital", length = 128)
     public String getRegCapital() {
         return regCapital;
     }
@@ -109,7 +116,6 @@ public class CompanyInfoEntity extends IdEntity{
     }
 
 
-    @Column(name = "legal_name", length = 256)
     public String getLegalName() {
         return legalName;
     }
@@ -119,7 +125,6 @@ public class CompanyInfoEntity extends IdEntity{
     }
 
 
-    @Column(name = "legal_ID", length = 32)
     public String getLegalId() {
         return legalId;
     }
@@ -129,7 +134,6 @@ public class CompanyInfoEntity extends IdEntity{
     }
 
 
-    @Column(name = "legal_phone", length = 32)
     public String getLegalPhone() {
         return legalPhone;
     }
@@ -139,7 +143,6 @@ public class CompanyInfoEntity extends IdEntity{
     }
 
 
-    @Column(name = "legal_photo", length = 128)
     public String getLegalPhoto() {
         return legalPhoto;
     }
@@ -149,7 +152,6 @@ public class CompanyInfoEntity extends IdEntity{
     }
 
 
-    @Column(name = "state")
     public Integer getState() {
         return state;
     }
@@ -159,7 +161,6 @@ public class CompanyInfoEntity extends IdEntity{
     }
 
 
-    @Column(name = "flag")
     public Integer getFlag() {
         return flag;
     }
@@ -169,7 +170,6 @@ public class CompanyInfoEntity extends IdEntity{
     }
 
 
-    @Column(name = "update_time")
     public Long getUpdateTime() {
         return updateTime;
     }

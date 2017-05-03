@@ -10,11 +10,13 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "dict_info")
 public class DictInfoEntity extends IdEntity{
+	@Column(name = "code", length = 32)
     private String code;
+	@Column(name = "name", length = 64)
     private String name;
+    @Column(name = "type", length = 64)
     private String type;
 
-    @Column(name = "code", length = 32)
     public String getCode() {
         return code;
     }
@@ -22,7 +24,6 @@ public class DictInfoEntity extends IdEntity{
     public void setCode(String code) {
         this.code = code;
     }
-    @Column(name = "type", length = 64)
     public String getType() {
         return type;
     }
@@ -31,7 +32,6 @@ public class DictInfoEntity extends IdEntity{
         this.type = type;
     }
 
-    @Column(name = "name", length = 64)
     public String getName() {
         return name;
     }

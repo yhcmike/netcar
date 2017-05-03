@@ -10,20 +10,28 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "driver_stat_info")
 public class DriverStatInfoEntity  extends IdEntity{
+	@Column(name = "company_id", length = 32)
     private String companyId;
+	@Column(name = "address")
     private Integer address;
+	@Column(name = "license_id", length = 32)
     private String licenseId;
+	@Column(name = "cycle")
     private Long cycle;
+	@Column(name = "order_count", length = 10)
     private String orderCount;
+	@Column(name = "traffic_violation_count", length = 32)
     private String trafficViolationCount;
+	@Column(name = "complained_count", length = 32)
     private String complainedCount;
+	@Column(name = "flag")
     private Integer flag;
+	@Column(name = "update_time")
     private Long updateTime;
 
 
 
 
-    @Column(name = "company_id", length = 32)
     public String getCompanyId() {
         return companyId;
     }
@@ -33,7 +41,6 @@ public class DriverStatInfoEntity  extends IdEntity{
     }
 
 
-    @Column(name = "address")
     public Integer getAddress() {
         return address;
     }
@@ -43,7 +50,6 @@ public class DriverStatInfoEntity  extends IdEntity{
     }
 
 
-    @Column(name = "license_id", length = 32)
     public String getLicenseId() {
         return licenseId;
     }
@@ -53,7 +59,6 @@ public class DriverStatInfoEntity  extends IdEntity{
     }
 
 
-    @Column(name = "cycle")
     public Long getCycle() {
         return cycle;
     }
@@ -63,7 +68,6 @@ public class DriverStatInfoEntity  extends IdEntity{
     }
 
 
-    @Column(name = "order_count", length = 10)
     public String getOrderCount() {
         return orderCount;
     }
@@ -73,7 +77,6 @@ public class DriverStatInfoEntity  extends IdEntity{
     }
 
 
-    @Column(name = "traffic_violation_count", length = 32)
     public String getTrafficViolationCount() {
         return trafficViolationCount;
     }
@@ -83,7 +86,6 @@ public class DriverStatInfoEntity  extends IdEntity{
     }
 
 
-    @Column(name = "complained_count", length = 32)
     public String getComplainedCount() {
         return complainedCount;
     }
@@ -93,7 +95,6 @@ public class DriverStatInfoEntity  extends IdEntity{
     }
 
 
-    @Column(name = "flag")
     public Integer getFlag() {
         return flag;
     }
@@ -103,7 +104,6 @@ public class DriverStatInfoEntity  extends IdEntity{
     }
 
 
-    @Column(name = "update_time")
     public Long getUpdateTime() {
         return updateTime;
     }
