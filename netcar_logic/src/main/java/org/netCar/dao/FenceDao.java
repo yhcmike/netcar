@@ -4,8 +4,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.commons.lang.StringUtils;
 import org.netCar.domain.FenceEntity;
+import org.netCar.vo.FenceVo;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -14,8 +14,8 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class FenceDao extends BaseHBDao<FenceEntity, Integer> {
 
-	public List<FenceEntity> listAllByCounty(Integer type, Integer status) {
-	   StringBuffer sql = new StringBuffer(" SELECT * FROM fence where 1=1 ");
+	public List<FenceVo> listAllByCounty(Integer type, Integer status) {
+	   StringBuffer sql = new StringBuffer(" SELECT id,name,shape,radius,type,spots FROM fence where 1=1 ");
 	   Map<String,Object> params = new HashMap<String,Object>();
         if(type != 0){
         	sql.append(" and type = :type ");
@@ -26,6 +26,6 @@ public class FenceDao extends BaseHBDao<FenceEntity, Integer> {
         	params.put("status", status);
         }
 	        
-		return listAll(sql.toString(), FenceEntity.class, params) ;
+		return listAll(sql.toString(), FenceVo.class, params) ;
 	}
 }

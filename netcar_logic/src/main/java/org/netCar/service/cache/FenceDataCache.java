@@ -26,10 +26,15 @@ public class FenceDataCache {
 	 */
 	private static final String FENCEDATA1 = "fence_data_type1";
 
-	/**	
+	/**
 	 * 出入记录围栏
 	 */
 	private static final String FENCEDATA2 = "fence_data_type2";
+
+	/**
+	 * 异常聚集围栏
+	 */
+	private static final String FENCEDATA3 = "fence_data_type3";
 
 	/**
 	 * code 行政区域编码 map key-- String: 行政区域编码 var---String:驾驶员定位信息
@@ -39,6 +44,8 @@ public class FenceDataCache {
 			redisTemplate.opsForHash().putAll(FENCEDATA1, map);
 		} else if (type == 2) {
 			redisTemplate.opsForHash().putAll(FENCEDATA2, map);
+		} else if (type == 3) {
+			redisTemplate.opsForHash().putAll(FENCEDATA3, map);
 		} else {
 			LOG.error(" add fence data,type:{} error ", type);
 		}
@@ -46,7 +53,21 @@ public class FenceDataCache {
 
 	public Map<String, String> getAllFencesData(Integer type) {
 		Map<String, String> map = new HashMap<String, String>();
-		String tempKey = type == 1 ? FENCEDATA1 : FENCEDATA2;
+		String tempKey = "";
+		switch (type) {
+		case 1:
+			tempKey = FENCEDATA1;
+			break;
+		case 2:
+			tempKey = FENCEDATA2;
+			break;
+		case 3:
+			tempKey = FENCEDATA3;
+			break;
+		default:
+			break;
+		}
+
 		Iterator<Object> iter = redisTemplate.opsForHash().keys(tempKey).iterator();
 		while (iter.hasNext()) {
 			String key = (String) iter.next();

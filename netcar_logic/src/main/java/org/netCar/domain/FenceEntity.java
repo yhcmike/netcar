@@ -12,22 +12,35 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "fence")
 public class FenceEntity  extends IdEntity{
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 8947915200707080084L;
+	
+	@Column(name = "name", length = 64)
     private String name;
+	@Column(name = "shape")
     private Integer shape;
+	@Column(name = "radius")
     private Double radius;
+	@Column(name = "type")
     private Integer type;
+	@Column(name = "spots")
     private String spots;
+	@Column(name = "remark")
     private String remark;
+	@Column(name = "status")
     private Integer status;
+	@Column(name = "number")
     private String number;
+	@Column(name = "purpose")
     private String purpose;
+	@Column(name = "createTime")
     private Date createTime;
+	@Column(name = "endTime")
     private Date endTime;
 
-
-
-
-    @Column(name = "name", length = 64)
     public String getName() {
         return name;
     }
@@ -36,8 +49,6 @@ public class FenceEntity  extends IdEntity{
         this.name = name;
     }
 
-
-    @Column(name = "shape")
     public Integer getShape() {
         return shape;
     }
@@ -45,9 +56,7 @@ public class FenceEntity  extends IdEntity{
     public void setShape(Integer shape) {
         this.shape = shape;
     }
-
-
-    @Column(name = "radius", precision = 0)
+    
     public Double getRadius() {
         return radius;
     }
@@ -56,8 +65,6 @@ public class FenceEntity  extends IdEntity{
         this.radius = radius;
     }
 
-
-    @Column(name = "type")
     public Integer getType() {
         return type;
     }
@@ -66,8 +73,6 @@ public class FenceEntity  extends IdEntity{
         this.type = type;
     }
 
-
-    @Column(name = "spots", length = 32)
     public String getSpots() {
         return spots;
     }
@@ -76,8 +81,6 @@ public class FenceEntity  extends IdEntity{
         this.spots = spots;
     }
 
-
-    @Column(name = "remark", length = 128)
     public String getRemark() {
         return remark;
     }
@@ -86,8 +89,6 @@ public class FenceEntity  extends IdEntity{
         this.remark = remark;
     }
 
-
-    @Column(name = "status")
     public Integer getStatus() {
         return status;
     }
@@ -96,7 +97,7 @@ public class FenceEntity  extends IdEntity{
         this.status = status;
     }
     
-    @Column(name = "number")
+    
 	public String getNumber() {
 		return number;
 	}
@@ -105,7 +106,6 @@ public class FenceEntity  extends IdEntity{
 		this.number = number;
 	}
 	
-	@Column(name = "purpose")
 	public String getPurpose() {
 		return purpose;
 	}
@@ -114,7 +114,6 @@ public class FenceEntity  extends IdEntity{
 		this.purpose = purpose;
 	}
 	
-	@Column(name = "createTime")
 	public Date getCreateTime() {
 		return createTime;
 	}
@@ -123,7 +122,7 @@ public class FenceEntity  extends IdEntity{
 		this.createTime = createTime;
 	}
 	
-	@Column(name = "endTime")
+	
 	public Date getEndTime() {
 		return endTime;
 	}

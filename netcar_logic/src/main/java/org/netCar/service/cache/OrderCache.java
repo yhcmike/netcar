@@ -1,12 +1,11 @@
 package org.netCar.service.cache;
 
+import java.util.Date;
+
 import org.apache.commons.lang.time.DateFormatUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
-
-import java.util.Date;
 
 /**
  * 订单实时信息
