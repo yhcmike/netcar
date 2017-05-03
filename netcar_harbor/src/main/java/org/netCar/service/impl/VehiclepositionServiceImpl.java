@@ -3,7 +3,6 @@ package org.netCar.service.impl;
 import org.netCar.dto.VehiclepositionJMS;
 import org.netCar.service.VehiclepositionService;
 import org.netCar.util.CtticDataUtils;
-import org.netCar.util.JsonUtil;
 import org.netCar.vo.OTIpcDef;
 import org.netCar.vo.OTIpcDef.OTIpc;
 import org.slf4j.Logger;
