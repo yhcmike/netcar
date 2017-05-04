@@ -112,7 +112,7 @@ public class VehiclepositionServiceImpl implements VehiclepositionService {
 				entity.setLongitude(position.getLongitude());
 				entity.setLatitude(position.getLatitude());
 				entity.setOrderId(position.getOrderId());
-				entity.setType(0);
+				entity.setType(1);
 				vehicleAccessFenceService.save(entity);
 
 			} else if (!nowFenceId.equals(lastFencetId)) {
