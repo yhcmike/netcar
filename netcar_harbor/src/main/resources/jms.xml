@@ -29,13 +29,22 @@ http://www.springframework.org/schema/context/spring-context-3.1.xsd">
 		</property>
 	</bean>
 
-	<bean id="uploadNetCar" class="org.apache.activemq.command.ActiveMQQueue">
-		<constructor-arg value="${mq.name}"></constructor-arg>
+	<bean id="vehiclePQueue" class="org.apache.activemq.command.ActiveMQQueue">
+		<constructor-arg value="${mq.vehiclePTopic}"></constructor-arg>
 	</bean>
 
-	<bean id="jmsTemplate" class="org.springframework.jms.core.JmsTemplate">
+	<bean id="vehiclePositionTemplate" class="org.springframework.jms.core.JmsTemplate">
 		<property name="connectionFactory" ref="connectionFactory"></property>
-		<property name="defaultDestination" ref="uploadNetCar" />
+		<property name="defaultDestination" ref="vehiclePQueue" />
+	</bean>
+	
+	<bean id="driverPQueue" class="org.apache.activemq.command.ActiveMQQueue">
+		<constructor-arg value="${mq.driverPTopic}"></constructor-arg>
+	</bean>
+
+	<bean id="driverPositionTemplate" class="org.springframework.jms.core.JmsTemplate">
+		<property name="connectionFactory" ref="connectionFactory"></property>
+		<property name="defaultDestination" ref="driverPQueue" />
 	</bean>
 	
 </beans>

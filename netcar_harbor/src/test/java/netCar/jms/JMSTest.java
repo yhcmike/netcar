@@ -2,14 +2,12 @@ package netCar.jms;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.netCar.dto.JMSSend;
+import org.netCar.dto.DriverPositionJMS;
 import org.netCar.dto.VehiclepositionJMS;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-
-import javax.annotation.Resource;
 
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -17,10 +15,13 @@ import javax.annotation.Resource;
 ({"/spring-application.xml"}) //加载配置文件  
 public class JMSTest {
 	@Autowired
-	private JmsTemplate jmsTemplate;
+	private JmsTemplate vehiclePositionTemplate;
+	
+	@Autowired
+	private JmsTemplate driverPositionTemplate;
 	
 	@Test
-	public void testsend(){
+	public void vehiclePostionTestsend(){
 
 
 		VehiclepositionJMS jms =  new VehiclepositionJMS();
@@ -41,7 +42,7 @@ public class JMSTest {
 		//TODO解析为json
 //		String jsonPosition = JsonUtil.obj2Str(jms);
 		//存放到mq
-		jmsTemplate.send(jms);
+		vehiclePositionTemplate.send(jms);
 		
 //		JMSSend jMSSend = new JMSSend();
 //		jMSSend.setAddress("address----");
@@ -51,6 +52,29 @@ public class JMSTest {
 //		jmsTemplate.send(jMSSend);
 	}
 
+	
+	@Test
+	public void driverPositionTestsend(){
+
+
+		DriverPositionJMS jms =  new DriverPositionJMS();
+		jms.setBizStatus(1);
+		jms.setCompanyId("123");
+		jms.setDirection(123);
+		jms.setEncrypt(123);
+		jms.setLicenseId("KSDKDIWIEMONEOWJOW)OEWH");
+		//TODO解析为json
+//		String jsonPosition = JsonUtil.obj2Str(jms);
+		//存放到mq
+		driverPositionTemplate.send(jms);
+		
+//		JMSSend jMSSend = new JMSSend();
+//		jMSSend.setAddress("address----");
+//		jMSSend.setName("name-------");
+//		
+//		
+//		jmsTemplate.send(jMSSend);
+	}
 
 
 	
