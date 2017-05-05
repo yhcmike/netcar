@@ -50,14 +50,8 @@ public class VehiclepositionServiceImpl implements VehiclepositionService {
 								jms.setVehStatus(p.getVehStatus());
 								jms.setOrderId(p.getOrderId());
 								jms.setWarnStatus(p.getWarnStatus());
-<<<<<<< 51937fad7d1dd04a0e111945453c64b0a55c4418
-								jmsTemplate.send(jms);
-=======
-								//TODO解析为json
-//								String jsonPosition = JsonUtil.obj2Str(jms);
 								//存放到mq
 								vehiclePositionTemplate.send(jms);
->>>>>>> 3cfb19a2bf7008350e290e7903c2d090fc1928d7
                             }
 							break;
 						default:
