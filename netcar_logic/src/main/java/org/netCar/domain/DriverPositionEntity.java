@@ -10,24 +10,36 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "driver_position")
 public class DriverPositionEntity extends IdEntity{
+	@Column(name = "company_id", length = 32)
     private String companyId;
+	@Column(name = "license_id", length = 32)
     private String licenseId;
+	@Column(name = "driver_region_code")
     private Integer driverRegionCode;
+	@Column(name = "vehicle_no", length = 32)
     private String vehicleNo;
+	@Column(name = "position_time")
     private Long positionTime;
-    private Integer longitude;
-    private Integer latitude;
+	@Column(name = "longitude")
+    private Double longitude;
+	@Column(name = "latitude")
+    private Double latitude;
+	@Column(name = "encrypt")
     private Integer encrypt;
+    @Column(name = "direction")
     private Integer direction;
+    @Column(name = "elevation")
     private Integer elevation;
+    @Column(name = "speed")
     private Integer speed;
+    @Column(name = "biz_status")
     private Integer bizStatus;
+    @Column(name = "order_id", length = 64)
     private String orderId;
 
 
 
 
-    @Column(name = "company_id", length = 32)
     public String getCompanyId() {
         return companyId;
     }
@@ -37,7 +49,6 @@ public class DriverPositionEntity extends IdEntity{
     }
 
 
-    @Column(name = "license_id", length = 32)
     public String getLicenseId() {
         return licenseId;
     }
@@ -47,7 +58,6 @@ public class DriverPositionEntity extends IdEntity{
     }
 
 
-    @Column(name = "driver_region_code")
     public Integer getDriverRegionCode() {
         return driverRegionCode;
     }
@@ -57,7 +67,6 @@ public class DriverPositionEntity extends IdEntity{
     }
 
 
-    @Column(name = "vehicle_no", length = 32)
     public String getVehicleNo() {
         return vehicleNo;
     }
@@ -67,7 +76,6 @@ public class DriverPositionEntity extends IdEntity{
     }
 
 
-    @Column(name = "position_time")
     public Long getPositionTime() {
         return positionTime;
     }
@@ -77,27 +85,24 @@ public class DriverPositionEntity extends IdEntity{
     }
 
 
-    @Column(name = "longitude")
-    public Integer getLongitude() {
+    public Double getLongitude() {
         return longitude;
     }
 
-    public void setLongitude(Integer longitude) {
+    public void setLongitude(Double longitude) {
         this.longitude = longitude;
     }
 
 
-    @Column(name = "latitude")
-    public Integer getLatitude() {
+    public Double getLatitude() {
         return latitude;
     }
 
-    public void setLatitude(Integer latitude) {
+    public void setLatitude(Double latitude) {
         this.latitude = latitude;
     }
 
 
-    @Column(name = "encrypt")
     public Integer getEncrypt() {
         return encrypt;
     }
@@ -107,7 +112,6 @@ public class DriverPositionEntity extends IdEntity{
     }
 
 
-    @Column(name = "direction")
     public Integer getDirection() {
         return direction;
     }
@@ -117,7 +121,6 @@ public class DriverPositionEntity extends IdEntity{
     }
 
 
-    @Column(name = "elevation")
     public Integer getElevation() {
         return elevation;
     }
@@ -127,7 +130,6 @@ public class DriverPositionEntity extends IdEntity{
     }
 
 
-    @Column(name = "speed")
     public Integer getSpeed() {
         return speed;
     }
@@ -137,7 +139,6 @@ public class DriverPositionEntity extends IdEntity{
     }
 
 
-    @Column(name = "biz_status")
     public Integer getBizStatus() {
         return bizStatus;
     }
@@ -147,7 +148,6 @@ public class DriverPositionEntity extends IdEntity{
     }
 
 
-    @Column(name = "order_id", length = 64)
     public String getOrderId() {
         return orderId;
     }

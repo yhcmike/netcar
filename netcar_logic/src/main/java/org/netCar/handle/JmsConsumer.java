@@ -4,7 +4,9 @@ import javax.jms.Message;
 import javax.jms.MessageListener;
 import javax.jms.ObjectMessage;
 
+import org.netCar.dto.DriverPositionJMS;
 import org.netCar.dto.VehiclepositionJMS;
+import org.netCar.service.DriverPositionService;
 import org.netCar.service.VehiclepositionService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,6 +24,9 @@ public class JmsConsumer implements MessageListener {
 	@Autowired
 	private VehiclepositionService vehiclepositionService;
 	
+	@Autowired
+	private DriverPositionService driverPositionService;
+	
 	@Override
 	public void onMessage(Message message) {
 		
@@ -36,6 +41,10 @@ public class JmsConsumer implements MessageListener {
 					VehiclepositionJMS position = (VehiclepositionJMS)obj;
 					logger.info("MQ_Consumer:" + position);
 					vehiclepositionService.operationPostion(position);
+				}
+				if(obj instanceof DriverPositionJMS ){
+					DriverPositionJMS position = (DriverPositionJMS)obj;
+					driverPositionService.operationPostion(position);
 				}
 			} catch (Exception e) {
 				logger.error("", e);

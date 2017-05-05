@@ -14,9 +14,9 @@ import org.springframework.jms.core.MessageCreator;
  */
 public class VehiclepositionJMS implements MessageCreator, Serializable,Cloneable {
 
-    private Integer id;
 
-    //公司标识
+	private static final long serialVersionUID = -8164009323770199719L;
+	//公司标识
     private String companyId;
     //车辆号牌
     private String vehicleNo;
@@ -48,13 +48,6 @@ public class VehiclepositionJMS implements MessageCreator, Serializable,Cloneabl
     private String orderId;
 
 
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     public String getCompanyId() {
         return companyId;

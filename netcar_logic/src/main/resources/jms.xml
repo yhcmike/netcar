@@ -34,14 +34,27 @@ http://www.springframework.org/schema/context/spring-context-3.1.xsd">
 	</bean>
 
 
-	<bean id="from_netCar_harbor" class="org.apache.activemq.command.ActiveMQQueue">
-		<constructor-arg value="${mq.name}"></constructor-arg>
+	<bean id="vehiclePostion_harbor" class="org.apache.activemq.command.ActiveMQQueue">
+		<constructor-arg value="${mq.vehiclePTopic}"></constructor-arg>
 	</bean>
 
 	<bean
 			class="org.springframework.jms.listener.DefaultMessageListenerContainer">
 		<property name="connectionFactory" ref="connectionFactory" />
-		<property name="destination" ref="from_netCar_harbor" />
+		<property name="destination" ref="vehiclePostion_harbor" />
+		<property name="messageListener" ref="jmsConsumer" />
+		<property name="concurrentConsumers" value="${mq.consumer.count}"></property>
+	</bean>
+	
+	
+	<bean id="driverPostion_harbor" class="org.apache.activemq.command.ActiveMQQueue">
+		<constructor-arg value="${mq.driverPTopic}"></constructor-arg>
+	</bean>
+
+	<bean
+			class="org.springframework.jms.listener.DefaultMessageListenerContainer">
+		<property name="connectionFactory" ref="connectionFactory" />
+		<property name="destination" ref="driverPostion_harbor" />
 		<property name="messageListener" ref="jmsConsumer" />
 		<property name="concurrentConsumers" value="${mq.consumer.count}"></property>
 	</bean>
