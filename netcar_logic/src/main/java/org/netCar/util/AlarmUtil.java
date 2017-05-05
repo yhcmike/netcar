@@ -17,10 +17,11 @@ public class AlarmUtil {
 
 		if (fenceVo.getShape() == 0) {
 			// 圆形
-			SpotVo spotVo = JsonUtil.json2Obj(fenceVo.getSpots(), SpotVo.class);
+			String spots = fenceVo.getSpots().replaceAll("\\[","").replaceAll("\\]","");
+			String[] arr = spots.split(",");
 			Double[] center = new Double[2];
-			center[0] = spotVo.getLng();
-			center[1] = spotVo.getLat();
+			center[0] = Double.parseDouble(arr[0]);
+			center[1] = Double.parseDouble(arr[1]);
 			return isInCircle(aLon, aLat, center, fenceVo.getRadius());
 
 		} else if (fenceVo.getShape() == 1) {

@@ -1,6 +1,7 @@
 package org.netCar.dto;
 
 import java.io.Serializable;
+import java.math.BigInteger;
 
 import javax.jms.JMSException;
 import javax.jms.Message;
@@ -25,15 +26,15 @@ public class VehiclepositionJMS implements MessageCreator, Serializable,Cloneabl
     //定位时间
     private Long positionTime;
     //经度
-    private double longitude;
+    private Double longitude;
     //纬度
-    private double latitude;
+    private Double latitude;
     //瞬时速度
     private float speed;
     //方向角
-    private long direction;
+    private BigInteger direction;
     //海拔高度
-    private long elevation;
+    private Float elevation;
     //行驶里程
     private double mileage;
     //坐标加密标识
@@ -81,19 +82,19 @@ public class VehiclepositionJMS implements MessageCreator, Serializable,Cloneabl
         this.positionTime = positionTime;
     }
 
-    public double getLongitude() {
+    public Double getLongitude() {
         return longitude;
     }
 
-    public void setLongitude(double longitude) {
+    public void setLongitude(Double longitude) {
         this.longitude = longitude;
     }
 
-    public double getLatitude() {
+    public Double getLatitude() {
         return latitude;
     }
 
-    public void setLatitude(double latitude) {
+    public void setLatitude(Double latitude) {
         this.latitude = latitude;
     }
 
@@ -105,19 +106,19 @@ public class VehiclepositionJMS implements MessageCreator, Serializable,Cloneabl
         this.speed = speed;
     }
 
-    public long getDirection() {
+    public BigInteger getDirection() {
         return direction;
     }
 
-    public void setDirection(long direction) {
+    public void setDirection(BigInteger direction) {
         this.direction = direction;
     }
 
-    public long getElevation() {
+    public Float getElevation() {
         return elevation;
     }
 
-    public void setElevation(long elevation) {
+    public void setElevation(Float elevation) {
         this.elevation = elevation;
     }
 
