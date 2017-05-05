@@ -33,7 +33,6 @@ public class VehiclePositionTest {
     	List<TestVehiclePosition> vehiclePositionList = testVehiclePositionService.listAllByOrderId("B37491861589339998");
     	for(TestVehiclePosition vehiclePosition : vehiclePositionList){
     		VehiclepositionJMS jms = new VehiclepositionJMS();
-	    		jms.setId(vehiclePosition.getId());
 	    		jms.setCompanyId(vehiclePosition.getCompanyId());
 	    		jms.setVehicleNo(vehiclePosition.getVehicleNo());
 	    		jms.setVehicleRegionCode(vehiclePosition.getVehicleRegionCode());

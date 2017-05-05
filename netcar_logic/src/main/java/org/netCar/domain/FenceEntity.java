@@ -12,20 +12,16 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "fence")
 public class FenceEntity  extends IdEntity{
-<<<<<<< abd06f04c3788e34de437a3424c26b703dd45c17
 	
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 8947915200707080084L;
 	
-=======
->>>>>>> f7e739d5205629f85416c56bca118e777241e8ae
 	@Column(name = "name", length = 64)
     private String name;
 	@Column(name = "shape")
     private Integer shape;
-<<<<<<< abd06f04c3788e34de437a3424c26b703dd45c17
 	@Column(name = "radius")
     private Double radius;
 	@Column(name = "type")
@@ -33,15 +29,6 @@ public class FenceEntity  extends IdEntity{
 	@Column(name = "spots")
     private String spots;
 	@Column(name = "remark")
-=======
-	@Column(name = "radius", precision = 0)
-    private Double radius;
-	@Column(name = "type")
-    private Integer type;
-	@Column(name = "spots", length = 32)
-    private String spots;
-	@Column(name = "remark", length = 128)
->>>>>>> f7e739d5205629f85416c56bca118e777241e8ae
     private String remark;
 	@Column(name = "status")
     private Integer status;
@@ -54,12 +41,6 @@ public class FenceEntity  extends IdEntity{
 	@Column(name = "endTime")
     private Date endTime;
 
-<<<<<<< abd06f04c3788e34de437a3424c26b703dd45c17
-=======
-
-
-
->>>>>>> f7e739d5205629f85416c56bca118e777241e8ae
     public String getName() {
         return name;
     }
@@ -68,10 +49,7 @@ public class FenceEntity  extends IdEntity{
         this.name = name;
     }
 
-<<<<<<< abd06f04c3788e34de437a3424c26b703dd45c17
-=======
 
->>>>>>> f7e739d5205629f85416c56bca118e777241e8ae
     public Integer getShape() {
         return shape;
     }
@@ -79,12 +57,7 @@ public class FenceEntity  extends IdEntity{
     public void setShape(Integer shape) {
         this.shape = shape;
     }
-<<<<<<< abd06f04c3788e34de437a3424c26b703dd45c17
-    
-=======
 
-
->>>>>>> f7e739d5205629f85416c56bca118e777241e8ae
     public Double getRadius() {
         return radius;
     }
@@ -93,10 +66,7 @@ public class FenceEntity  extends IdEntity{
         this.radius = radius;
     }
 
-<<<<<<< abd06f04c3788e34de437a3424c26b703dd45c17
-=======
 
->>>>>>> f7e739d5205629f85416c56bca118e777241e8ae
     public Integer getType() {
         return type;
     }
@@ -105,10 +75,7 @@ public class FenceEntity  extends IdEntity{
         this.type = type;
     }
 
-<<<<<<< abd06f04c3788e34de437a3424c26b703dd45c17
-=======
 
->>>>>>> f7e739d5205629f85416c56bca118e777241e8ae
     public String getSpots() {
         return spots;
     }
@@ -117,10 +84,7 @@ public class FenceEntity  extends IdEntity{
         this.spots = spots;
     }
 
-<<<<<<< abd06f04c3788e34de437a3424c26b703dd45c17
-=======
 
->>>>>>> f7e739d5205629f85416c56bca118e777241e8ae
     public String getRemark() {
         return remark;
     }
@@ -129,10 +93,7 @@ public class FenceEntity  extends IdEntity{
         this.remark = remark;
     }
 
-<<<<<<< abd06f04c3788e34de437a3424c26b703dd45c17
-=======
 
->>>>>>> f7e739d5205629f85416c56bca118e777241e8ae
     public Integer getStatus() {
         return status;
     }
@@ -141,10 +102,7 @@ public class FenceEntity  extends IdEntity{
         this.status = status;
     }
     
-<<<<<<< abd06f04c3788e34de437a3424c26b703dd45c17
-    
-=======
->>>>>>> f7e739d5205629f85416c56bca118e777241e8ae
+
 	public String getNumber() {
 		return number;
 	}
@@ -169,10 +127,6 @@ public class FenceEntity  extends IdEntity{
 		this.createTime = createTime;
 	}
 	
-<<<<<<< abd06f04c3788e34de437a3424c26b703dd45c17
-	
-=======
->>>>>>> f7e739d5205629f85416c56bca118e777241e8ae
 	public Date getEndTime() {
 		return endTime;
 	}
